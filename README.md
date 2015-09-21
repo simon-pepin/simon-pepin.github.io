@@ -1,2 +1,2 @@
-# SPL361.github.io
+# simon-pepin.github.io
 Personal website
