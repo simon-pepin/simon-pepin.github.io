@@ -6,7 +6,8 @@
 #
 layout: frontpage
 header:
-  image_fullwidth: flowers.jpg
+  image_fullwidth: vierville.jpg
+  
 widget1:
   title: "Blog"
   url: '/blog/'
