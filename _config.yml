@@ -8,7 +8,7 @@
 #                                                 /____/        
 #
 # Title of your website
-title: "Leaves of maths"
+title: "Sigma>0"
 
 # The slogan describes your website and is used on homepage in <title> and other important places
 
@@ -24,7 +24,7 @@ author: simon-pepin
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
-url: 'https://simon-pepin.github.io'
+#url: 'https://simon-pepin.github.io'
 baseurl: ''
 
 # This is for the editing function in _/includes/improve_content
@@ -41,13 +41,46 @@ baseurl: ''
 urlimg: 'https://simon-pepin.github.io/images/'
 
 # Logo size is 600x80 pixels
-logo: "logo.png"
+#logo: "logo.png"
 
 # Paginates all X entries
 paginate: 5
 
 # Pagination path › Important for blog page in /blog/ to work
 paginate_path: "blog/page:num"
+
+# include pages
+
+include: ["pages"]
+
+# Jekyll scholar
+
+gems: ['jekyll/scholar']
+
+scholar:
+
+  bibtex_filters:
+    - latex
+    - markdown
+    
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: {{ reference }}
+
+  replace_strings: true
+  join_strings:    true
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
 
 # Theme works best with Kramdown (using the table of contents function)
 markdown: kramdown

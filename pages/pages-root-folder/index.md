@@ -6,13 +6,14 @@
 #
 layout: frontpage
 header:
+  title: Simon Pepin Lehalleur
   image_fullwidth: vierville.jpg
   
 widget1:
   title: "Blog"
   url: '/blog/'
   image: 
-  text: 'Mathematics of data, Data science projects'
+  text: 'Mathematics and Data science projects'
 
 widget2:
   title: "Research"
