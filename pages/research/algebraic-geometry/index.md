@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "Algebraic Geometry"
+title: "Algebraic Geometry and motives"
 header: 
 permalink: "/research/algebraic-geometry/"
 ---
 <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
-
-## Algebraic geometry and motives
 
 # Where it all came from
 
