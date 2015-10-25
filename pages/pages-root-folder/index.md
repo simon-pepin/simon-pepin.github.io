@@ -19,7 +19,7 @@ widget2:
   title: "Research"
   url: '/research/'
   image: 
-  text: 'My previous life as an algebraic geometer'
+  text: 'Algebraic geometry and motives'
 
 permalink: /index.html
 ---
