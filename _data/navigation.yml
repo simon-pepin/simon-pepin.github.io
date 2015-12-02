@@ -5,10 +5,6 @@
 - title: About
   url: "/about/"
   side: left
-
-- title: Blog
-  url: "/blog/"
-  side: left
   
 - title: Research
   url: "/research/"

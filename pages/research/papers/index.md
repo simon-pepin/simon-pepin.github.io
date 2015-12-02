@@ -31,7 +31,7 @@ Subgroups of maximal rank of reductive groups.
 <!-- Authors: Pepin Lehalleur Simon -->
 <li><a name="1mot"></a>Simon
   Pepin&nbsp;Lehalleur.
-A motivic t-structure for relative 1-motives. In preparation</li>
+<a href="http://arxiv.org/abs/1512.00266">The motivic t-structure for relative 1-motives. </a></li>
 
 </ul>
 
