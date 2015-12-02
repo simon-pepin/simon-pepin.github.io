@@ -15,12 +15,5 @@ widget1:
   image: 
   text: 'Algebraic geometry and motives'
 
-<!-- widget2: -->
-<!--   title: "Blog" -->
-<!--   url: '/blog/' -->
-<!--   image:  -->
-<!--   text: 'Mathematics and Data science projects' -->
-
-
 permalink: /index.html
 ---
