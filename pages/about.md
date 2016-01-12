@@ -4,7 +4,7 @@ title: "About"
 header:
 permalink: "/about/"
 ---
-Simon Pepin Lehalleur (a.k.a. me) has just moved to Berlin, and is currently looking for a postdoc position in algebraic geometry.
+I have just moved to Berlin, and I am currently looking for a postdoc position in algebraic geometry.
 
 Here is a [CV]({{ site.url}}/resources/cv_en.pdf) and a [picture]({{site_url}}/resources/img/profile.png).
 
