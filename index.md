@@ -3,7 +3,7 @@ layout: default
 ---
 
 <img style="width=290px;height=272px;float:left;padding:10px;"
-src="/image/personal-photo.png" alt="profile picture" width="725" height="682">
+src="/image/personal-photo.png" alt="profile picture" width="290" height="272">
 
 I am a mathematician, working on questions in algebraic and arithmetic geometry, in particular related to motives.
 
