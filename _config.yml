@@ -1,6 +1,6 @@
 # Site settings
 title: Simon Pepin Lehalleur
-email:  simonpl@zedat.fu-berlin.de
+email:  simonpl@zedat.fu-berlin.de 
 description: > # this means to ignore newlines until "baseurl:"
   I'm a post-doctoral student at the Freie Universität Berlin.
   I study Arithmetic Geometry.
