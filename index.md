@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<img style="width=725px;height=682px;float:left;padding:10px;"
+<img style="width=290px;height=272px;float:left;padding:10px;"
 src="/image/personal-photo.png" alt="profile picture" width="725" height="682">
 
 I am a mathematician, working on questions in algebraic and arithmetic geometry, in particular related to motives.
