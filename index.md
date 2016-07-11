@@ -2,5 +2,6 @@
 layout: default
 ---
 
-Here's how you link to a [webpage in your site](/teaching/), and
-here's a link to an [external site](https://www.google.com)
+I am a post-doctoral student in the Research group in [Arithmetic Geometry](http://www.mi.fu-berlin.de/en/math/groups/arithmetic_geometry/index.html) at the Freie Universität Berlin. I was previously a Phd student at the [University of Zürich](http://www.math.uzh.ch/)
+
+
