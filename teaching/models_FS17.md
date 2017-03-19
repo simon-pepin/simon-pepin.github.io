@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Models of curves and abelian varieties
+title: Models of curves and abelian varieties (FU Berlin FS17)
 permalink: /teaching/models_FS17
 ---
 
 
-###Summary:
+### _Summary:_
 
 **Curves** and **abelian varieties** are among the most important examples of
 algebraic varieties. In complex algebraic geometry, they are very well
@@ -21,19 +21,19 @@ general theory of moduli of curves and abelian varieties. More
 precisely, given a curve or an abelian variety over a local or global
 field, we will establish
 
-* the existence of the *minimal regular model* of the curve,
-* the existence of the *Néron model* of the abelian variety,
+* the existence of the **minimal regular model** of the curve,
+* the existence of the **Néron model** of the abelian variety,
 * the relationship between the minimal regular model of a curve and
 the Néron model of its Jacobian,
-* the *stable reduction theorem* for curves, and
-* the *semi-abelian reduction theorem* for abelian varieties.
+* the **stable reduction theorem** for curves, and
+* the **semi-abelian reduction theorem** for abelian varieties.
 
 Along the way, we will encounter many basic tools of algebraic
 geometry: resolution of singularities of surfaces, intersection theory
 on surfaces, dualizing complexes, the Picard functor, rigid analytic
 geometry of curves, ...
 
-#### Prerequisites:
+#### _Prerequisites:_
 
 Algebraic geometry, the language of schemes, the theory
 of algebraic curves over a field; roughly speaking, Hartshorne's
@@ -41,6 +41,6 @@ Algebraic Geometry chapters 1-4 or Liu's Algebraic Geometry and
 Arithmetic Curves chapters 1-7. Familiarity with abelian varieties is
 useful but not assumed, we will review the fundamentals in the course.
 
-#### Main references:
+#### _Main references:_
 * Liu, Algebraic Geometry and Arithmetic Curves
 * Bosch, Lüktebohmert, Raynaud, Néron Models
