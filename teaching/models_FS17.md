@@ -43,11 +43,11 @@ geometry of curves, ...
 #### _Prerequisites:_
 
 Algebraic geometry, the language of schemes, the theory
-of algebraic curves over a field; roughly speaking, Hartshorne's
-Algebraic Geometry chapters 1-4 or Liu's Algebraic Geometry and
-Arithmetic Curves chapters 1-7. Familiarity with abelian varieties is
+of algebraic curves over a field; roughly speaking, **Hartshorne's
+Algebraic Geometry chapters 1-4** or **Liu's Algebraic Geometry and
+Arithmetic Curves chapters 1-7**. Familiarity with abelian varieties is
 useful but not assumed, we will review the fundamentals in the course.
 
 #### _Main references:_
-- Liu, Algebraic Geometry and Arithmetic Curves
-- Bosch, Lüktebohmert, Raynaud, Néron Models
+- Liu, **Algebraic Geometry and Arithmetic Curves**
+- Bosch, Lüktebohmert, Raynaud, **Néron Models**
