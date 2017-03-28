@@ -1,12 +1,16 @@
 ---
 layout: page
-title: Models of curves and abelian varieties (FU Berlin FS17)
+title: Models of curves and abelian varieties 
 permalink: /teaching/models_FS17
 ---
 
 ### _Organisation:_
 
-Coming soon!
+FU Berlin FS 17 ( (FU website)[http://www.fu-berlin.de/vv/de/lv/384488?query=Esnault&sm=314889])
+
+Time: Tuesdays 10h00-12h00
+
+Room: SR 210 Arnimallee 3
 
 ### _Course notes:_
 
