@@ -6,11 +6,11 @@ permalink: /teaching/models_FS17
 
 ### _Organisation:_
 
-FU Berlin FS 17 ( (FU website)[http://www.fu-berlin.de/vv/de/lv/384488?query=Esnault&sm=314889])
+[FU website](http://www.fu-berlin.de/vv/de/lv/384488?query=Esnault&sm=314889)
 
-Time: Tuesdays 10h00-12h00
+**Time**: Tuesdays 10h00-12h00
 
-Room: SR 210 Arnimallee 3
+**Room**: SR 210 Arnimallee 3
 
 ### _Course notes:_
 
