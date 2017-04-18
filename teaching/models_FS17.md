@@ -14,6 +14,8 @@ permalink: /teaching/models_FS17
 
 ### _Course notes:_
 
+Comments and feedback about these notes is highly encouraged!
+
 [Notes](/teaching/Models_notes.pdf)
 
 [Bibliography](/teaching/models_biblio.pdf)
