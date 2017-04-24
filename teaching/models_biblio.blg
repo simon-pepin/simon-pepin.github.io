@@ -1,0 +1,17 @@
+[0] Config.pm:340> INFO - This is Biber 2.4
+[0] Config.pm:343> INFO - Logfile is 'models_biblio.blg'
+[46] biber:287> INFO - === Mo Apr 24, 2017, 11:40:38
+[132] Biber.pm:348> INFO - Reading 'models_biblio.bcf'
+[259] Biber.pm:742> INFO - Found 6 citekeys in bib section 0
+[267] Biber.pm:3151> INFO - Processing section 0
+[293] Biber.pm:3308> INFO - Looking for bibtex format file 'models.bib' for section 0
+[311] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[330] bibtex.pm:974> INFO - Found BibTeX data source 'models.bib'
+[374] Utils.pm:147> WARN - The field 'year' in entry 'Conrad_models' cannot be null, deleting it
+[430] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[430] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[430] Biber.pm:3028> INFO - Sorting list 'anyt/global' of type 'entry' with scheme 'anyt' and locale 'en-US'
+[430] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
+[438] bbl.pm:519> INFO - Writing 'models_biblio.bbl' with encoding 'UTF-8'
+[456] bbl.pm:615> INFO - Output to models_biblio.bbl
+[457] Biber.pm:109> INFO - WARNINGS: 1

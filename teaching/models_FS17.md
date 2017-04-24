@@ -16,7 +16,9 @@ permalink: /teaching/models_FS17
 
 Comments and feedback about these notes is highly encouraged!
 
-[Notes](/teaching/Models_notes.pdf)
+[Introduction](/teaching/Models_intro.pdf)
+
+[Weierstrass models of elliptic curves](/teaching/Models_Weierstrass.pdf)
 
 [Bibliography](/teaching/models_biblio.pdf)
 
