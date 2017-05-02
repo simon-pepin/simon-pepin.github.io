@@ -83,6 +83,32 @@
       \verb math.stanford.edu/~conrad/papers/minimalmodel.pdf
       \endverb
     \endentry
+    \entry{Hartshorne}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ee65baaab88f9233fbad3d51c399ee25}{%
+           family={Hartshorne},
+           family_i={H\bibinitperiod},
+           given={Robin},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, New York-Heidelberg}%
+      }
+      \strng{namehash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{fullhash}{ee65baaab88f9233fbad3d51c399ee25}
+      \field{labelalpha}{Hartshorne}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-387-90244-9}
+      \field{note}{Graduate Texts in Mathematics, No. 52}
+      \field{shorthand}{Hartshorne}
+      \field{title}{Algebraic geometry}
+      \field{year}{1977}
+      \field{pages}{xvi+496}
+      \range{pages}{-1}
+    \endentry
     \entry{Liu}{book}{}
       \name{author}{1}{}{%
         {{hash=38189fe02b562b8892bd694420804211}{%

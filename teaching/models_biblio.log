@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.18)  24 APR 2017 11:40
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.18)  2 MAY 2017 09:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -315,17 +315,22 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 17.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 34.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 34.
+(Font)              <7> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 34.
+(Font)              <5> on input line 36.
 
-Overfull \hbox (11.39984pt too wide) in paragraph at lines 35--35
+Overfull \hbox (2.71524pt too wide) in paragraph at lines 37--37
+\T1/cmr/m/n/10 Math-e-mat-ics, No. 52. Springer-Verlag, New York-Heidelberg,
+ []
+
+
+Overfull \hbox (11.39984pt too wide) in paragraph at lines 37--37
 \T1/cmr/m/n/10 In-sti-tute of Fun-da-men-tal Re-search, Bom-bay, 2008, pp. xii+
 263. 
  []
@@ -338,10 +343,10 @@ Package logreq Info: Writing requests to 'models_biblio.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 6377 strings out of 493638
- 110347 string characters out of 6146796
- 497265 words of memory out of 5000000
- 9754 multiletter control sequences out of 15000+600000
+ 6378 strings out of 493638
+ 110380 string characters out of 6146796
+ 497276 words of memory out of 5000000
+ 9755 multiletter control sequences out of 15000+600000
  11886 words of font info for 31 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  44i,6n,45p,810b,1108s stack positions out of 5000i,500n,10000p,200000b,80000s
