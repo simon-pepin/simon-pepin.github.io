@@ -2054,10 +2054,12 @@
     <bcf:citekey order="1">Liu</bcf:citekey>
     <bcf:citekey order="2">BLR</bcf:citekey>
     <bcf:citekey order="3">Conrad_models</bcf:citekey>
-    <bcf:citekey order="4">Silverman</bcf:citekey>
-    <bcf:citekey order="5">Silverman_adv</bcf:citekey>
-    <bcf:citekey order="6">Mumford</bcf:citekey>
-    <bcf:citekey order="7">Hartshorne</bcf:citekey>
+    <bcf:citekey order="4">Badescu</bcf:citekey>
+    <bcf:citekey order="5">Schroer</bcf:citekey>
+    <bcf:citekey order="6">Silverman</bcf:citekey>
+    <bcf:citekey order="7">Silverman_adv</bcf:citekey>
+    <bcf:citekey order="8">Mumford</bcf:citekey>
+    <bcf:citekey order="9">Hartshorne</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt/global" type="entry" sortscheme="anyt" sortnamekeyscheme="global">
   <bcf:sorting>

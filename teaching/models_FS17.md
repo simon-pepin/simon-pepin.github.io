@@ -20,6 +20,8 @@ Comments and feedback about these notes is highly encouraged!
 
 [Weierstrass models of elliptic curves](/teaching/Models_Weierstrass.pdf)
 
+[Intersection theory on regular surfaces](/teaching/Models_intersection.pdf)
+
 [Bibliography](/teaching/models_biblio.pdf)
 
 ### _Summary:_
