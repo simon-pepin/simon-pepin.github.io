@@ -36,7 +36,7 @@
       }
       \strng{namehash}{ecb9e7732826dd9c8327751191cc2e54}
       \strng{fullhash}{ecb9e7732826dd9c8327751191cc2e54}
-      \field{labelalpha}{Băd01}
+      \field{labelalpha}{Badescu}
       \field{sortinit}{B}
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
@@ -44,6 +44,7 @@
       \field{isbn}{0-387-98668-5}
       \field{note}{Translated from the 1981 Romanian original by Vladimir Maşek and revised by the author}
       \field{series}{Universitext}
+      \field{shorthand}{Badescu}
       \field{title}{Algebraic surfaces}
       \field{year}{2001}
       \field{pages}{xii+258}
@@ -205,7 +206,7 @@
       }
       \strng{namehash}{4d4f91b5f1e3f964078cff8c30cc16fa}
       \strng{fullhash}{4d4f91b5f1e3f964078cff8c30cc16fa}
-      \field{labelalpha}{Sch99}
+      \field{labelalpha}{Schroer}
       \field{sortinit}{S}
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
@@ -213,6 +214,7 @@
       \field{issn}{0025-2611}
       \field{journaltitle}{Manuscripta Math.}
       \field{number}{3}
+      \field{shorthand}{Schroer}
       \field{title}{On non-projective normal surfaces}
       \field{volume}{100}
       \field{year}{1999}

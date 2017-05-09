@@ -1,17 +1,17 @@
-[1] Config.pm:340> INFO - This is Biber 2.4
-[1] Config.pm:343> INFO - Logfile is 'models_biblio.blg'
-[141] biber:287> INFO - === Di Mai  9, 2017, 16:12:55
-[361] Biber.pm:348> INFO - Reading 'models_biblio.bcf'
-[685] Biber.pm:742> INFO - Found 9 citekeys in bib section 0
-[704] Biber.pm:3151> INFO - Processing section 0
-[784] Biber.pm:3308> INFO - Looking for bibtex format file 'models.bib' for section 0
-[841] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
-[886] bibtex.pm:974> INFO - Found BibTeX data source 'models.bib'
-[1064] Utils.pm:147> WARN - The field 'year' in entry 'Conrad_models' cannot be null, deleting it
-[1240] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1240] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1240] Biber.pm:3028> INFO - Sorting list 'anyt/global' of type 'entry' with scheme 'anyt' and locale 'en-US'
-[1241] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
-[1267] bbl.pm:519> INFO - Writing 'models_biblio.bbl' with encoding 'UTF-8'
-[1332] bbl.pm:615> INFO - Output to models_biblio.bbl
-[1332] Biber.pm:109> INFO - WARNINGS: 1
+[0] Config.pm:340> INFO - This is Biber 2.4
+[0] Config.pm:343> INFO - Logfile is 'models_biblio.blg'
+[93] biber:287> INFO - === Di Mai  9, 2017, 17:51:59
+[304] Biber.pm:348> INFO - Reading 'models_biblio.bcf'
+[610] Biber.pm:742> INFO - Found 9 citekeys in bib section 0
+[624] Biber.pm:3151> INFO - Processing section 0
+[674] Biber.pm:3308> INFO - Looking for bibtex format file 'models.bib' for section 0
+[751] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[822] bibtex.pm:974> INFO - Found BibTeX data source 'models.bib'
+[1052] Utils.pm:147> WARN - The field 'year' in entry 'Conrad_models' cannot be null, deleting it
+[1212] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1213] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1213] Biber.pm:3028> INFO - Sorting list 'anyt/global' of type 'entry' with scheme 'anyt' and locale 'en-US'
+[1213] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
+[1233] bbl.pm:519> INFO - Writing 'models_biblio.bbl' with encoding 'UTF-8'
+[1274] bbl.pm:615> INFO - Output to models_biblio.bbl
+[1274] Biber.pm:109> INFO - WARNINGS: 1
