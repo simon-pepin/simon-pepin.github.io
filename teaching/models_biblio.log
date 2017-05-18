@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.18)  9 MAY 2017 17:52
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.18)  18 MAY 2017 10:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -306,7 +306,15 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'models_biblio.bbl' found.
- (./models_biblio.bbl)
+ (./models_biblio.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Lipman
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -315,30 +323,29 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 17.
-Missing character: There is no ă in font ecrm1000!
-Missing character: There is no ş in font ecrm1000!
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 40.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 44.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 40.
+(Font)              <7> on input line 44.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 40.
+(Font)              <5> on input line 44.
+Missing character: There is no ă in font ecrm1000!
+Missing character: There is no ş in font ecrm1000!
 
-Overfull \hbox (2.71524pt too wide) in paragraph at lines 41--41
+Overfull \hbox (2.71524pt too wide) in paragraph at lines 45--45
 \T1/cmr/m/n/10 Math-e-mat-ics, No. 52. Springer-Verlag, New York-Heidelberg,
  []
 
 
-Overfull \hbox (11.39984pt too wide) in paragraph at lines 41--41
+Overfull \hbox (11.39984pt too wide) in paragraph at lines 45--45
 \T1/cmr/m/n/10 In-sti-tute of Fun-da-men-tal Re-search, Bom-bay, 2008, pp. xii+
 263. 
  []
 
 
-Overfull \hbox (37.06679pt too wide) in paragraph at lines 41--41
+Overfull \hbox (37.06679pt too wide) in paragraph at lines 45--45
 []\T1/cmr/m/n/10 Stefan Schröer. ``On non-projective nor-mal sur-faces''. In: \
 T1/cmr/m/it/10 Manuscripta
  []
@@ -351,12 +358,12 @@ Package logreq Info: Writing requests to 'models_biblio.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 6381 strings out of 493638
- 110458 string characters out of 6146796
- 497292 words of memory out of 5000000
- 9758 multiletter control sequences out of 15000+600000
+ 6383 strings out of 493638
+ 110496 string characters out of 6146796
+ 497305 words of memory out of 5000000
+ 9760 multiletter control sequences out of 15000+600000
  11886 words of font info for 31 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 44i,6n,45p,810b,1122s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,6n,45p,810b,1119s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on models_biblio.pdf (2 pages).

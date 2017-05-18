@@ -23,6 +23,36 @@
 
 \refsection{0}
   \sortlist[entry]{anyt/global}
+    \entry{Artin}{article}{}
+      \name{author}{1}{}{%
+        {{hash=69a473a63b6a5b334a00dacc5c3ef319}{%
+           family={Artin},
+           family_i={A\bibinitperiod},
+           given={Michael},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{69a473a63b6a5b334a00dacc5c3ef319}
+      \strng{fullhash}{69a473a63b6a5b334a00dacc5c3ef319}
+      \field{labelalpha}{Artin}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9327}
+      \field{journaltitle}{Amer. J. Math.}
+      \field{shorthand}{Artin}
+      \field{title}{Some numerical criteria for contractability of curves on algebraic surfaces}
+      \field{volume}{84}
+      \field{year}{1962}
+      \field{pages}{485\bibrangedash 496}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.2307/2372985
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.2307/2372985
+      \endverb
+    \endentry
     \entry{Badescu}{book}{}
       \name{author}{1}{}{%
         {{hash=ecb9e7732826dd9c8327751191cc2e54}{%
@@ -293,6 +323,7 @@
       \endverb
     \endentry
   \endsortlist
+  \missing{Lipman}
 \endrefsection
 \endinput
 

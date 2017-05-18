@@ -2060,6 +2060,8 @@
     <bcf:citekey order="7">Silverman_adv</bcf:citekey>
     <bcf:citekey order="8">Mumford</bcf:citekey>
     <bcf:citekey order="9">Hartshorne</bcf:citekey>
+    <bcf:citekey order="10">Artin</bcf:citekey>
+    <bcf:citekey order="11">Lipman</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt/global" type="entry" sortscheme="anyt" sortnamekeyscheme="global">
   <bcf:sorting>
