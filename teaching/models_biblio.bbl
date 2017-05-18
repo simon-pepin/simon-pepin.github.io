@@ -172,6 +172,33 @@
       \field{pages}{xvi+496}
       \range{pages}{-1}
     \endentry
+    \entry{Lipman}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e4dab969a5e0f864302f10a4b7486952}{%
+           family={Lipman},
+           family_i={L\bibinitperiod},
+           given={Joseph},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4dab969a5e0f864302f10a4b7486952}
+      \strng{fullhash}{e4dab969a5e0f864302f10a4b7486952}
+      \field{labelalpha}{Lipman}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0073-8301}
+      \field{journaltitle}{Inst. Hautes Études Sci. Publ. Math.}
+      \field{number}{36}
+      \field{shorthand}{Lipman}
+      \field{title}{Rational singularities, with applications to algebraic surfaces and unique factorization}
+      \field{year}{1969}
+      \field{pages}{195\bibrangedash 279}
+      \range{pages}{85}
+      \verb{url}
+      \verb http://www.numdam.org/item?id=PMIHES_1969__36__195_0
+      \endverb
+    \endentry
     \entry{Liu}{book}{}
       \name{author}{1}{}{%
         {{hash=38189fe02b562b8892bd694420804211}{%
@@ -323,7 +350,6 @@
       \endverb
     \endentry
   \endsortlist
-  \missing{Lipman}
 \endrefsection
 \endinput
 

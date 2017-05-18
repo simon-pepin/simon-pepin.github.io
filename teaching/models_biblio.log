@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.18)  18 MAY 2017 10:07
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.18)  18 MAY 2017 10:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -306,15 +306,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'models_biblio.bbl' found.
- (./models_biblio.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Lipman
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./models_biblio.bbl)
 Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -324,7 +316,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 17.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 44.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -344,22 +337,22 @@ Overfull \hbox (11.39984pt too wide) in paragraph at lines 45--45
 263. 
  []
 
+[1
 
+]
 Overfull \hbox (37.06679pt too wide) in paragraph at lines 45--45
 []\T1/cmr/m/n/10 Stefan Schröer. ``On non-projective nor-mal sur-faces''. In: \
 T1/cmr/m/it/10 Manuscripta
  []
 
-[1
-
-] [2] (./models_biblio.aux)
+[2] (./models_biblio.aux)
 Package logreq Info: Writing requests to 'models_biblio.run.xml'.
 \openout1 = `models_biblio.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  6383 strings out of 493638
- 110496 string characters out of 6146796
+ 110515 string characters out of 6146796
  497305 words of memory out of 5000000
  9760 multiletter control sequences out of 15000+600000
  11886 words of font info for 31 fonts, out of 8000000 for 9000
