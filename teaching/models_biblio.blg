@@ -1,17 +1,20 @@
 [0] Config.pm:340> INFO - This is Biber 2.4
 [0] Config.pm:343> INFO - Logfile is 'models_biblio.blg'
-[60] biber:287> INFO - === Do Mai 18, 2017, 10:09:42
-[200] Biber.pm:348> INFO - Reading 'models_biblio.bcf'
-[331] Biber.pm:742> INFO - Found 11 citekeys in bib section 0
-[339] Biber.pm:3151> INFO - Processing section 0
-[387] Biber.pm:3308> INFO - Looking for bibtex format file 'models.bib' for section 0
-[435] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
-[479] bibtex.pm:974> INFO - Found BibTeX data source 'models.bib'
-[642] Utils.pm:147> WARN - The field 'year' in entry 'Conrad_models' cannot be null, deleting it
-[760] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[761] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[761] Biber.pm:3028> INFO - Sorting list 'anyt/global' of type 'entry' with scheme 'anyt' and locale 'en-US'
-[761] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
-[776] bbl.pm:519> INFO - Writing 'models_biblio.bbl' with encoding 'UTF-8'
-[834] bbl.pm:615> INFO - Output to models_biblio.bbl
-[834] Biber.pm:109> INFO - WARNINGS: 1
+[83] biber:287> INFO - === Mo Jul  3, 2017, 17:28:46
+[269] Biber.pm:348> INFO - Reading 'models_biblio.bcf'
+[503] Biber.pm:742> INFO - Found 17 citekeys in bib section 0
+[514] Biber.pm:3151> INFO - Processing section 0
+[577] Biber.pm:3308> INFO - Looking for bibtex format file 'models.bib' for section 0
+[680] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[749] bibtex.pm:974> INFO - Found BibTeX data source 'models.bib'
+[841] Utils.pm:147> WARN - ISBN '978-0-521-86103-8; 0-521-86103-9' in entry 'Gille_Szamuely' is invalid - run biber with '--validate_datamodel' for details.
+[990] Utils.pm:147> WARN - ISBN '978-0-691-12923-5; 0-691-12923-1' in entry 'Kollar' is invalid - run biber with '--validate_datamodel' for details.
+[1007] Utils.pm:147> WARN - I didn't find a database entry for 'Lipman' (section 0)
+[1008] Utils.pm:147> WARN - The field 'year' in entry 'Conrad_models' cannot be null, deleting it
+[1273] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1273] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1274] Biber.pm:3028> INFO - Sorting list 'anyt/global' of type 'entry' with scheme 'anyt' and locale 'en-US'
+[1274] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
+[1316] bbl.pm:519> INFO - Writing 'models_biblio.bbl' with encoding 'UTF-8'
+[1436] bbl.pm:615> INFO - Output to models_biblio.bbl
+[1437] Biber.pm:109> INFO - WARNINGS: 4

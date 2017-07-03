@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.18)  18 MAY 2017 10:09
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.18)  3 JUL 2017 17:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -306,7 +306,15 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'models_biblio.bbl' found.
- (./models_biblio.bbl)
+ (./models_biblio.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Lipman
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -315,34 +323,51 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 17.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 44.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 56.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 44.
+(Font)              <7> on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 44.
+(Font)              <5> on input line 56.
 Missing character: There is no ă in font ecrm1000!
 Missing character: There is no ş in font ecrm1000!
 
-Overfull \hbox (2.71524pt too wide) in paragraph at lines 45--45
-\T1/cmr/m/n/10 Math-e-mat-ics, No. 52. Springer-Verlag, New York-Heidelberg,
+Overfull \hbox (10.74219pt too wide) in paragraph at lines 57--57
+\T1/cmr/m/n/10 Re-lated Ar-eas (3)]. Berlin: Springer-Verlag, 1990, pp. x+325. 
+
  []
 
 
-Overfull \hbox (11.39984pt too wide) in paragraph at lines 45--45
-\T1/cmr/m/n/10 In-sti-tute of Fun-da-men-tal Re-search, Bom-bay, 2008, pp. xii+
-263. 
+Overfull \hbox (12.96274pt too wide) in paragraph at lines 57--57
+\T1/cmr/m/n/10 Math-e-mat-ics, No. 52. Springer-Verlag, New York-Heidelberg,
  []
 
 [1
 
 ]
-Overfull \hbox (37.06679pt too wide) in paragraph at lines 45--45
-[]\T1/cmr/m/n/10 Stefan Schröer. ``On non-projective nor-mal sur-faces''. In: \
-T1/cmr/m/it/10 Manuscripta
+Overfull \hbox (12.13931pt too wide) in paragraph at lines 57--57
+[]\T1/cmr/m/n/10 János Kol-lár. \T1/cmr/m/it/10 Lec-tures on res-o-lu-tion of s
+in-gu-lar-i-ties\T1/cmr/m/n/10 . Vol. 166.
+ []
+
+
+Overfull \hbox (6.78429pt too wide) in paragraph at lines 57--57
+\T1/cmr/m/n/10 An-nals of Math-e-mat-ics Stud-ies. Prince-ton Uni-ver-sity Pres
+s,
+ []
+
+
+Overfull \hbox (3.35812pt too wide) in paragraph at lines 57--57
+[]\T1/cmr/m/n/10 Qing Liu. \T1/cmr/m/it/10 Al-ge-braic ge-om-e-try and arith-me
+tic curves\T1/cmr/m/n/10 . Vol. 6.
+ []
+
+
+Overfull \hbox (7.20024pt too wide) in paragraph at lines 57--57
+\T1/cmr/m/n/10 Sec-ond. Vol. 106. Grad-u-ate Texts in Math-e-mat-ics. Springer,
+
  []
 
 [2] (./models_biblio.aux)
@@ -351,10 +376,10 @@ Package logreq Info: Writing requests to 'models_biblio.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 6383 strings out of 493638
- 110515 string characters out of 6146796
- 497305 words of memory out of 5000000
- 9760 multiletter control sequences out of 15000+600000
+ 6390 strings out of 493638
+ 110737 string characters out of 6146796
+ 497391 words of memory out of 5000000
+ 9767 multiletter control sequences out of 15000+600000
  11886 words of font info for 31 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  44i,6n,45p,810b,1119s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -20,7 +20,11 @@ Comments and feedback about these notes is highly encouraged!
 
 [Weierstrass models of elliptic curves](/teaching/Models_Weierstrass.pdf)
 
-[Intersection theory on regular surfaces](/teaching/Models_intersection.pdf)
+[Intersection theory on regular surfaces](/teaching/Models_intersection.pdf) - Note that the last section is not complete.
+
+[Resolution of singularities of surfaces](/teaching/Models_resolution.pdf)
+
+[Picard schemes](/teaching/Models_Picard.pdf)
 
 [Bibliography](/teaching/models_biblio.pdf)
 

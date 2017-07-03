@@ -23,7 +23,7 @@
 
 \refsection{0}
   \sortlist[entry]{anyt/global}
-    \entry{Artin}{article}{}
+    \entry{Artin_contraction}{article}{}
       \name{author}{1}{}{%
         {{hash=69a473a63b6a5b334a00dacc5c3ef319}{%
            family={Artin},
@@ -33,14 +33,14 @@
       }
       \strng{namehash}{69a473a63b6a5b334a00dacc5c3ef319}
       \strng{fullhash}{69a473a63b6a5b334a00dacc5c3ef319}
-      \field{labelalpha}{Artin}
+      \field{labelalpha}{Artin\_contraction}
       \field{sortinit}{A}
       \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0002-9327}
       \field{journaltitle}{Amer. J. Math.}
-      \field{shorthand}{Artin}
+      \field{shorthand}{Artin\_contraction}
       \field{title}{Some numerical criteria for contractability of curves on algebraic surfaces}
       \field{volume}{84}
       \field{year}{1962}
@@ -52,6 +52,31 @@
       \verb{url}
       \verb http://dx.doi.org/10.2307/2372985
       \endverb
+    \endentry
+    \entry{Artin_resolution}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=ba3b6798392b32feccc7c8b2f245b53e}{%
+           family={Artin},
+           family_i={A\bibinitperiod},
+           given={M.},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, New York}%
+      }
+      \strng{namehash}{ba3b6798392b32feccc7c8b2f245b53e}
+      \strng{fullhash}{ba3b6798392b32feccc7c8b2f245b53e}
+      \field{labelalpha}{Artin\_resolution}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Arithmetic geometry ({S}torrs, {C}onn., 1984)}
+      \field{shorthand}{Artin\_resolution}
+      \field{title}{Lipman's proof of resolution of singularities for surfaces}
+      \field{year}{1986}
+      \field{pages}{267\bibrangedash 287}
+      \range{pages}{21}
     \endentry
     \entry{Badescu}{book}{}
       \name{author}{1}{}{%
@@ -125,6 +150,37 @@
       \field{pages}{x+325}
       \range{pages}{-1}
     \endentry
+    \entry{Brion_Picard}{article}{}
+      \name{author}{1}{}{%
+        {{hash=977541cb33450695440d60f54e12e144}{%
+           family={Brion},
+           family_i={B\bibinitperiod},
+           given={Michel},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{977541cb33450695440d60f54e12e144}
+      \strng{fullhash}{977541cb33450695440d60f54e12e144}
+      \field{labelalpha}{Brion\_Picard}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1674-7283}
+      \field{journaltitle}{Sci. China Math.}
+      \field{number}{3}
+      \field{shorthand}{Brion\_Picard}
+      \field{title}{Which algebraic groups are {P}icard varieties?}
+      \field{volume}{58}
+      \field{year}{2015}
+      \field{pages}{461\bibrangedash 478}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1007/s11425-014-4882-3
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s11425-014-4882-3
+      \endverb
+    \endentry
     \entry{Conrad_models}{misc}{}
       \name{author}{1}{}{%
         {{hash=647c5d439906ef98914ad121844bba70}{%
@@ -144,6 +200,44 @@
       \field{title}{Minimal models for elliptic curves}
       \verb{url}
       \verb math.stanford.edu/~conrad/papers/minimalmodel.pdf
+      \endverb
+    \endentry
+    \entry{Gille_Szamuely}{book}{}
+      \name{author}{2}{}{%
+        {{hash=6c94f98ba7967a84541ff6708213e065}{%
+           family={Gille},
+           family_i={G\bibinitperiod},
+           given={Philippe},
+           given_i={P\bibinitperiod}}}%
+        {{hash=934491605fe4a22de62016eac47e5213}{%
+           family={Szamuely},
+           family_i={S\bibinitperiod},
+           given={Tamás},
+           given_i={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press, Cambridge}%
+      }
+      \strng{namehash}{9ba5c18ff9716544cad1887412f20ff9}
+      \strng{fullhash}{9ba5c18ff9716544cad1887412f20ff9}
+      \field{labelalpha}{Gille\_Szamuely}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-521-86103-8; 0-521-86103-9}
+      \field{series}{Cambridge Studies in Advanced Mathematics}
+      \field{shorthand}{Gille\_Szamuely}
+      \field{title}{Central simple algebras and {G}alois cohomology}
+      \field{volume}{101}
+      \field{year}{2006}
+      \field{pages}{xii+343}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1017/CBO9780511607219
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1017/CBO9780511607219
       \endverb
     \endentry
     \entry{Hartshorne}{book}{}
@@ -172,32 +266,95 @@
       \field{pages}{xvi+496}
       \range{pages}{-1}
     \endentry
-    \entry{Lipman}{article}{}
-      \name{author}{1}{}{%
-        {{hash=e4dab969a5e0f864302f10a4b7486952}{%
-           family={Lipman},
-           family_i={L\bibinitperiod},
-           given={Joseph},
-           given_i={J\bibinitperiod}}}%
+    \entry{Hauser}{article}{}
+      \name{author}{2}{}{%
+        {{hash=24bff0e5a2b47477072c627dfb28a9ea}{%
+           family={Faber},
+           family_i={F\bibinitperiod},
+           given={E.},
+           given_i={E\bibinitperiod}}}%
+        {{hash=1d74bfc83b2f14a2a58222c3ab3c6aa4}{%
+           family={Hauser},
+           family_i={H\bibinitperiod},
+           given={H.},
+           given_i={H\bibinitperiod}}}%
       }
-      \strng{namehash}{e4dab969a5e0f864302f10a4b7486952}
-      \strng{fullhash}{e4dab969a5e0f864302f10a4b7486952}
-      \field{labelalpha}{Lipman}
-      \field{sortinit}{L}
-      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \strng{namehash}{b6104b469f313d0913f2009f5f083cd1}
+      \strng{fullhash}{b6104b469f313d0913f2009f5f083cd1}
+      \field{labelalpha}{Hauser}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{0073-8301}
-      \field{journaltitle}{Inst. Hautes Études Sci. Publ. Math.}
-      \field{number}{36}
-      \field{shorthand}{Lipman}
-      \field{title}{Rational singularities, with applications to algebraic surfaces and unique factorization}
-      \field{year}{1969}
-      \field{pages}{195\bibrangedash 279}
-      \range{pages}{85}
-      \verb{url}
-      \verb http://www.numdam.org/item?id=PMIHES_1969__36__195_0
+      \field{issn}{0273-0979}
+      \field{journaltitle}{Bull. Amer. Math. Soc. (N.S.)}
+      \field{number}{3}
+      \field{shorthand}{Hauser}
+      \field{title}{Today's menu: geometry and resolution of singular algebraic surfaces}
+      \field{volume}{47}
+      \field{year}{2010}
+      \field{pages}{373\bibrangedash 417}
+      \range{pages}{45}
+      \verb{doi}
+      \verb 10.1090/S0273-0979-10-01295-4
       \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1090/S0273-0979-10-01295-4
+      \endverb
+    \endentry
+    \entry{Kleiman_Picard}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=953b294e306760cf402cb0ea88f724f9}{%
+           family={Kleiman},
+           family_i={K\bibinitperiod},
+           given={Steven\bibnamedelima L.},
+           given_i={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Amer. Math. Soc., Providence, RI}%
+      }
+      \strng{namehash}{953b294e306760cf402cb0ea88f724f9}
+      \strng{fullhash}{953b294e306760cf402cb0ea88f724f9}
+      \field{labelalpha}{Kleiman\_Picard}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Fundamental algebraic geometry}
+      \field{series}{Math. Surveys Monogr.}
+      \field{shorthand}{Kleiman\_Picard}
+      \field{title}{The {P}icard scheme}
+      \field{volume}{123}
+      \field{year}{2005}
+      \field{pages}{235\bibrangedash 321}
+      \range{pages}{87}
+    \endentry
+    \entry{Kollar}{book}{}
+      \name{author}{1}{}{%
+        {{hash=43fd239813bce49520fe61f6a161a3ed}{%
+           family={Kollár},
+           family_i={K\bibinitperiod},
+           given={János},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press, Princeton, NJ}%
+      }
+      \strng{namehash}{43fd239813bce49520fe61f6a161a3ed}
+      \strng{fullhash}{43fd239813bce49520fe61f6a161a3ed}
+      \field{labelalpha}{Kollar}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-691-12923-5; 0-691-12923-1}
+      \field{series}{Annals of Mathematics Studies}
+      \field{shorthand}{Kollar}
+      \field{title}{Lectures on resolution of singularities}
+      \field{volume}{166}
+      \field{year}{2007}
+      \field{pages}{vi+208}
+      \range{pages}{-1}
     \endentry
     \entry{Liu}{book}{}
       \name{author}{1}{}{%
@@ -350,6 +507,7 @@
       \endverb
     \endentry
   \endsortlist
+  \missing{Lipman}
 \endrefsection
 \endinput
 
