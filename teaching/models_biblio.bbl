@@ -150,6 +150,33 @@
       \field{pages}{x+325}
       \range{pages}{-1}
     \endentry
+    \entry{Breen}{book}{}
+      \name{author}{1}{}{%
+        {{hash=5d36175c00a7169a73c8b5e3f8b6bb18}{%
+           family={Breen},
+           family_i={B\bibinitperiod},
+           given={Lawrence},
+           given_i={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, Berlin}%
+      }
+      \strng{namehash}{5d36175c00a7169a73c8b5e3f8b6bb18}
+      \strng{fullhash}{5d36175c00a7169a73c8b5e3f8b6bb18}
+      \field{labelalpha}{Breen}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-540-12002-5}
+      \field{series}{Lecture Notes in Mathematics}
+      \field{shorthand}{Breen}
+      \field{title}{Fonctions thêta et théorème du cube}
+      \field{volume}{980}
+      \field{year}{1983}
+      \field{pages}{xiii+115}
+      \range{pages}{-1}
+    \endentry
     \entry{Brion_Picard}{article}{}
       \name{author}{1}{}{%
         {{hash=977541cb33450695440d60f54e12e144}{%
@@ -181,6 +208,29 @@
       \verb http://dx.doi.org/10.1007/s11425-014-4882-3
       \endverb
     \endentry
+    \entry{Conrad_abelian}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ae1052ce28fe7c29a262e7992587b838}{%
+           prefix={by},
+           prefix_i={b\bibinitperiod},
+           family={Tony\bibnamedelima Feng)},
+           family_i={T\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Brian\bibnamedelimb Conrad\bibnamedelima (notes},
+           given_i={B\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim (\bibinitperiod}}}%
+      }
+      \strng{namehash}{ae1052ce28fe7c29a262e7992587b838}
+      \strng{fullhash}{ae1052ce28fe7c29a262e7992587b838}
+      \field{labelalpha}{Conrad\_abelian}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Conrad\_abelian}
+      \field{title}{Abelian varieties}
+      \verb{url}
+      \verb math.stanford.edu/~conrad/papers/minimalmodel.pdf
+      \endverb
+    \endentry
     \entry{Conrad_models}{misc}{}
       \name{author}{1}{}{%
         {{hash=647c5d439906ef98914ad121844bba70}{%
@@ -200,6 +250,45 @@
       \field{title}{Minimal models for elliptic curves}
       \verb{url}
       \verb math.stanford.edu/~conrad/papers/minimalmodel.pdf
+      \endverb
+    \endentry
+    \entry{Faltings_Chai}{book}{}
+      \name{author}{2}{}{%
+        {{hash=29294fedac168a18fdff7d5352ccc14d}{%
+           family={Faltings},
+           family_i={F\bibinitperiod},
+           given={Gerd},
+           given_i={G\bibinitperiod}}}%
+        {{hash=9fdfad7cd96b16ca241ae7cae1857378}{%
+           family={Chai},
+           family_i={C\bibinitperiod},
+           given={Ching-Li},
+           given_i={C\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, Berlin}%
+      }
+      \strng{namehash}{d11ca450b823ef5e5d184d5d3e17c9c1}
+      \strng{fullhash}{d11ca450b823ef5e5d184d5d3e17c9c1}
+      \field{labelalpha}{Faltings\_Chai}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-540-52015-5}
+      \field{note}{With an appendix by David Mumford}
+      \field{series}{Ergebnisse der Mathematik und ihrer Grenzgebiete (3) [Results in Mathematics and Related Areas (3)]}
+      \field{shorthand}{Faltings\_Chai}
+      \field{title}{Degeneration of abelian varieties}
+      \field{volume}{22}
+      \field{year}{1990}
+      \field{pages}{xii+316}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/978-3-662-02632-8
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/978-3-662-02632-8
       \endverb
     \endentry
     \entry{Gille_Szamuely}{book}{}
@@ -408,6 +497,31 @@
       \field{volume}{5}
       \field{year}{2008}
       \field{pages}{xii+263}
+      \range{pages}{-1}
+    \endentry
+    \entry{Raynaud_ample}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f23d91cf889c20dc5c31fd9532a2427e}{%
+           family={Raynaud},
+           family_i={R\bibinitperiod},
+           given={Michel},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, Berlin-New York}%
+      }
+      \strng{namehash}{f23d91cf889c20dc5c31fd9532a2427e}
+      \strng{fullhash}{f23d91cf889c20dc5c31fd9532a2427e}
+      \field{labelalpha}{Raynaud\_ample}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Lecture Notes in Mathematics, Vol. 119}
+      \field{shorthand}{Raynaud\_ample}
+      \field{title}{Faisceaux amples sur les schémas en groupes et les espaces homogènes}
+      \field{year}{1970}
+      \field{pages}{ii+218}
       \range{pages}{-1}
     \endentry
     \entry{Schroer}{article}{}

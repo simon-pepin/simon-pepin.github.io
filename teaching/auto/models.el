@@ -3,6 +3,7 @@
  (lambda ()
    (LaTeX-add-bibitems
     "Conrad_models"
+    "Conrad_abelian"
     ""
     "Conrad_image_trace"
     "Conrad_Chevalley"

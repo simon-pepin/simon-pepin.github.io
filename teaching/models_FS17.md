@@ -26,6 +26,8 @@ Comments and feedback about these notes is highly encouraged!
 
 [Picard schemes](/teaching/Models_Picard.pdf)
 
+[Abelian varieties and line bundles](/teaching/Models_abelian.pdf)
+
 [Bibliography](/teaching/models_biblio.pdf)
 
 ### _Summary:_

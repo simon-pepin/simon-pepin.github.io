@@ -2054,20 +2054,24 @@
     <bcf:citekey order="1">Liu</bcf:citekey>
     <bcf:citekey order="2">BLR</bcf:citekey>
     <bcf:citekey order="3">Conrad_models</bcf:citekey>
-    <bcf:citekey order="4">Badescu</bcf:citekey>
-    <bcf:citekey order="5">Gille_Szamuely</bcf:citekey>
-    <bcf:citekey order="6">Artin_resolution</bcf:citekey>
-    <bcf:citekey order="7">Kleiman_Picard</bcf:citekey>
-    <bcf:citekey order="8">Brion_Picard</bcf:citekey>
-    <bcf:citekey order="9">Schroer</bcf:citekey>
-    <bcf:citekey order="10">Silverman</bcf:citekey>
-    <bcf:citekey order="11">Silverman_adv</bcf:citekey>
-    <bcf:citekey order="12">Mumford</bcf:citekey>
-    <bcf:citekey order="13">Hartshorne</bcf:citekey>
-    <bcf:citekey order="14">Artin_contraction</bcf:citekey>
-    <bcf:citekey order="15">Kollar</bcf:citekey>
-    <bcf:citekey order="16">Hauser</bcf:citekey>
-    <bcf:citekey order="17">Lipman</bcf:citekey>
+    <bcf:citekey order="4">Conrad_abelian</bcf:citekey>
+    <bcf:citekey order="5">Breen</bcf:citekey>
+    <bcf:citekey order="6">Faltings_Chai</bcf:citekey>
+    <bcf:citekey order="7">Raynaud_ample</bcf:citekey>
+    <bcf:citekey order="8">Badescu</bcf:citekey>
+    <bcf:citekey order="9">Gille_Szamuely</bcf:citekey>
+    <bcf:citekey order="10">Artin_resolution</bcf:citekey>
+    <bcf:citekey order="11">Kleiman_Picard</bcf:citekey>
+    <bcf:citekey order="12">Brion_Picard</bcf:citekey>
+    <bcf:citekey order="13">Schroer</bcf:citekey>
+    <bcf:citekey order="14">Silverman</bcf:citekey>
+    <bcf:citekey order="15">Silverman_adv</bcf:citekey>
+    <bcf:citekey order="16">Mumford</bcf:citekey>
+    <bcf:citekey order="17">Hartshorne</bcf:citekey>
+    <bcf:citekey order="18">Artin_contraction</bcf:citekey>
+    <bcf:citekey order="19">Kollar</bcf:citekey>
+    <bcf:citekey order="20">Hauser</bcf:citekey>
+    <bcf:citekey order="21">Lipman</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt/global" type="entry" sortscheme="anyt" sortnamekeyscheme="global">
   <bcf:sorting>
