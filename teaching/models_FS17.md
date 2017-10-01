@@ -28,6 +28,8 @@ Comments and feedback about these notes is highly encouraged!
 
 [Abelian varieties and line bundles](/teaching/Models_abelian.pdf)
 
+[N\'eron models](/teaching/Models_Neron.pdf)
+
 [Bibliography](/teaching/models_biblio.pdf)
 
 ### _Summary:_
@@ -44,19 +46,12 @@ topic on its own, for instance for the formulation and study of the
 Birch-Swinnerton-Dyer conjecture, and also a first step towards the
 general theory of moduli of curves and abelian varieties. More
 precisely, given a curve or an abelian variety over a local or global
-field, we will establish
-
-- the existence of the **minimal regular model** of the curve,
-- the existence of the **Néron model** of the abelian variety,
-- the relationship between the minimal regular model of a curve and
-the Néron model of its Jacobian,
-- the **stable reduction theorem** for curves, and
-- the **semi-abelian reduction theorem** for abelian varieties.
+field, we will establish the existence of the **minimal regular model** of the curve and the existence of the **Néron model** of the abelian variety. We will also briefly discuss the relationship between the minimal regular model of a curve and
+the Néron model of its Jacobian.
 
 Along the way, we will encounter many basic tools of algebraic
 geometry: resolution of singularities of surfaces, intersection theory
-on surfaces, dualizing complexes, the Picard functor, rigid analytic
-geometry of curves, ...
+on surfaces, dualizing complexes, the Picard functor...
 
 #### _Prerequisites:_
 
