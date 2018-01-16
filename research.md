@@ -14,4 +14,8 @@ In my PhD work, under the supervision of [Joseph Ayoub](http://user.math.uzh.ch/
 
 #### Preprints:
 
-* [The motivic t-structure for relative 1-motives](https://arxiv.org/abs/1512.00266)
+* [Triangulated categories of relative 1-motives](https://arxiv.org/abs/1512.00266)
+
+* (with V. Hoskins) [On the Voevodsky motive of the moduli stack of vector bundles on a curve](https://arxiv.org/abs/1711.11072)
+
+* [Constructible 1-motives and exactness](https://arxiv.org/abs/1712.01180)

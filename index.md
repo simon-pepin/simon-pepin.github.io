@@ -9,7 +9,6 @@ I am a mathematician, working on questions in algebraic and arithmetic geometry,
 
 I am currently a post-doctoral researcher in the Research group in [Arithmetic Geometry](http://www.mi.fu-berlin.de/en/math/groups/arithmetic_geometry/index.html) at the Freie Universität Berlin, under the joint supervision of Professor [Esnault](http://www.mi.fu-berlin.de/users/esnault/) and Professor [Srinivas](http://www.math.tifr.res.in/~srinivas/) (currently Einstein visiting fellow at the FU). I was previously a Phd student at the [University of Zürich](http://www.math.uzh.ch/).
 
-**On August 28-September 1, 2017, I have organised a summer school on [Motives for periods](https://people.math.ethz.ch/~jfresan/berlin.html) together with Giuseppe Ancona and Javier Fresan.**
 
 
 
