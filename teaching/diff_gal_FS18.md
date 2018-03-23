@@ -21,3 +21,7 @@ We will follow parts of the textbook
 
 - **Galois theory of linear differential equations (Springer Grundlehren der mathematischen Wissenschaften), Singer and Van der Put.**
 
+### _Planning_:
+
+In preparation
+
