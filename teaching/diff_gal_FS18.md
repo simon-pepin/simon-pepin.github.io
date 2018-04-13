@@ -23,5 +23,7 @@ We will follow parts of the textbook
 
 ### _Planning_:
 
-In preparation
+The program for the first eight talks is written. The rest of the talks will be adapted to the interests of the participants.
+
+[Program](/teaching/DGT_program.pdf)
 
