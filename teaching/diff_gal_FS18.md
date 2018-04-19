@@ -8,7 +8,7 @@ permalink: /teaching/diff_gal_FS18
 
 **Time**: Tuesday, 12h-14h,
 
-**Room**: SR 119 Arnimallee 3
+**Room**: SR 210 Arnimallee 3
 
 ### _Summary:_
 **Galois theory** relates questions about algebraic extensions of fields to (finite) Galois groups. **Differential Galois theory** relates questions about linear differential equations to (algebraic) differential Galois groups. Galois theory takes place in a more general context of algebra (rings, modules, fields, etc.); differential Galois theory takes place in the context of differential algebra. 
@@ -20,6 +20,10 @@ The first goal of this seminar is to learn the basics of differential algebra an
 We will follow parts of the textbook 
 
 - **Galois theory of linear differential equations (Springer Grundlehren der mathematischen Wissenschaften), Singer and Van der Put.**
+
+Another good introduction to the subject is the following paper:
+
+- **A first look at differential algebra, Hubbard and Littell**
 
 ### _Planning_:
 
