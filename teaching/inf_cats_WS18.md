@@ -6,9 +6,11 @@ permalink: /teaching/inf_cats_WS18
 
 ### _Organisation:_
 
-**Time**: Tuesday, 12h-14h,
+**Time**: Do 16:00-18:00
 
-**Room**: SR 210 Arnimallee 3
+**First meeting**: 18.10.2018
+
+**Room**: KöLu24-26/SR 006 Neuro/Mathe (Königin-Luise-Str. 24 / 26)
 
 ### _Summary:_
 
