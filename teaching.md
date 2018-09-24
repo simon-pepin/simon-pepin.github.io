@@ -6,7 +6,7 @@ permalink: /teaching/
 
 Winter semester 2018: 
 
-* [Seminar on infinity categories](https://simon-github.io/teaching/inf_cats_WS18.html)
+* [Seminar on infinity categories](https://simon-pepin.github.io/teaching/inf_cats_WS18.html)
 
 Spring semester 2018:
 

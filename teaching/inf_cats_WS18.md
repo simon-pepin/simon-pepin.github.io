@@ -32,6 +32,22 @@ For infinity-category theory:
 
 ### _Planning_:
 
-Program in preparation. 
+Preliminary outline:
+
+- Introduction
+- Categories, Functors and Natural Transformations
+- Universal Properties, Representable Functors and the Yoneda Lemma
+- Limits and Colimits
+- Adjoint Functors
+- Simplicial Sets
+- Infinity-categories
+- Homotopical algebra and Model categories
+- The Joyal model structure for infinity categories
+- Straightening and unstraightening, the Yoneda lemma for infinity categories
+- Adjoints, limits and colimits in infinity categories
+- Presentable infinity-categories and Model Categories
+- Monoidal infinity-categories
+- Stable infinity-categories
+- Infinity topoi
 
 [comment]: # [Program](/teaching/inf_cats_program.pdf)
