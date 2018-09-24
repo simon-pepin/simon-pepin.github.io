@@ -1,0 +1,362 @@
+\documentclass[a4paper]{amsart}
+
+
+% Standard Packages
+\usepackage{amssymb}
+%\usepackage{amscd}
+%\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+%\usepackage{varioref}
+\usepackage[arrow,curve,matrix]{xy}
+\usepackage{mdframed}
+
+%% Graphics Packages
+%\usepackage{colortbl}
+%\usepackage{graphicx}
+%\usepackage{tikz}
+
+% Font packages
+\usepackage{mathrsfs}
+
+\DeclareUnicodeCharacter{00A0}{ }
+
+
+%
+% GENERAL TYPESETTING
+%
+%
+%% Colours for hyperlinks
+%\definecolor{linkred}{rgb}{0.7,0.2,0.2}
+%\definecolor{linkblue}{rgb}{0,0.2,0.6}
+
+% Limit table of contents to section titles
+\setcounter{tocdepth}{1}
+
+% Numbering of figures (see below for numbering of equations)
+\numberwithin{figure}{section}
+
+% Add an uparrow to the bibliography entries, just before the back-list of references
+\usepackage[hyperpageref]{backref}
+\renewcommand{\backref}[1]{$\uparrow$~#1}
+
+% Numbering of parts in roman numbers
+%\renewcommand\thepart{\rm \Roman{part}}
+
+% Sloppy formatting -- often looks better
+\sloppy
+
+% Changes the layout of descriptions and itemized lists. The indent specified in
+% the original amsart style is too much for my taste.
+%\setdescription{labelindent=\parindent, leftmargin=2\parindent}
+%\setitemize[1]{labelindent=\parindent, leftmargin=2\parindent}
+%\setenumerate[1]{labelindent=0cm, leftmargin=*, widest=iiii}
+
+
+
+%
+% Input characters
+%
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{χ}{\ensuremath{\chi}}
+\newunicodechar{δ}{\ensuremath{\delta}}
+\newunicodechar{∆}{\ensuremath{\Delta}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{Γ}{\ensuremath{\Gamma}}
+\newunicodechar{ι}{\ensuremath{\iota}}
+\newunicodechar{κ}{\ensuremath{\kappa}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{Λ}{\ensuremath{\Lambda}}
+\newunicodechar{μ}{\ensuremath{\mu}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+\newunicodechar{Ω}{\ensuremath{\Omega}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{φ}{\ensuremath{\phi}}
+\newunicodechar{Φ}{\ensuremath{\Phi}}
+\newunicodechar{ψ}{\ensuremath{\psi}}
+\newunicodechar{Ψ}{\ensuremath{\Psi}}
+\newunicodechar{ρ}{\ensuremath{\rho}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{Θ}{\ensuremath{\Theta}}
+
+
+\newunicodechar{∞}{\ensuremath{\infty}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{⨯}{\ensuremath{\times}}
+\newunicodechar{∪}{\ensuremath{\cup}}
+\newunicodechar{∩}{\ensuremath{\cap}}
+\newunicodechar{⊇}{\ensuremath{\supseteq}}
+\newunicodechar{⊃}{\ensuremath{\supset}}
+\newunicodechar{⊆}{\ensuremath{\subseteq}}
+\newunicodechar{⊂}{\ensuremath{\subset}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{◦}{\ensuremath{\circ}}
+\newunicodechar{°}{\ensuremath{^\circ}}
+\newunicodechar{…}{\ifmmode\mathellipsis\else\textellipsis\fi}
+\newunicodechar{⊗}{\ensuremath{\otimes}}
+
+%operators
+\newcommand{\salt}{\mathrm{s\mbox{-}alt}}
+\newcommand{\stimes}{⨯^{\salt}}
+\newcommand{\isom}{\cong}
+\newcommand{\tensor}{\otimes}
+\newcommand{\Frac}{\mathsf{Frac}} % Quotient field
+\newcommand{\Gal}{\mathsf{Gal}} % Galois group
+\newcommand{\Aut}{\mathsf{Aut}} % Automorphism group
+
+
+%theorem environments
+\theoremstyle{theorem}
+\newtheorem{thm}{Theorem}
+\newtheorem*{thmU}{Theorem}
+\newtheorem{theo}{Theorem}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem*{corU}{Corollary}
+\newtheorem{lemm}[thm]{Lemma}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{propdef}[thm]{Definition and Proposition}
+\newtheorem{obse}[thm]{Observation}
+\newtheorem{rema}[thm]{Remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{remi}[thm]{Reminder}
+\newtheorem{exam}[thm]{Example}
+\newtheorem{summ}[thm]{Summary}
+\newtheorem{nota}[thm]{Notation}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem*{ques}{Question}
+
+
+
+
+%letters
+\DeclareSymbolFontAlphabet{\scr}{rsfs}
+\newcommand{\Fh}{\mathcal{F}}
+\newcommand{\Oh}{\mathcal{O}}
+\newcommand{\OO}{\mathcal{O}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\Fp}{\mathbb{F}\!{_p}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Pe}{\mathbb{P}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+
+\newcommand{\Top}{{Top}}
+%\newcommand{\Top}{\mathsf{Top}}
+\newcommand{\pTop}{{Top}_\ast}
+%\newcommand{\pTop}{\mathsf{Top}_\ast}
+\newcommand{\grVec}{{Vec}}
+%\newcommand{\grVec}{\mathsf{Vec}}
+\newcommand{\sSet}{{\mathsf{Set}_\Delta}}
+\newcommand{\Spaces}{{\mathcal{S}}}
+\newcommand{\PreShv}{{{P}}}
+%\newcommand{\PreShv}{{\mathcal{P}}}
+\newcommand{\Shv}{{{Shv}}}
+%\newcommand{\Shv}{{\mathsf{Shv}}}
+\newcommand{\Op}{{{Op}}}
+%\newcommand{\Op}{{\mathsf{Op}}}
+\newcommand{\Sp}{{{Sp}}}
+%\newcommand{\Sp}{{\mathsf{Sp}}}
+
+%Special
+\newcommand{\val}{\mathrm{val}}
+\newcommand{\shval}{\mathrm{shval}}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\trd}{tr{.}d}
+\DeclareMathOperator{\uhom}{\underline{hom}}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Map}{Map}
+%\DeclareMathOperator{\char}{char}
+
+\title{$∞$-categories seminar \\
+Talk III. $∞$-Categories}
+
+\renewcommand{\thesection}{\Roman{section}}
+\setlength{\parskip}{1em}
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+The ∞-category $Top$ of topological spaces is the following simplicial set. An $n$-simplex is:
+\begin{enumerate}
+ \item A tuple $(X_0, \dots, X_n)$ of $n{+}1$ topological spaces.
+
+ \item An tuple of morphisms  
+ \[ (h_{i,j}: X_i {\times} \square^{j{-}i{-}1}_{top} \to X_{j})_{0 \leq i < j \leq n} \]% (by convention, $\square^{0}_{top} = \{\ast\}$ and $\square^{-1}_{top} = \varnothing$).
+ where $\square^m_{top} = \{ (t_1, \dots, t_m) \in \RR^m : 0 \leq t_i \leq 1 \}$.
+
+ \item The morphisms $h_{i,j}$ are required to satisfy the compatibility condition: For every $0 \leq i < j < k \leq n$, we should have 
+\begin{align*}
+h_{i,k}(x, (s_1, \dots, s_{j{-}i{-}1}, 1, t_1, \dots, t_{k{-}j{-}1})) \\
+= h_{j,k}(h_{i,j}(x, (s_1, \dots, s_{j{-}i{-}1})), (t_1, \dots, t_{k{-}j{-}1})) 
+\end{align*}
+for all $x \in X_i$, $(s_1, \dots, s_{j{-}i{-}1}) \in \square_{top}^{j{-}i{-}1}$, $(t_1, \dots, t_{k{-}j{-}1}) \in \square_{top}^{k{-}j{-}1}$.
+% For every $a, b$, the restriction of $h_{i,k{+}a{+}b}$ to $X_i{\times}\square^{a{-}1}_{top} {\times} \square^{b{-}1}_{top} \subseteq X_{i}{\times}\square^{a{+}b{-}1}_{top}$ is the composition $h_{i{+}a,i{+}a{+}b} \circ (h_{i,i{+}a} \times \id_{\square^{b{-}1}_{top}})$. Here, the inclusion $\square^{a{-}1}_{top} {\times} \square^{b{-}1}_{top} \subseteq \square^{a{+}b{-}1}_{top}$ is given by $((t_1, \dots, t_{a-1}), (s_1, \dots, s_{b-1})) \mapsto (t_1, \dots, t_{a-1}, 1, s_1, \dots, s_{b-1})$.
+\end{enumerate}
+
+Notice that a tuple $((X_0, \dots, X_n), (h_{ij})_{0 \leq i < j \leq n})$ defines a morphism $$f_{ij}(-) \stackrel{def}{=} h_{ij}(-, (0,0,\dots, 0)) : X_i \to X_j$$ for each $0 \leq i < j \leq n$. Moreover, for every $i < i_1 < i_2 < \dots  < i_k < j$ the compatibility conditions imply that $$h_{ij}(-, e_{i_1} + \dots + e_{j_k}) = f_{i_k,j} \circ f_{i_{k-1},i_k} \circ \dots \circ f_{i, i_1}: X_i \to X_j$$ where $e_{i'} = (0, \dots, 0, 1, 0, \dots, 0)$ is the $i'$th standard basis vector of $\RR^{j{-}i}$. So we can interpret $h_{ij}$ as a homotopy between all the possible compositions of the $f$'s with $f_{ij}$ at the ``lowest'' corner of $\square^{j{-}i{-}1}_{top}$ and $f_{j{-}1,j} \circ f_{j{-}2,j{-}1} \circ f_{i{+}1,i{+}2} \circ f_{i,i{+}1}$ at the ``highest'' corner. The compatibility conditions then can be interpreted as asking that these homotopies are compatible with all compositions.
+
+The face morphisms are
+\[ d_k: (X_0, \dots, X_n, h_{i,j}) \mapsto (X_0, \dots, X_{k-1}, X_{k+1}, \dots, X_n, h'_{i,j}) \]
+where 
+\[ h_{i,j}'(x,t) = 
+\left \{ \begin{array}{cc}
+h_{i,j}(x,t) & i < j < k \\
+h_{i,j{+}1}(x, (t_1, \dots, t_{k{-}i{-}1}, 0, t_{k{-}i}, \dots, t_{j{-}i{-}1})) & i < k \leq j \\
+h_{i{+}1,j{+}1}(x,t) & k \leq i < j.
+\end{array} \right .\]
+The degeneracy morphisms are 
+\[ d_k: (X_0, \dots, X_n, h_{i,j}) \mapsto (X_0, \dots, X_{k}, X_{k}, \dots, X_n, h'_{i,j}) \]
+where 
+\[ h_{i,j}'(x,t) = 
+\left \{ \begin{array}{cc}
+h_{i,j}(x,t) & i < j \leq k \\
+h_{i,j{-}1}(x, (t_1, \dots, t_{k{-}i{-}1}, t_{k{-}i{+}1}, \dots, t_{j{-}i{-}1})) & i \leq k < j \\
+h_{i{-}1,j{-}1}(x,t) & k < i < j.
+\end{array} \right .\]
+Here, we interpret $h_{i,i}$ as $\id_{X_i}$. 
+%Given a morphism $\phi: [m] \to [n]$, the corresponding morphism $\Top_n \to \Top_m$ sends a $n$-simplex $((X_i), (h_{i, a}))$ to the $m$-simplex whose tuple of spaces is $(X_{\phi(0)}, \dots, X_{\phi(m)})$. For the morphisms $h_{i, a}$, we observe that $\phi$ induces a morphism %
+%$\square^{a-1}_{top} \to \square^{\phi(a{+}i){-}\phi(i){-}1}_{top}$ %
+%by sending %
+%$t_1e_1 {+} \dots {+} t_{a{-}1}e_{a{-}1} \in \square^{a-1}_{top}$ %
+%to %
+%$t_1e_{\phi(i{+}1){-}\phi(i)} {+} \dots {+} t_{a{-}1}e_{\phi(a{-}1{+}i){-}\phi(i)} \in \square^{\phi(a{+}i){-}\phi(i){-}1}_{top}$ (we interpret $e_0$ and $e_{\phi(a{+}i){-}\phi(i)}$ as 0 if they occur). Then we take the new $h_{i,a}$'s to be the compositions %
+%$X_{\phi(i)} {\times} \square^{a-1}_{top} %
+%\to X_{\phi(i)} {\times} \square^{\phi(a{+}i){-}\phi(i){-}1}_{top} %
+%\to X_{\phi(a{+}i)}$.
+
+Note that every sequence of continuous homomorphisms $X_0 \stackrel{f_1}{\to} \dots \stackrel{f_n}{\to} X_n$ defines an $n$-simplex: choose $h_{i,j}$ to be the composition $X_i {\times} \square^{j{-}i{-}1} \to X_i \stackrel{f_{i{+}1}}{\to} X_{i {+} 1} \stackrel{f_{i{+}2}}{\to} \dots \stackrel{f_{j}}{\to} X_{j}$ (i.e., the trivial homotopy).
+
+We can write this data in an upper triangular matrix
+\[ \left ( 
+\begin{array}{cccccc}
+X_0 
+& h_{01} 
+& h_{02} 
+& h_{03} 
+& h_{04} 
+& h_{05} 
+\\
+& X_1 & h_{01} & h_{13} & h_{14} & h_{15}   \\
+& & X_2  & h_{23} & h_{24} & h_{25}  \\
+& & & X_3  & h_{34} & h_{35} \\
+& & & & X_4  & h_{45}   \\
+& & & & & X_5 
+\end{array}
+\right ) \]
+
+Now we will be concerned with morphisms $\Delta^1 * \partial \Delta^n \to Top$. There is a canonical inclusion $\Delta^1 * \partial \Delta^n \subseteq \Delta^{n+2}$, as 
+\[ \Delta^1 * \partial \Delta^n  = \cup_{i = 2}^{n+2} d_i \Delta^{n+2}. \]
+Consequently, a morphism as above corresponds to similar data $((X_i), (h_{ij}))$ and compatibilities as for a morphism $\Delta^{n+2} \to Top$, except, $h_{0,n{+}2}, h_{1,n{+}2}, h_{2,n{+}2}$ have as sources
+\[ h_{2,n{+}2}: X_2 \times \partial \square^n \to X_{n+2} \]
+\[ h_{1,n{+}2}: X_1 \times \sqcap^{n+1}_{1,1} \to X_{n+2} \]
+\[ h_{0,n{+}2}: X_0 \times (\sqcap^{n+1}_{1,1} \cap \sqcap^{n+1}_{1,2}) \to X_{n+2} \]
+here we define
+\begin{align*}
+\sqcap^{n}_{\epsilon,i} &= \{ (t_1, \dots, t_n) : t_j = 0 \textrm{ or } 1 \textrm{ for some } j \neq i \textrm{ or } t_i = 1-\epsilon \}  \\
+&= \cup_{(\epsilon', i') \neq (\epsilon, i)} d_{\epsilon',i'}\square^n 
+\end{align*}
+%\sqsubset
+
+Our interest in these morphisms is to calculate the colimit of a morphism $A \to B$. 
+
+Actually we are more interested in morphisms $(0 \rightrightarrows 1) * \Delta^n \to Top$ so we can calculate coequalisers. Notice that $(0\rightrightarrows 1) = \Delta^1 \sqcup_{\partial \Delta^1} \Delta^1$. Since join commutes with colimits we deduce that $(0 \rightrightarrows 1) * \Delta^n = \Delta^{n+1} \sqcup_{\partial \Delta^1 * \Delta^n} \Delta^{n+1}$.
+
+We also have $\partial \Delta^1 * \Delta^n \subseteq \Delta^{n+1}$, as a partially ordered set, is the set of subsets $I \subseteq [n+1]$ such that $\{0, 1\} \not\subseteq I$. On the other hand, $\Lambda^{n+1}_i$ as a partially ordered set is the set of $I \subseteq [n+1]$ such that $I \neq [n+1]$ and $I \neq \{0, \dots, \hat{i}, \dots, n+1\}$. 
+
+On the other hand, if we use pushouts, then our diagram categories are all 0-categories. The indexing category for a pushout is $\Lambda^2_0$. The category $\Lambda^2_0 * \Delta^n$ can be described as the partially ordered set $\{00, 01, 10, 22, 33, 44, \dots, nn \}$. A morphism $\Lambda^2_0 * \Delta^n \to Top$ is the data of 
+\begin{enumerate}
+ \item Spaces $X_0, X_1, X_{1'}, X_2, \dots, X_n$,
+ \item morphisms 
+ \begin{itemize}
+  \item $X_0 \times \Lambda \!\!\square_{top}^{j-1} \to X_j$ for $2 \leq j$
+ \item  $X_i \times \square_{top}^{j-i-1} \to X_j$ for $(i,j) = (0,1), (0,1')$ and all $i < j \in \{1, 1', 2, 3, \dots, n\}$.
+ \end{itemize}
+ \item compatibilities as above.
+\end{enumerate}
+Here, 
+\[ \Lambda \!\!\square_{top}^{n} = \square_{top}^{n} \amalg_{d_{01}\square_{top}^{n}} \square_{top}^{n} = |\Lambda^2_0| \times \square_{top}^{n-1} \]
+
+
+We can organise this data into an upper triangular matrix
+\[ \left ( 
+\begin{array}{cccccc}
+X_0 
+& h_{01}, h_{01'} 
+& h_{02} 
+& h_{03} 
+& h_{04} 
+& h_{05} 
+\\
+& X_1, X_{1'} & h_{12}, h_{1'2} & h_{13}, h_{1'3} & h_{14}, h_{1'4} & h_{15}, h_{1'5}   \\
+& & X_2  & h_{23} & h_{24} & h_{25}  \\
+& & & X_3  & h_{34} & h_{35} \\
+& & & & X_4  & h_{45}   \\
+& & & & & X_5 
+\end{array}
+\right ) \]
+
+
+
+
+
+%\[ \left ( 
+%\begin{array}{cccccc}
+%X_0 
+%& X_0{\times}\square^{1} \stackrel{h_{01}}{\to} X_1 
+%& X_0{\times}\square^{2} \stackrel{h_{02}}{\to} X_2 
+%& X_0{\times}\square^{3} \stackrel{h_{03}}{\to} X_3 
+%& X_0{\times}\square^{4} \stackrel{h_{04}}{\to} X_4 
+%& X_0{\times}\square^{5} \stackrel{h_{05}}{\to} X_5 
+%\\
+%& X_1 & X_0{\times}\square^{1} \stackrel{h_{01}}{\to} X_1 & h_{13} & h_{14} & h_{15}   \\
+%& & X_2  & h_{23} & h_{24} & h_{25}  \\
+%& & & X_3  & h_{34} & h_{35} \\
+%& & & & X_4  & h_{45}   \\
+%& & & & & X_5 
+%\end{array}
+%\right ) \]
+%
+%
+
+
+
+
+
+
+
+
+\end{document}
+
+

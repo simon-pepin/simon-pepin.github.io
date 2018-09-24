@@ -1,0 +1,589 @@
+\documentclass{amsart}
+\usepackage{amscd}
+\usepackage{color}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\newcommand\hmmax{0}
+\newcommand\bmmax{0}
+\usepackage{bm}
+\usepackage[all,cmtip]{xy}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{vmargin}
+\usepackage{verbatim}
+\usepackage{cleveref}
+\usepackage{stackrel}
+\usepackage{epigraph}
+\usepackage{chngcntr}
+\usepackage{etoolbox}
+\usepackage[backend=biber, doi=false,isbn=false, url=false]{biblatex}
+\newtheorem{theo}{Theorem}[section]
+\newtheorem{cor}[theo]{Corollary}
+\newtheorem{prop}[theo]{Proposition}
+\newtheorem{lemma}[theo]{Lemma}
+\newtheorem{claim}[theo]{Claim}
+\newtheorem{conj}[theo]{Conjecture}
+\newtheorem{question}[theo]{Question}
+\theoremstyle{definition}
+\newtheorem{defi}[theo]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theo]{Remark}
+\newtheorem{notation}[theo]{Notation}
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+\newcommand{\Ca}{{\mathcal{a}}}
+\newcommand{\Cb}{{\mathcal{b}}}
+\newcommand{\Cc}{{\mathcal{c}}}
+\newcommand{\Cd}{{\mathcal{d}}}
+\newcommand{\Ce}{{\mathcal{e}}}
+\newcommand{\Cf}{{\mathcal{f}}}
+\newcommand{\Cg}{{\mathcal{g}}}
+\newcommand{\Ch}{{\mathcal{h}}}
+\newcommand{\Ci}{{\mathcal{i}}}
+\newcommand{\Cj}{{\mathcal{j}}}
+\newcommand{\Ck}{{\mathcal{k}}}
+\newcommand{\Cl}{{\mathcal{l}}}
+\newcommand{\Cm}{{\mathcal{m}}}
+\newcommand{\Cn}{{\mathcal{n}}}
+\newcommand{\Co}{{\mathcal{o}}}
+\newcommand{\Cp}{{\mathcal{p}}}
+\newcommand{\Cq}{{\mathcal{q}}}
+\newcommand{\Cr}{{\mathcal{r}}}
+\newcommand{\Cs}{{\mathcal{s}}}
+\newcommand{\Ct}{{\mathcal{t}}}
+\newcommand{\Cu}{{\mathcal{u}}}
+\newcommand{\Cv}{{\mathcal{v}}}
+\newcommand{\Cw}{{\mathcal{w}}}
+\newcommand{\Cx}{{\mathcal{x}}}
+\newcommand{\Cy}{{\mathcal{y}}}
+\newcommand{\Cz}{{\mathcal{z}}}
+\newcommand{\CA}{{\mathcal{A}}}
+\newcommand{\CB}{{\mathcal{B}}}
+\newcommand{\CC}{{\mathcal{C}}}
+\renewcommand{\CD}{{\mathcal{D}}}
+\newcommand{\CE}{{\mathcal{E}}}
+\newcommand{\CF}{{\mathcal{F}}}
+\newcommand{\CG}{{\mathcal{G}}}
+\newcommand{\CH}{{\mathcal{H}}}
+\newcommand{\CI}{{\mathcal{I}}}
+\newcommand{\CJ}{{\mathcal{J}}}
+\newcommand{\CK}{{\mathcal{K}}}
+\newcommand{\CL}{{\mathcal{L}}}
+\newcommand{\CM}{{\mathcal{M}}}
+\newcommand{\CN}{{\mathcal{N}}}
+\newcommand{\CO}{{\mathcal{O}}}
+\newcommand{\CP}{{\mathcal{P}}}
+\newcommand{\CQ}{{\mathcal{Q}}}
+\newcommand{\CR}{{\mathcal{R}}}
+\newcommand{\CS}{{\mathcal{S}}}
+\newcommand{\CT}{{\mathcal{T}}}
+\newcommand{\CU}{{\mathcal{U}}}
+\newcommand{\CV}{{\mathcal{V}}}
+\newcommand{\CW}{{\mathcal{W}}}
+\newcommand{\CX}{{\mathcal{X}}}
+\newcommand{\CY}{{\mathcal{Y}}}
+\newcommand{\CZ}{{\mathcal{Z}}}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Homint}{\underline{\mathsf{Hom}}}
+\newcommand{\Homsh}{\mathcal{H}om}
+\newcommand{\RHom}{\mathop{\rm RHom}\nolimits}
+\newcommand{\Ext}{\mathop{\rm Ext}\nolimits}
+\newcommand{\Extsh}{\mathcal{E}xt}
+\newcommand{\YExt}{\mathop{\rm YExt}\nolimits}
+\newcommand{\Lim}{{\rm Lim}}
+\newcommand{\Colim}{{\rm Colim}}
+\DeclareMathOperator*{\Holim}{{\rm Holim}}
+\DeclareMathOperator*{\Hocolim}{{\rm Hocolim}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\rap}{\stackrel{+}{\rightarrow}}
+\newcommand{\Spec}{\mathop{{\bf Spec}}\nolimits}
+\newcommand{\Spm}{\mathop{{\bf Spm}}\nolimits}
+\newcommand{\Spf}{\mathop{{\bf Spf}}\nolimits}
+\newcommand{\Proj}{\mathop{{\bf Proj}}\nolimits}
+\newcommand{\Th}{\mathop{{\bf Th}}\nolimits}
+\newcommand{\Sch}{\mathsf{Sch}}
+\newcommand{\Sm}{\mathsf{Sm}}
+\newcommand{\AnSm}{\mathsf{AnSm}}
+\newcommand{\Ouv}{\mathsf{Ouv}}
+\newcommand{\SmProj}{\mathsf{SmProj}}
+\newcommand{\un}{\mathds{1}}
+\newcommand{\Be}{{\scriptsize \mbox{\foreignlanguage{russian}{B}}}}
+\newcommand{\Ob}{\mathsf{Ob}}
+\newcommand{\Gm}{\mathbb{G}_\mathrm{m}}
+\newcommand{\Ga}{\mathbb{G}_\mathrm{a}}
+\newcommand{\pointille}{{_.}^.}
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\trace}{\mathop{\rm Tr}\nolimits}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\newcommand{\charact}{\mathop{\rm char}\nolimits}
+\newcommand{\rank}{\mathop{{\rm rank}}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\SH}{\mathop{\mathbf{SH}}\nolimits}
+\newcommand{\DM}{\mathop{\mathbf{DM}}\nolimits}
+\newcommand{\DA}{\mathop{\mathbf{DA}}\nolimits}
+\newcommand{\AnDA}{\mathop{\mathbf{AnDA}}\nolimits}
+\newcommand{\Chow}{\mathop{\mathbf{Chow}}\nolimits}
+\newcommand{\HI}{\mathop{\mathbf{HI}}\nolimits}
+\newcommand{\MM}{\mathop{\mathbf{MM}}\nolimits}
+\newcommand{\Cpl}{\mathop{\mathbf{Cpl}}\nolimits}
+\newcommand{\Spt}{\mathop{\mathbf{Spt}}\nolimits}
+\newcommand{\PSh}{\mathop{\mathbf{PSh}}\nolimits}
+\newcommand{\Sh}{\mathop{\mathbf{Sh}}\nolimits}
+\newcommand{\Mod}{\rm Mod}
+\newcommand{\Mon}{\rm Mon}
+\newcommand{\CMon}{\rm CMon}
+\newcommand{\Cat}{\rm Cat}
+\newcommand{\id}{{\rm id}}
+\newcommand{\Ho}{\mathbf{Ho}}
+\newcommand{\PreShv}{\mathbf{PSh}}
+\newcommand{\Shv}{\mathbf{Sh}}
+\newcommand{\D}{\mathsf{D}}
+\newcommand{\Sym}{\mathsf{Sym}}
+\newcommand{\Coh}{\mathsf{Coh}}
+\newcommand{\Alt}{\mathsf{Alt}}
+\newcommand{\SmCor}{\mathsf{SmCor}}
+\newcommand{\Var}{\mathsf{Var}}
+\newcommand{\An}{{\rm An}}
+\newcommand{\Pic}{{\rm Pic}}
+\newcommand{\sPic}{\mathcal{P}ic}
+\newcommand{\NS}{{\rm NS}}
+\newcommand{\Alb}{{\rm Alb}}
+\newcommand{\Div}{{\rm Div}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Nis}{{\rm Nis}}
+\newcommand{\Et}{{\rm Et}}
+\newcommand{\Zar}{{\rm Zar}}
+\newcommand{\Bor}{Bor}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\SL}{{\rm SL}}
+\newcommand{\PGL}{{\rm PGL}}
+\newcommand{\Gr}{{\rm Gr}}
+\newcommand{\image}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\imm}{\mathop{{\rm im}}\nolimits}
+\newcommand{\coimage}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\Lie}{\mathop{\rm Lie}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Mor}{\mathop{\rm Mor}\nolimits}
+\newcommand{\tildeExt}{\widetilde{\rm Ext}\mathstrut}
+\newcommand{\UHom}{\mathop{\underline{\rm Hom}}\nolimits}
+\newcommand{\UAut}{\mathop{\underline{\rm Aut}}\nolimits}
+\newcommand{\Cent}{\mathop{\rm Cent}\nolimits}
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Stab}{\mathop{\rm Stab}\nolimits}
+\newcommand{\Quot}{\mathop{\rm Quot}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Ind}{\mathop{\rm Ind}\nolimits}
+\newcommand{\Frac}{\mathop{\rm Frac}\nolimits}
+\newcommand{\Id}{\mathop{\rm Id}\nolimits}
+\newcommand{\CoInd}{\mathop{\rm CoInd}\nolimits}
+\newcommand{\Tot}{\mathop{\rm Tot}\nolimits}
+\newcommand{\DTot}{\mathop{\rm DTot}\nolimits}
+\newcommand{\Pro}{\mathop{\rm Pro}\nolimits}
+\newcommand{\Sus}{\mathop{\rm Sus}\nolimits}
+\newcommand{\LSus}{\mathop{\rm LSus}\nolimits}
+\newcommand{\Ev}{\mathop{\rm Ev}\nolimits}
+\newcommand{\REv}{\mathop{\rm REv}\nolimits}
+\newcommand{\Frob}{\mathop{{\rm Frob}}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Coker}{\mathop{\rm Coker}\nolimits}
+\newcommand{\Ker}{\mathop{\rm Ker}\nolimits}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+\newcommand{\Jac}{\mathop{\rm Jac}\nolimits}
+\newcommand{\df}{\mathrm{df}}
+\newcommand{\JG}{\mathcal{JG}}
+\newcommand{\DG}{\mathcal{DG}}
+\newcommand{\CCG}{\mathcal{CG}}
+\newcommand{\PG}{\mathcal{PG}}
+\newcommand{\sNS}{\mathcal{NS}}
+\newcommand{\NSL}{\mathcal{NSL}}
+\newcommand{\Picsm}{\mathcal{P}ic^\sm}
+\newcommand{\Picsmc}{\mathcal{P}ic^\sm_*}
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+\newcommand{\basechange}{\rm base\ change}
+\newcommand{\Lotimes}{\mathbin{\stackrel{L}{\otimes}}}
+\newcommand{\loccit}{[loc.$\;$cit.]}
+\newcommand{\OFU}{\overline{\FU}}
+\newcommand{\Ug}{\underline{g}}
+\newcommand{\Un}{\underline{n}}
+\newcommand{\Ur}{\underline{r}}
+\newcommand{\Ux}{\underline{x}}
+\newcommand{\diag}{\mathop{\rm diag}\nolimits}
+\newcommand{\pr}{\mathop{\rm pr}\nolimits}
+\newcommand{\Cone}{{\rm Cone}}
+\newcommand{\CHo}{\mathop{\rm CH}\nolimits}
+\newcommand{\LAlb}{\mathop{\rm LAlb}\nolimits}
+\newcommand{\RPic}{\mathop{\rm RPic}\nolimits}
+\newcommand{\Ab}{\mathop{\rm Ab}\nolimits}
+\newcommand{\For}{\mathop{\rm For}\nolimits}
+\newcommand{\Set}{\mathop{\rm Set}\nolimits}
+\newcommand{\corexp}{\mathrm{cor}}
+\newcommand{\et}{\mathrm{\'et}}
+\newcommand{\eff}{\mathrm{eff}}
+\newcommand{\qfh}{\mathrm{qfh}}
+\newcommand{\gm}{\mathrm{gm}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\aug}{\mathrm{aug}}
+\newcommand{\coh}{\mathrm{coh}}
+\newcommand{\homo}{\mathrm{hom}}
+\newcommand{\dcoh}{\mathrm{dcoh}}
+\newcommand{\red}{\mathrm{red}}
+\newcommand{\sm}{\mathrm{sm}}
+\newcommand{\ssm}{\mathrm{ssm}}
+\newcommand{\gsm}{\mathrm{gsm}}
+\newcommand{\ins}{\mathrm{ins}}
+\newcommand{\ind}{\mathrm{ins}}
+\newcommand{\nc}{\mathrm{nc}}
+\newcommand{\mode}{\mathrm{mod}}
+\newcommand{\sep}{\mathrm{sep}}
+\newcommand{\s}{\mathrm{s}}
+\newcommand{\nr}{\mathrm{nr}}
+\newcommand{\tor}{{\rm tor}}
+\newcommand{\opp}{{\rm opp}}
+\newcommand{\steff}{{\rm st-eff}}
+\newcommand{\Ex}{{\rm Ex}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\perf}{{\rm perf}}
+\newcommand{\fr}{{\rm fr}}
+\newcommand{\gr}{{\rm gr}}
+\newcommand{\str}{{\rm str}}
+\newcommand{\ab}{{\rm ab}}
+\newcommand{\num}{{\rm num}}
+\newcommand{\pure}{{\rm pure}}
+\newcommand{\an}{{\rm an}}
+\newcommand{\psh}{{\rm psh}}
+\newcommand{\adjo}{{\rm adj}}
+\newcommand{\TODO}{{\color{red} TODO }}
+\newcommand{\REF}{{\color{green} REF }}
+		                        \usepackage{stmaryrd}
+
+
+\newcommand\cosimparrowone{%
+        \mathrel{\vcenter{\mathsurround0pt
+                \ialign{##\crcr
+                      \noalign{\nointerlineskip}$\rightarrow$\crcr
+                      \noalign{\nointerlineskip}$\leftarrow$\crcr
+                      \noalign{\nointerlineskip}$\rightarrow$\crcr
+                }%
+        }}%
+    }
+\newcommand\cosimparrowtwo{%
+        \mathrel{\vcenter{\mathsurround0pt
+                \ialign{##\crcr
+                        \noalign{\nointerlineskip}$\rightarrow$\crcr
+                        \noalign{\nointerlineskip}$\leftarrow$\crcr
+                        \noalign{\nointerlineskip}$\rightarrow$\crcr
+                        \noalign{\nointerlineskip}$\leftarrow$\crcr
+                        \noalign{\nointerlineskip}$\rightarrow$\crcr
+
+                }%
+        }}%
+}
+    
+\addbibresource{DGT.bib}
+\date{\today}
+\title{Galois theory of linear differential equations}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.50.2 (Org mode 9.1.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+Galois theory relates questions about algebraic extensions of fields to (finite) Galois groups. Differential Galois theory relates questions about linear differential equations to (algebraic) differential Galois groups. Galois theory takes place in a more general context of algebra (rings, modules, fields, etc.); differential Galois theory takes place in the context of differential algebra. 
+
+The first goal of this seminar is to learn the basics of differential algebra and its application to differential Galois theory. The second goal is to connect differential Galois theory to the analytic theory of linear differential equations of complex functions in one variable, and to explain the classical Riemann-Hilbert correspondence in the case of the complex plane. 
+
+The first eight talks (covering the first aim of the seminar) are written below. The plan for the others will be arranged depending on the number of participants to the seminar and their interests.
+
+\section*{Guidelines for the talks}
+
+\begin{itemize}
+\item The talks are given in English, should be given on the blackboard, and should last approximately 80 minutes to
+allow for 10 minutes of questions.
+\item Participants are expected to discuss their talk with me the week before they are scheduled to
+speak (and bring with them a draft of their talk notes). The default appointment for this
+discussion is Tuesday at 11am (the week before the talk) in room 108, Arnimallee 3 (if the participant
+is not available at this time, they should email before this date to arrange a different time).
+\item All required definitions and mathematical claims should be clearly stated; in particular, the
+  definitions of all terms in italics in the descriptions below should be given.
+\item The speaker should make sure that the assumptions and the claim are clear to the audience, in order for the
+other participants to be able to follow proofs and explanations.
+\end{itemize}
+
+\section*{Program}
+
+% (1) Differential rings and fields, extensions, constants. Differential modules.
+% Differential equations and solutions. Wronskian. Cyclic vector theorem.
+% (Only characteristic zero.)
+
+% (2) Picard Vessiot rings. Constants in a PV ring. Existence and unicity up to
+% isomorphism of PV-rings. Example of logarithm and exponential.
+
+% (3) Differential Galois group, definition, embedding into GL_n(C). Example.
+% Differential Galois group as a functor.
+
+% (4) Linear algebraic groups: Hopf algebras, functorial viewpoint. Differential
+% Galois groups are algebraic. Constructino of Hopf algebra.
+
+% (5) Foemal local theory: setup, K = C((t)) formal power series, C algebraically
+% closed of characteristic zero. Fields K_m = C((t^{1/m})) are Galois over K.
+
+% (6) Classification theorem for DE over K in 3 variants: For matrix equations, 
+% for differential modules, and for operators. Valuations, valuation ring, ideal. 
+% Lattices.
+
+% (7) Classical Hensel's Lemma, proof. The field "union of the K_m" is 
+% algebraically closed, proof.
+
+% (8) Regular and irregular singularities. Permanence properties, examples. 
+% Classification of local regular singular equations using Hensel's Lemma
+% for D-modules.
+
+% (9) Hensel's Lemma for irregular D-modules, proof of the classification 
+% theorem.
+
+% (10) Newton Polygons. Generalities, examples, NP of a product. 
+% Regularity in terms of NP.
+
+% (11) Factorisation of Differential operators according to slopes in the
+% Newton Polygon. Second proof of classification (only distinct eigenvalues
+% case). Factorisation of the Airy equation.
+
+% (12) Differential equations on the punctured complex disk. Classification.
+% Monodromy. Image of monodromy is Zariski dense Galois group. 
+% Regularity as a growth condition (Fuchs criterion)
+
+% (13) Equations on P^1, regularity, global monodromy is dense in 
+% Galois group. Statement of Hilberts 21st problem and RH correspondence
+% on P^1. Further generalisations.
+
+
+\subsection{April 17th: Introduction, review of classical Galois theory (Simon Pepin Lehalleur)}
+
+Given by the lecturer.
+
+\subsection{April 24th: Differential algebra (Simon Pepin Lehalleur)}
+
+The reference for this talk is \S 1.1. The goal is to introduce the basic notions of differential algebra: differential rings, differential ideals, differential fields, etc.
+
+\begin{itemize}
+\item State definition 1.1 on \emph{differential rings} and \emph{differential fields}. Also, define a map \(f:R \rightarrow S\) of differential rings to be a \emph{morphism of differential rings} if \(f\) is a morphism of rings and \(f\) commutes with the derivation in the sense that, for all \(r\in R\), we have \(f(\partial(r))=\partial(f(r))\).
+\item Present the examples from 1.2 and 1.3.
+\item Define \emph{constants} in a differential ring (1.4). Introduce the following notation (which is not used in \cite{DGT} but is very convenient): for a differential ring \(R\), put \(R^{\Delta}=\{r\in R| \ r'=0\}\). Prove that \(R^{\Delta}\) is a subring of \(R\), and that \(R^{\Delta}\) is a field when \(R\) is a field. While proving this, you will need the formula in Exercise 1.5.1.(a), which you should also state and prove.
+\item Do Exercise 1.5.1.(b). Such an ideal in a differential ring is called a \emph{differential ideal}.
+\item State without proof the result of Exercise 1.5.1.(d) about derivations on localisations of rings. In particular, if \(R\) is an integral differential ring, its field of fractions \(\Frac(R)\) is a differential field and the map \(R\ra \Frac(R)\) is a morphism of differential rings.
+\item Do Exercise 1.5.2.(c) and (d) about constants and algebraic extensions of differential fields.
+\item Do Exercise 1.5.3.(a)-(b)-(c) about extending derivations to field extensions. Emphasize the difference between extensions to algebraic extensions (which are unique) and extensions to purely transcendental extensions (which are essentially arbitrary).
+\end{itemize}
+
+\subsection{May 1st: May day/Labor day, no talk}
+
+\subsection{May 8th: Linear differential equations I (Sagi Rotfogel)}
+
+The reference for this talk is \S 1.2. Using the language of differential algebra from the previous talk, we can develop an algebraic way to think about differential equations. In the same way that, in commutative algebra, the study of polynomial equations can be clarified and extended by talking about modules over rings, we will do the same with differential equations and talk about differential modules.
+
+\begin{itemize}
+\item State the definition of \emph{linear scalar differential equation} (middle of page 8).
+\item Define \emph{matrix differential equations} (second paragraph of page 7) and explain how to associate a matrix differential equation to a linear differential equation via companion matrices (last paragraph of page 8). The goal of the rest of the talk is to get a more intrinsic version of these notions. 
+\item Do Exercise 1.14.2 which gives simple examples of linear differential equations over a simple differential field.  
+\item State the definition of \emph{differential module} (1.6). 
+\item Explain how to associate a matrix differential equation to a choice of basis (as a \(k\)-vector space) of a differential module, and the notion of \emph{equivalence} of matrix differential equations which comes from a change of basis of the differential module (following the discussion after 1.6). Conclude that differential modules are equivalent to matrix differential equations up to equivalence.
+\item Explain what a \emph{cyclic vector} in a differential module is (see discussion after Lemma 1.10). State without proof the following fact: every differential module over a differential field has a cyclic vector. Conclude that every differential module is coming from a linear scalar differential equation.
+\item State and prove Lemma 1.7.
+%\item Define the \emph{wronskian} of a tuple of elements in a differential ring (Definition 1.11) and state without proof Lemma 1.12.  
+\item State and prove Lemma 1.8. State its equivalent form Lemma 1.10 for linear differential equations.
+\item State Definition 1.9 of a \emph{fundamental matrix} and explain the remark following 1.9 on the set of fundamental matrices.
+\end{itemize}
+
+
+\subsection{May 15th: Basic algebraic geometry and linear algebraic groups (Kivan\c{c} Ersoy)}
+
+
+\subsection{May 22th: Picard-Vessiot rings (Jakob Gr\"unwald)}
+
+The reference for this is \S 1.3. In classical Galois theory, the bridge between polynomial equations and field extensions is the notion of splitting field. The aim of this talk is to introduce something similar for differential equations, Picard-Vessiot rings.
+
+Note that despite what is said in the beginning of \S 1.3, this talk does not require any knowledge of varieties and algebraic groups.
+
+\begin{itemize}
+\item Recall what is a differential ideal and the result of Exercise 1.2.1.(b). Define \emph{simple differential rings}.
+\item State Definition 1.15.
+\item Do Exercise 1.16. For this, you will need to make some recollections about tensor products of vector spaces over a field. You can look at the presentation in p.41 of the book.
+\item State Lemma 1.17. Prove part 1. Part 2. uses some algebraic geometry and should be skipped.
+\item Present examples 1.18 and 1.19 in detail.
+\item Do Exercise 1.24, connecting classical Galois theory with Picard-Vessiot rings.
+\item State and prove Proposition 1.20.
+\end{itemize}
+
+
+\subsection{May 29th : Differential Galois groups (Joaquim Ribeiro)}
+
+The reference for this is \S 1.4. The goal is to define the differential Galois group of a linear differential equation, to prove that it is a linear algebraic group, and to explain the relationship between the differential Galois group and the Picard-Vessiot ring.
+
+\begin{itemize}
+\item State Definition 1.25 of the \emph{differential Galois group} of a matrix differential equation.
+\item Write down the statements from Observations 1.26.(1)-(2), which show that the differential Galois group can be realised as a subgroup of a general linear group.
+\item Prove Observation 1.26.(3), that the differential Galois group only depends of a Picard-Vessiot field, i.e. the field of fractions of a Picard-Vessiot ring.
+\item State and prove Theorem 1.27, which says that the differential Galois group is a linear algebraic group. The book provides two proofs of parts (1) and (2), you should follow the first one which is more elementary. One point which is not well just justified is the fact that the coefficients \(C(M,i,j)\) are polynomials in the entries of \(M\) and \(\frac{1}{\det(M)}\); think about it, and ask the lecturer for details.
+\item A basic property of the Galois group of a Galois extension in classical Galois theory is that it acts transitively on the set of roots. The analoguous property in differential Galois theory is the fact that a Picard-Vessiot ring, seen as an affine variety, is a \emph{torsor} for the differential Galois group. Recall the notion of torsor for a linear algebraic group (beginning of page 22). State Theorem 1.28. It will be proved in the next talk.
+\item Explain how Corollary 1.30 follows from Theorem 1.28. The proof uses a bit of algebraic geometry; try to explain the main ideas, and ask the lecturer for details. 
+\end{itemize}
+
+\subsection{June 5th: the differential Galois correspondence (Louis Martini)}
+
+The reference is again \S 1.4. The aim is to state and prove the differential Galois correspondence.
+
+\begin{itemize}
+\item Recall the statement of Theorem 1.28, and prove it.
+\item State Proposition 1.31, which gives a concrete criterion for when the Picard-Vessiot torsor is trivial.
+\item State and prove Proposition 1.34, the differential Galois correspondence.
+\end{itemize}
+
+\subsection{June 12th: Examples of differential Galois groups}
+
+The reference is the end of \S 1.4. The aim is to make the theory from the previous talks more concrete by looking at several examples.
+
+\begin{itemize}
+\item We start with equations of order 1. Do Exercises 1.35.1 and 1.35.2 (ignoring the question about the torsor).
+\item Do Exercise 1.35.5.(a). This requires presenting Exercise 1.14.5 as well.
+\item The rest of the talk will be about second order equations of the form \(y''=ry\). By applying Exercise 1.35.5.(a), explain why their differential Galois group is always a subgroup of \(\SL_{2}(\BC)\). List the algebraic subgroups of \(\SL_{2}(\BC)\) up to conjugacy (middle of p.28); you don't need to say much about case (iii) because we will not need it.
+\item Do Exercise 1.36.1, which presents general results about the equation \(y''=ry\).
+\item Do Exercise 1.36.2, which looks at a specific example, namely \(y''=(\frac{5}{16}z^{-2}+z)y\).
+\end{itemize}
+
+\subsection{June 19th: ring of differential operators and formal local theory I}
+
+The reference is \S 2 and \S 3.1. The goal is to explain a different point of view on differential equations and differential modules which is very useful, and to use it to state the classification for differential equations over the differential field \(C((z))\).
+
+\begin{itemize}
+\item Define the ring of differential operators and present its basic properties (2.1, 2.2, 2.3, Exercise 2.4)
+\item Connect the previous notion of differential modules to \(k[\partial]\)-modules (Lemma 2.5, Observation 2.6).
+\item Do exercise 2.7, which explains what it means for a differential module to be trivial.
+\item Present some reminders on multilinear algebra (tensor products, exterior powers - you can skip symmetric powers).
+\item Prove Proposition 2.9 on the existence of cyclic vectors, and recall from the Talk on May 8th what it means for the comparison between linear differential equations and matrix differential equations.
+\item Explain briefly, following the beginning of \S 3.2, how one can form direct sums, tensor products, internal homs and exterior powers of differential modules.
+\item Explain the problem of classifying differential equations over the field of Laurent series \(k((z))\) with \(k\) algebraically closed field of characteristic \(0\) (beginning of \S 3.1) and state the main Theorem 3.1
+\end{itemize}
+  
+\subsection{July 3rd: Formal local theory II}
+
+The reference is \S 3.1. The goal is to prove the theorem stated at the end of the previous talk.
+
+\begin{itemize}
+\item Recall, as in the end of the first part \S 3.1 (Proposition 3.3, Lemma 3.4), the classical form of Hensel's lemma for polynomials and how it allows to describe the algebraic closure of the field of Laurent series.
+\item Define lattices and regular singular differential modules (3.7-3.9).
+\item Explain their stability properties (Lemma 3.10).
+\item Explain Proposition 3.12 on the structure of regular singular equations.
+\item Relate regular singular modules and equations (Proposition 3.16).
+\item Prove Hensel's lemma for regular singular modules (Proposition 3.17) and deduce part 3 of theorem 3.1 in the regular singular case.
+\item State and prove Hensel's lemma for the irregular singular case (3.19).
+\item Complete the proof of Theorem 3.1 (end of section 3.1).
+\end{itemize}
+  
+% \subsection{June 5th: Differential modules, differential equations and differential Galois groups}
+
+
+% \subsection{June 19th: Formal and analytic local solutions II}
+
+% \subsection{July 3rd: Differential equations on \(\BP^{1}\) and monodromy}
+
+% \subsection{July 10th: statement of the Riemann-Hilbert problem}
+
+% \subsection{July 17th: some results on the Riemann-Hilbert problem}
+
+
+
+\end{document}

@@ -1,0 +1,321 @@
+\documentclass[a4paper]{amsart}
+
+
+% Standard Packages
+\usepackage{amssymb}
+%\usepackage{amscd}
+%\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+%\usepackage{varioref}
+\usepackage[arrow,curve,matrix]{xy}
+\usepackage{mdframed}
+
+%% Graphics Packages
+%\usepackage{colortbl}
+%\usepackage{graphicx}
+%\usepackage{tikz}
+
+% Font packages
+\usepackage{mathrsfs}
+
+\DeclareUnicodeCharacter{00A0}{ }
+
+
+%
+% GENERAL TYPESETTING
+%
+%
+%% Colours for hyperlinks
+%\definecolor{linkred}{rgb}{0.7,0.2,0.2}
+%\definecolor{linkblue}{rgb}{0,0.2,0.6}
+
+% Limit table of contents to section titles
+\setcounter{tocdepth}{1}
+
+% Numbering of figures (see below for numbering of equations)
+\numberwithin{figure}{section}
+
+% Add an uparrow to the bibliography entries, just before the back-list of references
+\usepackage[hyperpageref]{backref}
+\renewcommand{\backref}[1]{$\uparrow$~#1}
+
+% Numbering of parts in roman numbers
+%\renewcommand\thepart{\rm \Roman{part}}
+
+% Sloppy formatting -- often looks better
+\sloppy
+
+% Changes the layout of descriptions and itemized lists. The indent specified in
+% the original amsart style is too much for my taste.
+%\setdescription{labelindent=\parindent, leftmargin=2\parindent}
+%\setitemize[1]{labelindent=\parindent, leftmargin=2\parindent}
+%\setenumerate[1]{labelindent=0cm, leftmargin=*, widest=iiii}
+
+
+
+%
+% Input characters
+%
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{χ}{\ensuremath{\chi}}
+\newunicodechar{δ}{\ensuremath{\delta}}
+\newunicodechar{∆}{\ensuremath{\Delta}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{Γ}{\ensuremath{\Gamma}}
+\newunicodechar{ι}{\ensuremath{\iota}}
+\newunicodechar{κ}{\ensuremath{\kappa}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{Λ}{\ensuremath{\Lambda}}
+\newunicodechar{μ}{\ensuremath{\mu}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+\newunicodechar{Ω}{\ensuremath{\Omega}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{φ}{\ensuremath{\phi}}
+\newunicodechar{Φ}{\ensuremath{\Phi}}
+\newunicodechar{ψ}{\ensuremath{\psi}}
+\newunicodechar{Ψ}{\ensuremath{\Psi}}
+\newunicodechar{ρ}{\ensuremath{\rho}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{Θ}{\ensuremath{\Theta}}
+
+
+\newunicodechar{∞}{\ensuremath{\infty}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{⨯}{\ensuremath{\times}}
+\newunicodechar{∪}{\ensuremath{\cup}}
+\newunicodechar{∩}{\ensuremath{\cap}}
+\newunicodechar{⊇}{\ensuremath{\supseteq}}
+\newunicodechar{⊃}{\ensuremath{\supset}}
+\newunicodechar{⊆}{\ensuremath{\subseteq}}
+\newunicodechar{⊂}{\ensuremath{\subset}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{◦}{\ensuremath{\circ}}
+\newunicodechar{°}{\ensuremath{^\circ}}
+\newunicodechar{…}{\ifmmode\mathellipsis\else\textellipsis\fi}
+\newunicodechar{⊗}{\ensuremath{\otimes}}
+
+%operators
+\newcommand{\salt}{\mathrm{s\mbox{-}alt}}
+\newcommand{\stimes}{⨯^{\salt}}
+\newcommand{\isom}{\cong}
+\newcommand{\tensor}{\otimes}
+\newcommand{\Frac}{\mathsf{Frac}} % Quotient field
+\newcommand{\Gal}{\mathsf{Gal}} % Galois group
+\newcommand{\Aut}{\mathsf{Aut}} % Automorphism group
+
+
+%theorem environments
+\theoremstyle{theorem}
+\newtheorem{thm}{Theorem}
+\newtheorem*{thmU}{Theorem}
+\newtheorem{theo}{Theorem}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem*{corU}{Corollary}
+\newtheorem{lemm}[thm]{Lemma}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{propdef}[thm]{Definition and Proposition}
+\newtheorem{obse}[thm]{Observation}
+\newtheorem{rema}[thm]{Remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{remi}[thm]{Reminder}
+\newtheorem{exam}[thm]{Example}
+\newtheorem{summ}[thm]{Summary}
+\newtheorem{nota}[thm]{Notation}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem*{ques}{Question}
+\newtheorem*{exer}{Exercise}
+
+
+
+
+%letters
+\DeclareSymbolFontAlphabet{\scr}{rsfs}
+\newcommand{\Fh}{\mathcal{F}}
+\newcommand{\Oh}{\mathcal{O}}
+\newcommand{\OO}{\mathcal{O}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\Fp}{\mathbb{F}\!{_p}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Pe}{\mathbb{P}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+
+\newcommand{\Top}{{Top}}
+%\newcommand{\Top}{\mathsf{Top}}
+\newcommand{\pTop}{{Top}_\ast}
+%\newcommand{\pTop}{\mathsf{Top}_\ast}
+\newcommand{\grVec}{{Vec}}
+%\newcommand{\grVec}{\mathsf{Vec}}
+\newcommand{\sSet}{{\mathsf{Set}_\Delta}}
+\newcommand{\Spaces}{{\mathcal{S}}}
+\newcommand{\PreShv}{{{P}}}
+%\newcommand{\PreShv}{{\mathcal{P}}}
+\newcommand{\Shv}{{{Shv}}}
+%\newcommand{\Shv}{{\mathsf{Shv}}}
+\newcommand{\Op}{{{Op}}}
+%\newcommand{\Op}{{\mathsf{Op}}}
+\newcommand{\Sp}{{{Sp}}}
+%\newcommand{\Sp}{{\mathsf{Sp}}}
+
+%Special
+\newcommand{\val}{\mathrm{val}}
+\newcommand{\shval}{\mathrm{shval}}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\trd}{tr{.}d}
+\DeclareMathOperator{\uhom}{\underline{hom}}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Map}{Map}
+%\DeclareMathOperator{\char}{char}
+
+\title{$∞$-categories seminar \\
+Talk III. $∞$-Categories}
+
+\renewcommand{\thesection}{\Roman{section}}
+\setlength{\parskip}{1em}
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+\begin{exer}
+Let $p: X → S$ be a morphism of simplicial sets, and $f: ∆^1 → X$ an edge, with source $x: ∆^0 → X$ (that is, $x$ is the composition of $f$ with the canonical inclusion $∆^0 ⊆ ∆^1$). Show that the following are equivalent.
+\begin{enumerate}
+ \item[(A)] The induced map $X_{ / f} → X_x \times_{S_{/{p(x)}}} S_{/ p(f)}$ is a trivial Kan fibration.
+
+ \item[(B)] For every $n ≥ 2$, and every commutative diagram
+ \[ \xymatrix{
+ ∆^1 \ar[d] \ar[dr]^f & \\
+ \Lambda^n_0 \ar[r] \ar[d] & X \ar[d]^p \\
+ ∆^n \ar[r] \ar@{-->}[ur] & S
+ } \] 
+there is a dashed morphism making the diagram commutative.
+ \end{enumerate}
+\end{exer}
+
+\emph{Step a).} Recall that a morphism is a trivial Kan fibration if and only if it has the left lifting property with respect to the morphisms $\partial ∆^n → ∆^n$ for all $n ≥ 0$. So (A) is equivalent to:
+\begin{enumerate}
+ \item[(A')] For all $n ≥ 0$ and every commutative diagram
+ \begin{equation} \label{A}
+  \xymatrix{
+\partial ∆^n \ar[d] \ar[r] & X_{ / f} \ar[d] \\
+∆^n \ar[r] \ar@{-->}[ur] & X_x \times_{S_{/{p(x)}}} S_{ / p(f)}
+ } 
+ \end{equation}
+there is a dashed morphism making the diagram commutative.
+\end{enumerate}
+
+\emph{Step b).} Recall that by the universal property of overcategories, the upper horizontal morphism in \eqref{A} corresponds to a unique commutative diagram
+ \begin{equation} \label{B}
+ \xymatrix{
+∆^1 \ar@/^3ex/[rr]^f \ar[r] & ∆^1 * \partial ∆^n \ar[r] & X
+} 
+\end{equation}
+where $∆^1 ⊆∆^1 * \partial ∆^n$ is the canonical inclusion (and conversely, such a diagram corresponds to a unique morphism $\partial ∆^n → X_{ / f}$). Moreover, by the universal property of fibre products, the lower horizontal morphism in \eqref{A} corresponds to a unique commutative diagram
+\[ \xymatrix{
+∆^n \ar[r] \ar[d] & S_{ / p(f)} \ar[d] \\
+X_x  \ar[r] & {S_{/{p(x)}}}
+} \]
+(where the lower morphism and right morphism are the canonical ones), and by the universal property of overcategories, such a diagram corresponds uniquely to a commutative diagram 
+ \begin{equation} \label{C}
+ \xymatrix{
+∆^0 \ar@/^3ex/[rr]^x \ar[r] & ∆^{0} * ∆^n \ar[r] \ar[d] & X \ar[d]^p \\
+∆^1 \ar@/_3ex/[rr]_{p(f)} \ar[r] &∆^1 * ∆^n \ar[r] & S 
+} 
+\end{equation}
+where $∆^0 ⊆ ∆^0 {*} \partial ∆^n$, $∆^1 ⊆∆^1 {*} \partial ∆^n$, $∆^{0} {*} ∆^n ⊆ ∆^{1} {*} ∆^n$ are the canonical ones.
+
+\emph{Step c).} Observe that the commutivity of \eqref{A} (without the dashed morphism) is equivalent to the requirement that \eqref{B} and \eqref{C} fit together into a commutative diagram
+\begin{equation} \label{D}
+\xymatrix{
+∆^1 \ar[dr]^f \ar[d] & \\
+(∆^1 * \partial ∆^n) \cup (∆^0 * ∆^n) \ar[r] \ar[d] & X \ar[d]^p \\
+∆^1 * ∆^n \ar[r] & S
+}
+\end{equation}
+
+\emph{Step d).} Observe that the inclusion
+\[ (∆^1 * \partial ∆^n) \cup (∆^0 * ∆^n) ⊆ ∆^1 * ∆^n \]
+is canonically isomorphic to the inclusion
+\[ \Lambda^{n+2}_0 ⊆ ∆^{n+2}. \]
+(Indeed, $(∆^0 * ∆^n) ⊆ ∆^1 * ∆^n$ is the inclusion of the face $d_1 ∆^{n+2} ⊆ ∆^{n+2}$. Moreover, $\partial ∆^n$ is the union of the faces $d_i∆^n ⊆ ∆^n$ for $0 ≤ i ≤ n$, and $∆^1 * d_i∆^n ⊆ ∆^{n+2}$ is the inclusion of the face $d_{i+2}∆^{n+2} ⊆ ∆^{n+2}$). Conclude that \eqref{D} is isomorphic to
+\begin{equation} \label{E}
+\xymatrix{
+∆^1 \ar[dr]^f \ar[d] & \\
+\Lambda^{n+2}_0  \ar[r] \ar[d] & X \ar[d]^p \\
+∆^{n+2} \ar[r] & S
+}
+\end{equation}
+
+
+%Recall that there is a canonical isomorphism $∆^1 * ∆^n \cong ∆^{n+2}$. Moreover, under this isomorphism, $∆^{\{1\}} * ∆^n$ corresponds to $∆^{\{1, \dots, n+2\}}$, and $∆^1 * \partial ∆^n$ corresponds to the nerve of the partially ordered set of subsets $I ⊆ \{0, \dots, n+2\}$ such that $\{2, 3, \dots, n+2\} \not\subseteq I$.
+
+%\emph{Step d).} Observe that since $p: X \to S$ is an inner fibration, and for all $i ≥ 2$ there are inclusions 
+%\[ ∆^1 ⊆ \Lambda^{\{0,1,2, \dots, i{-}1,i{+}1, \dots, {n+2}\}}_{1} ⊆ (∆^1 * \partial ∆^{\{2, \dots, n{+}2\}}) \cup (∆^0 * ∆^{\{2, \dots, n{+}2\}}) ⊆ ∆^{n+2} \] 
+%compatible with the canonical isomorphism $∆^1 * ∆^n \cong ∆^{n+2}$, every diagram \eqref{D} can be completed to a diagram of the form
+%\begin{equation} \label{E}
+%\xymatrix{
+%∆^1 \ar[dr]^f \ar[d] & \\
+%(∆^1 * \partial ∆^n) \cup (∆^0 * ∆^n) \ar[r] \ar[d] & X \ar[d]^p \\
+%∆^1 * ∆^n \ar[r] & S
+%}
+%\end{equation}
+
+\emph{Step e).} Conclude that \eqref{A} admits a dashed morphism making the diagram commute if and only if the corresponding diagram 
+\begin{equation} \label{F}
+\xymatrix{
+∆^1 \ar[dr]^f \ar[d] & \\
+\Lambda^{n+2}_0  \ar[r] \ar[d] & X \ar[d]^p \\
+∆^{n+2} \ar[r] \ar@{-->}[ur] & S
+}
+\end{equation}
+admits a dashed morphism making the diagram commute.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+

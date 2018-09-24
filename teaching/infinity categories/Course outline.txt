@@ -1,0 +1,17 @@
+Higher category theory lies in the intersection of two major developments of 20th century mathematics: topology and category theory. It provides a framework for settings where the morphisms between two objects form not just a set but a topological space, and is believed to be the best language for modern homological algebra and sheaf theory by a steadily increasing portion of the mathematical community.
+
+Despite being a recent discipline, higher category theory has already found spectacular applications across mathematics, such as Lurie's proof of the cobordism hypothesis (in Mathematical Physics), and Gaitsgory-Lurie's work on Weil's Tamagawa number conjecture (in Number Theory), not to mention applications in Geometric Langlands, K-theory, Mirror Symmetry, Knot Theory / Floer Homology...
+
+This reading seminar will gently introduce some of the main concepts of higher category theory as developped by Lurie. By the end of the seminar, the student will be familiar enough with infinity categories that they can navigate texts written in this new language.
+
+This reading seminar will complement the course Categories and Homotopy Theory 19234201.
+
+The webpage can be found at http://www.mi.fu-berlin.de/users/shanekelly/InfinityCategories2017SS.html
+
+
+
+
+This course is a follow up of Lecture 19215101 "Topologie III" by Elmar Vogt and STARTS on 06.06.2017. The contents of both lectures are basic for (algebraic and geometric) topology, and we strongly recommend for students to take both as a single package.
+Exercises are conducted by Filipp Levikov and run as scheduled to cover both courses.
+CONTENTS of Categories and homotopy theory:
+This will be an introduction to some of the basic techniques of homotopy theory that use category theory. We will cover basic categorical constructions: functors, adjunctions, monads, the yoneda lemma, (co) limits and we use these to describe the category of simplicial sets. We go back to homotopy theory with the concept of model categories, homotopy (co) limits. One of our main goals is to understand Quillen's Theorem A and why simplicial sets are combinatorial models for spaces. This course will complement the reading seminar in infinity categories 19233511.

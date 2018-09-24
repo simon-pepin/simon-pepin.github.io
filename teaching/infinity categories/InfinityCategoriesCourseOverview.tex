@@ -1,0 +1,463 @@
+\documentclass[a4paper]{amsart}
+
+
+% Standard Packages
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+\usepackage{varioref}
+\usepackage[arrow,curve,matrix]{xy}
+
+% Graphics Packages
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Font packages
+\usepackage{mathrsfs}
+
+
+%
+% GENERAL TYPESETTING
+%
+
+% Colours for hyperlinks
+\definecolor{linkred}{rgb}{0.7,0.2,0.2}
+\definecolor{linkblue}{rgb}{0,0.2,0.6}
+
+% Limit table of contents to section titles
+\setcounter{tocdepth}{1}
+
+% Numbering of figures (see below for numbering of equations)
+\numberwithin{figure}{section}
+
+% Add an uparrow to the bibliography entries, just before the back-list of references
+\usepackage[hyperpageref]{backref}
+\renewcommand{\backref}[1]{$\uparrow$~#1}
+
+% Numbering of parts in roman numbers
+%\renewcommand\thepart{\rm \Roman{part}}
+
+% Sloppy formatting -- often looks better
+\sloppy
+
+% Changes the layout of descriptions and itemized lists. The indent specified in
+% the original amsart style is too much for my taste.
+%\setdescription{labelindent=\parindent, leftmargin=2\parindent}
+%\setitemize[1]{labelindent=\parindent, leftmargin=2\parindent}
+%\setenumerate[1]{labelindent=0cm, leftmargin=*, widest=iiii}
+
+
+
+%
+% Input characters
+%
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{χ}{\ensuremath{\chi}}
+\newunicodechar{δ}{\ensuremath{\delta}}
+\newunicodechar{∆}{\ensuremath{\Delta}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{Γ}{\ensuremath{\Gamma}}
+\newunicodechar{ι}{\ensuremath{\iota}}
+\newunicodechar{κ}{\ensuremath{\kappa}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{Λ}{\ensuremath{\Lambda}}
+\newunicodechar{μ}{\ensuremath{\mu}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+\newunicodechar{Ω}{\ensuremath{\Omega}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{φ}{\ensuremath{\phi}}
+\newunicodechar{Φ}{\ensuremath{\Phi}}
+\newunicodechar{ψ}{\ensuremath{\psi}}
+\newunicodechar{Ψ}{\ensuremath{\Psi}}
+\newunicodechar{ρ}{\ensuremath{\rho}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{Θ}{\ensuremath{\Theta}}
+
+
+\newunicodechar{∞}{\ensuremath{\infty}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{⨯}{\ensuremath{\times}}
+\newunicodechar{∪}{\ensuremath{\cup}}
+\newunicodechar{∩}{\ensuremath{\cap}}
+\newunicodechar{⊇}{\ensuremath{\supseteq}}
+\newunicodechar{⊃}{\ensuremath{\supset}}
+\newunicodechar{⊆}{\ensuremath{\subseteq}}
+\newunicodechar{⊂}{\ensuremath{\subset}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{◦}{\ensuremath{\circ}}
+\newunicodechar{°}{\ensuremath{^\circ}}
+\newunicodechar{…}{\ifmmode\mathellipsis\else\textellipsis\fi}
+
+
+%operators
+\newcommand{\salt}{\mathrm{s\mbox{-}alt}}
+\newcommand{\stimes}{⨯^{\salt}}
+\newcommand{\isom}{\cong}
+\newcommand{\tensor}{\otimes}
+\newcommand{\Frac}{\mathsf{Frac}} % Quotient field
+\newcommand{\Gal}{\mathsf{Gal}} % Galois group
+\newcommand{\Aut}{\mathsf{Aut}} % Automorphism group
+
+
+%theorem environments
+\theoremstyle{theorem}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem*{thmU}{Theorem}
+\newtheorem{theo}{Theorem}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem*{corU}{Corollary}
+\newtheorem{lemm}[thm]{Lemma}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{propdef}[thm]{Definition and Proposition}
+\newtheorem{obse}[thm]{Observation}
+\newtheorem{rema}[thm]{Remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{remi}[thm]{Reminder}
+\newtheorem{exam}[thm]{Example}
+\newtheorem{summ}[thm]{Summary}
+\newtheorem{nota}[thm]{Notation}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem*{ques}{Question}
+
+
+
+
+%letters
+\DeclareSymbolFontAlphabet{\scr}{rsfs}
+\newcommand{\Fh}{\mathcal{F}}
+\newcommand{\Oh}{\mathcal{O}}
+\newcommand{\OO}{\mathcal{O}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\Fp}{\mathbb{F}\!{_p}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Pe}{\mathbb{P}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+
+%Special
+\newcommand{\val}{\mathrm{val}}
+\newcommand{\shval}{\mathrm{shval}}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\trd}{tr{.}d}
+%\DeclareMathOperator{\char}{char}
+
+\title{$∞$-categories seminar}
+
+\renewcommand{\thesection}{\Roman{section}}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\section*{General information}
+
+\begin{center}
+\begin{tabular}{rl}
+Instructor & Shane Kelly \\
+Email & shane.kelly.uni [at] gmail [dot] com \\
+Webpage & {\footnotesize http://www.mi.fu-berlin.de/users/shanekelly/InfinityCategories2017SS.html} \\
+University webpage & {\footnotesize http://www.fu-berlin.de/vv/de/lv/365477?query=infinity+categories\&sm=314889} \\
+Textbooks 
+& ``A short course on ∞-categories'' by Groth \\
+& ``Higher topos theory'' by Lurie \\
+& ``Higher algebra'' by Lurie \\
+Room & SR 140/A7 Seminarraum (Hinterhaus) (Arnimallee 7) \\
+Time & Mo 16:00-18:00
+\end{tabular}
+\end{center}
+
+\section*{About the presentation}
+
+This is a student seminar which means that the students each make one of the presentations. The presentation should be about 75 minutes long, leaving 15 minutes for potential questions and discussion.
+
+Students are not \emph{required} to hand in any written notes. However, students are encouraged to prepare some notes if they feel it will improve the presentation. This should be considered seriously, especially if the student has not made many presentations before.
+
+For example, its helpful to have
+\begin{enumerate}
+ \item a written copy of exactly what they plan to write on the blackboard, and 
+ \item 5-10 pages of notes on the material to help find any gaps in your understanding.
+\end{enumerate}
+ 
+If notes are prepared I will collect them and give feedback if desired.
+
+The material listed below should be considered as a skeleton of the talk, to be padded out with other material from the texts or examples that the student finds interesting, relevant, enlightening, useful, etc.
+
+If you have any questions please feel free to contact me at the email address above.
+
+\section*{Overview and schedule}
+
+\section{24.04. Introduction}
+
+Topology studies those aspects of spaces which are preserved by stretching and bending, but not tearing or gluing. From this point of view, the surface of a doughnut (with hole) is the same as the surface of a coffee cup (with handle), but these are both different from the surface of a ball. Similarly, the figure 1 is the same as the figures 2, 3, 5, and 7 but different from 6, 0, and 9, and these are different from 8. The figure 4 either falls into the first or second group depending on how you write it.
+
+A basic tool used to show that two spaces are different, is the fundamental groupoid $\pi_{\leq 1}(X)$ of a space $X$. This is is the set of ways we can move from one point to another of our space leaving a trailer of string. Two paths are considered the same if we can slide, stretch, or contract the string path of one to the other without leaving the space, and without moving the start and end points. It is a groupoid because given two paths, one starting where the other finishes, we get a third by concatenating them. The groupoid $\pi_{\leq 1}$ is not changed under deformation. So if two spaces have different $\pi_{\leq 1}$'s, we can conclude that one cannot be obtained from the other by deformation. For example, a circle is different from a sphere, because every path on a sphere can be contracted to a point.
+
+%However, if we want to study a space which is glued from two other spaces, the fundamental group is no good, because the fundamental group only contains information about one connected component, and the intersection of the two component spaces may not be connected. So we replace it with the fundamental groupoid. This is the set of points of the space, and paths from one point to another. Now we cannot compose any two paths, only paths which 
+
+The fundamental groupoid only contains information about holes of ``dimension 1''. It can tell that a figure 8 is different from a figure 0, but not that a sphere is different from a doughnut. To do this, we should also use paths of fabric between two string paths. But then we only get ``dimension 2'' holes, so we should use blocks, etc, etc. 
+
+This is a basic example of an ∞-category: The set of continuous maps $\square^n_{top} \to X$, where $0 \leq n < \infty$ and $\square^n_{top} = \{ (x_1, \dots, x_n) \in \RR^n : 0 \leq x_i \leq 1 \}$, together with the information of which maps $\square^{n-1}_{top} {\to} X$ are the face of a map $\square^n_{top} {\to} X$, and which maps $\square^n_{top} {\to} X$ are obtained from a map $\square^{n-1}_{top} {\to} X$ by just not moving in one direction.
+
+The ``∞'' refers to the fact that we are allowed any $n < \infty$, and the ``category'' from the fact that we can concatenate two maps $\square^n_{top} {\rightrightarrows} X$ if an ending face of one agrees with the starting face of the other.
+
+A key difference with the fundamental groupoid, is that there is not a unique choice for the concatenation, because we are no longer considering two maps the same if one can be deformed to the other. However, any choice of concatenation can be deformed into any other choice. 
+
+
+
+\section{08.05. Simplicial sets}
+
+In practice, it is often more practical to work with triangles rather than squares. A \emph{simplicial set} is an abstract combinatorial object, which mimics the ∞-category of a topological space: we have a set $K_n$ for every $0 \leq n < \infty$, which we can think of as maps from an $n$-dimensional triangle into a space, and various morphisms $\delta_i: K_n \to K_{n-1}, \sigma_i: K_{n-1} \to K_n$ telling us how the triangles fit together.
+
+In this lecture the basic definitions are given, together with some basic examples.
+
+This lecture will cover the following: 
+
+Define a simplicial set [May, Def.1.1], [Wei, Cor.8.1.4]. % 
+Define the simplicial set associated to a directed graph%
+\footnote{0-simplices are vertices of the graph, 1-simplicies are paths, and $n$-simplicies are $n$-tuples of sequential paths.}. % 
+Define the simplicial set associated to a partially ordered set.%
+\footnote{$n$-simplices are sequences of elements $x_0 \leq x_1 \leq \dots \leq x_n$.} %
+Define the standard simplicial simplex $∆^n$ via the partially ordered sets $[n] = \{ 0 \leq 1 \leq \dots \leq n\}$. % 
+Define subsimplicial set. % 
+Define the standard topological simplicies $∆^n_{top}$ [May, §14]. % 
+Give examples of subsimplicial sets of $∆^3$, and describe their corresponding subspaces of $∆^3_{top}$. %
+Define the singular simplicial set $Sing_\bullet(X)$ of a topological space $X$ [Lur, p.1], [HTT, p.8], [Wei, App.1.1.4]. %
+Define the product $K \times K'$ of two simplicial sets $K, K'$. %
+Show that for any two topological spaces, $Sing_\bullet(X) \times Sing_\bullet(Y) = Sing_\bullet(X \times Y)$. %
+
+If there is time, discuss simplicial complexes [Wei, Exa.8.1.8, Ex.8.1.2, Ex.8.1.3, Ex.8.1.4].
+
+\section{15.05. Morphisms of simplicial sets}
+
+Not only do we get a simplicial set from every topological space, but by gluing the simplicies together we can get a topological space from every simplicial set. Using this we can transport the notion of when two topological spaces are ``the same'' (from the point of view of topology) to define when two simplicial sets are ``the same''.
+
+This lecture will cover the following: 
+
+Define a morphism of simplicial sets [May, Def.1.2]. % 
+Observe that a morphism of directed graphs / partially ordered sets / topological spaces, induces a morphism of the associated simplicial sets. %
+Define the mapping space of two simplicial sets $K, K'$ as $\hom_{sSet}(\Delta^\bullet \times K, K')$. %
+
+Define the geometric realisation of a simplicial set [Wei, 8.1.6], [May, §14]. %
+Observe that the geometric realisation of $∆^n$ is $∆_{top}^n$. %
+Define a homotopy equivalence of topological spaces [Hat, p.3]. %
+Give examples of homotopy equivalences which are not isomorphisms. %
+Define a \emph{weak equivalence} of simplicial sets as a morphism which induces a homotopy equivalence on the geometric realisations [Hat, p.3]. %
+
+\section{22.05. ∞-categories and functors} %adjunctions?
+
+Not every simplicial set has the ``composition'' property possessed by simplicial sets of topological spaces. This lecture formalises what it means to be able to ``compose'' simplicies, and defines ∞-categories. It finishes with the observation that the simplicial set of morphisms between an ∞-category is again an ∞-category.
+
+This lecture will cover the following:
+
+Define the boundaries $\partial ∆^n$ of $∆^n$. %
+Define the inner horns $\Lambda^n_k$. %
+Define Kan complex [Gro, Def.1.5], [HTT, Def.1.1.2.1], [May, Def.1.3, Con.1.6]. %
+Show that for any topological space $X$, the simplicial set $Sing_\bullet(X)$ is a Kan complex. %
+Define an ∞-category [Gro, Def.1.7], [HTT, Def.1.1.2.4]. %
+Show that for any directed graph, its associated simplicial set is an ∞-category. Give an example of a directed graph whose simplicial set is not a Kan complex. %
+Define a 1-category as an ∞-category in which the lifting condition is \emph{uniquely} satisfied. Show that this definition is equivalent to the ``objects-morphisms'' definition. %
+Define a functor of ∞-categories [Gro,Def.2.1], [HTT, p.39]. %
+Define a natural transformation of functors [Gro, Def.2.1]. %
+Define the simplicial set of functors between two ∞-categories [Gro, Def.2.1], [HTT, Not.1.2.7.2]. %
+State that it is an ∞-category [Gro, Prop.2.5(i)], [HTT, 1.2.7.3]. %
+
+%References: [HTT, 1.1.2] %(∞-categories, 8 pages)
+%[HTT, 1.2.7] %(Functors of ∞-categories, 2 pages)
+
+\section{29.05. Joins and slice categories}
+
+The \emph{join} of two topological spaces is the topological space we get by joining every point in one to every point in the other. This lecture shows how to define this for simplicial sets. A special case is when one space is a single point. This is called the \emph{cone} for obvious reasons. Joins are needed for the definition of \emph{slice} categories, which are needed for the definition of \emph{limits}, in the next lecture. The ``slice'' of a morphism of topological spaces $f: X \to Y$ is something like the space of pairs $(x, \gamma)$ where $x \in X$ is a point and $\gamma: [0, 1] \to Y$ is a path starting from $f(x)$.
+
+This lecture will cover the following: 
+
+Define the right and left cone of a directed graph and a partially ordered set.%
+\footnote{For a graph, add one extra vertex and one edge to / from it for every old vertex. For a partially ordered set, add a new element defined to be less than / greater than every old element.} %
+Define the cone of a topological space, and draw the picture [Hat, pp.8-9]. %
+Define the join of two topological spaces, and draw the picture [Hat, p.9]. %
+Define the join of two simplicial sets [Gro, Def.2.11], [HTT, Def.1.2.8.1]. %
+Show that there are isomorphisms $∆^{i} {\star} ∆^{j} \cong ∆^{i+j+1}$. %
+Define the right cone and left cone of a simplicial set, and describe them explicitly [Gro Exa.2.14], [HTT, Not.1.2.8.4]. %
+Show that the ∞-categories of the cones of a directed graph and partially ordered set are the ∞-categories of their cones. %
+\emph{Prove} that for any two ∞-categories $S, S'$, the join $S \star S'$ is an ∞-category [HTT, Prop.1.2.8.3]. %
+
+Define the overcategory  $C_{/p}$ of a map $p$ by its universal property [Gro, Prop.2.17], [HTT, Prop.1.2.9.2]. %
+Define $C_{/p}$  explicitly [HTT, Proof of Prop.1.2.9.2]. %
+State (without proof) that $C_{/p}$ is an ∞-category [HTT, Prop.1.2.9.3]. %
+Define the undercategory by a universal property, and explicitly [HTT, Rem.1.2.9.5]. %
+Given a morphism of topological spaces $p: Y \to X$, explicitly describe the ∞-category $Sing_\bullet(X)_{/Sing(p)}$. %
+Do the same for directed graphs and partially ordered sets if there is time.
+
+%References: [Gro, pp.27-28], %
+%[HTT, 1.2.8] %(Joins, 2 pages)
+%[HTT, 1.2.9] %(Overcategories and undercategories, 2 pages)
+
+
+\section{12.06. Limits, colimits}
+
+Colimits are a vast generalisation and unification of unions and quotients. They are a way of gluing spaces together. The colimit of a morphism of ∞-categories is in a precise sense its ``supremum''. %
+Dually, limits are a vast generalisation and unification of intersections and fixed points. The limit of a morphism of ∞-categories is in a precise sense its ``infimum'' . %
+They are as basic to category theory as convergence is to analysis, but we will most immediately use them to define \emph{stable ∞-categories}. %
+They are also used in the \emph{Seifert-van Kampen Theorem}.
+
+This lecture will cover the following: TBA
+
+%Define initial and final objects [Gro, §2.4], [HTT, §1.2.12]. % ELABORATE
+%Define colimits and limits [HTT, Def.1.2.13.4]. %
+%Define pushout and pullback squares [Gro, Def.2.29]. %   \\ 
+%Define the homotopy pushout of a diagram $Z \stackrel{f}{\leftarrow} X \stackrel{g}{\to} Y$  of topological spaces as $ \frac{Y \amalg [0,1]\times X \amalg Z}{(f(X) \sim \{0\} \times X, \ g(X) \sim \{1\} \times X)}$. Show that this gives a pushout square in the ∞-category of topological spaces. %
+
+%Fill up with examples? Put infinity category of topological spaces in here?
+
+%%%[HTT, 1.2.10, 11, 12] %(Ff and ess.surj. functors, subcategories, initial and final objects 3 pages)
+
+%%%\section{n m . Kan extensions}
+%%% TOO TECHNICAL
+
+\section{19.06. Monoidal categories} 
+%%% **** need acyclic Kan fibrations
+
+Some of the most interesting topological spaces come equipped with a multiplication, e.g., $GL_n(\CC)$. This defines a ``multiplication'' on its associated simplicial set. Monoidal categories are those equipped with a ``multiplication''. %There important examples, such as the \emph{loop space} of a pointed topological space for which the multiplication is only well defined up to ``deformation''. So in the ∞-category world, instead of a multiplication being a map that sends any pair $x, y$ to its product $x \cdot y$, it is a collection of ``products'' ***
+
+This lecture will cover the following: TBA
+
+%Define the ∞-category $N(∆)^{op}$.%
+%\footnote{$n$-simplicies are sequences $[m_0] \leftarrow \dots \leftarrow [m_n]$ of non-decreasing morphisms where $[m]  = \{0 \leq 1 \leq \dots \leq m \}$ for $m \geq 0$} %
+%Define an inner fibration of simplicial sets [Gro, Def.1.37], [HTT, Def.2.0.0.3]. %
+%Define coCartesian lifts [Gro, Def.4.12], [HTT, Def.2.4.1.1]. %
+%Define coCartesian fibrations [Gro, Def.4.13]. %
+%Define the fibres and functors in the other direction.
+
+%Define monoidal ∞-categories [Gro, Def.4.14], [DAGII, Def.1.1.2]. %
+
+%Example: Loop space of a topological space.
+%Define the loop space of a topological space [***]. %
+%Explain that there is a contractible space of compositions of loops.
+
+
+\section{26.06. Symmetric monoidal categories}
+
+This lecture is very similar to the last one but studies those monoidal categories for which the multiplication is symmetric. If we are thinking of monoidal categories as groups, symmetric monoiodal categories are the abelian ones.
+
+This lecture will cover the following: TBA
+
+\section{03.07. Stable ∞-categories}
+
+Two more canonical examples of ∞-categories are the collection of all pointed topological spaces, and the collection of all complexes of vector spaces. The smash product of a pointed topological space with the circle $S^1$ corresponds to shifting a complex of vector spaces. % (because we can think of the one dimensional complex concentrated in degree 1 as a pointed circle--it has one ``hole'' of dimension one). 
+However, in the category of complexes of vector spaces, this is procedure is invertible. Using colimits, there is a notion of smash-product-with-$S^1$ in any (pointed) ∞-category, and the \emph{stable} ∞-categories are those in which this procedure is invertible.
+
+This lecture will cover the following: TBA
+
+%Define the ∞-category of bounded complexes of vector spaces?
+
+%Define pointed ∞-categories [Gro, Def.5.1], [DAGI, Def.2.1]. %
+%Define triangles in pointed ∞-categories [Gro, p.60], [DAGI, Def.2.4]. %
+%Define exact and coexact triangules in pointed ∞-categories [Gro, Def.5.5], [DAGI, Def.2.4]. % 
+%
+%Define kernel and cokernels in pointed ∞-categories [DAGI, Def.2.6] % 
+%Define stable ∞-infinity categories [Gro. Def.5.11], [DAGI, Def.2.9]. %
+
+
+\section{10.07. To be chosen}
+
+\section{17.07. To be chosen}
+
+Potential further topics:
+
+\begin{enumerate}
+ \item Kan extensions. These are like parametrised / relative (co)limits.
+ \item Universality of $D^-(A)$. The ∞-category of bounded above chain complexes of vector spaces satisfies a universal property.
+ \item Spectra. This is the universal way of making the ∞-category of spaces into a stable ∞-category. The ∞-category of spectra is the universal stable ∞-category. 
+ \item Brown Representability Theorem. A characterisation of when a functor is of the form $\mathrm{Map}(-, X)$ for some object $X$ in the category. In particular, this allows us to identify cohomology theories with objects in the category of spectra.
+ \item Topoi. Sheaf theory, but for sheaves of spaces.
+ \item Operads. Ring theory, but for spaces. 
+ \item Seifert-van Kampen Theorem. This says that if a topological space $X$ is the union of open subspaces $\mathscr{U} = \{U_i \subseteq X\}_{i \in I}$, and the set $\mathscr{U}$ is closed under intersection, then the simplicial set of $X$ is the colimit of the simplicial sets of the $U_i$. 
+% \item Ran space.
+\end{enumerate}
+
+
+
+\begin{thebibliography}{99.}
+
+\bibitem[Hat]{Hat}
+Hatcher, Allen.
+\newblock Algebraic Topology.
+
+\bibitem[Lur]{Lur}
+Lurie, Jacob.
+\newblock What is...an ∞-category?.
+
+\bibitem[HTT]{HTT}
+Lurie, Jacob.
+\newblock Higher topos theory.
+
+\bibitem[DAGI]{DAGI}
+Lurie, Jacob.
+\newblock Derived algebraic geometry I.
+
+\bibitem[DAGII]{DAGII}
+Lurie, Jacob.
+\newblock Derived algebraic geometry, II.
+
+\bibitem[May]{May}
+May, Peter.
+\newblock Simplicial objects in algebraic topology.
+
+\bibitem[Gro]{Gro}
+Groth, Moritz.
+\newblock A short course on ∞-categories.
+
+\bibitem[Wei]{Wei}
+Weibel, Charles  A.
+\newblock An introduction to homological algebra.
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+

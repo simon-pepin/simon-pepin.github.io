@@ -1,0 +1,9 @@
+[0] Config.pm:340> INFO - This is Biber 2.4
+[1] Config.pm:343> INFO - Logfile is 'DGT_program.blg'
+[95] biber:287> INFO - === Di Mai  8, 2018, 14:11:54
+[306] Biber.pm:348> INFO - Reading 'DGT_program.bcf'
+[672] Biber.pm:742> INFO - Found 1 citekeys in bib section 0
+[692] Biber.pm:3151> INFO - Processing section 0
+[752] Biber.pm:3308> INFO - Looking for bibtex format file 'DGT.bib' for section 0
+[892] Utils.pm:163> ERROR - Cannot find 'DGT.bib'!
+[892] Biber.pm:113> INFO - ERRORS: 1

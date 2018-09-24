@@ -1,0 +1,1152 @@
+\documentclass[a4paper]{amsart}
+
+
+% Standard Packages
+\usepackage{amssymb}
+%\usepackage{amscd}
+%\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+%\usepackage{varioref}
+\usepackage[arrow,curve,matrix]{xy}
+
+%% Graphics Packages
+%\usepackage{colortbl}
+%\usepackage{graphicx}
+%\usepackage{tikz}
+
+% Font packages
+\usepackage{mathrsfs}
+
+
+%
+% GENERAL TYPESETTING
+%
+%
+%% Colours for hyperlinks
+%\definecolor{linkred}{rgb}{0.7,0.2,0.2}
+%\definecolor{linkblue}{rgb}{0,0.2,0.6}
+
+% Limit table of contents to section titles
+\setcounter{tocdepth}{1}
+
+% Numbering of figures (see below for numbering of equations)
+\numberwithin{figure}{section}
+
+% Add an uparrow to the bibliography entries, just before the back-list of references
+%\usepackage[hyperpageref]{backref}
+%\renewcommand{\backref}[1]{$\uparrow$~#1}
+
+% Numbering of parts in roman numbers
+%\renewcommand\thepart{\rm \Roman{part}}
+
+% Sloppy formatting -- often looks better
+\sloppy
+
+% Changes the layout of descriptions and itemized lists. The indent specified in
+% the original amsart style is too much for my taste.
+%\setdescription{labelindent=\parindent, leftmargin=2\parindent}
+%\setitemize[1]{labelindent=\parindent, leftmargin=2\parindent}
+%\setenumerate[1]{labelindent=0cm, leftmargin=*, widest=iiii}
+
+
+
+%
+% Input characters
+%
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{χ}{\ensuremath{\chi}}
+\newunicodechar{δ}{\ensuremath{\delta}}
+\newunicodechar{∆}{\ensuremath{\Delta}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{Γ}{\ensuremath{\Gamma}}
+\newunicodechar{ι}{\ensuremath{\iota}}
+\newunicodechar{κ}{\ensuremath{\kappa}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{Λ}{\ensuremath{\Lambda}}
+\newunicodechar{μ}{\ensuremath{\mu}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+\newunicodechar{Ω}{\ensuremath{\Omega}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{φ}{\ensuremath{\phi}}
+\newunicodechar{Φ}{\ensuremath{\Phi}}
+\newunicodechar{ψ}{\ensuremath{\psi}}
+\newunicodechar{Ψ}{\ensuremath{\Psi}}
+\newunicodechar{ρ}{\ensuremath{\rho}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{Θ}{\ensuremath{\Theta}}
+
+
+\newunicodechar{∞}{\ensuremath{\infty}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{⨯}{\ensuremath{\times}}
+\newunicodechar{∪}{\ensuremath{\cup}}
+\newunicodechar{∩}{\ensuremath{\cap}}
+\newunicodechar{⊇}{\ensuremath{\supseteq}}
+\newunicodechar{⊃}{\ensuremath{\supset}}
+\newunicodechar{⊆}{\ensuremath{\subseteq}}
+\newunicodechar{⊂}{\ensuremath{\subset}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{◦}{\ensuremath{\circ}}
+\newunicodechar{°}{\ensuremath{^\circ}}
+\newunicodechar{…}{\ifmmode\mathellipsis\else\textellipsis\fi}
+\newunicodechar{⊗}{\ensuremath{\otimes}}
+
+%operators
+\newcommand{\salt}{\mathrm{s\mbox{-}alt}}
+\newcommand{\stimes}{⨯^{\salt}}
+\newcommand{\isom}{\cong}
+\newcommand{\tensor}{\otimes}
+\newcommand{\Frac}{\mathsf{Frac}} % Quotient field
+\newcommand{\Gal}{\mathsf{Gal}} % Galois group
+\newcommand{\Aut}{\mathsf{Aut}} % Automorphism group
+
+
+%theorem environments
+\theoremstyle{theorem}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem*{thmU}{Theorem}
+\newtheorem{theo}{Theorem}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem*{corU}{Corollary}
+\newtheorem{lemm}[thm]{Lemma}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{propdef}[thm]{Definition and Proposition}
+\newtheorem{obse}[thm]{Observation}
+\newtheorem{rema}[thm]{Remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{remi}[thm]{Reminder}
+\newtheorem{exam}[thm]{Example}
+\newtheorem{summ}[thm]{Summary}
+\newtheorem{nota}[thm]{Notation}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem*{ques}{Question}
+
+
+
+
+%letters
+\DeclareSymbolFontAlphabet{\scr}{rsfs}
+\newcommand{\Fh}{\mathcal{F}}
+\newcommand{\Oh}{\mathcal{O}}
+\newcommand{\OO}{\mathcal{O}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\Fp}{\mathbb{F}\!{_p}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Pe}{\mathbb{P}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+
+\newcommand{\Top}{{Top}}
+%\newcommand{\Top}{\mathsf{Top}}
+\newcommand{\pTop}{{Top}_\ast}
+%\newcommand{\pTop}{\mathsf{Top}_\ast}
+\newcommand{\grVec}{{Vec}}
+%\newcommand{\grVec}{\mathsf{Vec}}
+\newcommand{\sSet}{{{Set}_\Delta}}
+%\newcommand{\sSet}{{\mathsf{Set}_\Delta}}
+\newcommand{\Spaces}{{\mathcal{S}}}
+\newcommand{\PreShv}{{{P}}}
+%\newcommand{\PreShv}{{\mathcal{P}}}
+\newcommand{\Shv}{{{Shv}}}
+%\newcommand{\Shv}{{\mathsf{Shv}}}
+\newcommand{\Op}{{{Op}}}
+%\newcommand{\Op}{{\mathsf{Op}}}
+%\newcommand{\Sp}{{{Sp}}}
+\newcommand{\Sp}{{\mathcal{S}}}
+\newcommand{\Kan}{{{Kan}}}
+%\newcommand{\Sp}{{\mathsf{Sp}}}
+
+%Special
+\newcommand{\val}{\mathrm{val}}
+\newcommand{\shval}{\mathrm{shval}}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\trd}{tr{.}d}
+\DeclareMathOperator{\uhom}{\underline{hom}}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\Ind}{Ind}
+%\DeclareMathOperator{\char}{char}
+
+\title{$∞$-categories seminar}
+
+\renewcommand{\thesection}{\Roman{section}}
+\setlength{\parskip}{1em}
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section*{``Abstract''}
+
+Higher category theory lies in the intersection of two major developments of 20th century mathematics: topology and category theory. It provides a framework for settings where the morphisms between two objects form not just a set but a topological space, and is believed to be the best language for modern homological algebra and sheaf theory by a steadily increasing portion of the mathematical community.
+
+Despite being a new discipline, higher category theory has already found spectacular applications across mathematics, such as Lurie's proof of the cobordism hypothesis (in Mathematical Physics), and Gaitsgory-Lurie's work on Weil's Tamagawa number conjecture (in Number Theory), not to mention applications in Geometric Langlands, K-theory, Mirror Symmetry, Knot Theory / Floer Homology...
+
+This reading seminar will gently introduce some of the main concepts of higher category theory as developped by Lurie. By the end of the seminar, the student will be familiar enough with infinity categories that they can navigate texts written in this new language.
+
+\section*{General information}
+
+\begin{center}
+\begin{tabular}{rl}
+Instructor: & Shane Kelly \\
+Email: & shane [dot] kelly [dot] uni [at] gmail [dot] com \\
+Webpage: & {\footnotesize \url{http://www.mi.fu-berlin.de/users/shanekelly/InfinityCategories2017SS.html}} \\
+University webpage: & {\footnotesize \url{http://www.fu-berlin.de/vv/de/lv/365477?query=infinity+categories\&sm=314889}} \\
+Textbooks: 
+& ``A short course on ∞-categories'' by Groth \\
+& ``Higher topos theory'' by Lurie \\
+& ``Higher algebra'' by Lurie \\
+& See also the bibliography at the end. \\
+Room: & SR 140/A7 Seminarraum (Hinterhaus) (Arnimallee 7) \\
+Time: & Mo 16:00-18:00
+\end{tabular}
+\end{center}
+
+\section*{About the presentation}
+
+This is a student seminar which means that the students each make one of the presentations. The presentation should be about 75 minutes long, leaving 15 minutes for potential questions and discussion.
+
+Students are not \emph{required} to hand in any written notes. However, students are encouraged to prepare some notes if they feel it will improve the presentation. This should be considered seriously, especially if the student has not made many presentations before.
+
+For example, its helpful to have
+\begin{enumerate}
+ \item a written copy of exactly what they plan to write on the blackboard, and 
+ \item 5-10 pages of notes on the material to help find any gaps in your understanding.
+\end{enumerate}
+ 
+If notes are prepared I will collect them and give feedback if desired.
+
+The material listed below should be considered as a skeleton of the talk, to be padded out with other material from the texts or examples that the student finds interesting, relevant, enlightening, useful, etc.
+
+If you have any questions please feel free to contact me at the email address above.
+
+\section*{NB}
+
+About the absence of 1-categories before Talk VI: This seminar will complement the course \href{http://www.fu-berlin.de/vv/de/lv/365626?m=199248&pc=130123&sm=314889}{``Categories and Homotopy Theory'' 19234201}, which starts on the 8th of June. As such, we avoid as much as possible using 1-categories in the classical sense in the first half of the seminar. Moreover, model categories, simplicial categories, homotopy limits, etc only appear at the end of the course, after they have appeared in \href{http://www.fu-berlin.de/vv/de/lv/365626?m=199248&pc=130123&sm=314889}{``Categories and Homotopy Theory''}. This means that we lose a very important point of view on the subject, but on the other hand, it highlights homotopy theoretic tones of the material.
+
+($*$) About the references: Sometimes I insist on mentioning aspects of the theory which, as stated in the references, go beyond the scope of this course. When I do this, the reference is marked with a star. This is a warning that the language of the literature is not what we are using, or that there is a lot of background material needed to understand the statement as written that we are not going to cover.
+
+\section*{Overview and schedule}
+
+\section{24.04. Introduction}
+
+Topology studies those aspects of spaces which are preserved by stretching and bending, but not tearing or gluing. From this point of view, the surface of a doughnut (with hole) is the same as the surface of a coffee cup (with handle), but these are both different from the surface of a ball. Similarly, the shape of the written number 1 is the same as the shape of the written numbers 3, 5, and 7 but different from 6, 0, and 9, and these are different from 8. The shape of 2 and 4 either fall into the first or second groups depending on how you write them.
+
+A basic tool used to show that two spaces are different, is the fundamental groupoid $\pi_{\leq 1}(X)$ of a space $X$. This is the set of ways we can move from one point to another of our space leaving a trail of string. Two paths are considered the same if we can slide, stretch, or contract the string path of one to the other without leaving the space, and without moving the start and end points. It is a groupoid because given two paths, one starting where the other finishes, we get a third by concatenating them. The groupoid $\pi_{\leq 1}(X)$ is not changed under deformation, so if two spaces have different $\pi_{\leq 1}$'s, we can conclude that one cannot be obtained from the other by deformation. For example, a circle is different from a sphere, because every path on a sphere can be contracted to a point.
+
+%However, if we want to study a space which is glued from two other spaces, the fundamental group is no good, because the fundamental group only contains information about one connected component, and the intersection of the two component spaces may not be connected. So we replace it with the fundamental groupoid. This is the set of points of the space, and paths from one point to another. Now we cannot compose any two paths, only paths which 
+
+The fundamental groupoid only contains information about holes of ``dimension  $\leq 1$''. It can tell that a figure 8 is different from a figure 0, but not that a sphere is different from a point. To do this, we should also use paths of fabric between two string paths. But then we only get ``dimension 2'' holes, so we should use blocks, etc, etc. 
+
+This is a basic example of an ∞-category: The set of continuous maps $\square^n_{top} \to X$, where $0 \leq n < \infty$ and $\square^n_{top} = \{ (x_1, \dots, x_n) \in \RR^n : 0 \leq x_i \leq 1 \}$, together with the information of which maps $\square^{n-1}_{top} {\to} X$ are the face of a map $\square^n_{top} {\to} X$, and which maps $\square^n_{top} {\to} X$ are obtained from a map $\square^{n-1}_{top} {\to} X$ by just not moving in one direction.
+
+The ``∞'' refers to the fact that we are allowed any $n < \infty$, and the ``category'' from the fact that we can concatenate two maps $\square^n_{top} {\rightrightarrows} X$ if an ending face of one agrees with a starting face of the other.
+
+%A key difference with the fundamental groupoid, is that there is not a unique choice for the concatenation, because we are no longer considering two maps the same if one can be deformed to the other. However, any choice of concatenation can be deformed into any other choice. 
+
+
+
+\section{08.05. Simplicial sets (Danijela)} \label{ss}
+
+In practice, it is often more practical to work with triangles rather than squares. A \emph{simplicial set} is an abstract combinatorial object, which mimics the ∞-category of a topological space: we have a set $K_n$ for every $0 \leq n < \infty$, which we can think of as maps from an $n$-dimensional triangle into a space, and various morphisms $\delta_i: K_n \to K_{n-1}, \sigma_i: K_{n-1} \to K_n$ telling us how the triangles fit together.
+
+In this lecture the basic definitions are given, together with some basic examples.
+
+This lecture will cover the following: 
+
+See \href{InfCat2SS.pdf}{[Danijela's notes (scanned pdf), used with permission]}. \\%
+\\ 
+Another useful reference is: \href{https://arxiv.org/abs/0809.4221}{arxiv:0809.4221}.
+
+%Define the standard topological simplicies ${∆^n}_{top}$ [May, §14]. % 
+%Define the sets $Sing_n(X)$ associated to a topological space $X$ [Lur, p.1], [HTT, p.8], [Wei, App.1.1.4]*. %
+%Show that the face $\delta_i: {∆^{n-1}}_{top} → {∆^{n}}_{top}$ and degeneracy morphisms $\sigma_i: {∆^{n+1}}_{top} → {∆^{n}}_{top}$ (defined in [May, §14]) induce morphisms $d_i: Sing_n(X) → Sing_{n-1}(X)$ and $s_i: Sing_n(X) → Sing_{n+1}(X)$ which satisfy the identities of  [May, Def.1.1] and [Wei, Prop.8.1.3]. %
+%
+%Define a simplicial set [May, Def.1.1], [Wei, Prop.8.1.3]*. % 
+%Define the simplicial set $NP$ associated to a partially ordered set%
+%\footnote{$n$-simplices are sequences of elements $x_0 \leq x_1 \leq \dots \leq x_n$. Boundaries remove an $x_i$ and degeneracies write an $x_i$ twice in a row.} %
+% $(P, ≤)$. %
+%Define a \emph{0-category} to be any simplicial set $K$ such that there is a partially ordered set $(P, ≤)$ with $K = NP$ [HTT, Exa.2.3.4.3]*. %
+%Define the standard simplicial simplex $∆^n = N[n]$ via the partially ordered sets $[n] = \{ 0 \leq 1 \leq \dots \leq n\}$. % 
+%Define the simplicial set $N\cG$ associated to a directed graph%
+%\footnote{0-simplices are vertices of the graph, 1-simplicies are paths, and $n$-simplicies are $n$-tuples of sequential paths. Boundaries concatenate two adjacent paths (or remove the first or last path) and degeneracies insert an empty path.} % 
+% $\cG$. %
+%Define the simplicial set $BG$ associated to a group%
+%\footnote{The set of $n$-simplicies is the cartesian product $G^n$ (by convention $BG_0$ is a one point set). Boundaries multiply two adjacent elements (or remove the first or last path) and degeneracies insert the identity element $e \in G$.} 
+% $G$ % 
+%[Wei, Exa.8.1.7]. %
+%
+%Define subsimplicial set. % 
+%Give examples of subsimplicial sets of $∆^2$, and describe their corresponding subspaces of $∆^2_{top}$. In particular, consider $N\{0,1\}, N\{1,2\}, N\{0,2\} \subseteq ∆^2$, and their various unions such as $\Lambda^2_0, \Lambda^2_1, \Lambda^2_2, \partial ∆^2$. %
+%Define the product $K \times K'$ of two simplicial sets $K, K'$. %
+%Show that for any two topological spaces $Sing_\bullet(X) \times Sing_\bullet(Y) = Sing_\bullet(X \times Y)$. %
+%
+%If there is time, discuss simplicial complexes [Wei, Exa.8.1.8, Ex.8.1.2, Ex.8.1.3, Ex.8.1.4], in particular, show how to get a simplicial set $SS(K)$ from a simplicial complex $K$, and how to get a simplicial complex $SC(K)$ from a simplicial set $K$, observe that $SC(SS(K)) = K$, but give an example to show that $SS(SC(K)) \neq K$ in general. 
+
+\section{15.05. ∞-Categories (Kristian)} \label{Sec:InfCat}
+
+Not only do we get a simplicial set from every topological space, but by using the simplicial set as a recipe to glue various $∆_{top}^n$ together we can get a topological space from every simplicial set. The first part of this lecture describes how using this we can transport the notion of when two topological spaces are ``the same'' (from the point of view of topology) to define when two simplicial sets are ``the same''.
+
+Not every simplicial set has the ``composition'' property possessed by simplicial sets of topological spaces. The second part of this lecture formalises what it means to be able to ``compose'' simplicies, and defines ∞-categories. It finishes with the observation that the simplicial set of morphisms between an ∞-category is again an ∞-category.
+
+This lecture will cover the following: 
+
+See \href{InfCat3IC.pdf}{[Lecture notes (pdf)]}. \\%
+\\ 
+
+%Define a morphism of simplicial sets [May, Def.1.2]. % 
+%Observe that a morphism of partially ordered sets / directed graphs / topological spaces, induces a morphism of the associated simplicial sets. %
+%Define the mapping space of two simplicial sets $K, K'$ as $\hom_{sSet}(\Delta^\bullet {\times} K, K')$. %
+%
+%Define the geometric realisation of a simplicial set [Wei, 8.1.6], [May, §14]. %
+%Observe that the geometric realisation of $∆^n$ is $∆_{top}^n$. %
+%Define a homotopy equivalence of topological spaces [Hat, p.3]. %
+%(Optional) Give examples of homotopy equivalences which are not isomorphisms. %
+%Define a \emph{weak equivalence} of simplicial sets as a morphism which induces a homotopy equivalence on the geometric realisations [Hat, p.3]. %
+%
+%Define the boundaries $\partial ∆^n$ of $∆^n$. %
+%Define the inner horns $\Lambda^n_k$. %
+%Define Kan fibrations [HTT, Exa.2.0.0.1], [May, Def.1.7]. %
+%Define Kan complexes [Gro, Def.1.5], [HTT, Def.1.1.2.1], [May, Def.1.3, Con.1.6]. %
+%State that for any topological space $X$, the simplicial set $Sing_\bullet(X)$ is a Kan complex. %
+%(Optional) Prove this. %
+%Define an ∞-category [Gro, Def.1.7], [HTT, Def.1.1.2.4]. %
+%Show that 0-categories, cf. Talk~\ref{ss}, are ∞-categories [HTT, Exa.2.3.4.3]. %
+%Show that for any directed graph, its associated simplicial set is an ∞-category. %
+%(Optional) Give an example of a directed graph whose simplicial set is not a Kan complex. %
+%Define an n-category as an ∞-category in which the lifting condition is \emph{uniquely} satisfied [HTT, Prop.2.3.4.9]. %
+%(Optional) Show that this definition of 1-categories is equivalent to the classical ``objects-morphisms'' definition [May, §2]. %
+%Define a functor of ∞-categories [Gro,Def.2.1], [HTT, p.39]. %
+%Define a natural transformation of functors [Gro, Def.2.1]. %
+%Define the simplicial set of functors between two ∞-categories [Gro, Def.2.1], [HTT, Not.1.2.7.2]. %
+%State that it is an ∞-category [Gro, Prop.2.5(i)], [HTT, 1.2.7.3]. %
+
+%References: [HTT, 1.1.2] %(∞-categories, 8 pages)
+%[HTT, 1.2.7] %(Functors of ∞-categories, 2 pages)
+
+\section{22.05. Joins and slice ∞-categories (Arne)}
+
+The \emph{join} of two topological spaces is the topological space we get by adding a path from every point in one to every point in the other. For example, if one space is a circle, and the other a point, we get the shape of an icecream cone (without the icecream). This lecture shows how to define this for simplicial sets. In the case one space is a single point, the join is called the \emph{cone} for obvious reasons. Joins are needed for the definition of \emph{slice} categories, which are needed for the definition of \emph{limits}, in the next lecture. The ``slice'' of a morphism of topological spaces $f: X \to Y$ is something like the space of pairs $(x, \gamma)$ where $x \in X$ is a point and $\gamma: [0, 1] \to Y$ is a path starting from $f(x)$.
+
+This lecture will cover the following: 
+
+Define the right and left cone of a directed graph and a partially ordered set.%
+\footnote{For a graph, add one extra vertex and one edge to / from it for every old vertex. For a partially ordered set, add a new element defined to be less than / greater than every old element.} %
+Define the cone of a topological space, and draw the picture [Hat, pp.8-9]. %
+Define the join of two topological spaces, and draw the picture [Hat, p.9]. %
+Define the join of two simplicial sets [Gro, Def.2.11], [HTT, Def.1.2.8.1]. %
+Show that there are isomorphisms $∆^{i} {\star} ∆^{j} \cong ∆^{i+j+1}$. %
+Define the right cone and left cone of a simplicial set, and describe them explicitly [Gro Exa.2.14], [HTT, Not.1.2.8.4]. %
+Show that the ∞-categories of the cones of a directed graph and partially ordered set are the ∞-categories of their cones. %
+\emph{Prove} that for any two ∞-categories $S, S'$, the join $S \star S'$ is an ∞-category [HTT, Prop.1.2.8.3]. %
+
+Define the overcategory  $C_{/p}$ of a map $p$ by its universal property [Gro, Prop.2.17], [HTT, Prop.1.2.9.2]. %
+Define $C_{/p}$  explicitly [HTT, Proof of Prop.1.2.9.2]. %
+State (without proof) that $C_{/p}$ is an ∞-category [HTT, Prop.1.2.9.3]. %
+Define the undercategory by a universal property, and explicitly [HTT, Rem.1.2.9.5]. %
+Given a morphism of topological spaces $p: Y \to X$, explicitly describe the ∞-category $Sing_\bullet(X)_{/Sing(p)}$. %
+Do the same for directed graphs and partially ordered sets if there is time.
+
+%References: [Gro, pp.27-28], %
+%[HTT, 1.2.8] %(Joins, 2 pages)
+%[HTT, 1.2.9] %(Overcategories and undercategories, 2 pages)
+
+
+\section{29.05. Limits and colimits in ∞-categories (Robert)}
+
+Colimits are a vast generalisation and unification of unions and quotients. They are a way of gluing spaces together. The colimit of a collection of morphisms of ∞-categories is in a precise sense the ``supremum'' of this collection. %
+Dually, limits are a vast generalisation and unification of intersections, fixed points, and kernels. The limit of a collection of morphisms of ∞-categories is in a precise sense the ``infimum'' of this collection. %
+(Co)Limits are as basic to category theory as convergence is to analysis, but we will most immediately use them to define \emph{stable ∞-categories}. %
+If we do the Seifert-van Kampen Theorem they will appear there too.
+
+This lecture will cover the following:
+
+Define the ∞-category of topological spaces.\footnote{%
+See Example~\ref{exam:top} at the end of this document.
+} %
+Recall the definition of weak equivalence and Kan fibration from Talk~\ref{Sec:InfCat}. %
+Claim that a morphism of simplicial sets is a Kan fibration and a weak equivalence if and only if it is a trivial fibration (=trivial Kan fibration) in the sense of [HTT, Exa.2.0.0.2]. %
+Recall that a morphism which is both a weak equivalence and a Kan fibration is called an \emph{acyclic fibration} or \emph{trivial fibration}. %
+Define initial and final objects [Gro, §2.4], [HTT, §1.2.12.3]. %
+Show that the ∞-category of a partially ordered set has an initial (resp. final) object if and only if it has a minimal (resp. maximal) element. %
+(Optional) State the equivalent conditions of [Gro, Prop.2.23] (use the right mapping space [Gro, Rem.16(ii)], [HTT, p.27] as in [HTT, Prop.1.2.12.4]). %
+Show that the one point topological space is a final object in the ∞-category of topological spaces. %
+State that a topological space homotopy equivalent to a one point topological space is a final object. %
+(Optional) Prove this. %
+(Optional) Find sufficient and necessary conditions for a topological space to be a final object. %
+
+Define colimits and limits [HTT, Def.1.2.13.4]. %
+Observe that initial (resp. final) objects are colimits (resp. limits) of the empty diagram. %
+Show that limits / colimits in 0-categories (i.e., nerves of partially ordered sets) are infimums / supremums. % 
+Define pushout and pullback squares [Gro, Def.2.29]. %   \\ 
+
+Define the \emph{homotopy pushout} of a diagram $Z \stackrel{f}{\leftarrow} X \stackrel{g}{\to} Y$  of topological spaces as 
+$(Y \amalg ([0,1]{\times} X) \amalg Z)$ modulo the relations $f(X) \sim \{0\} {\times} X$ and $g(X) \sim \{1\} {\times} X$
+%$\frac{Y \amalg [0,1]\times X \amalg Z}{(f(X) \sim \{0\} \times X, \ g(X) \sim \{1\} \times X)}$
+. %
+Claim that this gives a pushout square in the ∞-category of topological spaces. %
+(Optional) Show this claim. %
+Define the \emph{homotopy pullback} of a diagram $Z \stackrel{f}{\rightarrow} X \stackrel{g}{\leftarrow} Y$  of topological spaces as $\{( z, \gamma, y) \in Z \times \hom([0,1], X) \times Y : \gamma(0) = f(z), \gamma(q) = g(y) \}$. %
+Claim that this gives a pullback square in the ∞-category of topological spaces. %
+(Optional) Show this claim. %
+(Optional) Do any / all of the following examples in the ∞-category of topological spaces: (co)products, (co)equalisers, mapping (co)telescope. %
+%Define the \emph{mapping cotelescope} of an inverse system $\dots \stackrel{f_3}{\to} X_2 \stackrel{f_2}{\to} X_1 \stackrel{f_1}{\to} X_0$ of spaces as $\{ (\gamma_n) \in \prod_{n \in \NN} \hom([0,1], X_n) : f_n \circ \gamma_n(1) = \gamma_{n-1}(0) \} $. %
+%Claim that this is the limit of the functor $X: N \NN^{op} \to \Top$. %
+%(Optional) Do mapping telescopes. %
+
+(Optional) Define cofinal morphisms [HTT, Def.4.1.1.1]. %
+(Optional) State the equivalent conditions of [HTT, Prop.4.1.1.8]. %
+(Optional) Define left Kan extensions along full subcategories [HTT, Def.4.3.2.2]. %
+(Optional) State the existence of left Kan extensions along full subcategories when the target is cocomplete [HTT, Cor.4.3.2.14].
+(Optional) Explain why Kan extensions are more complicated along morphisms which are not full inclusions [HTT, §4.3.3]. %
+(Optional) Define left extensions [HTT, Def.4.3.3.1]. %
+(Optional) Define left Kan extensions in general [HTT, Def.4.3.3.2]. %
+(Optional) State that the two definitions are compatible [HTT, Prop.4.3.3.5]. %
+(Optional) Explain how colimits are examples of left Kan extensions. %
+(Optional) Explain how inverse image of (classical) sheaves along a morphism of topological spaces is an example of a left Kan extensions. %
+
+
+
+% TO BE COMPLETED
+%%%[HTT, 1.2.10, 11, 12] %(Ff and ess.surj. functors, subcategories, initial and final objects 3 pages)
+
+%%%\section{n m . Kan extensions}
+%%% TOO TECHNICAL
+\section*{Reminder. 08.06. ``Categories and Homotopy Theory'' 19234201 starts.}
+
+\section{12.06. Monoidal ∞-categories (Karl)} %%% Include symmetric monoidal ∞-categories?
+%%% **** need acyclic Kan fibrations
+
+Some of the most interesting topological spaces come equipped with a multiplication, e.g., $GL_n(\CC)$. This defines a ``multiplication'' on its associated simplicial set. Monoidal categories are those equipped with a ``multiplication''. An important more general case is the space of loops of a topological space, written $\Omega X$. Here, the composition is not so straightforward.
+
+Recall that when defining the composition of two paths $\gamma, \gamma': [0, 1] \to X$ in a topological space with $\gamma(1) = \gamma'(0)$, we get the composition $\gamma'\circ \gamma: [0,1] \to X$ by travelling faster along the first map, then faster along the second map, see [HA, Beginning of Chap.5]. So there is a space of composition choices, and any choice is deformable into any other. Recall also that it is important to have this choice, because it is the only way to have associativity $(\gamma'' \circ \gamma') \circ \gamma = \gamma'' \circ (\gamma' \circ \gamma)$. So we want to keep track of the ∞-category of composition choices of $n$-paths for each $n = 0, 1, \dots$, as well as the many various functors sending a composition choice of $n$ paths to a composition choice of $k$ paths, for $n, k = 0, 1, \dots$. In practice it turns out to be a good idea to use \emph{coCartesian fibrations} to organise this data.
+
+Given a morphism $f: S \to \mathrm{Subsets}(Y)$ from a set $S$ to the set of subsets of a set $Y$, we can define $X = \{(s, y) : s \in S, y \in f(s)\}$ and instead work with the morphism of sets $p: X \to S; (s, y) \mapsto s$. We can recover $f$ as $p^{-1}$, but the organisation of the data is a little cleaner. This is the idea behind coCartesian fibrations. Instead of a functor $S \to $ ∞-$\mathsf{Cat}$ from an ∞-category to the ∞-category of ∞-categories, which in general may be complicated to define and work with, we instead work with a special class of morphisms of ∞-categories called coCartesian fibrations. These are precisely those morphisms which are obtained analogously to the way we got $p: X → S$ from $f: S → \mathrm{Subsets}(Y)$.
+
+From this point of view, the ∞-category associated to $\Omega X$ is not the assignment of an ∞-category to each $n$, and a functor to each $[n] → [k]$, but rather, a coCartesian fibration $C → ∆^{op}$ towards the ∞-category associated to the collection of the partially ordered sets $[n]$.
+
+
+%There important examples, such as the \emph{loop space} of a pointed topological space for which the multiplication is only well defined up to ``deformation''. So in the ∞-category world, instead of a multiplication being a map that sends any pair $x, y$ to its product $x \cdot y$, it is a collection of ``products'' ***
+
+This lecture will cover the following:
+
+Define an inner fibration of simplicial sets [Gro, Def.1.37], [HTT, Def.2.0.0.3]. %
+Define coCartesian morphisms [Gro, Def.4.12], [HTT, Def.2.4.1.1]. %
+Unwrap this definition (i.e., state it in terms of lifting diagrams of inclusions of horns and boundaries of simplicies) [HTT, Rem.2.4.1.4]. %
+Define coCartesian fibrations [Gro, Def. 4.13], [HTT, Def.2.4.2.1]. %
+
+State the following: ``Principle. The ∞-category of coCartesian fibrations towards an ∞-category $S$ is equivalent to the ∞-category of functors from $S$ to the ∞-category of ∞-categories'' [HTT, Thm.3.2.0.1 and preceding paragraph]*. %
+
+More concretely: %
+Observe that if $A$ is an ∞-category, then $A {\to} \Delta^0$ is a coCartesian fibration. %
+Show that given two ∞-categories $A^{0}, A^{1}$ and a morphism $A^{1} \to A^{0}$, one can associate a coCartesian fibration $p: N_A(\Delta^1) \to \Delta^1$ such that $p^{-1}(0) = A^0$ and $p^{-1}(1) = A^1$ [HTT, Def.3.2.5.2]. %see also [HTT, p.179]
+
+Show that given a coCartesian fibration $p: X {\to} S$, for every 0-simplex $s \in S_0$, the fibre $p^{-1}(s)$ is an ∞-category. %
+Claim that for any coCartesian fibration $p: X {\to} \Delta^1$ there exists a morphism $p^{-1}(1) \to p^{-1}(0)$ [HTT, Lem.2.1.1.4], [HTT, Beginning of §2.4]. % WELL DEFINED UP TO HOMOTOPY
+Show that if $p: X{\to}S$ is a coCartesian fibration and $\sigma: \Delta^1 {\to}S$ a morphism, then $p^{-1}(\sigma) \to \Delta^1$ is a coCartesian fibration. %
+Deduce that for any coCartesian fibration $p: X \to S$ and any edge $\sigma: \Delta^1 \to S$, there exists a morphism $p^{-1}(\sigma(1)) \to p^{-1}(\sigma(0))$. %
+
+Define the ∞-category%
+\footnote{%
+See Example~\ref{exam:delta} at the end of this document.%
+} %
+ $N∆^{op}$. %
+ Define monoidal ∞-categories [Gro, Def.4.14 and p.48], [DAGII, Def.1.1.2]. %
+
+Present the following example [Gro, Exa.4.7]*, [DAGII, Def.1.1.1]*: Let $G$ be a group. 
+%Define $(G^\otimes)_0 = \amalg_n G^n$ the disjoint union over all $n = 0, 1, \dots$ of the set $G^n$ of $n$-tuples of elements of $G$. 
+The set of $q$-simplicies $(G^\otimes)_q$ is the set of tuples 
+%
+\begin{center}
+$([m_0] {\stackrel{\alpha_1}{\leftarrow}} \dots {\stackrel{\alpha_q}{\leftarrow}} [m_q], ((g_{0,1}, g_{0,2}, \dots, g_{0, m_0}), \dots, (g_{q,1}, g_{q,2}, \dots, g_{q, m_q})))$
+\end{center}
+%
+such that for each $0 < i ≤ q$ and $0 < j ≤ m_i$ we have %
+\begin{center}
+$
+g_{i,j} = 
+g_{i{-}1,\alpha_i(j)}
+g_{i{-}1,\alpha_i(j){-}1}
+\dots 
+g_{i{-}1,\alpha_i(j{-}1){+}1}$
+\end{center} %
+where $[m_0] {\leftarrow} \dots {\leftarrow} [m_q]$ is a $q$-tuple of $N∆^{op}$, and $(g_{i,1}, g_{i,2}, \dots, g_{i, m_i}) \in G^{m_i}$ for each $i = 0, \dots, q$. If $\alpha_i(j{-}1) = \alpha_i(j)$ we interpret the right hand side as the identity element $e \in G$. Note that considering $g_i = (g_{i,1}, \dots, g_{i, m_i})$ as an element of $BG_{m_i}$, the demanded equality can be more succinctly written as $g_{i} = \alpha^*g_{i{-}1}$. %
+% Note this is just a coherent sequence of diagrams $[m_i] → G$ where $G$ is a one point category
+The functor $G^\otimes \to N∆^{op}$ is projection to the first component. %
+Observe that the preimage of $[1]$ is the discrete ∞-category $G^\otimes_{[1]} = G$. %
+Observe that the preimage of the map $\delta_1: [1] {→} [2]; 0,1 \mapsto 0,2$ defines the multiplication on $G$. %
+Observe that the preimage of the map $[1] → [0]$ determines the identity element of $G$. %
+Observe that the associativity condition $(xy)z = x(yz)$ of $G$ is implied by the fact that the two compositions $\{0,3\} → \{0,1,3\} → \{0,1,2,3\}$ and $\{0,3\} → \{0,2,3\} → \{0,1,2,3\}$ are equal. %
+Observe that the associativity condition $((wx)y)z = (wx)(yz) = w(x(y(z))) = w((xy)z) = (w(xy))z$ is also encoded in a similar way. %
+Observe that for each $n$, the morphism $G^\otimes_{[n]} \to (G^\otimes_{[1]})^n$ induced by the maps $[1] {→} [n]; 0,1 \mapsto i{-}1,i$ is an isomorphism. % 
+
+%Present the following example [Gro, Exa.4.7]*, [DAGII, Def.1.1.1]*: Let $Fin^\otimes$ be the ∞-category whose $q$-simplicies are tuples
+%%
+%$$([m_0] {\stackrel{\alpha_1}{\leftarrow}} \dots {\stackrel{\alpha_q}{\leftarrow}} [m_q], ((I_{0,1}, I_{0,2}, \dots, I_{0, m_0}), \dots, (I_{q,1}, g_{q,2}, \dots, I_{q, m_q})))$$ 
+%%
+%where 
+
+%If possible, give the example of the cartesian monoidal ∞-category of topological spaces: The $q$-simplicies are triples $(\alpha, X, h)$ where $\alpha = [m_0] {\stackrel{\alpha_1}{\leftarrow}} \dots {\stackrel{\alpha_q}{\leftarrow}} [m_q]$ is a $q$-simplex of $N∆^{op}$, where $X = ((X_{0,1}, X_{0,2}, \dots, X_{0, m_0}), \dots, (X_{q,1}, X_{q,2}, \dots, X_{q, m_q}))$ is a sequence of sequences of topological spaces, and where $h$ is a collection of morphisms 
+
+Present the following example. Let $(X, x)$ be a pointed topological space, and we will define an ∞-category $\Omega X^\otimes$. The $q$-simplicies are tuples
+\begin{center}
+$([m_0] {\stackrel{\alpha_1}{\leftarrow}} \dots {\stackrel{\alpha_q}{\leftarrow}} [m_q], (h_I: ∆_{top}^{j} {\times} ∆_{top}^{m_{i_j}} \to X)_{I = (i_0 ≤ \dots ≤ i_j) \subseteq [q]})$
+\end{center}
+where the tuples are required to satisfy:
+\begin{enumerate}
+ \item $h_I(∆_{top}^{j}{\times}\{e_k\}) = x$ for each corner $\{e_k\} = (0, \dots, 0, 1, 0, \dots, 0) \in ∆^{m_{i_j}}_{top}$ (the $1$ is in the $k$th coordinate).
+ \item For every inclusion $ I' = (i_0' ≤ \dots ≤ i_{j'}') \subseteq I = (i_0 ≤ \dots ≤ i_{j}) \subseteq [q]$ the composition $h_I \circ (∆_{top}^{j'} {\times} ∆_{top}^{m_{i'_{j'}}} {→} ∆_{top}^{j} {\times} ∆_{top}^{m_{i_j}})$ is equal to $h_{I'}$, where the $∆_{top}^{j'}{→}∆_{top}^{j}$ is induced by the inclusion $I' ⊆ I$ and $∆_{top}^{m_{i'_{j'}}} {→} ∆_{top}^{m_{i_j}}$ is induced by $\alpha_{i'_{j'}} \alpha_{i'_{j'}{+}1} \alpha_{i'_{j'}{+}2} \dots \alpha_{i_j}:[m_{i_j}] {→} [m_{i'_{j'}}]$.
+\end{enumerate}
+Observe that the fibre $\Omega X^\otimes_{[1]}$ over $[1]$ is the singular simplicial set of the loop space $Sing_\bullet \Omega X$. %
+More generally, observe that the fibre over $[n]$ is the singular simplicial set of the subspace of $\uhom(\Delta_{top}^n, X)$ consisting of those maps sending the corners to $x$. %
+Observe that the morphism $\Omega X^\otimes_{[n]} \to (\Omega X^\otimes_{[1]})^n$ induced by the maps $[1] {→} [n]; 0,1 \mapsto i{-}1,i$ is a homotopy equivalence but \emph{not} an isomorphism. % 
+
+
+
+%
+%
+%Let $X$ be a topological group. That is, a topological space equipped with morphisms $m: X \times X \to X$ and $e: \{\ast\} \to X$ satisfying the axioms of a group. Define a monoidal ∞-category $X^\otimes$ as follows. 
+%
+%
+%Objects are the same as $N∆^{op}$. Mapping simplicial sets are 
+%\[ Map(m, n) = \coprod_{f \in \hom([m], [n])} X^m \]
+%Composition 
+%\[Map(l, m) \times Map(m, n) \to Map(l, n) \]
+%\[ \coprod_{g \in \hom([l], [m])} X^l \times \coprod_{f \in \hom([m], [n])} X^m \to \coprod_{f \in \hom([l], [n])} X^l \]
+%is probably given by pulling back along $g$ and then termwise multiplication. 
+%
+%Nerve of this: 0-simplicies are $\NN$. 1-simplicies are $(\alpha: [m] → [n], (x_1, \dots, x_m))$.
+%2-simplicies are $([l] → [m] → [n], (x_1, \dots, x_l), (x_1, \dots, x_m), h)$ where $h: [0,1] → X^l$ is a path from $x_1$ to $x_2$. The $q$-simplicies are
+%\[ ([m_0] {\stackrel{\alpha_1}{\leftarrow}} \dots {\stackrel{\alpha_q}{\leftarrow}} [m_q], ((x_{0,1}, x_{0,2}, \dots, x_{0, m_0}), \dots, (x_{q,1}, x_{q,2}, \dots, x_{q, m_q}))) \]
+%$$([m_0] {\stackrel{\alpha_1}{\leftarrow}} \dots {\stackrel{\alpha_q}{\leftarrow}} [m_q], ((h_{1,1}), (h_{2,1}, h_{2,2}), (h_{3,1}, h_{3,2}, h_{3,3}), \dots, (h_{q, 1}, h_{q, 2}, \dots, h_{q, q}))$$
+%where $h_{i,a}: \square^{a-1} \to X^{m_i}$ and for each $a, b$ the diagram commutes
+%\[ \xymatrix{
+%\square_{top}^{a-1} \times \square_{top}^{b-1} \ar[dd] \ar[r] & X^{m_{i-a}} \times X^{m_i} \ar[d]^{\alpha_{m_i}^*\alpha_{m_{i-1}}^*\dots \alpha_{m_{i-a}}^*} \\
+%& X^{m_{i}} \times X^{m_i}  \ar[d] \\
+%\square_{top}^{a+b-1} \ar[r] & X^{m_i}
+%} \] 
+%Observe that the maps $h_{i,1}$ is just a choice of element of $X^{m_i}$. %
+%Observe that the $q$-simplicies of the fibre over $[1]$ are collections of maps $h_{i,a}: \square_{top}^{a-1} → X$ which are compatible in the sense that $h_{i,a+b}(t_1, \dots, t_{a-1}, 0, t_1, \dots, t_{b-1}) = h_{i, }(t_1, \dots, t_{a-1}) \cdot h_{i, }(t_1, \dots, t_{b-1})$. 
+%
+
+
+
+%If possible, give the example of the monoidal ∞-category associated to the loop space of a pointed topological space. %[HA, p.198]? 
+%Cartesian monoidal structures? %
+%Cartesian monoidal category of topological spaces?
+
+Define monoidal and lax monoidal functors [DAGII, Def.1.1.8]. %
+Define algebras objects [DAGII, Def.1.1.14]. %
+Define left-tensored ∞-categories [DAGII, Def.2.1.1]. %
+Give example [DAGII, Exa.2.1.3]. %
+Define module objects [DAGII, Def.2.1.4]. %
+% Unwrap what this means in the case of $\Top^\otimes$. 
+
+%Barr-Beck? Too technical? %
+%Topological cyclic homology as an application? %
+%Symmetric monoidal categories if there is time %
+
+\section{19.06. Stable ∞-categories. (Vincent)} \label{stable}
+
+Two more canonical examples of ∞-categories are the collection of all pointed topological spaces, and the collection of all complexes of vector spaces. The smash product of a pointed topological space with the circle $S^1$ (called suspension) corresponds to shifting a complex of vector spaces. % (because we can think of the one dimensional complex concentrated in degree 1 as a pointed circle--it has one ``hole'' of dimension one). 
+However, while every complex of vector spaces is the shift of some other complex, not every pointed topological space is the suspension of some other pointed topological space. Using colimits, there is a notion of smash-product-with-$S^1$ in any (pointed) ∞-category, and the \emph{stable} ∞-categories are those in which this procedure is an equivalence.
+
+This lecture will cover the following:
+
+Define the ∞-category $\grVec$ of bounded complexes of vector spaces.%
+\footnote{%
+See Example~\ref{exam:vec} at the end of this document.
+} %
+Define the ∞-category $\pTop$ of pointed topological spaces. %
+Define pointed ∞-categories [Gro, Def.5.1], [DAGI, Def.2.1]. %	
+Observe that the zero vector space is both an initial and final object of $\grVec$. %
+Observe that in fact, any complex homotopy equivalent to zero is both an initial and final object of $\grVec$. %
+Observe that the point is both an initial and final object of $\pTop$. %
+Recall that $\Top$ is not a pointed ∞-category. %
+Define triangles in pointed ∞-categories [Gro, p.60], [DAGI, Def.2.4]. %
+Define exact and coexact triangules in pointed ∞-categories [Gro, Def.5.5], [DAGI, Def.2.4]. %
+Observe that  triangles in $\grVec$ with corners $K_\bullet \stackrel{f}{\to} K_\bullet' \to Cone(f)$ are both exact and coexact. %
+In particular, if $0 \to V \to V' \to V'' \to 0$ is an exact sequence of vector spaces, then $V \to V' \to V''$ is an exact and coexact triangle. %
+%More generally, if $f: V \to V'$ is a morphism of vector spaces, then $V \to V' \to C \oplus K[1]$ is an exact and coexact triangle, where 
+Observe that the triangles $X \stackrel{f}{\to} Y \to Cone(f)$ in $\pTop$ are coexact. %
+Observe that the triangles $Fib(f) \to X \stackrel{f}{\to} Y$ in $\pTop$ are exact. %
+Give an example of a coexact triangle in $\pTop$ which is not exact, and an exact triangle which is not coexact. %
+Define kernel and cokernels in pointed ∞-categories [DAGI, Def.2.6]. % 
+Define stable ∞-infinity categories [Gro. Def.5.11], [DAGI, Def.2.9]. %
+Observe that $\grVec$ is stable, but $\pTop$ is not stable. %
+
+Define the homotopy category $h(C)$ of an ∞-category $C$ using the construction $\pi(C)$ of [HTT], (resp. $\tau_1(C)$ of [Gro]), [Gro, Prop.1.15]*, [HHT, §1.2.3]*. %
+Observe that morphisms of $h(\grVec)$ are morphisms of chain complexes up to chain homotopy, and the morphisms of $h(\Top)$ are the morphisms of topological spaces up to homotopy. %
+Observe that $h(C)$ is a 1-category. %
+
+Define the suspension $\Sigma$ and loop $\Omega$ functors of a pointed ∞-category admitting pushouts and pullbacks [Gro, Def.5.8 and preceding text], [DAGI, Rem.3.2]. %
+Explain that in such an ∞-category $C$, for any objects $X, Y \in C_0$ the set of morphisms $\hom_{hC}(\Sigma X, Y)$ in the homotopy category is a group, and the set of morphisms $\hom_{hC}(\Sigma \Sigma X, Y)$ is an abelian group.\footnote{
+Step 1. Observe that $\Sigma X$ is the colimit of any diagram of the form $0 {\leftarrow} X {\rightarrow} X {\leftarrow} X {\rightarrow} \dots {\leftarrow} X {\rightarrow} 0$, and $\Sigma X \sqcup \Sigma X \sqcup \dots \sqcup \Sigma X$ is the colimit of any diagram of the form $0 {\leftarrow} X {\rightarrow} 0 {\leftarrow} X {\rightarrow} \dots {\leftarrow} X {\rightarrow} 0$. \\
+Step 2. Observe that by sending some $X$'s to zero in such a diagram, we obtain a map $\Sigma X \to \Sigma X \sqcup \Sigma X \sqcup \dots \sqcup \Sigma X$. \\
+Step 3. Observe that this induces maps $\hom_{hC}(\Sigma X, Y) \times \dots \times \hom_{hC}(\Sigma X, Y) \to \hom_{hC}(\Sigma X, Y)$.
+Step 4. Observe that any zero morphism $\Sigma X \to 0 \to Y$ induces a unit element for this operation. \\
+Step 5. Observe that $\hom_{hC}(\Sigma \Sigma X, Y)$ admits two multiplications which are compatible. Therefore, by the Eckman-Hilton Lemma they are the same. Consequently, this multiplication is commutative. 
+} %
+State that if $C$ is a stable ∞-category, then $hC$, equipped with the class of (co)exact triangles, satisfies the axioms (TR1)-(TR4) [Gro, Thm.5.15], [DAGI, Def.3.1, Thm.3.11]. %
+Prove any or all of these axioms (note the proof of the octahedral axiom (TR4) is surprisingly simple in this setting). % 
+
+
+
+%Explain that if a pointed 1-category has products and coproducts, and the canonical morphisms $X \sqcup X' \to X \times X'$ are all isomorphisms, then for every $X, Y$, the set $\hom(X, Y)$ has a canonical structure of an abelian group. %
+%Define an \emph{additive} 1-category to be a pointed 1-category admitting finite products and finite coproducts, such that the canonical morphisms $X \sqcup X' \to X \times X'$ are all isomorphisms. 
+%Show that for any ∞-category $C$, the 1-category $hC$ is pointed, has products and coproducts, and 
+%
+%
+%Define the functors $(-)[n]: C → C$ on a stable ∞-category [DAGI, Not.3.4]. %
+%Define distinguished triangles [DAGI, Def.3.8]. %
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%Axioms for a triangulated category.
+
+\section{26.06. ∞-Topoi (Georg)} \label{topoi}
+
+Classical (1-)topoi arise in a number of different ways:
+\begin{enumerate}
+ \item As generalisations of topological spaces.
+ \item As generalisations of set theory as a logical foundation of mathematics.
+ \item As a class of cocomplete (1-)categories that can be defined using generators and relations.
+\end{enumerate}
+
+%For lack of time we cannot do all of them, and for various reasons we will focus on the last one. If there is time we may consider connections to the first one. 
+
+Recall that not every ∞-category is cocomplete, that is, not every ∞-category admits all colimits. A canonical and practically useful way to embed an ∞-category $C$ in a cocomplete ∞-category is to consider the ∞-category $\PreShv(C) = \Fun(C^{op}, \Spaces)$ of functors from $C^{op}$ to the ∞-category of spaces $\Spaces$. Objects of this category are called presheaves for historical reasons. %In the first part of this talk, we define $\Spaces$ and $\PreShv(C)$, and look at the canonical functor $C → \PreShv(C)$ in some special cases where it is easy to define.
+
+In the case that $C$ is the nerve $N\Op(X)$ of the partially ordered set $\Op(X)$ of open sets of a topological space $X$, the category $\PreShv(N\Op(X))$ contains a very interesting full subcategory---the category $\Shv(N\Op(X))$ of \emph{sheaves}. A functor $F: N\Op(X)^{op} \to \Spaces$ is a sheaf if for any open covering ${U} = \{U_i \subseteq V\}_{i \in I}$ of some open $V \subseteq X$ which is closed under intersection (i.e., for all $U_i, U_j \in {U}$ we have $U_i \cap U_j \in {U}$), we can reconstruct $F(V)$ as the limit $\lim F|_{N {U}}$ of the induced diagram $N{U}^{op} → \Spaces$. Every presheaf can be forced to be a sheaf---there is a functor $\PreShv(N\Op(X)) → \Shv(N\Op(X))$. In fact, this is the universal functor which forces two presheaves to be equivalent if for every point $x \in X$ they agree on a sufficiently small neighbourhood. 
+
+If we think of $\PreShv(N\Op(X))$ as the cocomplete ∞-category generated by $N\Op(X)$, then we can think of the functor $\PreShv(N\Op(X)) → \Shv(N\Op(X))$ as enforcing certain relations, in this case, the relation that two presheaves ``agreeing'' on an open cover are in fact equivalent.
+
+∞-Categories built in this way---cocompletion of some smaller ∞-category and then forcing relations of a certain kind---arise in a much more general setting than classical topological spaces. %In this talk we work up to the general definition of an ∞-topos as a certain kind of localisation of a category of presheaves, and show that sheaves on a topological space are an example. 
+
+
+%The prototopical example of a sheaf is the set of analytic functions on open subsets of the complex plane: such a function is the data of a convergent power series on an open neighbourhood at each point, and the power series are required to agree on the intersections. In many situations, we don't want to work with just a set of functions on each open neighbourhood, but something more homological such as a complex of vector spaces, or a topological space. For example we could assign $Sing_*(U)$ to each open $U$. Here the requirement that they agree on the intersections is more subtle, because we only require them to agree up to homotopy, but these homotopies must also agree up to homotopy on the triple intersections, etc, etc. 
+%
+%Let us be more precise. A \emph{presheaf} on a topological space $X$ is a functor $F: NOp(X)^{op} \to \sSet$ from the opposite of the nerve of the partially ordered set $Op(X)$ of open subsets of $X$ to the ∞-category $\sSet$ of simplicial sets. For example, the presheaf of analytic functions sends a $0$-simplex, i.e., an open $U \subseteq X$ to the set $C^∞(U)$ of analytic functions on $U$ (seen as a discrete simplicial set) and a $1$-simplex, i.e., an inclusion $V ⊆ U$ to the restriction map $C^∞(U) \to C^∞(V)$. A presheaf is said to be a \emph{sheaf} if for every set $\mathcal{U} \subseteq Op(X)$ of opens which is closed under intersection, the canonical morphism $F(\cup_{U \in \mathcal{U}} U) → \varprojlim_{U \in \mathcal{U}} F$ is an equivalence. 
+%
+%In practice, instead of considering those assignments $U \mapsto F(U)$ which satisfy the ``agree on intersections'' condition, it may be easier to work with the category of all assignments (without any conditions) and formally invert any morphism $F \to G$ of assignments which is an isomorphism on very small neighbourhoods of 
+
+This lecture will be a more advanced talk, covering material of the speaker's choice.
+
+%%YONEDA
+%Define the ∞-category $\Spaces$ of spaces%
+%\footnote{
+%Define $\square^n_{sSet}$ to be $(\Delta^1)^{\times n}$. Equivalently, $\square^n_{sSet}$ is the nerve of the partially ordered set $[1]^n$ with the induced ordering. Equivalently, $\square^n_{sSet}$ is the nerve of the partially ordered set of subsets of $\{1, \dots, n\}$. The $q$-simplices of the ∞-category $\Spaces$ consist of:
+%\begin{enumerate}
+% \item A set of $q{+}1$ Kan complexes $K^{(0)}, \dots, K^{(q)}$.
+%
+% \item For each $i = 0, \dots, q{-}1$ and $a = 1, \dots, q{-}i$, a morphism $h_{i,i{+}a}: K^{(i)} {\times} \square^{a{-}1}_{sSet} \to K^{({a{+}i})}$.% (by convention, $\square^{0}_{top} = \{\ast\}$ and $\square^{-1}_{top} = \varnothing$).
+%
+% \item The morphisms $h_{i,j}$ are required to satisfy the compatibility condition: For every $a, b$, the restriction of $h_{i,k{+}a{+}b}$ to $K^{(i)}{\times}\square^{a{-}1}_{sSet} {\times} \square^{b{-}1}_{sSet} \subseteq K^{(i)}{\times}\square^{a{+}b{-}1}_{sSet}$ is the composition $h_{i{+}a,i{+}a{+}b} \circ (h_{i,i{+}a} \times \id_{\square^{b{-}1}_{sSet}})$. Here, the inclusion $\square^{a{-}1}_{sSet} {\times} \square^{b{-}1}_{sSet} \subseteq \square^{a{+}b{-}1}_{sSet}$ is induced by the inclusion $\{1, \dots, a{-}1\} \subseteq \{a{+}b{-}1\}$ and the identification of $\{1, \dots, b{-}1\}$ with $\{a{+}1, 
+%a{+}2, \dots, a{+}b{-}1\}$.
+%\end{enumerate}
+%Note that every sequence of morphisms $K_0 \stackrel{f_1}{\to} \dots \stackrel{f_n}{\to} K_n$ defines an $n$-simplex: choose $h_{i,i{+}a}$ to be the composition $K_i {\times} \square^{a-1} \to K_i \stackrel{f_{i{+}1}}{\to} K_{i {+} 1} \stackrel{f_{i{+}2}}{\to} \dots \stackrel{f_{i{+}a}}{\to} K_{i{+}a}$.
+%} %
+% [HTT, Def.1.2.16.1]*. %
+%%
+%Define the ∞-category $\PreShv(K)$ of presheaves on a simplicial set [HTT, Def.5.1.0.1]. %
+%As an example, describe representable presheaves on a topological space.%
+%\footnote{
+%Let $X$ be a topological space, let $\Op(X)$ be the partially ordered set of open subsets of $X$. So a $q$-simplex is a sequence of inclusions $U_0 \subset \dots \subseteq U_q$ of opens of $X$. If $V \subseteq X$ is an open, then define: the \emph{presheaf $j(V): N\Op(X)^{op} \to \Spaces$ represented by $V$} sends a $q$-simplex $U_0 \subset \dots \subseteq U_q$ to the $q$-simplex of $\Spaces$ with $K^{(i)} = \varnothing$ for all $i$ if $U_q \not\subseteq V$, and $K^{(i)}  = \Delta^0$ for all $i$ if $U_q \subseteq V$.
+%} %
+%Show that every inclusion $V \subseteq V'$ of open subsets of a topological space defines a natural transformation $j(V) \to j(V')$. %
+%More generally, show that there is a canonical morphism%
+%\footnote{
+%Associate to an $n$-simplex $V_0 \subseteq \dots \subseteq V_n$ of $N\Op(X)$ the morphism $N\Op(X)^{op} \times \Delta^n \to \Spaces$ of simplicial sets which sends a pair $((U_0 \supseteq \dots \supseteq U_q), (i_0, \dots, i_q))$ to the $q$-simplex of $\Spaces$ corresponding to the sequence of morphisms $K_0 \stackrel{f_1}{\to} \dots \stackrel{f_q}{\to} K_q$ with $K_{q-j} = \varnothing$ if $V_{i_{j}} \not\subseteq U_{j}$, and $K_{q{-}j} = \Delta^0$ if $V_{i_{j}} \subseteq U_{j}$.
+%} %
+%$N\Op(X) \to \Fun(N\Op(X)^{op}, \Spaces)$.
+%% DO THIS EXAMPLE
+%%As another example, describe the representable presheaf $j(Y): \Spaces^{op} \to \Spaces$ on $\Spaces$ where $Y$ is a Kan complex.%
+%%\footnote{
+%%A $q$-simplex $(K^{(i)}, h_{i,j})$
+%% : 0 \leq i \leq q, 0 \leq j \leq q{-}1, j{+}1 \leq k \leq q)$ 
+%%is sent to the $q$-complex whose Kan complexes are $\Map(K^{(q)}, Y)$
+%%} %
+%Claim that for any ∞-category $C$, there is a canonical functor $j: C \to \Fun(C^{op}, \Spaces)$. %SHOULD CLAIM IT IS FULLY FAITHFUL, BUT HAVEN'T DEFINED MAPPING SPACES IN A GOOD WAY...Joyal uses the subsimplicial set of $\Fn(\Delta^1, C)$ which sends end points to $x$ and $y$, and claims it is a Kan complex.
+%
+%%ADJOINTS 5.2.6
+%
+%%LOCALISATION FUNCTORS 5.2.7
+%
+%
+%
+%
+%%ORDINALS
+%Define an \emph{ordinal} to be a well-ordered set. %
+%Given examples%
+%\footnote{Note that we can associate $2\omega$ with the set $\{ n {-} \tfrac{1}{m} \in \RR : n, m \in \NN_{>1}\}$ equipped with the induced ordering. 
+%} %
+% $0, 1, 2, 3, \omega, \omega {+} 1, \omega {+} 2, 2 \omega, 2 \omega {+} 1, \omega^2, \omega^2 {+} 2 \omega {+} 1, \omega_1, \omega_2, \omega_\omega$. %
+%Define a successor (resp. limit) ordinal to be one admitting (resp. not admitting) a maximal element. %
+%Define a \emph{cardinal} as an equivalence class of ordinals, and explain why this is a lie.%
+%\footnote{We define two ordinals to be equivalent if there is a bijection between them. However, by Russell's Paradox, there is no set of ordinals. More to the point, the collection of all ordinals equivalent to some ordinal is too big to be a set, and so it doesn't make sense to talk about an equivalence class of ordinals. None-the-less, we say this anyway, but keep in mind that it is a lie. For a more refined discussion see [HTT, Section 1.2.15]*.}
+%% [*** in general the difference between big categories and small categoeis***]%
+%Define a cofinal morphism of simplicial sets using [HTT, Prop.4.1.1.8(3)]. %
+%Let $\alpha, \beta$ be ordinals and $\phi: \beta \to \alpha$ a morphism of partially ordered sets. Observe that $N(\phi): N(\beta) \to N(\alpha)$ is cofinal if and only if for every $a \in \alpha$, there exists $b \in \beta$ with $a < \phi(b)$. %
+%Define a \emph{regular ordinal} to be an ordinal $\alpha$, such that for every cofinal map $N(\beta) \to N(\alpha)$, we have $|\beta| \geq |\alpha|$. %
+%Define a \emph{regular cardinal} to be the cardinality of a regular ordinal. %
+%%Observe that regular cardinals correspond to classes of colimits.%
+%%\footnote{By this I mean the following. For every ∞-category $C$, consider the set of objects ${^\omega}C$ which are colimits of a diagram $N\omega \to C$ where $\omega$ is an ordinal. Notice that ${^{\omega + 1}}C = C$, i.e., } %
+%Give examples of regular cardinals, and cardinals which are not regular. %
+%
+%%IND CATEGORIES 5.3
+%Let $\kappa$ be a regular cardinal. %
+%Define a simplicial set to be \emph{$\kappa$-small} if its set of nondegenerate simplicies has cardinality $< \kappa$. % https://math.stackexchange.com/questions/1539638/definition-of-a-kappa-small-simplicial-set
+%%cf. also $\omega$-filtered on page 379. This should mean finite limits and finite colimits
+%Define $\kappa$-filtered [HTT, Def.5.3.1.7]. %
+%
+%Define $\kappa$-left (resp. $\kappa$-right) exactness of a functor $f:A \to B$ from an ∞-category $A$ admitting $\kappa$-small colimits (resp. limits) using [HTT, Prop.5.3.2.9, Rem.5.3.2.10]. %
+%
+%
+%
+%
+%Define the ind-category $\Ind_\kappa(C)$ of a small ∞-category $C$ as the smallest full subcategory of $P(C)$ containing the image of the Yoneda functor and closed under $\kappa$-filtered colimits [HTT, Prop.5.3.5.3, Cor.5.3.5.4]*. %
+%Remark that $\Ind_\kappa(C)$ admits all $\kappa$-filtered colimits [HTT, Cor.5.1.2.3, Prop.5.3.5.3]*. %
+%Define $\kappa$-accessible ∞-categories [HTT, Def.5.4.2.1]. %
+%***examples and non-examples (poset, vec, sSet, top?)***
+%*** Filtering of the category of vector spaces by cardinality of the basis.
+%[HTT, Exa.5.4.2.7]. %
+%% Functor categories are accessible [HTT, Prop.5.4.4.3]. % 
+%Define $\kappa$-continuous functors [HTT, Def.5.3.4.5]. %
+%Define accessible functors [HTT, Def.5.4.2.5]. %
+%%Define a $\kappa$-filtered colimit [***]. % not needed ?
+%Define a presentable ∞-categories using [HTT, Thm.5.5.1.1(4)]. % More equivalent definitions?
+%% Note that in Thm.5.5.1.1(4) there is no exactness required, and that if we add exactness, then we get the definition of an ∞-topos. 
+%%Compact objects [HTT, Def.5.3.4.5]. %
+%Define ∞-topoi [HTT, Def.6.1.0.4]. %
+%Observe that every ∞-topos is presentable [HTT, Thm.5.5.1.1(4)]. %
+%Define the category%
+%\footnote{
+%} %
+%of sheaves on a topological space [HTT, ***]. 
+%Claim that this is an ∞-topos [HTT, ***]. 
+%Claim that there is a generalisation of a topological space, called a \emph{Grothendieck site} which gives other examples of ∞-topoi [HTT, ***]. 
+%
+%
+%% in an ∞-category $C$ as the colimit of a diagram $p: N(A) \to C$ indexed by an ordinal $A$ with $|A|$
+%
+%% ACCESSIBILITY, PRESENTABLE CATEGORIES
+%
+%% DEFINITION OF A TOPOS, AND EXAMPLE OF SHEAVES ON A TOPOLOGICAL SPACE
+%
+%
+%
+%
+%
+%%
+%%
+%% Yoneda's lemma? [HTT, Prop.5.1.3.1] % requires working out the canonical functor K^{op} \times K \to sSet, which involves working out a fibrant replacement of the simplicial category associated to K.
+%%  Do Yoneda's lemma in the case of prehseaves on a classical topological space
+%% But need full Yoneda to define the Ind category.
+%% hom version of yoneda  F(X) = homXF
+%%
+%%
+%%Define localizations [HTT, Def.5.2.7.2]. %
+%%Example: chain complexes of abelian groups localised at a prime. ***to do *** %
+%%State existence of localizations [HTT, ***]. %
+%%
+%%Define an ∞-topos [HTT, Def.6.1.0.4]. %
+%%Show that for any topological space, the category of sheaves is a topos ***really? yes, or at least state that it is, and state some kind of gluing result***. %
+%%
+%%Seifert-van Kampen Theorem. 
+
+\section{03.07. ∞-Operads (André)}
+
+We have already mentioned that not every topological space is of the form $\Omega X$ for some topological space $X$. For example, each $\Omega X$ is connected. But not every connected topological space is of the form $\Omega X$ either. In the homotopy category, there is a canonical group structure on $\Omega X$, but the 7-sphere $S^7$ admits such a structure in the homotopy category (induced by the octonians) but cannot be a loop space by a Steenrod algebra operations argument. To recognise that $\Omega X$ is a loop space, we recall that for each $n$, there is a contractible space of ``multiplications'' $(\Omega X)^n → \Omega X$ satisfying various conditions. Such an object is called a group like monoid, over the $\EE_1$-operad (the operad is the collection of contractible spaces of multiplications). 
+
+In this talk, we work towards understanding the statement of this recognition principle---that the functor sending a pointed space to its associated grouplike $\EE_1$-operad is an equivalence of categories.
+
+This lecture will cover the following: TBA
+
+
+%algebras
+%Observe that the loop space of a topological space is not equipped with a well-defined product, but is none-the-less an algebra in the ∞-category of topological spaces. [HA, Section 5.1.3] "For every pointed space K, the resulting map E⊗k → S is evidently an Ek-monoid object of S (in the sense of Definition 2.4.2.1"
+%
+% Main result: Theorem 5.1.3.6 equivalence between k-loop spaces and operads over $E_k$
+%
+%
+%Recognition principles for iterated loop spaces
+
+\section{10.07. Spectra (Alex)}
+
+We studied stable ∞-categories in Talk~\ref{stable} and observed that not every ∞-category is stable. There is however, a universal stable ∞-category associated to any ∞-category. More precisely, for any (presentable) ∞-category $C$, there is a colimit preserving functor  $C → \Sp(C)$ such that the ∞-category $\Fun^L(C, D)$ of colimit preserving functors from $C$ to any (presentable) stable ∞-category $D$ is equivalent to $\Fun^L(\Sp(C), D)$, the category of colimit preserving functors out of $\Sp(C)$.
+
+There are at least two ways to do this. One way is as follows: we would like the loop functor $\Omega: C \to C$ to be an equivalence. So one could take the inverse limit of the diagram $\dots \stackrel{\Omega}{\to} C \stackrel{\Omega}{\to} C \stackrel{\Omega}{\to} C$ in the ∞-category of ∞-categories. There is a more concrete description of this ∞-category via \emph{spectra}. A spectrum, or rather, an $\Omega$-spectrum in $\Top$ is, classically, a sequence of topological spaces $(X_0, X_1, \dots)$ with homotopy equivalences $X_i → \Omega X_{i+1}$. If there is time we may discuss the ∞-category version of this description. One can think of $X_i$ as the ``$i$th component'' in the limit described above. It is informative to observe that if we replace a complex of vector spaces $K$ by its shifted truncations $(\tau_{\leq i}K)[i]$ and canonical morphisms $(\tau_{\leq i}K)[{-}i] \to (\tau_{\leq {i+1}}K)[{-}i{-}1]$ we don't lose any information. Indeed, the ∞-category of chain complexes is equivalent to the ∞-category of $\Omega$-spectra of bounded-below-zero chain complexes.
+
+Another way of constructing the stabilisation of an ∞-category is via \emph{excisive functors} from $\Spaces^{fin}_*$, the category of pointed objects in the smallest sub-∞-category of spaces $\Spaces$ containing the terminal object. An excisive functor is one sending pushout squares to pullback squares. Given such a functor $F$, we obtain a $\Omega$-spectrum in the classical sense by defining $X_n = F(\Sigma^n S^0)$, and the structural morphisms come from the property $F(\Sigma^n S^0) = \Omega F(\Sigma^{n-1} S^0)$. Conversely, given any $\Omega$-spectrum one can extend this to a functor on all of $\Spaces^{fin}_*$. 
+
+This latter procedure, using excisive functors, is where this talk will start. This is also useful foundation work for learning about Goodwillie calculus. If there is time, we will discuss the $\Omega$-spectrum point of view and observe that the two constructions produce equivalent categories.
+
+%One way is similar to the construction of the localisation of a ring. If $A$ is a ring and $f \in A$ an element, then ring homomorphisms $A \to B$ which send $f$ to an invertible element of $B$ are in bijection with ring homomorphisms $A[1/f]$. One way to describe $A[1/f]$ is as fractions of the form $a / f^n$ with $n \in \ZZ_{\geq 0}$, but another way, is as the (1-)colimit $A \to A \to A \to \dots$ where all morphisms are multiplication by $f$ (here $a / f^n$ corresponds to the element of the colimit represented by $a$ in the $n$th copy of $A$). Similarly, 
+
+This lecture will cover the following: TBA
+
+%Stabilisation DAGI Section 9
+%
+%Brown Representability HA 1.4.1.2? In the case of pointed spaces Remark 1.4.1.5.
+%Dold-Kan?
+%BarrBeck?
+%
+%Define excisive functors [HA, Def.1.4.2.1]. %
+%Define spectra via excisive functors [HA, Def.1.4.2.8]. %
+%State that the category of spectra is stable [HA, 1.4.2.17]. %
+%State that if $C$ is already stable then $Sp(C) = C$ [HA, 1.4.2.21]. %
+%Prove that spectra is the universal stable category [HA, 1.4.4.5]. % [HA, 1.4.2.23]?
+%
+%Connection to sequences of spaces with bonding maps [DAGI, Cor.10.17]. %
+%
+%Brown representability.
+%Define a cohomology theory [HA, Def.1.4.1.6]
+%Observe that we can apply Brown representability [HA, Remark 1.4.1.9, Cor.1.4.1.10] and that we obtain a spectrum [HA, Remark 1.4.1.11]. 
+%
+%
+%Eilenberg-Maclane examples. 
+%Non-Eilenberg-Maclane examples. 
+%
+%
+%Stabilisation? DAGI Section 8
+%
+%Goodwillie calculus? NOT ENOUGH TIME
+%
+%Corollary 5.5.2.9 (Adjoint Functor Theorem).
+%
+% 1.4.1 Brown representability
+% 1.4.2 Spectrum objects
+% 1.4.3 is the same as Ind(Sp^{fin}) 
+% 1.4.4 universal property
+
+\section{17.07. Simplicial model categories (Tommaso)}
+
+Simplicial categories and model categories are older notions that predate ∞-categories. What we have been calling ∞-categories are more properly called \emph{quasi-categories}, and they are just one of many equivalent theories of ∞-categories, simplicial categories being another theory. 
+
+A simplicial category is like a 1-category, but instead of a set of morphisms, we have a simplicial set of morphisms associated to every pair of objects. There is an equivalence between the theory of quasi-categories and the theory of simplicial categories in a very precise sense. This equivalence is very useful. There are many constructions, such as the Yoneda embedding from Talk~\ref{topoi}, which are trivial in the category of simplicial categories. Another example is the construction of (co)limits. While (co)limits in ∞-categories are defined by a universal property rather than a construction, in simplicial categories there is a a concrete construction. Moving to the world of simplicial categories gives a way to calculate (co)limits in ∞-categories.
+
+While there is a quasi-category associated to any model category, there may be many model categories associated to a given (presentable) quasi-category. Choosing a model category giving a quasi-category is analogous to choosing a basis for a vector space. Model categories also give a language for comparing various theories---there is a model category of quasi-categories, and a model category of simplicial categories, and a Quillen equivalence between these model categories. 
+
+This lecture will cover the following: TBA
+
+
+
+
+%
+%Define simplicial categories. %
+%Define fibrant simplicial categories. %
+%Define the simplicial set associated to a simplicial category. %
+%State that it is an ∞-category if the simplicial category is fibrant. %
+%Give the example of topological spaces, and chain complexes. %
+%Observe that the ∞-categories of topological spaces and chain complexes that we defined earlier are the ∞-categories associated to these simplicial categories. %
+%State the homotopy colimits in simplicial categories are colimits in their associated ∞-category [HTT, Thm.4.2.4.1].
+%Describe the Yoneda functor and state that it is an equivalence. %
+% Cartesian-ness in terms of simplicial categories [HTT, 2.4.1.10]. %
+%
+%To be completed.
+%Define a model category. %
+%Give the examples of topological spaces and chain complexes. %
+%
+%Algebras and modules in simplicial model categories [DAGII, Section 1.6]. %
+%
+%
+%
+%
+%
+%
+%Potential further topics:
+%
+%\begin{enumerate}
+% \item Kan extensions. These are like parametrised / relative (co)limits.
+% \item Universality of $D^-(A)$. The ∞-category of bounded above chain complexes of vector spaces satisfies a universal property.
+% \item Spectra. This is the universal way of making the ∞-category of spaces into a stable ∞-category. The ∞-category of spectra is the universal stable ∞-category. 
+% \item Brown Representability Theorem. A characterisation of when a functor is of the form $\mathrm{Map}(-, X)$ for some object $X$ in the category. In particular, this allows us to identify cohomology theories with objects in the category of spectra.
+% \item Topoi. Sheaf theory, but for sheaves of spaces.
+% \item Operads. Ring theory, but for spaces. 
+% \item Seifert-van Kampen Theorem. This says that if a topological space $X$ is the union of open subspaces $\mathscr{U} = \{U_i \subseteq X\}_{i \in I}$, and the set $\mathscr{U}$ is closed under intersection, then the simplicial set of $X$ is the colimit of the simplicial sets of the $U_i$. 
+%% \item Ran space.
+%\end{enumerate}
+
+\section*{Examples of ∞-categories}
+
+\begin{exam} \label{exam:poset}
+Recall that a partially ordered set is a set $P_0$ together with a antisymmetric, transitive, reflexive binary relation $P_1 \subseteq P_0 \times P_0$. The set $NP_n$ of $n$-simplicies of the \emph{nerve} $NP$ of a partially ordered set is 
+\[ NP_n = \{ (x_0, \dots, x_n) \in P_0^{n+1} = P_0 \times \dots \times P_0 : (x_i, x_{i+1}) \in P_1\textrm{ for } 0 \leq i < n \}. \]
+In other words, ordered tuples $x_0 \leq \dots \leq x_n$. The face morphisms are
+\[ d_i: (x_0, \dots, x_n) \mapsto (x_0, \dots, x_{i-1}, x_{i+1}, \dots, x_n) \]
+and the degeneracy morphisms are 
+\[ s_i: (x_0, \dots, x_n) \mapsto (x_0, \dots, x_{i}, x_i, \dots, x_n). \]
+Note that we could also have written $NP_n$ as the iterated fibre product $P_1^{\times_{P_0} n} = P_1 \times_{P_0} \dots \times_{P_0} P_1$. 
+\end{exam}
+
+\begin{exam} \label{exam:bg}
+Recall that a \emph{group} is a set $G_1$ equipped with a multiplication $G_1 \times G_1 \to G_1$ which is associative, and every element $g \in G_1$ admits an inverse. The \emph{classifying space} $BG$ of $G$ is the simplicial set whose set of $n$-simplicies is 
+\[ G_n = G_1^n = G_1 \times \dots \times G_1. \]
+The set $G_0$ has a single element. The face morphisms are 
+\[ d_i: (g_1, \dots, g_n) \mapsto \left \{ \begin{array}{cc}
+(g_2, \dots, g_n) & i = 0 \\
+(g_1, \dots, g_ig_{i+1}, \dots, g_n) & 0 < i < n \\
+(g_1, \dots, g_{n-1}) & i = n
+\end{array} \right . \]
+and the degeneracy morphisms are
+\[ s_i: (g_1, \dots, g_n) \mapsto (g_1, \dots, g_i, e, g_{i+1}, \dots, g_n). \]
+\end{exam}
+
+The nerve of a partially ordered set and the classifying space of a group are special cases of the nerve of a (small classical) category.
+
+\begin{exam} \label{exam:nc}
+Recall that a (small classical) category is a set $C_0$ whose elements are called \emph{objects}, a set $C_1$ whose elements are called \emph{morphisms}, four set maps 
+\[ \id: C_0 \to C_1, \qquad s, t: C_1 \rightrightarrows C_0, \]
+\[ \circ: \{ (f, g) \in C_1 \times C_1 : s(g) = t(f) \} \to C_1; \qquad (f,g) \mapsto g \circ f \]
+called \emph{identity}, \emph{source}, \emph{target}, and \emph{composition} respectively, such that the multiplication is associative (so $h\circ(g\circ f) = (h \circ g) \circ f$ when $s(g) = t(f), s(h) = t(g)$), for every $x \in C_0$ we have $s(e_x) = t(e_x)$, and the images of $C_0$ are identity elements (so $\id_{t(f)} \circ f = f$ and $f \circ \id_{s(f)} = f$). The \emph{nerve} $NC$ of a category is the simplicial set whose $n$-simplicies for $n \geq 1$ are 
+\[ NC_n = \{ (f_1, \dots, f_n) \in C_1^n : s(f_{i{+}1}) = t(f_i) \} \]
+and set of $0$-simplices is $C_0$. The face morphisms are
+\[ d_0 = t, d_1 = s: C_1 \to C_0 \textrm{ for } n = 1, \]
+\[ d_i: (f_1, \dots, f_n) \mapsto \left \{ \begin{array}{cc}
+(f_2, \dots, f_n) & i = 0 \\
+(f_1, \dots, f_{i+1} \circ f_i, \dots, f_n) & 0 < i < n \\
+(f_1, \dots, f_{n-1}) & i = n
+\end{array} \right . \]
+and the degeneracy morphisms are 
+\[ s_i: (f_1, \dots, f_n) \mapsto (f_1, \dots, f_{i-1}, \id_{t(f_{i{-}1})} = \id_{s(f_i)}, f_i, \dots, f_n). \]
+\end{exam}
+
+Here is a special case of the nerve of a category.
+
+\begin{exam} \label{exam:delta}
+The $q$-simplices of $\Delta^{op}$ are sequences $[m_0] {\leftarrow} \dots {\leftarrow} [m_q]$ of non-decreasing morphisms where $[m]  = \{0 \leq 1 \leq \dots \leq m \}$ for $m = 0, 1, 2, \dots$. Boundaries are given by removing an $[m_i]$ and composing morphisms, degeneracies are given by inserting an identity morphism.\end{exam}
+
+\begin{exam} \label{exam:2cat}
+The 2-category $Cat$ of (small classical) categories is the following simplicial set. An $n$-simplex is:
+\begin{enumerate}
+ \item A tuple $(C_0, \dots, C_n)$ of $n+1$ (small classical) categories (cf. Example~\ref{exam:nc}).
+ \item A tuple $(F_{ij}: C_{i} \to C_{j})_{0 \leq i < j \leq n}$ of functors.
+ \item A tuple $(\eta_{ijk}: F_{ik} \Rightarrow F_{jk} \circ F_{ij})_{0 \leq i < j < k \leq n}$ of natural transformations. 
+ \item The natural transformations are required to satisfy the compatibility condition: for every $0 \leq i, j, k, \ell \leq n$ the square 
+ \[ \xymatrix{
+F_{i\ell} \ar[r]^{\eta_{ij\ell}} \ar[d]_{\eta_{ik\ell}} & F_{j\ell}F_{ij} \ar[d]^{\eta_{\eta_{jk\ell} F_{ij}}} \\
+F_{k\ell}F_{ik} \ar[r]_{F_{k\ell} \eta_{ijk}} &  F_{k\ell}F_{jk}F_{ij}
+ } \]
+of natural transformations commutes.
+\end{enumerate}
+\end{exam}
+
+
+\begin{exam} \label{exam:top}
+The ∞-category $Top$ of topological spaces is the following simplicial set. An $n$-simplex is:
+\begin{enumerate}
+ \item A tuple $(X_0, \dots, X_n)$ of $n{+}1$ topological spaces.
+
+ \item An tuple of morphisms  
+ \[ (h_{i,j}: X_i {\times} \square^{j{-}i{-}1}_{top} \to X_{j})_{0 \leq i < j \leq n} \]% (by convention, $\square^{0}_{top} = \{\ast\}$ and $\square^{-1}_{top} = \varnothing$).
+ where $\square^m_{top} = \{ (t_1, \dots, t_m) \in \RR^m : 0 \leq t_i \leq 1 \}$.
+
+ \item The morphisms $h_{i,j}$ are required to satisfy the compatibility condition: For every $0 \leq i < j < k \leq n$, we should have 
+\begin{align*}
+h_{i,k}(x, (s_1, \dots, s_{j{-}i{-}1}, 1, t_1, \dots, t_{k{-}j{-}1})) \\
+= h_{j,k}(h_{i,j}(x, (s_1, \dots, s_{j{-}i{-}1})), (t_1, \dots, t_{k{-}j{-}1})) 
+\end{align*}
+for all $x \in X_i$, $(s_1, \dots, s_{j{-}i{-}1}) \in \square_{top}^{j{-}i{-}1}$, $(t_1, \dots, t_{k{-}j{-}1}) \in \square_{top}^{k{-}j{-}1}$.
+% For every $a, b$, the restriction of $h_{i,k{+}a{+}b}$ to $X_i{\times}\square^{a{-}1}_{top} {\times} \square^{b{-}1}_{top} \subseteq X_{i}{\times}\square^{a{+}b{-}1}_{top}$ is the composition $h_{i{+}a,i{+}a{+}b} \circ (h_{i,i{+}a} \times \id_{\square^{b{-}1}_{top}})$. Here, the inclusion $\square^{a{-}1}_{top} {\times} \square^{b{-}1}_{top} \subseteq \square^{a{+}b{-}1}_{top}$ is given by $((t_1, \dots, t_{a-1}), (s_1, \dots, s_{b-1})) \mapsto (t_1, \dots, t_{a-1}, 1, s_1, \dots, s_{b-1})$.
+\end{enumerate}
+
+Notice that a tuple $((X_0, \dots, X_n), (h_{ij})_{0 \leq i < j \leq n})$ defines a morphism $$f_{ij}(-) \stackrel{def}{=} h_{ij}(-, (0,0,\dots, 0)) : X_i \to X_j$$ for each $0 \leq i < j \leq n$. Moreover, for every $i < i_1 < i_2 < \dots  < i_k < j$ the compatibility conditions imply that $$h_{ij}(-, e_{i_1} + \dots + e_{j_k}) = f_{i_k,j} \circ f_{i_{k-1},i_k} \circ \dots \circ f_{i, i_1}: X_i \to X_j$$ where $e_{i'} = (0, \dots, 0, 1, 0, \dots, 0)$ is the $i'$th standard basis vector of $\RR^{j{-}i}$. So we can interpret $h_{ij}$ as a homotopy between all the possible compositions of the $f$'s with $f_{ij}$ at the ``lowest'' corner of $\square^{j{-}i{-}1}_{top}$ and $f_{j{-}1,j} \circ f_{j{-}2,j{-}1} \circ f_{i{+}1,i{+}2} \circ f_{i,i{+}1}$ at the ``highest'' corner. The compatibility conditions then can be interpreted as asking that these homotopies are compatible with all compositions.
+
+The face morphisms are
+\[ d_k: (X_0, \dots, X_n, h_{i,j}) \mapsto (X_0, \dots, X_{k-1}, X_{k+1}, \dots, X_n, h'_{i,j}) \]
+where 
+\[ h_{i,j}'(x,t) = 
+\left \{ \begin{array}{cc}
+h_{i,j}(x,t) & i < j < k \\
+h_{i,j{+}1}(x, (t_1, \dots, t_{k{-}i{-}1}, 0, t_{k{-}i}, \dots, t_{j{-}i{-}1})) & i < k \leq j \\
+h_{i{+}1,j{+}1}(x,t) & k \leq i < j.
+\end{array} \right .\]
+The degeneracy morphisms are 
+\[ d_k: (X_0, \dots, X_n, h_{i,j}) \mapsto (X_0, \dots, X_{k}, X_{k}, \dots, X_n, h'_{i,j}) \]
+where 
+\[ h_{i,j}'(x,t) = 
+\left \{ \begin{array}{cc}
+h_{i,j}(x,t) & i < j \leq k \\
+h_{i,j{-}1}(x, (t_1, \dots, t_{k{-}i{-}1}, t_{k{-}i{+}1}, \dots, t_{j{-}i{-}1})) & i \leq k < j \\
+h_{i{-}1,j{-}1}(x,t) & k < i < j.
+\end{array} \right .\]
+Here, we interpret $h_{i,i}$ as $\id_{X_i}$. 
+%Given a morphism $\phi: [m] \to [n]$, the corresponding morphism $\Top_n \to \Top_m$ sends a $n$-simplex $((X_i), (h_{i, a}))$ to the $m$-simplex whose tuple of spaces is $(X_{\phi(0)}, \dots, X_{\phi(m)})$. For the morphisms $h_{i, a}$, we observe that $\phi$ induces a morphism %
+%$\square^{a-1}_{top} \to \square^{\phi(a{+}i){-}\phi(i){-}1}_{top}$ %
+%by sending %
+%$t_1e_1 {+} \dots {+} t_{a{-}1}e_{a{-}1} \in \square^{a-1}_{top}$ %
+%to %
+%$t_1e_{\phi(i{+}1){-}\phi(i)} {+} \dots {+} t_{a{-}1}e_{\phi(a{-}1{+}i){-}\phi(i)} \in \square^{\phi(a{+}i){-}\phi(i){-}1}_{top}$ (we interpret $e_0$ and $e_{\phi(a{+}i){-}\phi(i)}$ as 0 if they occur). Then we take the new $h_{i,a}$'s to be the compositions %
+%$X_{\phi(i)} {\times} \square^{a-1}_{top} %
+%\to X_{\phi(i)} {\times} \square^{\phi(a{+}i){-}\phi(i){-}1}_{top} %
+%\to X_{\phi(a{+}i)}$.
+
+Note that every sequence of continuous homomorphisms $X_0 \stackrel{f_1}{\to} \dots \stackrel{f_n}{\to} X_n$ defines an $n$-simplex: choose $h_{i,j}$ to be the composition $X_i {\times} \square^{j{-}i{-}1} \to X_i \stackrel{f_{i{+}1}}{\to} X_{i {+} 1} \stackrel{f_{i{+}2}}{\to} \dots \stackrel{f_{j}}{\to} X_{j}$ (i.e., the trivial homotopy).
+\end{exam}
+
+\begin{exam} \label{exam:vec}
+Define $\square^n_{vec}$ to be the (homological) complex of vector spaces which in degree $q$, has one basis vector for every sequence of subsets 
+\[ (\varnothing \subseteq I_0 \subsetneq I_1 \subsetneq \dots \subsetneq I_q \subseteq \{1, \dots, n\}). \]
+Differentials are alternating sums of the maps induced by forgetting the $i$th $I_i$. Another way to think about this is, the basis vectors of $(\square^n_{vec})_q$ are the non-degenerate $q$-simplicies of $N(\textrm{Subsets}(\{1, \dots, n\}))$ (which, not coincidentally, is isomorphic to the $n$-fold cartesian product $(\Delta^1)^n$). The map $(\square^n_{vec})_q \to (\square^n_{vec})_{q-1}$ is the alternating sum of the maps induced by the face morphisms $N(\textrm{Subsets}(\{1, \dots, n\}))_q \to N(\textrm{Subsets}(\{1, \dots, n\}))_{q-1}$
+
+A $q$-simplex of the ∞-category $\grVec$ is:
+\begin{enumerate}
+ \item A tuple $(K^{(0)}, \dots, K^{(q)})$ of $q{+}1$ complexes of vector spaces.
+
+ \item A tuple of morphisms
+ \[ (h_{i,j}: K^{(i)} {\otimes} \square^{j{-}i{-}1}_{vec} \to K^{(j)})_{0 \leq i < j \leq q}. \]% (by convention, $\square^{0}_{top} = \{\ast\}$ and $\square^{-1}_{top} = \varnothing$).
+
+ \item The morphisms $h_{i,j}$ are required to satisfy the compatibility condition: For every $a, b \geq 1$, the restriction of $h_{i,i{+}a{+}b}$ to $K^{(i)}{\otimes}\square^{a{-}1}_{vec} {\otimes} \square^{b{-}1}_{vec} \subseteq K^{(i)}{\otimes}\square^{a{+}b{-}1}_{vec}$ is the composition $h_{i{+}a,i{+}a{+}b} \circ (h_{i,i{+}a} \otimes \id_{\square^{b{-}1}_{vec}})$. Here, the inclusion $\square^{a{-}1}_{vec} {\otimes} \square^{b{-}1}_{vec} \subseteq \square^{a{+}b{-}1}_{vec}$ is induced by the identification of $\{1, \dots, b{-}1\}$ with $\{a{+}1, a{+}2, \dots, a{+}b{-}1\}$ and the morphism
+\[ 
+ \textrm{Subsets}(\{1, \dots, a{-}1\}) \times  \textrm{Subsets}(\{a{+}1, \dots, b{+}a{-}1\}) \to \textrm{Subsets}(\{1, \dots, a{+}b{-}1\}) 
+ \]
+ \[
+ I, J \mapsto I \cup \{a\} \cup J 
+\]
+ \end{enumerate}
+
+As in the case of topological spaces, notice that given a tuple as above, for each $0 \leq i < j  \leq n$ we have a morphism $f_{ij}: K^{(i)} \to K^{(j)}$ induced by the inclusion $\square_{vec}^0 \subseteq \square^{j{-}i{-}1}_{vec}$ corresponding to the empty set $(\varnothing \subseteq \{1, \dots, n\})$. The compatibilities enforce that the inclusions $\square_{vec}^0 \subseteq \square^{j{-}i{-}1}_{vec}$ must be equal to the various compositions $K^{(i)} \to K^{(i_1)} \to \dots K^{(j)}$ of the $f$'s.
+
+For example, $h_{i,i{+}2}$ is a chain homotopy between $f_{i,i{+}2}: K^{(i)} \to K^{(i{+}2)}$ and $f_{i{+}1,i{+}2} \circ f_{i,i{+}1}: K^{(i)} \to K^{(i{+}1)} \to K^{(i{+}2)}$. The other $h$'s can be interpreted as higher chain homotopies between the chain homotopies.
+
+% that since $K^{(i)} \otimes \square_{vec}^0 \cong K^{(i)}$, the morphisms $h_{i,i{+}1}$ are of the form $K^{(i)} {\to} K^{(i{+}1)}$. Moreover, the morphisms $h_{i, i{+}2}$ are nothing more than a chain homotopy between the composition $K^{(i)} \to K^{(i{+}1)} \to K^{(i{+}2)}$ and another morphism $K^{(i)} \to K^{(i{+}2)}$, namely, the composition $K^{(i)} \cong K^{(i)} \otimes \square^0_{top} \subset K^{(i)} \otimes \square^1_{top} \to K^{(i{+}2)}$.
+%every sequence of morphisms $K_0 \stackrel{f_1}{\to} \dots \stackrel{f_q}{\to} K_q$ defines an $q$-simplex: choose $h_{i,i{+}a}$ to be the composition $K_i {\otimes} \square_{vec}^{a-1} \to K_i \stackrel{f_{i{+}1}}{\to} K_{i {+} 1} \stackrel{f_{i{+}2}}{\to} \dots \stackrel{f_{i{+}a}}{\to} K_{i{+}a}$.
+\end{exam}
+
+
+\begin{exam} \label{exam:ss}
+Define $\square^n = (\Delta^1)^n$ to be the $n$-fold cartesian product. Note there is a canonical isomorphism $\square^n \cong N(Subsets(\{1, \dots, n\})$.
+
+An $n$-simplex of $\Sp$, the ∞-category of spaces is:
+\begin{enumerate}
+ \item A tuple $(K^{(0)}, \dots, K^{(q)})$ of $q{+}1$ Kan complexes.
+
+ \item A tuple of morphisms
+ \[ (h_{i,j}: K^{(i)} {\otimes} \square^{j{-}i{-}1} \to K^{(j)})_{0 \leq i < j \leq q}. \]% (by convention, $\square^{0}_{top} = \{\ast\}$ and $\square^{-1}_{top} = \varnothing$).
+
+ \item The morphisms $h_{i,j}$ are required to satisfy the compatibility condition: For every $a, b \geq 1$, the restriction of $h_{i,i{+}a{+}b}$ to $K^{(i)}{\times}\square^{a{-}1} {\times} \square^{b{-}1} \subseteq K^{(i)}{\otimes}\square^{a{+}b{-}1}$ is the composition $h_{i{+}a,i{+}a{+}b} \circ (h_{i,i{+}a} \otimes \id_{\square^{b{-}1}})$. Here, the inclusion $\square^{a{-}1} {\times} \square^{b{-}1} \subseteq \square^{a{+}b{-}1}$ is induced by the identification of $\{1, \dots, b{-}1\}$ with $\{a{+}1, a{+}2, \dots, a{+}b{-}1\}$ and the morphism
+\[ 
+ \textrm{Subsets}(\{1, \dots, a{-}1\}) \times  \textrm{Subsets}(\{a{+}1, \dots, b{+}a{-}1\}) \to \textrm{Subsets}(\{1, \dots, a{+}b{-}1\}) 
+ \]
+ \[
+ I, J \mapsto I \cup \{a\} \cup J 
+\]
+ \end{enumerate}
+
+As in the case of topological spaces, notice that given a tuple as above, for each $0 \leq i < j  \leq n$ we have a morphism $f_{ij}: K^{(i)} \to K^{(j)}$ induced by the inclusion $\square^0 \subseteq \square^{j{-}i{-}1}$ corresponding to the empty set $(\varnothing \subseteq \{1, \dots, n\})$. The compatibilities enforce that for each subset $\{i_1, \dots, i_k\} \subseteq I$, the morphism associated to the inclusion $\Delta^0 \subseteq \square^{j{-}i{-}1}$ corresponding to $I$ must be equal to the composition $K^{(i)} \to K^{(i_1)} \to \dots K^{(j)}$ of the $f$'s.
+
+For example, $h_{i,i{+}2}$ is a homotopy between $f_{i,i{+}2}: K^{(i)} \to K^{(i{+}2)}$ and $f_{i{+}1,i{+}2} \circ f_{i,i{+}1}: K^{(i)} \to K^{(i{+}1)} \to K^{(i{+}2)}$. The other $h$'s can be interpreted as higher homotopies between the homotopies.
+%
+% that since $K^{(i)} \otimes \square_{vec}^0 \cong K^{(i)}$, the morphisms $h_{i,i{+}1}$ are of the form $K^{(i)} {\to} K^{(i{+}1)}$. Moreover, the morphisms $h_{i, i{+}2}$ are nothing more than a chain homotopy between the composition $K^{(i)} \to K^{(i{+}1)} \to K^{(i{+}2)}$ and another morphism $K^{(i)} \to K^{(i{+}2)}$, namely, the composition $K^{(i)} \cong K^{(i)} \otimes \square^0_{top} \subset K^{(i)} \otimes \square^1_{top} \to K^{(i{+}2)}$.
+%every sequence of morphisms $K_0 \stackrel{f_1}{\to} \dots \stackrel{f_q}{\to} K_q$ defines an $q$-simplex: choose $h_{i,i{+}a}$ to be the composition $K_i {\otimes} \square_{vec}^{a-1} \to K_i \stackrel{f_{i{+}1}}{\to} K_{i {+} 1} \stackrel{f_{i{+}2}}{\to} \dots \stackrel{f_{i{+}a}}{\to} K_{i{+}a}$.
+\end{exam}
+
+
+
+\begin{thebibliography}{99.}
+
+\bibitem[Fri]{Fri}
+Friedman, Greg.
+\newblock An elementary illustrated introduction to simplicial sets.\\
+\newblock \url{https://arxiv.org/abs/0809.4221}
+
+\bibitem[Hat]{Hat}
+Hatcher, Allen.
+\newblock Algebraic Topology.
+
+\bibitem[Lur]{Lur}
+Lurie, Jacob.
+\newblock What is...an ∞-category? \\
+\newblock \url{http://www.ams.org/notices/200808/tx080800949p.pdf}
+
+\bibitem[HA]{HA}
+Lurie, Jacob.
+\newblock Higher algebra. \\
+\newblock \url{http://www.math.harvard.edu/~lurie/papers/HA.pdf}
+
+\bibitem[HTT]{HTT}
+Lurie, Jacob.
+\newblock Higher topos theory. \\
+\newblock \url{http://www.math.harvard.edu/~lurie/papers/highertopoi.pdf}
+
+\bibitem[DAGI]{DAGI}
+Lurie, Jacob.
+\newblock Derived algebraic geometry I. \\
+\newblock \url{http://www.math.harvard.edu/~lurie/papers/DAG.pdf}
+
+\bibitem[DAGII]{DAGII}
+Lurie, Jacob.
+\newblock Derived algebraic geometry, II. \\
+\newblock \url{http://www-math.mit.edu/~lurie/papers/DAG-II.pdf} 
+
+\bibitem[May]{May}
+May, Peter.
+\newblock Simplicial objects in algebraic topology.
+
+\bibitem[Gro]{Gro}
+Groth, Moritz.
+\newblock A short course on ∞-categories. \\
+\newblock \url{https://arxiv.org/abs/1007.2925}
+
+\bibitem[Wei]{Wei}
+Weibel, Charles  A.
+\newblock An introduction to homological algebra.
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+

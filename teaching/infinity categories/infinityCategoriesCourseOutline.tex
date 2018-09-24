@@ -1,0 +1,209 @@
+% !TEX encoding = UTF-8 Unicode
+% \documentclass[11pt]{article}
+\documentclass{article}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+
+\usepackage{amsmath}
+\usepackage{xypic}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[utf8]{inputenc}
+\usepackage[verbose]{newunicodechar}
+
+\DeclareUnicodeCharacter{00A0}{ }
+
+%
+% Input characters
+%
+\newunicodechar{∞}{\ensuremath{\infty}}
+
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{χ}{\ensuremath{\chi}}
+\newunicodechar{δ}{\ensuremath{\delta}}
+\newunicodechar{∆}{\ensuremath{\Delta}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{Γ}{\ensuremath{\Gamma}}
+\newunicodechar{ι}{\ensuremath{\iota}}
+\newunicodechar{κ}{\ensuremath{\kappa}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{Λ}{\ensuremath{\Lambda}}
+\newunicodechar{μ}{\ensuremath{\mu}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+\newunicodechar{Ω}{\ensuremath{\Omega}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{φ}{\ensuremath{\phi}}
+\newunicodechar{Φ}{\ensuremath{\Phi}}
+\newunicodechar{ψ}{\ensuremath{\psi}}
+\newunicodechar{Ψ}{\ensuremath{\Psi}}
+\newunicodechar{ρ}{\ensuremath{\rho}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{Θ}{\ensuremath{\Theta}}
+
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{⊗}{\ensuremath{\otimes}}
+\newunicodechar{⨯}{\ensuremath{\times}}
+\newunicodechar{∪}{\ensuremath{\cup}}
+\newunicodechar{∩}{\ensuremath{\cap}}
+\newunicodechar{⊇}{\ensuremath{\supseteq}}
+\newunicodechar{⊃}{\ensuremath{\supset}}
+\newunicodechar{⊆}{\ensuremath{\subseteq}}
+\newunicodechar{⊂}{\ensuremath{\subset}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{◦}{\ensuremath{\circ}}
+\newunicodechar{°}{\ensuremath{^\circ}}
+
+% Sha
+\DeclareFontFamily{U}{wncy}{}
+\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58} 
+
+\setlength{\parskip}{1em}
+
+\renewcommand{\implies}{\Rightarrow}
+
+\newtheorem{theo}{Theorem}[section]
+\newtheorem{prop}[theo]{Proposition}
+\newtheorem{lem}[theo]{Lemma}
+\newtheorem{rmk}[theo]{Remark}
+\newtheorem{defi}[theo]{Definition}
+\newtheorem{coro}[theo]{Corollary}
+\newtheorem{lemm}[theo]{Lemma}
+\theoremstyle{definition}
+\newtheorem{exam}[theo]{Example}
+\newtheorem{rema}[theo]{Remark}
+\newtheorem{exer}[theo]{Exercise}
+\newtheorem{fact}[theo]{Fact}
+\newtheorem{ques}[theo]{Question}
+\newtheorem{prope}[theo]{Properties}
+\newtheorem{conj}[theo]{Conjecture}
+
+% \headsep 1mm
+% \oddsidemargin -10mm
+% \evensidemargin -10mm
+% \headheight -15mm
+% \textwidth 175mm
+% \textheight 240mm
+
+
+\newcommand{\cA}{\mathcal{A}}
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\CC}{\mathbb{C}}
+\renewcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\sH}{\mathsf{H}}
+\newcommand{\kk}{\textrm{l\!k}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\renewcommand{\cR}{\mathcal{R}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cZ}{\mathcal{Z}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\zpi}{\mathbb{Z}[\tfrac{1}{p}]}
+\newcommand{\zll}{\mathbb{Z}_{(l)}}
+
+\renewcommand{\top}{\textrm{top}}
+\newcommand{\iHom}{\mathscr{H}\textrm{om}}
+\renewcommand{\mod}{\textrm{-mod}}
+\newcommand{\GrVecdg}{\textrm{GrVec}^{\textrm{dg}}}
+\newcommand{\GrVec}{\textrm{GrVec}}
+
+\newcommand{\un}{1\!\!1}
+
+\newcommand{\HZtop}{{H\ZZ_\top}}
+\newcommand{\HZ}{{H\ZZ}}
+\newcommand{\HZpi}{{H\ZZ\tfrac{1}{p}}}
+\newcommand{\HZol}{{H\ZZ/\ell}}
+\newcommand{\HL}{H\Lambda}
+
+
+
+\DeclareMathOperator{\car}{char.}
+\DeclareMathOperator{\gal}{Gal}
+\DeclareMathOperator{\Mot}{Mot}
+\DeclareMathOperator{\Ab}{Ab}
+\DeclareMathOperator{\Spc}{Spc}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spech}{Spec^h}
+\DeclareMathOperator{\Cone}{Cone}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\PreTr}{PreTr}
+\DeclareMathOperator{\ihom}{\underline{hom}}
+
+
+
+\begin{document}
+
+
+
+\bigskip
+
+
+%\maketitle
+%\tableofcontents
+
+The goal is to understand the definition of a stable monoidal ∞-category enough to understand the universal property of the derived category of abelian groups (or vector spaces for some field), and potentially prove the Eilinberg-Steenrod and de Rham theorems.
+
+\begin{enumerate}
+ \item An ∞-category is \emph{pointed} if it admits an object which is both initial and final.
+ \item An ∞-category is \emph{stable} if it is pointed, finitely complete, finitely cocomplete, and the suspension functor is an equivalence.
+\end{enumerate}
+
+Note that one needs the notion of limits to make these definitions.
+
+\begin{enumerate}
+ \item A \emph{colimit} of a diagram $p: K \to C$ is an initial object in the cocone category $C_{p/}$.
+ \item An object is \emph{initial} if the canonical map $C_{/x} \to C$ is an acyclic fibration of simplicial sets.
+ \item Cocone categories $C_{/p}$ are defined via a universal property involving \emph{joins}, an operation on simplicial sets.
+\end{enumerate}
+
+\begin{enumerate}
+ \item A \emph{monoidal ∞-category} is a cocartesian fibration $p: M^⊗ → N(∆^{op})$, such that the Segal maps are equivalences, 
+ \[ M^⊗_{[n]} \to (M_{[1]}^⊗)^{⨯n}, \qquad n ≥ 0. \]
+ 
+ \item Let $p: C → D$ be a functor between ∞-categories. A morphism $f: c_1 {→} c_2$ in $C$ is cocartesian if the following map is an acyclic Kan fibration.
+\[ C_{f/} → C_{c_1/} ⨯_{D_{p(c_1)/}} D_{p(f)/}. \]
+
+ \item A functor $p: C → D$ between ∞-categories is a \emph{cocartesian fibration} if $p$ is an \emph{inner fibration} and for every object $c_1 ∈ C$ and every morphism $α: p(c_1) = d_1 → d_2$ in $D$ admits a cocartesian lift.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+\end{document} 

@@ -1,0 +1,19 @@
+\contentsline {section}{\tocsection {}{}{``Abstract''}}{1}{section*.2}
+\contentsline {section}{\tocsection {}{}{General information}}{2}{section*.3}
+\contentsline {section}{\tocsection {}{}{About the presentation}}{2}{section*.4}
+\contentsline {section}{\tocsection {}{}{NB}}{3}{section*.5}
+\contentsline {section}{\tocsection {}{}{Overview and schedule}}{3}{section*.6}
+\contentsline {section}{\tocsection {}{I}{24.04. Introduction}}{3}{section.1}
+\contentsline {section}{\tocsection {}{II}{08.05. Simplicial sets (Danijela)}}{4}{section.2}
+\contentsline {section}{\tocsection {}{III}{15.05. \ensuremath {\infty }-Categories (Kristian)}}{4}{section.3}
+\contentsline {section}{\tocsection {}{IV}{22.05. Joins and slice \ensuremath {\infty }-categories (Arne)}}{4}{section.4}
+\contentsline {section}{\tocsection {}{V}{29.05. Limits and colimits in \ensuremath {\infty }-categories (Robert)}}{5}{section.5}
+\contentsline {section}{\tocsection {}{}{Reminder. 08.06. ``Categories and Homotopy Theory'' 19234201 starts.}}{6}{section*.7}
+\contentsline {section}{\tocsection {}{VI}{12.06. Monoidal \ensuremath {\infty }-categories (Karl)}}{6}{section.6}
+\contentsline {section}{\tocsection {}{VII}{19.06. Stable \ensuremath {\infty }-categories. (Vincent)}}{9}{section.7}
+\contentsline {section}{\tocsection {}{VIII}{26.06. \ensuremath {\infty }-Topoi (Georg)}}{10}{section.8}
+\contentsline {section}{\tocsection {}{IX}{03.07. \ensuremath {\infty }-Operads (Andr\IeC {\'e})}}{11}{section.9}
+\contentsline {section}{\tocsection {}{X}{10.07. Spectra (Alex)}}{11}{section.10}
+\contentsline {section}{\tocsection {}{XI}{17.07. Simplicial model categories (Tommaso)}}{12}{section.11}
+\contentsline {section}{\tocsection {}{}{Examples of \ensuremath {\infty }-categories}}{14}{section*.8}
+\contentsline {section}{\tocsection {}{}{References}}{17}{section*.9}

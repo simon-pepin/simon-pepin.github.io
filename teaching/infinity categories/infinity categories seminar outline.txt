@@ -1,0 +1,60 @@
+Need to put acyclic fibrations in somewhere. So need homotopy groups, and homotopy weak equivalences.
+
+last four lectures options:
+
+seifert-van kampen theorem
+topoi
+
+dold-kan? HA as main theorem?
+
+Brown representability [HA]?
+algebras, operads, HA
+constructible sheaves HA
+calculus of functors HA
+
+
+Define the category $Fin_*$, [HA, Not.2.0.0.2]. %
+Define inert morphisms in $Fin_*$, [HA, Def.2.1.1.8]. %
+Define ∞-operad [HA, Def.2.1.1.10]. %
+Define the underlying ∞-category of an ∞-operad [HA, Rem.2.1.1.12]. %
+
+
+
+Second draft.
+
+Week 1, Basics (pp.3-12)
+Week 2, Simplicial categories (pp.13-22)
+Week 3, Functors, Joins (pp.22-28)
+Week 4, Limits and colimits (pp.29-34)
+Week 5, Monoidal categories (pp.44-48)
+Week 6, Monoidal ∞-categories (pp.49-54)
+Week 7, Symmetric monoidal ∞-categories (pp.55-58)
+Week 8, Stable ∞-categories 1 (pp.59-65)
+Week 9, Stable ∞-categories 2 (pp.66-70)
+Week 10, Applications 1
+Week 11, Applications 2
+
+First draft.
+
+Week 1, Basics 1 (pp.3-8)
+Week 2, Basics 2 (pp.8-12)
+Week 3, Simplicial categories 1 (pp.13-18)
+Week 4, Simplicial categories 2 (pp.18-22)
+Week 5, Functors, Joins (pp.22-28)
+Week 6, Limits and colimits. (pp.29-34)
+Week 7, Model categories 1 (pp.35-38)
+Week 8, Model categories 2 (pp.39-43)
+Week 9, Monoidal categories 1 (pp.44-48)
+Week 10, Monoidal categories 2 (pp.49-54)
+Week 11, Symmetric monoidal ∞-catogires (pp.55-58)
+Week 12, Stable ∞-categories 1 (pp.59-65)
+Week 13, Stable ∞-categories 2 (pp.66-70)
+
+
+applications(?) of infinity categories
+- generalisation of the gluing groupoids theorem
+- spectra are easier?
+- covering spaces correspond to quotients of the fundamental group, generalisation?
+- moduli spaces
+- dg categories, dag
+- 

@@ -1,0 +1,21 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{1}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-2000}{QQ2-1-2}{``Abstract''}}{1}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-3000}{QQ2-1-3}{General information}}{2}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-4000}{QQ2-1-4}{About the presentation}}{2}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-5000}{QQ2-1-5}{NB}}{3}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-6000}{QQ2-1-6}{Overview and schedule}}{3}\relax 
+\doTocEntry\tocsection{I}{\csname a:TocLink\endcsname{1}{x1-7000I}{QQ2-1-7}{24.04. Introduction}}{3}\relax 
+\doTocEntry\tocsection{II}{\csname a:TocLink\endcsname{1}{x1-8000II}{QQ2-1-8}{08.05. Simplicial sets (Danijela)}}{4}\relax 
+\doTocEntry\tocsection{III}{\csname a:TocLink\endcsname{1}{x1-9000III}{QQ2-1-9}{15.05. \ensuremath  {\infty }-Categories (Kristian)}}{4}\relax 
+\doTocEntry\tocsection{IV}{\csname a:TocLink\endcsname{1}{x1-10000IV}{QQ2-1-10}{22.05. Joins and slice \ensuremath  {\infty }-categories (Arne)}}{5}\relax 
+\doTocEntry\tocsection{V}{\csname a:TocLink\endcsname{1}{x1-11000V}{QQ2-1-11}{29.05. Limits and colimits in \ensuremath  {\infty }-categories (Robert)}}{6}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-12000V}{QQ2-1-12}{Reminder. 08.06. ``Categories and Homotopy Theory'' 19234201 starts.}}{7}\relax 
+\doTocEntry\tocsection{VI}{\csname a:TocLink\endcsname{1}{x1-13000VI}{QQ2-1-13}{12.06. Monoidal \ensuremath  {\infty }-categories (Karl)}}{7}\relax 
+\doTocEntry\tocsection{VII}{\csname a:TocLink\endcsname{1}{x1-14000VII}{QQ2-1-14}{19.06. Stable \ensuremath  {\infty }-categories. (Vincent)}}{10}\relax 
+\doTocEntry\tocsection{VIII}{\csname a:TocLink\endcsname{1}{x1-15000VIII}{QQ2-1-15}{26.06. \ensuremath  {\infty }-Topoi (Georg)}}{11}\relax 
+\doTocEntry\tocsection{IX}{\csname a:TocLink\endcsname{1}{x1-16000IX}{QQ2-1-16}{03.07. \ensuremath  {\infty }-Operads (Andr\IeC {\'e})}}{12}\relax 
+\doTocEntry\tocsection{X}{\csname a:TocLink\endcsname{1}{x1-17000X}{QQ2-1-17}{10.07. Spectra (Alex)}}{12}\relax 
+\doTocEntry\tocsection{XI}{\csname a:TocLink\endcsname{1}{x1-18000XI}{QQ2-1-18}{17.07. Simplicial model categories (Tommaso)}}{14}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-19000XI}{QQ2-1-19}{Examples of \ensuremath  {\infty }-categories}}{15}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-20000XI}{QQ2-1-20}{References}}{23}\relax 

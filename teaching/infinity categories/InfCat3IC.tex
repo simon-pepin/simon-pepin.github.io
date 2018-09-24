@@ -1,0 +1,650 @@
+\documentclass[a4paper]{amsart}
+
+
+% Standard Packages
+\usepackage{amssymb}
+%\usepackage{amscd}
+%\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+%\usepackage{varioref}
+\usepackage[arrow,curve,matrix]{xy}
+\usepackage{mdframed}
+
+%% Graphics Packages
+%\usepackage{colortbl}
+%\usepackage{graphicx}
+%\usepackage{tikz}
+
+% Font packages
+\usepackage{mathrsfs}
+
+\DeclareUnicodeCharacter{00A0}{ }
+
+
+%
+% GENERAL TYPESETTING
+%
+%
+%% Colours for hyperlinks
+%\definecolor{linkred}{rgb}{0.7,0.2,0.2}
+%\definecolor{linkblue}{rgb}{0,0.2,0.6}
+
+% Limit table of contents to section titles
+\setcounter{tocdepth}{1}
+
+% Numbering of figures (see below for numbering of equations)
+\numberwithin{figure}{section}
+
+% Add an uparrow to the bibliography entries, just before the back-list of references
+\usepackage[hyperpageref]{backref}
+\renewcommand{\backref}[1]{$\uparrow$~#1}
+
+% Numbering of parts in roman numbers
+%\renewcommand\thepart{\rm \Roman{part}}
+
+% Sloppy formatting -- often looks better
+\sloppy
+
+% Changes the layout of descriptions and itemized lists. The indent specified in
+% the original amsart style is too much for my taste.
+%\setdescription{labelindent=\parindent, leftmargin=2\parindent}
+%\setitemize[1]{labelindent=\parindent, leftmargin=2\parindent}
+%\setenumerate[1]{labelindent=0cm, leftmargin=*, widest=iiii}
+
+
+
+%
+% Input characters
+%
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{χ}{\ensuremath{\chi}}
+\newunicodechar{δ}{\ensuremath{\delta}}
+\newunicodechar{∆}{\ensuremath{\Delta}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{Γ}{\ensuremath{\Gamma}}
+\newunicodechar{ι}{\ensuremath{\iota}}
+\newunicodechar{κ}{\ensuremath{\kappa}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{Λ}{\ensuremath{\Lambda}}
+\newunicodechar{μ}{\ensuremath{\mu}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+\newunicodechar{Ω}{\ensuremath{\Omega}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{φ}{\ensuremath{\phi}}
+\newunicodechar{Φ}{\ensuremath{\Phi}}
+\newunicodechar{ψ}{\ensuremath{\psi}}
+\newunicodechar{Ψ}{\ensuremath{\Psi}}
+\newunicodechar{ρ}{\ensuremath{\rho}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{Θ}{\ensuremath{\Theta}}
+
+
+\newunicodechar{∞}{\ensuremath{\infty}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{⨯}{\ensuremath{\times}}
+\newunicodechar{∪}{\ensuremath{\cup}}
+\newunicodechar{∩}{\ensuremath{\cap}}
+\newunicodechar{⊇}{\ensuremath{\supseteq}}
+\newunicodechar{⊃}{\ensuremath{\supset}}
+\newunicodechar{⊆}{\ensuremath{\subseteq}}
+\newunicodechar{⊂}{\ensuremath{\subset}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{◦}{\ensuremath{\circ}}
+\newunicodechar{°}{\ensuremath{^\circ}}
+\newunicodechar{…}{\ifmmode\mathellipsis\else\textellipsis\fi}
+\newunicodechar{⊗}{\ensuremath{\otimes}}
+
+%operators
+\newcommand{\salt}{\mathrm{s\mbox{-}alt}}
+\newcommand{\stimes}{⨯^{\salt}}
+\newcommand{\isom}{\cong}
+\newcommand{\tensor}{\otimes}
+\newcommand{\Frac}{\mathsf{Frac}} % Quotient field
+\newcommand{\Gal}{\mathsf{Gal}} % Galois group
+\newcommand{\Aut}{\mathsf{Aut}} % Automorphism group
+
+
+%theorem environments
+\theoremstyle{theorem}
+\newtheorem{thm}{Theorem}
+\newtheorem*{thmU}{Theorem}
+\newtheorem{theo}{Theorem}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem*{corU}{Corollary}
+\newtheorem{lemm}[thm]{Lemma}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{propdef}[thm]{Definition and Proposition}
+\newtheorem{obse}[thm]{Observation}
+\newtheorem{rema}[thm]{Remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{remi}[thm]{Reminder}
+\newtheorem{exam}[thm]{Example}
+\newtheorem{summ}[thm]{Summary}
+\newtheorem{nota}[thm]{Notation}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem*{ques}{Question}
+
+
+
+
+%letters
+\DeclareSymbolFontAlphabet{\scr}{rsfs}
+\newcommand{\Fh}{\mathcal{F}}
+\newcommand{\Oh}{\mathcal{O}}
+\newcommand{\OO}{\mathcal{O}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\Fp}{\mathbb{F}\!{_p}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Pe}{\mathbb{P}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+
+\newcommand{\Top}{{Top}}
+%\newcommand{\Top}{\mathsf{Top}}
+\newcommand{\pTop}{{Top}_\ast}
+%\newcommand{\pTop}{\mathsf{Top}_\ast}
+\newcommand{\grVec}{{Vec}}
+%\newcommand{\grVec}{\mathsf{Vec}}
+\newcommand{\sSet}{{\mathsf{Set}_\Delta}}
+\newcommand{\Spaces}{{\mathcal{S}}}
+\newcommand{\PreShv}{{{P}}}
+%\newcommand{\PreShv}{{\mathcal{P}}}
+\newcommand{\Shv}{{{Shv}}}
+%\newcommand{\Shv}{{\mathsf{Shv}}}
+\newcommand{\Op}{{{Op}}}
+%\newcommand{\Op}{{\mathsf{Op}}}
+\newcommand{\Sp}{{{Sp}}}
+%\newcommand{\Sp}{{\mathsf{Sp}}}
+
+%Special
+\newcommand{\val}{\mathrm{val}}
+\newcommand{\shval}{\mathrm{shval}}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\trd}{tr{.}d}
+\DeclareMathOperator{\uhom}{\underline{hom}}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Map}{Map}
+%\DeclareMathOperator{\char}{char}
+
+\title{$∞$-categories seminar \\
+Talk III. $∞$-Categories}
+
+\renewcommand{\thesection}{\Roman{section}}
+\setlength{\parskip}{1em}
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+\maketitle
+
+\section{Morphisms of simplicial sets}
+
+Recall that last week we defined a simplicial set as follows. \\
+
+\begin{mdframed}
+\begin{defi} \label{defi:SS}
+A \emph{simplicial set} is a sequence of sets $K_0, K_1, K_2, \dots$ together with maps $d_i: K_q → K_{q-1}$ and $s_i: K_q → K_{q+1}$ for $0 \leq i \leq q$ satisfying the axioms:
+\[ d_id_j = d_{j-1}d_i \qquad \textrm{ if } i < j \]
+\[ s_is_j = s_{j+1}s_i \qquad \textrm{ if } i \leq j \]
+\[ d_is_j = s_{j-1}d_i \qquad \textrm{ if } i < j \]
+\[ d_js_j = \id = d_{j + 1}s_j \qquad \qquad   \] 
+\[ d_is_j = s_{j}d_{i-1} \qquad \textrm{ if } i > j + 1. \]
+The $d_i$ are called \emph{face morphisms}, the $s_i$ are called \emph{degeneracy morphisms}, and the elements of $K_q$ are called $q$-simplices.   
+\end{defi}
+\end{mdframed}
+
+We saw that, heuristically, we can think of the set $K_0$ as the points of some topological space $X$, we can think of the set $K_1$ as the paths, $K_2$ as morphisms to $X$ from a triangle, $K_3$ as morphisms to $X$ from a tetrahedron, etc. Similarly, we can think of the face morphisms $d_i: K_3 \to K_2$ (resp. $K_2 \to K_1$, resp. $K_1 \to K_0$) as telling us how to restrict a morphism from a tetrahedron to one of its faces, (resp. a morphism from a triangle to one of its edges, resp. a path to its endpoints), and the maps $s_i: K_0 \to K_1$ (resp. $K_1 \to K_2$, resp. $K_2 \to K_3$) as telling us how to use a point of $X$ to define a path which stands still at that point (resp. how to use a path to define a map from a triangle which is constant in one direction, resp. how to use a morphism from a triangle to define a map from a tetrahedon which is constant in one direction).
+
+Indeed, we saw that given any topological $X$, we can associate to it its \emph{singular simplicial set} $Sing_\bullet X$ whose set of $q$-simplices is the set of maps 
+\[ Sing_q X \stackrel{def}{=} \hom(\Delta^q_{top}, X) \]
+ where
+\[ \Delta^q_{top} = \{ (t_0, \dots, t_q) : 0 \leq t_i \leq q, \sum t_i = 1 \} \subseteq \RR^{q+1}. \]
+The face morphisms $d_i: Sing_q X \to Sing_{q-1} X$ were defined to be composition $f \mapsto f \circ |\delta_i|$ with the inclusions of the $i$th face $|\delta_i|: \Delta^{q-1}_{top} \subseteq \Delta_{top}^q; (t_0, \dots, t_{q-1}) \mapsto (t_0, \dots, t_{i-1}, 0, t_i, \dots, t_{q-1})$, and the degeneracy morphisms $s_i: Sing_q X \to Sing_{q+1} X$ were defined to be composition $f \mapsto f \circ |\sigma_i|$ with the projections $|\sigma_i|: \Delta^{q+1}_{top} \to \Delta_{top}^q; (t_0, \dots, t_{q+1}) \mapsto (t_0, \dots, t_i {+} t_{i+1}, \dots, t_{q})$ which send the $i$th and $(i{+}1)$th verticies to the same point.
+
+Later in this talk, we will see that we will build a topological space from any simplicial set, and in the case of $Sing_\bullet X$ this reconstructs the space $X$ (up to homotopy).
+
+Notice that given a continuous morphism of topological spaces $X \to Y$, we obtain for every $q$ a morphism of sets $Sing_q f: Sing_q X \to Sing_q Y$ by sending a map $\Delta^q_{top} \to X$ to the composition $\Delta^q_{top} \to X \to Y$. Moreover, these morphisms are compatible with the face morphisms $d_i$ and the degeneracy morphisms $s_i$ in the sense that 
+\[ (Sing_{q-1} f) \circ d_i = d_i \circ (Sing_q f), \qquad (Sing_{q+1} f) \circ s_i = s_i \circ (Sing_q f) \]
+for all $q$ and $i$. \\
+%Indeed, by definition $d_i$ and $s_i$ are precomposition with the morphisms $|\delta_i|: \Delta^{q-1}_{top} \to \Delta^{q}_{top}$ and $|\sigma_i|: \Delta^{q+1}_{top} \to \Delta^{q}_{top}$ that we defined last time. Then for any morphism $\alpha: \Delta^{q}_{top} \to X$ we have
+%\begin{align*}
+%(Sing_{q-1}f)(d_i(\alpha)) 
+%&= (Sing_{q-1}f)(\alpha \circ |\delta_i|) \\
+%&=  f \circ \alpha \circ |\delta_i| \\
+%&= d_i(f \circ \alpha) \\
+%&= d_i(Sing_{q}f(\alpha))
+%\end{align*}
+%and similar for the $s_i$'s.
+
+
+\begin{mdframed}
+\begin{defi}
+A \emph{morphism} of simplicial sets $f: K \to L$ is a sequence of morphisms $f_q: K_q \to L_q$ such that 
+\[ f_{q - 1} d_i = d_i f_q, \qquad \textrm{ and } \qquad f_{q+1}s_i = s_i f_q \]
+for all $i$ and $q$. 
+\end{defi}
+\end{mdframed}
+
+\vspace{\baselineskip}
+
+\begin{mdframed}
+\begin{exam}
+Let $(P, \leq)$ be a partially ordered set. Recall that its nerve $NP$ is the simplicial set whose set of $q$-simplicies is the set of $q$-tuples $(x_0, \dots, x_q) {\in} P^{q+1}$ such that $x_0 \leq \dots \leq x_q$. Face morphisms are induced by deleting an entry and degeneracy morphisms were induced by writing an entry twice.
+
+Let $(Q, \leq)$ be another partially ordered set. and $f: (P, \leq) \to (Q, \leq)$ a morphism of partially ordered sets. That is, a morphism of sets $f: P \to Q$ such that for all $p, p' \in P$, if $p \leq p'$ then $f(p) \leq f(p')$. Then $f$ induces  a morphism of simplicial sets 
+\[ Nf: NP \to NQ; \qquad (x_0, \dots, x_q) \mapsto (f(x_0), \dots, f(x_q)). \]
+\end{exam}
+\end{mdframed}
+
+\begin{exam}
+Similarly, a morphism of directed graph induces a morphism of their associated nerves. We leave the details for the interested reader.
+\end{exam}
+
+Recall that last week we also defined $\Delta^n$ to be the nerve of the partially ordered set $[n] = \{0, \dots, n\}$. So for example, $(0, 0, 1, 1, 1, 1, 3, 3)$ is an example of a 7-simplex of $\Delta^3$.
+
+We defined the product of two simplicial sets $K, K'$ as the simplicial set whose set of $q$-simplicies are the set of pairs $(K \times K')_q = K_q \times K_q'$, and face and degeneracy morphisms are defined componentwise. \\
+
+\begin{mdframed}
+\begin{defi}
+Let $K, L$ be two simplicial sets. The \emph{mapping space} from $K$ to $L$ is defined as the simplicial set whose set of $q$-simplices is the set of morphisms of simplicial sets from $\Delta^q \times K$ to $L$.
+\[ \Map(K, L)_q = \hom(K {\times} \Delta^q, L). \]
+The face and degeneracy morphisms are defined as follows. For each $i$, there is a unique morphism of partially ordered sets $\delta_i: [q{-}1] \to [q]$ whose image is $\{0, 1, \dots, q\} \setminus \{i\}$. Similarly, there is a unique surjective morphism of partially ordered sets $\sigma_i: [q{+}1] \to [q]$ such that two elements of $[q{+}1]$ are sent to $i$. These morphisms of partially ordered sets induce morphisms of their nerves $N\delta_i: \Delta^{q-1} \to \Delta^q$ and $N\sigma_i: \Delta^{q+1} \to \Delta^q$ respectively, and precomposing with these morphisms, we obtain face morphisms
+\[ d_i:  \hom(K {\times} \Delta^q, L) \to  \hom(K {\times} \Delta^{q-1}, L); \qquad f \mapsto f \circ (\id_K \times N\delta_i) \]
+and degeneracy morphisms
+\[ s_i:  \hom(K {\times} \Delta^q, L) \to  \hom(K {\times} \Delta^{q+1}, L); \qquad f \mapsto f \circ (\id_K \times N\sigma_i). \]
+\end{defi}
+\end{mdframed}
+
+Last week we saw that the morphisms $\sigma_i$ and $\delta_i$ satisfy the ``opposite'' properties to the axioms in Definition~\ref{defi:SS}. From this one deduces that the definition of $\Map(K, L)$ satisfies the axioms in Definition~\ref{defi:SS}. 
+
+\section{Geometric realisation}
+
+Now let us consider how to reconstruct a topological space $X$ from $Sing_\bullet X$. We recover the underlying set of $X$ from $Sing_0 X = \hom(\Delta^0_{top}, X)$, since $\Delta^0_{top}$ is a single point, so a map from $\Delta^0_{top}$ to $X$ is the same thing as choosing a point of $X$. So if $K$ is a simplicial set we could start with $K_0$ as the set of points. We also know that for any element $\sigma \in Sing_1 X$ we have a path $\Delta^1_{top} \to X$ from the start $d_0 \sigma$ to the end $d_1 \sigma$. So in general, for every $\sigma \in K_1$, we want the geometric realisation $|K|$ to have a path from $d_0\sigma$ to $d_1\sigma$. Similarly, for every $\sigma \in K_2$ we want the geometric realisation to have a triangle, that is, a copy of $\Delta^2_{top}$, whose edges are the paths $d_0\sigma, d_1\sigma,$ and $d_2\sigma$. \\
+
+\begin{mdframed}
+\begin{defi}
+Let $K$ be a simplicial set. The geometric realisation $|K|$ of $K$ is the topological space defined as follows. We begin with the disjoint union
+\begin{equation} \label{equa:geomRealDisjointUnion}
+\left ( \coprod_{q \in \NN} \coprod_{\alpha \in K_q} \Delta^q_{top} \right )= \{ (q, \alpha, t) : q \in \NN, \alpha \in K_q, t \in \Delta^q_{top} \}. 
+ \end{equation}
+That is, for every $q$-simplex $\alpha \in K_q$ we have a copy of the topological $q$-simplex $\Delta^q_{top}$. In general, this disjoint union will be enormous. Then we define an equivalence relation on this huge disjoint union of $\Delta_{top}$'s. It is generated by the following relations. For every $q, i$ we say that 
+\begin{equation} \label{equa:equa:geomRealEquiv}
+(q, \alpha, |\delta_i|(t)) \sim (q{-}1, d_i\alpha, t), \qquad  \textrm{ and } \qquad (q, \alpha, |\sigma_i|(t)) \sim (q{+}1, s_i\alpha, t). 
+\end{equation}
+Here, $|\delta_i|: \Delta^{q-1}_{top} \to \Delta^{q}_{top}$ and $|\sigma_i|: \Delta^{q+1}_{top} \to \Delta^q_{top}$ are the morphisms induced the morphims $\delta_i: [q-1] \to [q]$ and $\sigma_i: [q+1] \to [q]$ of partially ordered sets. Explicitly, $|\delta_i|(t_0, \dots, t_{q-1}) = (t_0, \dots, t_{i-1}, 0, t_i, \dots, t_{q-1})$ and $|\sigma_i|(t_0, \dots, t_{q+1}) = (t_0, \dots, t_i + t_{i+1}, \dots, t_{q+1})$.
+
+We equip the quotient set $|K|$ with the quotient topology. 
+\end{defi}
+\end{mdframed}
+
+Let us investigate a bit closer what happens in low degrees in this construction. We start with a bunch of points, one for every element of $K_0$, a bunch of closed unit intervals, one for every element of $K_1$, a bunch of triangles, one for every element of $K_2$, etc etc. Now the relations. The relation corresponding to the degeneracy map $s_0: [1] \to [0]$ means that for every interval corresponding to some element of the form $s_0\sigma \in K_1$ all its points are equivalent to the point $(0, \sigma, 1)$ corresponding to $\sigma$. On the other hand, for a general $\sigma \in K_1$, the endpoints $(1, \sigma, (1,0))$ and $(1, \sigma, (0,1))$ of its corresponding closed unit interval are associated to the points $(0, d_1\sigma, 1)$ and $(0, d_0\sigma, 1)$ corresponding to $d_0\sigma, d_1\sigma \in K_0$. In geometric terms, we have joined these two points by an interval. Similarly, the triangle corresponding to some $\sigma \in K_2$ will have its edges  connected to the three closed unit intervals  corresponding to $d_0 \sigma, d_1 \sigma, d_2\sigma$. Beyond this we can't say that much in general, its just an abstract topological space that we have constructed. \\
+
+%\begin{exam}
+%The geometric realisation of the classifying space of the integers $(\ZZ, +)$ as a group with the operation of addition is homeomorphic to a circle.
+%
+%Indeed, there is a unique 0-simplex, so we have one distinguished point in $|N\ZZ|$, lets call it $\ast$. Then there is a 1-simplex for every integer $n \in \ZZ$, and the end points of each of the corresponding intervals are jointed to the point $\ast$. So at this stage we have a bunch of circles, all joined at one point. This looks kind of like a slinky twisted into a loop. But the 1-simplex $0 \in (N\ZZ)_1$ is in the image of $s_0: (N\ZZ)_0 \to (N\ZZ)_1$, so the corresponding circle is squashed to the point $\ast$.  
+%
+%Now, notice that for every integer $n \in \ZZ$, we have 2-simplices $(0, n)$ and $((n, n)$, and this gives a triangle whose edges are the loop of $n$, the loop of $m$ and the loop of $n+m$. On the other hand, we also have triangles corresponding to $2$-simplicies of the form 
+%\end{exam}
+
+\begin{mdframed}
+\begin{lemm} \label{lemm:deltareal}
+The geometric realisation $|\Delta^n|$ of the $n$th standard simplicial set $\Delta^n$ is homeomorphic to $\Delta^n_{top}$. 
+\end{lemm}
+\end{mdframed}
+
+\begin{proof}
+We have a map $\Delta^n_{top} {\to} |\Delta^n|$ defined by sending $t \in \Delta^n_{top}$ to $(n, (0, 1, \dots, n), t)$. That is, we identify it with the copy of $\Delta^n_{top}$ in the disjoint union of Equation~\eqref{equa:geomRealDisjointUnion} corresponding to the $n$-simplex $(0, 1, \dots, n) \in (\Delta^n)_n$. On the other hand, any $q$-simplex $(i_0, \dots, i_q) \in (\Delta^n)_q$ defines a map $\alpha: [q] \to [n]$ (sending $j \in [q]$ to $i_j \in [n]$). This map induces a morphism of topological spaces $|\alpha|: \Delta^q_{top} \to \Delta^n_{top}$ sending $t_0e_0 + \dots t_qe_q$ to $t_0e_{\alpha(0)} + \dots t_qe_{\alpha(q)}$ where $e_i = (0, \dots, 0, 1, 0, \dots, 0) \in \RR^{q+1}$ is the $i$th standard basis vector and $0 \leq t_i \leq 1, \sum t_i = 1$ are the coordinates of a point in $\Delta^q_{top}$. Putting all of these $|\alpha|$ together, we get a map $\coprod_{q \in \NN} \coprod_{\alpha \in K_q} \Delta^q_{top} \to \Delta^n_{top}$ which we claim is compatible with the equivalence relation, and therefore defines a map $|\Delta^n| {\to} \Delta_{top}^n$.
+
+We claim that these two morphisms $\Delta^n_{top} {\to} |\Delta^n|$ and $|\Delta^n| {\to} \Delta_{top}^n$ are inverse homeomorphisms. Since $(0, 1, \dots, n) \in (\Delta^n)_n$ corresponds to the identity morphism $[n] \to [n]$, and therefore the identity morphism $\Delta^n_{top} \to \Delta^n_{top}$, it follows that the composition $\Delta^n_{top} {\to} |\Delta^n| {\to} \Delta^n_{top}$ is the identity.
+
+Therefore, modulo our claim that the $|\alpha|$ are compatible with the equivalence relation (i.e., that $|\Delta^n| {\to} \Delta^n_{top}$ is well-defined) it suffices to prove that $|\Delta^n| {\to} \Delta^n_{top}$ is surjective. In other words, it suffices to prove that every element $(q, \alpha, t)$ in the big disjoint union of Equation~\ref{equa:equa:geomRealEquiv} is equivalent to some element of the form $(n, (0, 1,\dots, n), t')$. 
+
+Consider some $(i_0, \dots, i_q) \in (\Delta^n)_q$. One can show that there is a sequence of morphisms of the form 
+\[ [q] \stackrel{\sigma{j_1}}{\to} [q-1] \stackrel{\sigma_{j_1}}{\to} \dots \stackrel{\sigma_{j_{q-p}}}{\to} [p] \stackrel{\delta_{j_1}}{\to} [p+1] \stackrel{\delta_{j_2}}{\to} \dots \stackrel{\delta_{j_{n-p}}}{\to} [n] \]
+such that the composition is the morphism $\alpha: [q] {\to} [n]; j {\mapsto} i_j$. Via the equivalence relations of Equation~\ref{equa:equa:geomRealEquiv}, we then find that the point $t_0e_0 + \dots t_qe_q$ in the $\Delta^q_{top}$ corresponding to $(i_0, \dots, i_q)$ is made to be equivalent to the point $t_0e_{i_0} + \dots t_qe_{i_q}$ in our distinguished copy of $\Delta^n_{top}$, so $|\Delta^n| {\to} \Delta^n_{top}$ is surjective.
+\end{proof}
+
+\section{Homotopy equivalence}
+
+Although $|Sing_\bullet X| $ is not homeomorphic to $X$ in general, if $X$ is not to pathological, the two spaces are \emph{homotopic}. We define now what this means. \\
+
+\begin{mdframed}
+\begin{defi}
+Let $f, g: X \to Y$ be two morphisms between two topological spaces. A \emph{homotopy} from $f$ to $g$ is a morphism $h: X \times \Delta^1_{top} \to Y$ such that $h(x, (1,0)) = f(x)$ and $h(x, (0,1)) = g(x)$ for all $x \in X$. If there exists a homotopy from $f$ to $g$ we say that $f$ and $g$ are \emph{homotopic}.
+\end{defi} 
+\end{mdframed}
+
+Given a homotopy as above, we may think of $h$ as a continuous deformation of $f$ to $g$ over time, whose value at time $t \in [0, 1]$ is the map $h((t, 1{-}t), \bullet): X \to Y$. Using this notion, we can make precise what it means to continuously deform one space into another space.  \\
+
+\begin{mdframed}
+\begin{defi}
+Let $X, Y$ be topological spaces. If there exist morphisms $f:X \to Y$ and $g: Y \to X$ such that $fg$ is homotopic to $\id_Y$ and $gf$ is homotopic to $\id_X$ then we say that $X$ and $Y$ are \emph{homotopic}, and $f$ is a homotopy equivalence from $X$ to $Y$. 
+\end{defi}
+\end{mdframed}
+
+\begin{exam}
+If $f: X \to Y$ is a homeomorphism with inverse $f^{-1}$, then it is a homotopy equivalence since $f f^{-1} = \id_Y$ and $f^{-1} f = \id_X$ so we can take the constant homotopy $h: X \times \Delta^1_{top} \to X; h(x, t) = x$ and similar for $Y$.
+\end{exam}
+
+\begin{exam}
+Let $X = \{ (x_0, x_1) \in \RR^2 : x_0^2 + x_1^2 = 1\}$ and $Y = \RR^2 \setminus \{(0, 0)\}$. We claim that $X$ and $Y$ are homotopic. Define $f: X \to Y$ to be the inclusion, and $Y \to X$ to be the map $(x_0, x_1) \mapsto (\tfrac{x_0}{\sqrt{(x_0^2 + x_0^2)}}, \tfrac{x_1}{\sqrt{(x_0^2 + x_1^2)}})$. Then we have $g \circ f = \id_X$ so we can use the constant homotopy here. On the other hand, $f \circ g \neq \id_Y$. However, define $h: Y \times \Delta^1_{top} \to Y;  ((y_0, y_1), (t_0, t_1) \mapsto (\tfrac{y_0}{t_1 + t_0\sqrt{(y_0^2 + y_1^2)}}, \tfrac{y_1}{t_1 + t_0\sqrt{(y_0^2 + y_1^2)}})$. This gives a homotopy from $\id_Y$ to $f \circ g$. 
+
+A similar formula shows that in general, $S^n$ is homotopic to $\RR^{n+1} \setminus \{(0, \dots, 0)\}$. 
+\end{exam}
+
+\begin{exam}
+We claim that each $\Delta^n_{top}$ is homotopic to a point, say $e_0 = (1, 0, \dots, 0)$. If $f$ is the inclusion $e_0 \in \Delta^n_{top}$, and $g$ is the projection sending every element of $\Delta^n_{top}$ to $e_0$, then $g f = \id$, and $fg \neq \id$, but we can define a homotopy $h: \Delta^n_{top} \times \Delta^
+1_{top} \to \Delta^n_{top}$ by $((x_0, \dots, x_n), (t_0, t_1)) \mapsto (t_1  + t_0 x_0, t_0 x_1, \dots,  t_0 x_n)$. This gives a homotopy from $fg$ to $\id$. 
+\end{exam}
+
+\begin{exam}
+There is always a canonical morphism $|Sing_\bullet X| \to X$ (see if you can guess the definition, it is not hard, see the proof of Lemma~\ref{lemm:deltareal} for a clue). If $X$ is a ``nice'' topological space (for example a CW complex) then this canonical morphism is a homotopy equivalence.
+\end{exam}
+
+%\begin{exam}
+%We could try the same trick as above to show that the circle $Y=  \{ (x, y) \in \RR^2 : x^2 + y^2 = 1\}$ is homotopic to, say, the point $X = (1, 0) \in Y$, by defining $h: Y \times [0, 1] \to Y$ to be $((x, y), t) \mapsto ((1{-}t)+tx, ty)$.
+%\end{exam}
+
+\begin{mdframed}
+\begin{defi}
+We say that a morphism $f: K \to L$ of simplicial sets is a \emph{weak equivalence} if the geometric realisation $|f|: |K| \to |L|$ is a homotopy equivalence. 
+\end{defi}
+\end{mdframed}
+
+\begin{rema}
+There is a combinatorial way to define weak equivalences of simplicial sets without using topological spaces. First one defines the homotopy groups of a Kan complex (Kan complexes will be defined in the next section; their homotopy groups are defined in [May, Def.3.6] and [Wei, Def.8.3.1] but beware that their notation is slightly different to ours). Then one says that a morphism of Kan complexes is a weak equivalence if it induces an isomorphism on all homotopy groups. For morphisms between simplicial sets $K, L$ which are not Kan complexes, we take canonical weak equivalences $K \to RK$, $L \to RL$ where $RK, RL$ are Kan complexes, and then define $K \to L$ to be a weak equivalence if its induced morphism $RK \to RL$ induces an isomorphism an homotopy groups. For example, there is a way to define barycentric subdivision of simplicial sets, and using this, one associates to each simplicial set $K$ a Kan complex $Ex^∞K$ and to each morphism of simplicial sets $f: K \to L$ a morphism of Kan complexes $Ex^∞f: Ex^∞K \to Ex^∞L$. Another option is the canonical morphisms $K \to Sing_\bullet |K|$, $L \to Sing_\bullet |L|$, although this doesn't avoid using the geometric realisation.
+\end{rema}
+
+
+\section{Kan complexes}
+
+Recall that last week we saw that the subtopological space of $\Delta^2_{top}$ corresponding to the simplicial set $N\{0, 1\} \cup N\{0, 2\} \cup N\{1, 2\}$ was its boundary. This is true for higher $n$ too, and leads to the following definition. \\
+
+\begin{mdframed}
+\begin{defi}
+The boundary of $\Delta^n$ is the subsimplicial set
+\[ \partial \Delta^n \stackrel{def}{=} \bigcup_{i = 0}^n N\biggl ( \{0, \dots, n\} \setminus \{i\} \biggr ). \]
+\end{defi}
+\end{mdframed}
+
+We also saw other subspaces of $\Delta^2_{top}$ where we only took the union of two of the $N\{0, 1\}, N\{0, 2\}, N\{1, 2\}$. This generalises to higher dimensions too. We define the $k$th horn as the boundary with the $k$th face missing as follows. \\
+
+\begin{mdframed}
+\begin{defi}
+The $k$th horn of $\Delta^n$ is the subsimplicial set
+\[ \Lambda_k^n \stackrel{def}{=} \bigcup_{i \neq k} N\biggl ( \{0, \dots, n\} \setminus \{i\} \biggr ). \]
+\end{defi}
+\end{mdframed}
+
+\begin{exam}
+The set of $7$-simplicies of the simplicial set $\Delta^5$ is the set of tuples $(i_0, i_1, i_2, i_3, i_4, i_5, i_6, i_7)$ with $0 \leq i_0 \leq \dots \leq i_7 \leq 5$, for example $(0, 1, 1, 2, 2, 4, 5, 5)$ or $(0, 1, 1, 1, 1, 1, 2, 3)$. The $7$-simplicies contained in $\partial \Delta^5$ are then those simplicies which don't contain every element of $[5]$. So, the two examples above are ok, but $(0, 1, 2, 3, 3, 4, 4, 5)$ is in $\Delta^5$ but not $\partial \Delta^5$. For the $7$-simplicies of $\Lambda^5_3$, we are still not allowed to have every element of $[5]$, but moreover, we are also not allowed to have every element of $\{0, 1, 2, 4, 5\}$, so $(0, 1, 1, 2, 2, 4, 5, 5)$ is not in $\Lambda^5_3$ but $(0, 1, 1, 1, 1, 1, 2, 3)$ is in $\Lambda^5_3$.
+\end{exam}
+
+Now we define Kan complexes. These are the simplicial sets that satisfy a ``horn-filling'' property---every time we have a bunch of $q$-simplicies whose various faces agree so that they fit together into the shape of a horn (in the above sense), there exists a $(q+1)$-simplex for which these $q$-simplices are its faces. More precisely: \\
+
+\begin{mdframed}
+\begin{defi} \label{defi:KanCond}
+Let $K$ be a simplicial set. We say $K$ satisfies the \emph{$(n, i)$-lifting property} if for every set of simplicies $\alpha_0, \dots, \alpha_{i-1}, \alpha_{i+1}, \dots, \alpha_{n} \in K_{n-1}$ such that 
+\begin{equation} \label{equa:KanHypo}
+d_j\alpha_k = d_{k-1}\alpha_j, \qquad j < k, \qquad j, k \neq i, 
+\end{equation}
+there exists $\beta \in K_{n}$ such that 
+\begin{equation} \label{equa:Kanconclu}
+d_j\beta = \alpha_j, \qquad j \neq i.
+\end{equation} 
+
+Equivalently, $K$ satisfies the $(n, i)$-lifting property if any morphism of the form $\Lambda^{n}_i {\to} K$, can be extended to some morphism $\Delta^{n} {\to} K$.
+\end{defi}
+\end{mdframed}
+
+\vspace{\baselineskip}
+
+\begin{mdframed}
+\begin{defi} \label{defi:KanComp}
+We say that $K$ is a \emph{Kan complex} if it satisfies the $(n, i)$-lifting property for all $n \in \NN$ and all $0 \leq i \leq n$. 
+\end{defi}
+\end{mdframed}
+
+\vspace{\baselineskip}
+
+\begin{mdframed}
+\begin{prop}
+For any topological space $X$, the simplicial set $Sing_\bullet X$ is a Kan complex.
+\end{prop}
+\end{mdframed}
+
+\begin{proof}[Sketch of proof.]
+The idea is that a morphism of simplicial sets $\alpha: \Lambda^n_i \to Sing_\bullet X$ (resp. $\beta: \Delta^n \to Sing_\bullet X$) is the same thing as a continuous morphism $a: |\Lambda^n_i| \to X$ (resp. $b: \Delta^n_{top}$). Then, since for every inclusion $|\Lambda^n_i| \subset \Delta^n_{top}$ we can find a continuous map $r: \Delta^n_{top} \to |\Lambda^n_i|$ which is the identity when restricted to $|\Lambda^n_i|$, given any $a$ as above, we can define $b$ as the composition $a \circ r: \Delta^n_{top} \to |\Lambda^n_i| \to Sing_\bullet X$.  Note that since the retraction $r$ is not unique, the lifting property does not have a unique solution---in general there are many options!
+\end{proof}
+
+%\begin{exam}
+%*** TO FINISH ***
+%If $(P, ≤)$ is a partially ordered set, then $NP$ is a Kan complex. Indeed, let $\alpha_i = (x_{i,0} \leq \dots \leq x_{i,q}) \in (NP)_q$ be $q$-simplicies satisfying the condition of Equation~\ref{equa:KanHypo}. We want to find $\beta = (y_0, \dots, y_{q+1})$ such that $d_i\beta = \alpha_i$ for all $i \neq k$. Pick some $i \neq k$, and define $\beta = (x_{i,0}, x_{i,1}, \dots, x_{i, i-1}, x_{i, i-1}, x_{i, i}, \dots, x_{i, q})$, so we at least have $d_i\beta = \alpha_i$. Then we need to check that for $i' \neq i, i' \neq k$ we have $d_{i'}\beta = \alpha_{i'}$. But a consequence of the condition of Equation~\ref{equa:KanHypo} applied to this example, is that for $k < i$ or $k > i'$ we have $x_{i, k} = x_{i', k}$, and for $i \leq k \leq i'$ we have $x_{i, k+1} = x_{i', k}$. 
+%\end{exam}
+
+\begin{exam} \label{exam:classifyingSpace}
+Let $G$ be a group, and consider its classifying space $BG$. Recall that the $q$-simplicies are tuples $(g_1, \dots, g_q)$. There is a unique $0$-simplex---the empty tuple $()$. Degeneracy morphisms $s_i$ insert the identity element $e \in G$ in position $i$. Face morphisms $d_0$ (resp. $d_n$) cancel the first (resp. last) coordinate, and the other $d_i$ are $(g_1, \dots, g_n) \mapsto (g_1, \dots, g_ig_{i+1}, \dots, g_n)$. 
+
+We claim that $BG$ is a Kan complex. Just to give an idea of the proof, we show the $(n, i)$-lifting property for $(n, i) = (2, 0), (2, 1), (2, 2)$. The argument for higher $n, i$ is the same, but with more bookkeeping. 
+
+Case (2,0). We have $\alpha_1 = g_1$ and $\alpha_2 = g_2$ and the condition of Equation~\ref{equa:KanHypo} is trivially satisfied because the set $BG_0$ has a single element. Defining $\beta = (g_2, g_2^{-1}g_1)$ we check that $d_1\beta = g_2g_2^{-1}g_1 = g_1$ and $d_2\beta = g_2$.
+
+Case (2, 1). We have $\alpha_0 = g_0$ and $\alpha_2 = g_2$. Define $\beta = (g_2, g_0)$ and check that $d_2\beta = g_2$ and $d_0\beta = g_1$. 
+
+Case (2, 2). We have $\alpha_0 = g_0$ and $\alpha_1 = g_1$. Define $\beta = (g_1g_0^{-1}, g_0)$ and check that $d_0\beta = g_0$ and $d_1\beta = g_1g_0^{-1}g_0 = g_1$. 
+%
+%
+%
+%when $i \neq 0, 1$, a similar argument works for other cases. Suppose that we are given $\alpha_j = (g_{j,1}, \dots,  g_{j,n-1}) \in G^{n-1} = (BG)_{n-1}$ satisfying the condition of Equation~\ref{equa:KanHypo}.
+%%such that $d_j\alpha_k = d_{k-1}\alpha_j$ for $j < k, j \neq i$. 
+%If $i \neq 0$, then for all $k \neq i$, we have $d_0\alpha_k = d_{k-1}\alpha_0$ which, more explicitly, means 
+%\[ (g_{k,2}, \dots,  g_{k,n-1}) = (g_{0,1}, \dots, g_{0, k{-}1}g_{0, k}, \dots, g_{0,n-1}). \]
+%Similarly, if $i \neq 1$, we have $d_1\alpha_k = d_{k-1}\alpha_1$ which means that 
+%\[ (g_{k,1}g_{k,2}, g_{k,3}, \dots,  g_{k,n-1}) = (g_{1,1}, \dots, g_{1, k{-}1}g_{1, k}, \dots, g_{1,n-1}). \]
+\end{exam}
+
+Later on we will need a more general notion---the notion of a Kan fibration. Heuristically, this is a morphism of simplicial sets for which all of the fibres are Kan complexes. \\
+
+\begin{mdframed}
+\begin{defi}
+Let $K \to L$ be a morphism of simplicial sets. We say that $f$ is a \emph{Kan fibration} if for every $n \in \NN$, every $0 \leq i \leq n$, and every commutative square as below, there exists a diagonal morphism making the two triangles commute. 
+\[ \xymatrix{
+\Lambda^n_i \ar[d] \ar[r] & K \ar[d]^f \\
+\Delta^n \ar[r] \ar@{-->}[ur] & L.
+} \]
+\end{defi}
+\end{mdframed}
+
+This condition can also be expressed in terms of $\alpha$'s and $\beta$'s as in Definition~\ref{defi:KanCond}, but  we leave this reformulation as an exercise for the motivated reader.
+
+Notice that $K$ is a Kan complex if and only if the canonical, unique morphism to $\Delta^0$ is a Kan fibration. 
+
+\section{$∞$-categories}
+
+\begin{mdframed}
+\begin{defi}
+An \emph{∞-category} is a simplicial set $K$ satisfying the $(n, i)$-lifting property of Definition~\ref{defi:KanCond} for all $n \in \NN$, and $0 < i < n$. 
+\end{defi}
+\end{mdframed}
+
+\begin{rema}
+Note that any Kan complex is an ∞-category. In particular, the $Sing_\bullet X$ are ∞-categories.
+\end{rema}
+
+\begin{mdframed}
+\begin{exam}
+Let $(P, ≤)$ be a partially ordered set. We claim that $NP$ is an ∞-category. Suppose that we are given $\alpha_j = (x_{j,0}, \dots,  x_{j,n-1}) \in P^{n} = (NP)_{n-1}$ satisfying the condition of Equation~\ref{equa:KanHypo}. Write these in an $(n+1) \times (n+1)$ matrix, by inserting an $\ast$ on the diagonal entries, and $\ast$'s in the $i$th row.
+\[
+\left (
+\begin{array}{ccccc}
+\ast & x_{0,0} & x_{0,1} & \dots & x_{0,{n-1}}  \\
+x_{1, 0} & \ast & x_{1,1} & \dots & x_{1,{n-1}} \\
+x_{2, 0} & x_{2,1} & \ast & \dots & x_{1,{n-1}} \\
+\vdots &&&& \vdots \\
+\ast & \ast &\ast &\ast &\ast \\
+\vdots &&&& \vdots \\
+x_{n, 0} & x_{n, 1} & \dots & x_{n, {n-1}} & \ast 
+\end{array}
+\right )
+\] 
+Since the face morphisms $d_i$ of $NP$ are defined by omitting an element, the $(n, i)$-lifting condition of Equation~\ref{defi:KanCond} shows that all the columns of this matrix are the same. Indeed, it says that for $j < k$ with $j, k \neq i$, removing the $j$th element from the $k$th row, and the $k$th element from the $j$th row, these two rows become equal. So now just define $\beta$ to be the tuple $(y_0, \dots, y_n)$ where $y_j$ is the entry in the $j$th column of the matrix. It is straightforward now to see that the condition of Equation~\ref{equa:Kanconclu} is satisfied. We remark that we can also observe that the $\beta$ we obtain is ALWAYS unique in this example.
+\end{exam}
+\end{mdframed}
+
+\begin{exam}
+Let $\cG = (V, E)$ be a directed graph. We claim that $N\cG$ is an ∞-category. We use the same trick as for the partially ordered set. Suppose we are given $\alpha_j = (\alpha_{j,1}, \dots,  \alpha_{j,{n{-}1}}) \in N\cG_{n-1}$ satisfying the condition of Equation~\ref{equa:KanHypo}, where each $\alpha_{j,k}$ is a path of edges through our directed graph. Write them in a matrix as we did for the partially ordered set, this time the matrix is a $(n{+}1) \times n$-matrix, and so both of the last two rows have an $\ast$ in the last column. 
+\[
+\left (
+\begin{array}{ccccc}
+\ast & \alpha_{0,1} & \alpha_{0,2} & \dots & \alpha_{0,{n-1}}  \\
+\alpha_{1, 1} & \ast & \alpha_{1,2} & \dots & \alpha_{1,{n-1}} \\
+\alpha_{2, 1} & \alpha_{2,2} & \ast & \dots & \alpha_{1,{n-1}} \\
+\vdots &&&& \vdots \\
+\ast & \ast &\ast &\ast &\ast \\
+\vdots &&&& \vdots \\
+\alpha_{n{-}1, 1} & \alpha_{n{-}1, 2} & \dots & \alpha_{n{-}1, {n-1}} & \ast \\
+\alpha_{n, 1} & \alpha_{n, 2} & \dots & \alpha_{n, {n-1}} & \ast 
+\end{array}
+\right )
+\]
+If $j \neq 0, n{-}1$, then when $j < k$, applying $d_j$ to the row with $\alpha_k$ in it replaces the entry $\alpha_{k, j}$ with the concatenation $\alpha_{k,j}\alpha_{k,j{+}1}$, and puts a $\ast$ where $\alpha_{k, j{+}1}$ was. Applying $d_{k-1}$ to the row with $\alpha_j$ in it replaces the entry $\alpha_{j,k{-}1}$ with the concatenation $\alpha_{j,k{-}1}\alpha_{j,k}$ and puts a $\ast$ where $\alpha_{j,k}$ was. Hence, the $(n, i)$-lifting condition of Equation~\ref{defi:KanCond} shows that all the columns of this matrix are the same EXCEPT for the entries $\alpha_{j, j}$ just left of the diagonal. Here the lifting condition shows that $\alpha_{j,j} = \alpha_{k, j}\alpha_{k, j{+}1}$. In other words, there are paths $\beta_1, \dots, \beta_n$ such that our matrix looks like this:
+\[
+\left (
+\begin{array}{ccccc}
+\ast & \beta_2 & \beta_3 & \dots & \beta_n  \\
+\beta_1\beta_2 & \ast & \beta_3 & \dots & \beta_n \\
+\beta_1 & \beta_2\beta_3 & \ast & \dots & \beta_n \\
+\vdots &&&& \vdots \\
+\ast & \ast &\ast &\ast &\ast \\
+\vdots &&&& \vdots \\
+\beta_1 & \beta_2 & \dots & \beta_{n{-}1}\beta_{n} & \ast \\
+\beta_1 & \beta_2 & \dots & \beta_{n-1} & \ast 
+\end{array}
+\right )
+\]
+Then one sees immediately that defining $\beta_j$ to be any of the equal entries in the $j$th column (that is, not $\alpha_{j, j}$), provides the unique solution when $n > 1$.
+\end{exam}
+
+\begin{mdframed}
+\begin{defi}
+Let $C$ be an ∞-category. We call $C$ an \emph{$n$-category} if for every $m > n$ and $0 < i < m$, the $\beta$ in the definition of the $(m, i)$-lifting property is unique. Equivalently, the extension $\Delta^m \to C$ in the definition of the $(m, i)$-lifting property is unique.
+\end{defi}
+\end{mdframed}
+
+\begin{exam}
+Recall, that we have already observed the uniqueness for nerves of partially ordered sets. That is, we observed that they are 0-categories. In fact, every 0-category corresponds to a unique partially ordered set, and conversely.
+\end{exam}
+
+\begin{exam}
+We noted above that the ∞-category $Sing_\bullet X$ is not an $n$-category for any $n$ (unless of course $X$ is a discrete set of points, or empty).
+\end{exam}
+
+\begin{defi}
+Traditionally, a \emph{category} $C$ was defined to be something like a directed graph with a multiplication operation on edges. More precisely, a category is:
+\begin{enumerate}
+ \item A set $Ob\ C$ whose elements are called \emph{objects}.
+ \item For each pair of objects $x, y \in Ob\ C$ a set $\hom(x, y)$ whose elements are called \emph{morphisms}.
+ \item For each triple of objects $x, y, z$ a morphism of sets
+\[ \circ: \hom(y, z) \times \hom(x, y) \to \hom(x, z) \]
+called \emph{composition}.
+\end{enumerate}
+This data is required to satisfy:
+\begin{enumerate}
+ \item For each object $x$ there is an element $\id_x \in \hom(x, x)$ which satisfies $\id_x \circ f = f$ and $g \circ \id_x = g$ for every $y \in Ob\ C$, every $f \in \hom(y, x)$ and every $g \in \hom(x, y)$.
+ \item For objects $w, x, y, z$ and morphisms $f \in \hom(w, x), g \in \hom(x, y), h \in \hom(y, z)$ we have $(h \circ g) \circ f = h \circ (g, \circ f)$. 
+\end{enumerate}
+\end{defi}
+
+Examples of categories are the category of groups (resp. vector spaces, resp. topological spaces, resp. sets) whose objects are the collection of all groups (resp. vector spaces, resp. topological spaces, resp. sets) and for any two objects $x, y$, the set $\hom(x, y)$ is the set of group homomorphims (resp. linear maps, resp. continuous morphisms, resp. morphism of sets). The motivation was that there were many procedures, such as the fundamental group $\pi_1X$ of a topological space $X$, which associated an object (resp. morphism) in one category to an object (resp. morphism) in another category, in such a way that the composition of two morphisms was sent to the composition of their images. %Since this structure appeared in many places, it was given a name to make talking about it easier.
+
+\begin{defi}
+Given a category $C$, as defined above, we can associate to it a simplicial set $NC$ called the \emph{nerve}. The 0-simplicies are the objects of $C$, the 1-simplicies are all the morphisms (for all pairs of objects), $d_0, d_1: NC_1 \to NC_0$ send a morphism $f \in \hom(x, y)$ to its \emph{source} $x$ and \emph{target} $y$ respectively, $s_0: NC_0 \to NC_1$ sends an object $x$ to its identity morphism $\id_x$. More generally, the set $NC_q$ of $q$-simplicies is the set of tuples of composable morphisms, i.e., tuples $(f_0, \dots, f_q)$ such that the target of $f_i$ is the source of $f_{i+1}$, the boundary morphisms are defined using composition as in the classifying space $BG$ of a group $G$, and the degeneracy morphisms are defined by inserting an identity morphism (as in the classifying space $BG$ of a group $G$).
+\end{defi}
+
+\begin{exam}
+Indeed, given a group $G$, one can define a category which has one object, say called $\ast$, and $\hom(\ast, \ast) = G$. Then $BG$ is precisely the nerve of this category.
+\end{exam}
+
+\begin{exam}
+Given a partially ordered set $(P, \leq)$, one can define a category whose objects are the elements of $P$, and $\hom(x, y)$ has a unique morphism if $x \leq y$, and is empty otherwise. Then the nerve of this category is precisely the nerve of the partially ordered set.
+\end{exam}
+
+\begin{exam}
+Given a directed graph, one can associate a category to it called the \emph{free category}. Its object are the nodes of the graph, and the morphisms are sequences of edges $e_1, \dots, e_n$ such that the source of $e_i$ is the target of $e_{i-1}$. Composition of morphisms We formally include an empty path for every node which correspond to the identity morphisms. Then the nerve of this free category is precisely the nerve of the directed graph.
+\end{exam}
+
+\begin{rema}
+Note that we can reconstruct any category $C$, from its nerve $NC$. Conversely, one can show that any $1$-category is the nerve of a unique category. That is, categories in the older sense are the same thing as 1-categories in our terminology.
+\end{rema}
+
+\section{Functors}
+
+\begin{mdframed}
+\begin{defi}
+Let $C, C'$ be ∞-categories. A \emph{functor} is just a morphism of simplicial sets $C \to D$. A \emph{natural transformation} from a functor $f$ to a functor $g$ is a morphism of simplicial sets $\eta: C \times \Delta^1 \to D$ such that $\eta|_{C \times N\{0\}} = f$ and $\eta|_{C \times N\{1\}} = g$ (note that there is a canonical isomorphism $C \times N\{\ast\} \cong C$ for any partially ordered set $\{\ast\}$ with one element, such as $\{0\}$ or $\{1\}$).
+\end{defi}
+\end{mdframed} 
+
+\vspace{\baselineskip}
+
+\begin{mdframed}
+\begin{prop}
+If $D$ is an ∞-category and $C$ a simplicial set then the mapping space $\Map(C, D)$ is an ∞-category. 
+\end{prop}
+\end{mdframed}
+
+\vspace{\baselineskip}
+
+\begin{mdframed}
+Due to this proposition, when $C$ and $D$ are ∞-categories, and we want to think of $\Map(C, D)$ as an ∞-category we will use the notation 
+\[ \Fun(C, D) = \Map(C, D). \] 
+\end{mdframed}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
