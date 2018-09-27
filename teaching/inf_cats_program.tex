@@ -366,11 +366,11 @@
         }}%
 }
     
-\addbibresource{DGT.bib}
+\addbibresource{infcats.bib}
 \date{\today}
 \title{Categories and infinity-categories}
 \hypersetup{
- pdfauthor={},
+ pdfauthor={Simon Pepin Lehalleur},
  pdftitle={},
  pdfkeywords={},
  pdfsubject={},
@@ -460,42 +460,98 @@ Following \cite[Chapter 4]{Riehl_context}, discuss the adjoint functors and its 
 \item Explain the fundamental results 4.5.1-3 and its applications 4.5.7-11. Explain Lemma 4.5.13.
 \end{itemize}
 
-
-
-
 \subsection{November 22th: Simplicial sets}
 
 A \emph{simplicial set} is an abstract combinatorial object, which allows to model topological space up to homotopy. We have a set $K_n$ for every $0 \leq n < \infty$, which we can think of as maps from an $n$-dimensional triangle into a space, and various morphisms $\delta_i: K_n \to K_{n-1}, \sigma_i: K_{n-1} \to K_n$ telling us how the triangles fit together.
 
-Following \cite{Riehl_elementary},
+\begin{itemize}
+\item Define simplicial objects in a category as in \cite[8.1.4]{Weibel} and prove \cite[8.1.1-3]{Weibel}. Explain example \cite[8.1.5]{Weibel}. Define morphisms of simplicial sets as natural transformations between functors and explain that simplicial sets form a category $\mathrm{sSet}$.
+\item Define simplicial spheres and simplicial horns as in \cite[5.1-3]{RiehlSS}.
+\item Define the nerve $N(C)$ of a category $C$ \cite[Example 1.2]{Groth}. Define the functor $N:\mathrm{Cat}\ra \mathrm{sSet}$ and prove that it is fully faithful. Discuss the special case of the nerve of a partially ordered set, seen as a category.%
+\item Define the geometric realisation of a simplicial set \cite[8.1.6]{Weibel}. Draw pictures of the geometric realisations of many of the examples considered so far.
+\item Define the product of two simplicial sets $K_{\bullet}$ and $K'_{\bullet}$ by $(K\times K')_{n}=K_{n}\times K'_{n}$ and the obvious morphisms. State that it is the categorical product of $K_{\bullet}$ and $K'_{\bullet}$ in $\mathrm{sSet}$.
+\item Given two simplicial sets $K$ and $K'$, define the mapping space $\mathrm{Map}(K,K')$, which is also a simplicial set, by $\mathrm{Map}(K,K')_{n}=\mathrm{Hom}(\Delta^{n}\times K,K')$. Prove that, for a fixed simplicial set $K$, the functor $\mathrm{Map}(K,-):\mathrm{sSet}\rightarrow \mathrm{sSet}$ is a right adjoint of the functor $-\times K:\mathrm{sSet}\rightarrow \mathrm{sSet}$.
+\item Explain how a simplicial object in an abelian category gives rise to a chain complex \cite[8.2.1]{Weibel} (actually check $d^{2}=0$). Define simplicial homology \cite[8.2.3]{Weibel}, and explain the relationship between the singular homology of a topological space and the simplicial homology of its singular complex \cite[8.2.4]{Weibel}.
+\end{itemize}
+  
+\subsection{November 29th: $\infty$-categories}
+
+Infinity-categories, at least in the context of this seminar, will always be what is ofter called a \emph{quasi-category}. A quasi-category is a special type of simplicial set, satisfying a lifting condition similar but weaker that the one of Kan simplicial sets discussed in the previous talk. We will see that one can in particular associate a quasi-category to any category, in a way that does not lose information. Quasi-categories are much more flexible, though: informally, they allow to have morphisms \emph{between} morphisms (called $2$-morphisms, and represented by $2$-simplices), $3$-morphisms between $2$-morphisms, and so on.
 
 \begin{itemize}
-
-\subsection{November 29th: \(\infty\)-categories}
+\item Define the singular simplicial set of a topological space \cite[8.2.4]{Weibel}. Prove that the geometric realisation is a left adjoint functor of the singular simplicial set functor.
+\item Define Kan simplicial sets \cite[8.2.7]{Weibel} and Kan fibrations \cite[Ex.2.0.0.1]{HTT}.
+\item Explain the definition of simplicial homotopy groups of fibrant simplicial sets \cite[8.3.1]{Weibel}. State without proof that, for a Kan simplicial set $X_{\bullet}$, we have for all $n\geq 0$ and every $x_{0}\in X_{0}$ that $\pi_{n}(X_{\bullet},x_{0})\simeq \pi_{n}(|X_{\bullet}|,x_{0})$.
+\item Define normalized complexes of a simplicial object in an abelian category and state the Dold-Kan correspondence \cite[8.3.6-8]{Weibel}. 
+\item Define an $\infty$-category \cite[Def.1.7]{Groth}, \cite[Def.1.1.2.4]{HTT}. Explain that, by definition, we have a (usual) category of $\infty$-categories which is a full subcategory of $\mathrm{sSet}$.
+\item Show that for any category, its nerve is an ∞-category. Give an example of a category whose nerve is not a Kan complex. State and prove \cite[Proposition 1.1.2.2]{HTT} which caracterize those infinity categories which come from categories.
+\item Define the simplicial set of functors between two ∞-categories \cite[Def.2.1]{Groth}, \cite[Not.1.2.7.2]{HTT}. State that it is an ∞-category \cite[Prop.2.5(i)]{Groth}, \cite[1.2.7.3]{HTT}.
+\end{itemize}
 
 \subsection{December 6th: join and slices }  
 
-\subsection{November 29th: Homotopical algebra and Model Categories}
+The \emph{join} of two topological spaces is the topological space we get by joining every point in one to every point in the other. This lecture shows how to define this for simplicial sets. A special case is when one space is a single point. This is called the \emph{cone} for obvious reasons. Joins are needed for the definition of \emph{slice} categories, which are needed for the definition of \emph{limits} in infinity-categories. The ``slice'' of a morphism of topological spaces $f: X \to Y$ is something like the space of pairs $(x, \gamma)$ where $x \in X$ is a point and $\gamma: [0, 1] \to Y$ is a path starting from $f(x)$.
 
-\subsection{December 6th: The Quillen and Joyal model structures on Simplicial Sets}
+This lecture will cover the following: 
 
-\subsection{December 13th:}
+\begin{itemize}
+\item Define the cone of a topological space, and draw the picture \cite[pp.8-9]{Hat}. %
+\item Define the join of two topological spaces, and draw the picture \cite[p.9]{Hat}. %
+\item Define the join of two simplicial sets \cite[Def.2.11]{Groth}, \cite[Def.1.2.8.1]{HTT}. %
+\item Show that there are isomorphisms $∆^{i} {\star} ∆^{j} \cong ∆^{i+j+1}$. %
+\item Define the right cone and left cone of a simplicial set, and describe them explicitly \cite[Ex.2.14]{Groth}, \cite[Not.1.2.8.4]{HTT}. %
+\item \emph{Prove} that for any two ∞-categories $S, S'$, the join $S \star S'$ is an ∞-category \cite[Prop.1.2.8.3]{HTT}. %
+\item Define the overcategory  $C_{/p}$ of a map $p$ by its universal property \cite[Prop.2.17]{Groth}, \cite[Prop.1.2.9.2]{HTT}. %
+\item Define $C_{/p}$  explicitly \cite[Proof of Prop.1.2.9.2]{HTT}. %
+\item State (without proof) that $C_{/p}$ is an ∞-category \cite[Prop.1.2.9.3]{HTT}. %
+\item Define the undercategory by a universal property, and explicitly \cite[Rem.1.2.9.5]{HTT}. %
+\item Given a morphism of topological spaces $p: Y \to X$, explicitly describe the ∞-category $Sing_\bullet(X)_{/Sing(p)}$. %
+\end{itemize}  
 
-\subsection{December 20th:}
+\subsection{December 13th: Limits and Colimits in infinity categories}
 
-\subsection{January 10th:}
+There is a theory of limits and colimits in infinity categories which generalizes the one for usual categories. This talk looks at the basic definitions, and also at examples in the infinity-category of topological spaces, which correspond to classical constructions of \emph{homotopy limits and colimits}. The idea is that classical limits and colimits in topological spaces are not homotopy-invariant, and homotopy limits and colimits correct this.
 
-\subsection{January 17th:}
+\begin{itemize}
+\item Define the ∞-category of topological spaces. The $n$-simplices consist of:
+\begin{enumerate}
+ \item A set of $n{+}1$ topological spaces $X_0, \dots, X_n$.
 
-\subsection{January 24th:}
+ \item For each $i = 0, \dots, n{-}1$ and $a = 1, \dots, n{-}i$, a morphism $h_{i,i{+}a}: X_i {\times} \square^{a{-}1}_{top} \to X_{a{+}i}$.% (by convention, $\square^{0}_{top} = \{\ast\}$ and $\square^{-1}_{top} = \varnothing$).
 
-\subsection{January 31th:}
+ \item The morphisms $h_{i,j}$ are required to satisfy the compatibility condition: For every $a, b$, the restriction of $h_{i,k{+}a{+}b}$ to $X_i{\times}\square^{a{-}1}_{top} {\times} \square^{b{-}1}_{top} \subseteq X_{i}{\times}\square^{a{+}b{-}1}_{top}$ is the composition $h_{i{+}a,i{+}a{+}b} \circ (h_{i,i{+}a} \times \id_{\square^{b{-}1}_{top}})$. Here, the inclusion $\square^{a{-}1}_{top} {\times} \square^{b{-}1}_{top} \subseteq \square^{a{+}b{-}1}_{top}$ is given by $((t_1, \dots, t_{a-1}), (s_1, \dots, s_{b-1})) \mapsto (t_1, \dots, t_{a-1}, 0, s_1, \dots, s_{b-1})$.
+\end{enumerate}
+\item Define initial and final objects \cite[§2.4]{Groth}, \cite[§1.2.12.3]{HTT}. %
+\item Show that the ∞-category of a partially ordered set has an initial (resp. final) object if and only if it has a minimal (resp. maximal) element.
+\item Show that the one point topological space is a final object in the ∞-category of topological spaces. %
+  State that a topological space homotopy equivalent to a one point topological space is a final object. %
+\item Define colimits and limits \cite[Def.1.2.13.4]{HTT}. %
+\item Observe that initial (resp. final) objects are colimits (resp. limits) of the empty diagram. %
+\item Show that limits / colimits in (nerves of) partially ordered sets are infimums / supremums. %
+\item Show that limits / colimits in (nerves of) categories are usual limits / colimits.
+\item Define pushout and pullback squares \cite[Def.2.29]{HTT}. %   \\ 
+\item Define the \emph{homotopy pushout} of a diagram $Z \stackrel{f}{\leftarrow} X \stackrel{g}{\to} Y$  of topological spaces as $ \frac{Y \amalg [0,1]\times X \amalg Z}{(f(X) \sim \{0\} \times X, \ g(X) \sim \{1\} \times X)}$. %
+\item Claim that this gives a pushout square in the ∞-category of topological spaces. (Optional) Show this claim. Explain that homotopy pushouts are homotopy invariant, in the sense that, for a map of diagrams as above whose components are weak equivalences, the resulting map is a weak equivalence.%
+\item Define the \emph{homotopy pullback} of a diagram $Z \stackrel{f}{\rightarrow} X \stackrel{g}{\leftarrow} Y$  of topological spaces as $\{( z, \gamma, y) \in Z \times \hom([0,1], X) \times Y : \gamma(0) = f(z), \gamma(q) = g(y) \}$. Claim that this gives a pullback square in the ∞-category of topological spaces. %
+\end{itemize}
+  
+\subsection{December 20th: Homotopical algebra and Model Categories}
 
-\subsection{February 7th:}
+\subsection{January 10th: The Quillen and Joyal model structures on Simplicial Sets}
 
-\subsection{February 14th:}
+\subsection{January 17th: Straightening and unstraightening, the Yoneda lemma for infinity categories
+}
 
+\subsection{January 24th: Adjoints in infinity categories, limits and colimits revisited
+}
 
+\subsection{January 31th: Stable infinity-categories
+}
 
+\subsection{February 7th: Monoidal infinity-categories}
+
+\subsection{February 14th: Infinity topoi}
+
+\printbibliography
 
 \end{document}

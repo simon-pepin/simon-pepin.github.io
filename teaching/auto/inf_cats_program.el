@@ -3,6 +3,13 @@
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("xy" "all" "cmtip") ("biblatex" "backend=biber" "doi=false" "isbn=false" "url=false")))
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
+   (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
     "amsart"
@@ -174,6 +181,8 @@
     "YExt"
     "Lim"
     "Colim"
+    "Holim"
+    "Hocolim"
     "ra"
     "lra"
     "rap"
@@ -338,7 +347,9 @@
     "REF"
     "cosimparrowone"
     "cosimparrowtwo")
-   (LaTeX-add-environments
+   (LaTeX-add-bibliographies
+    "infcats")
+   (LaTeX-add-amsthm-newtheorems
     "theo"
     "cor"
     "prop"
@@ -348,8 +359,6 @@
     "question"
     "defi"
     "remark"
-    "notation")
-   (LaTeX-add-bibliographies
-    "DGT"))
+    "notation"))
  :latex)
 
