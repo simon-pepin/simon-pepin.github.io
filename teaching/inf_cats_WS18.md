@@ -24,15 +24,15 @@ For ordinary category theory:
 
 - [**Category theory in context, E. Riehl**](http://www.math.jhu.edu/~eriehl/context.pdf) 
 
-- [**An introduction to Homological Algebra, C.Weibel**]
+- **An introduction to Homological Algebra, C.Weibel**
 
 For infinity-category theory:
 
 - [**A short course on ∞-categories, M.Groth**](https://arxiv.org/pdf/1007.2925.pdf)
 
-- [**Higher topos theory**, J.Lurie]()
+- **Higher topos theory**, J.Lurie
 
-- [**Higher algebra**, J.Lurie]()
+- **Higher algebra**, J.Lurie
 
 ### _Planning_:
 
