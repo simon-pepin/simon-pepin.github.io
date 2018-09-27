@@ -24,6 +24,8 @@ For ordinary category theory:
 
 - [**Category theory in context, E. Riehl**](http://www.math.jhu.edu/~eriehl/context.pdf) 
 
+- [**An introduction to Homological Algebra, C.Weibel**]
+
 For infinity-category theory:
 
 - [**A short course on ∞-categories, M.Groth**](https://arxiv.org/pdf/1007.2925.pdf)
@@ -34,5 +36,7 @@ For infinity-category theory:
 
 ### _Planning_:
 
-The [Program](/teaching/inf_cats_program.pdf) contains at the moment the details on nine talks. The rest of the seminar will depend on the participants' interests.
+- [Program](/teaching/inf_cats_program.pdf) 
+
+The above program contains at the moment the detailed overview of the first nine talks. The rest of the seminar will depend on the participants' interests.
 
