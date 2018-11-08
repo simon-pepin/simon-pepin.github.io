@@ -38,5 +38,4 @@ For infinity-category theory:
 
 - [**Program**](/teaching/inf_cats_program.pdf) 
 
-The above program contains at the moment the detailed overview of the first nine talks. The rest of the seminar will depend on the participants' interests.
 
