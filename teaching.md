@@ -6,6 +6,8 @@ permalink: /teaching/
 
 Winter semester 2018: 
 
+* Teaching assistant for [Number Theory III: Local class field theory](http://www.mi.fu-berlin.de/en/math/groups/arithmetic_geometry/teaching/numbthe_wise1819.html)
+
 * [Seminar on infinity categories](https://simon-pepin.github.io/teaching/inf_cats_WS18.html)
 
 Spring semester 2018:

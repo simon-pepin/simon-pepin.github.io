@@ -339,6 +339,11 @@
 \newcommand{\an}{{\rm an}}
 \newcommand{\psh}{{\rm psh}}
 \newcommand{\adjo}{{\rm adj}}
+
+\newcommand{\Top}{\mathrm{Top}}
+\newcommand{\sSet}{\mathrm{sSet}}
+\newcommand{\Sing}{\mathrm{Sing}}
+
 \newcommand{\TODO}{{\color{red} TODO }}
 \newcommand{\REF}{{\color{green} REF }}
 		                        \usepackage{stmaryrd}
@@ -408,7 +413,7 @@ other participants to be able to follow proofs and explanations.
 
 Given by the lecturer.
 
-\subsection{October 25th: Categories, Functors and natural transformations}
+\subsection{October 25th: Categories, Functors and natural transformations (Manuel Staiger)}
 
 Following \cite[Chapter 1]{Riehl_context}, introduce the basic definitions of category theory.
 
@@ -425,7 +430,7 @@ Following \cite[Chapter 1]{Riehl_context}, introduce the basic definitions of ca
 \item Give definitions 1.5.4, 1.5.7 and Theorem 1.5.9. Explain corollary 1.5.11.
 \end{itemize}
 
-\subsection{November 1st: Universal Properties, Representable Functors and the Yoneda Lemma}
+\subsection{November 1st: Universal Properties, Representable Functors and the Yoneda Lemma (Alexander Fee{\ss})}
 
 Following \cite[Chapter 2]{Riehl_context}, discuss how category theory gives a powerful formalisation of the idea of ``universal properties''.
 
@@ -437,7 +442,7 @@ Following \cite[Chapter 2]{Riehl_context}, discuss how category theory gives a p
 \item Present the definition 2.4.1-2 and explain their relation with slice categories as in 2.4.6.
 \end{itemize}
 
-\subsection{November 11th: Limits and Colimits}
+\subsection{November 11th: Limits and Colimits (Joshua R\"oher)}
 
 Following \cite[Chapter 3]{Riehl_context}, discuss the fundamental notion of limits and colimits of functors.
 
@@ -449,7 +454,7 @@ Following \cite[Chapter 3]{Riehl_context}, discuss the fundamental notion of lim
 \item Give the definition of complete and cocomplete categories, and some examples and counter-examples as in the beginning of \S 3.5.
 \end{itemize}
 
-\subsection{November 15th: Adjoint Functors}
+\subsection{November 15th: Adjoint Functors (Maria Delfin, Sarah L\"oser)}
 
 Following \cite[Chapter 4]{Riehl_context}, discuss the adjoint functors and its relationship to all the category theory we know so far.
 
@@ -461,7 +466,7 @@ Following \cite[Chapter 4]{Riehl_context}, discuss the adjoint functors and its 
 \item Explain the fundamental results 4.5.1-3 and its applications 4.5.7-11. Explain Lemma 4.5.13.
 \end{itemize}
 
-\subsection{November 22th: Simplicial sets}
+\subsection{November 22th: Simplicial sets (Marie Brandenburg, Xiangying Chen)}
 
 A \emph{simplicial set} is an abstract combinatorial object, which allows to model topological space up to homotopy. We have a set $K_n$ for every $0 \leq n < \infty$, which we can think of as maps from an $n$-dimensional triangle into a space, and various morphisms $\delta_i: K_n \to K_{n-1}, \sigma_i: K_{n-1} \to K_n$ telling us how the triangles fit together.
 
@@ -470,26 +475,51 @@ A \emph{simplicial set} is an abstract combinatorial object, which allows to mod
 \item Define simplicial spheres and simplicial horns as in \cite[5.1-3]{RiehlSS}.
 \item Define the nerve $N(C)$ of a category $C$ \cite[Example 1.2]{Groth}. Define the functor $N:\mathrm{Cat}\ra \mathrm{sSet}$ and prove that it is fully faithful. Discuss the special case of the nerve of a partially ordered set, seen as a category.%
 \item Define the geometric realisation of a simplicial set \cite[8.1.6]{Weibel}. Draw pictures of the geometric realisations of many of the examples considered so far.
-\item Define the product of two simplicial sets $K_{\bullet}$ and $K'_{\bullet}$ by $(K\times K')_{n}=K_{n}\times K'_{n}$ and the obvious morphisms. State that it is the categorical product of $K_{\bullet}$ and $K'_{\bullet}$ in $\mathrm{sSet}$.
-\item Given two simplicial sets $K$ and $K'$, define the mapping space $\mathrm{Map}(K,K')$, which is also a simplicial set, by $\mathrm{Map}(K,K')_{n}=\mathrm{Hom}(\Delta^{n}\times K,K')$. Prove that, for a fixed simplicial set $K$, the functor $\mathrm{Map}(K,-):\mathrm{sSet}\rightarrow \mathrm{sSet}$ is a right adjoint of the functor $-\times K:\mathrm{sSet}\rightarrow \mathrm{sSet}$.
-\item Explain how a simplicial object in an abelian category gives rise to a chain complex \cite[8.2.1]{Weibel} (actually check $d^{2}=0$). Define simplicial homology \cite[8.2.3]{Weibel}, and explain the relationship between the singular homology of a topological space and the simplicial homology of its singular complex \cite[8.2.4]{Weibel}.
-\end{itemize}
-  
-\subsection{November 29th: $\infty$-categories}
-
-Infinity-categories, at least in the context of this seminar, will always be what is ofter called a \emph{quasi-category}. A quasi-category is a special type of simplicial set, satisfying a lifting condition similar but weaker that the one of Kan simplicial sets discussed in the previous talk. We will see that one can in particular associate a quasi-category to any category, in a way that does not lose information. Quasi-categories are much more flexible, though: informally, they allow to have morphisms \emph{between} morphisms (called $2$-morphisms, and represented by $2$-simplices), $3$-morphisms between $2$-morphisms, and so on.
-
-\begin{itemize}
 \item Define the singular simplicial set of a topological space \cite[8.2.4]{Weibel}. Prove that the geometric realisation is a left adjoint functor of the singular simplicial set functor $\mathrm{Sing}_{\bullet}(-)$.
 \item Define Kan simplicial sets \cite[8.2.7]{Weibel} and Kan fibrations \cite[Ex.2.0.0.1]{HTT}.
 \item Explain the definition of simplicial homotopy groups of fibrant simplicial sets \cite[8.3.1]{Weibel}. State without proof that, for a Kan simplicial set $X_{\bullet}$, we have for all $n\geq 0$ and every $x_{0}\in X_{0}$ that $\pi_{n}(X_{\bullet},x_{0})\simeq \pi_{n}(|X_{\bullet}|,x_{0})$.
-\item Define normalized complexes of a simplicial object in an abelian category and state the Dold-Kan correspondence \cite[8.3.6-8]{Weibel}. 
-\item Define an $\infty$-category \cite[Def.1.7]{Groth}, \cite[Def.1.1.2.4]{HTT}. Explain that, by definition, we have a (usual) category of $\infty$-categories which is a full subcategory of $\mathrm{sSet}$.
+\item Define the product of two simplicial sets $K_{\bullet}$ and $K'_{\bullet}$ by $(K\times K')_{n}=K_{n}\times K'_{n}$ and the obvious morphisms. State that it is the categorical product of $K_{\bullet}$ and $K'_{\bullet}$ in $\mathrm{sSet}$.
+\item Given two simplicial sets $K$ and $K'$, define the mapping space $\mathrm{Map}(K,K')$, which is also a simplicial set, by $\mathrm{Map}(K,K')_{n}=\mathrm{Hom}(\Delta^{n}\times K,K')$. Prove that, for a fixed simplicial set $K$, the functor $\mathrm{Map}(K,-):\mathrm{sSet}\rightarrow \mathrm{sSet}$ is a right adjoint of the functor $-\times K:\mathrm{sSet}\rightarrow \mathrm{sSet}$.
+
+  % \item Explain how a simplicial object in an abelian category gives rise to a chain complex \cite[8.2.1]{Weibel} (actually check $d^{2}=0$). Define simplicial homology \cite[8.2.3]{Weibel}, and explain the relationship between the singular homology of a topological space and the simplicial homology of its singular complex \cite[8.2.4]{Weibel}.
+\end{itemize}
+
+\subsection{November 29th: $\infty$-categories (Sagi Rotfogel, Konrad K. (?)}
+
+Infinity-categories, at least in the context of this seminar, will always be what is often called a \emph{quasi-category}. A quasi-category is a special type of simplicial set, satisfying a lifting condition similar but weaker that the one of Kan simplicial sets discussed in the previous talk. We will see that one can in particular associate a quasi-category to any category, in a way that does not lose information. Quasi-categories are much more flexible, though: informally, they allow to have morphisms \emph{between} morphisms (called $2$-morphisms, and represented by $2$-simplices), $3$-morphisms between $2$-morphisms, and so on.
+
+\begin{itemize}
+% \item Define normalized complexes of a simplicial object in an abelian category and state the Dold-Kan correspondence \cite[8.3.6-8]{Weibel}. 
+\item Define an $\infty$-category \cite[Def.1.7]{Groth}, \cite[Def.1.1.2.4]{HTT}. Explain that, by definition, we have a (usual) category of $\infty$-categories which is a full subcategory of $\mathrm{sSet}$. 
+\item Define the opposite $\infty$-category of an $\infty$-category \cite[\S 1.2.1]{HTT}.  
 \item Show that for any category, its nerve is an ∞-category. Give an example of a category whose nerve is not a Kan complex. State and prove \cite[Proposition 1.1.2.2]{HTT} which caracterize those infinity categories which come from categories.
+\item It is difficult to write \enquote{by hand} many examples of infinity-categories which are neither nerves of categories nor Kan complexes. The simplest examples of the kind are $\infty$-categories which only have \enquote{non-trivial 2-categorical structure}; explain the case of the quasi-category of categories \cite[8.3]{Rezk} (you have to read \cite[8.2]{Rezk} to understand the construction).
+\item Define what it means for a functor between $\infty$-categories to be fully faithful and essentially surjective \cite[1.2.10.1]{HTT}. Define subcategories of $\infty$-categories \cite[\S 1.2.11]{HTT}.
+\item Define the space of right morphisms between objects in an $\infty$-category and explain that it is an $\infty$-category \cite[Prop. 1.2.2.3]{HTT}, explain \cite[Rmk. 1.2.2.4]{HTT}. 
+\item Describe the homotopy category of an $\infty$-category, following \cite[\S 1.2.3]{HTT}; more precisely, just define $\pi(C)$ for $C$ simplicial set and sketch the proof that it is a category \cite[1.2.3.7-8]{HTT}, which we will denote $hC$. Note that passing to the homotopy category loses a lot of information; for instance, if $K$ is a Kan simplicial set, then $hK$ is equivalent to the discrete category on the set $\pi_{0}(K)$.
+\item This leads to the notion of isomorphism in an $\infty$-category $C$: two objects are said to be isomorphic iff they are isomorphic in the homotopy category $hC$ (Lurie calls this equivalence, but many authors since have decided to call). State the caracterisation of isomorphism in terms of mapping spaces \cite[Prop. 1.2.4.1]{HTT}. 
 \item Define the simplicial set of functors between two ∞-categories \cite[Def.2.1]{Groth}, \cite[Not.1.2.7.2]{HTT}. State that it is an ∞-category \cite[Prop.2.5(i)]{Groth}, \cite[1.2.7.3]{HTT}.
 \end{itemize}
 
-\subsection{December 6th: join and slices }  
+\subsection{December 6th: Simplicial categories and $\infty$-categories}
+
+There is a more rigid model of $(\infty,1)$-categories which is perhaps more intuitive and also useful to approach the more flexible model of Joyal and Lurie: simplicial categories, considered up to their natural homotopy equivalences. An important point is that any simplicial category gives rise to an $\infty$-category.
+
+This lecture will cover:
+
+\begin{itemize}
+\item Explain the motivation for considering enriched categories as in the first paragraph of \cite[Chapter 3]{Riehl_cat_hom}.
+\item Briefly define symmetric monoidal categories as in \cite[\S 3.1]{Riehl_cat_hom}, and give the examples of categories with finite products (\emph{cartesian} monoidal structures), hence $\Set$, $\Top$, and $\sSet$, as well as the example of categories of modules over a ring. Note that, in this talk, $\Top$ should denote not the category of all topological spaces but a better behaved subcategory, the category of compactly generated weakly Hausdorff spaces, because it is cartesian closed (a notion which will be discussed below). This is really a minor technical issue which should be mentionned once and then studiously ignored.
+\item Define \emph{enriched categories} as in \cite[Def. 3.3.1]{Riehl_cat_hom}. Explain more concretely the examples of topological categories (categories enriched over $\Top$), $R$-linear categories (categories enriched over $R-\Mod$ for $R$ commutative ring) and in more detail simplicial categories (categories enriched over $\sSet$, the object of this talk). For this last one, follow the discussion in \cite[\S 3.6]{Riehl_cat_hom}. Explain how to pass between topological and simplicial categories using the geometric realisation/singular set adjunction \cite[end of p.18-top of p.19]{HTT}.
+\item Define \emph{closed} symmetric monoidal categories \cite[Def. 3.3.6]{Riehl_cat_hom}, explain that such a category is enriched over itself via the internal homs, explain (using the construction of mapping spaces in the talk on simplicial sets) that $\sSet$ is a closed symmetric monoidal category. By the previous point, we also get a simplicial category structure on $\Top$. A \emph{cartesian closed} category is a category with finite products such that the cartesian monoidal structure is closed.
+\item Define equivalences of topological categories as in \cite[Def. 1.1.3.6]{HTT} and of simplicial categories as in \cite[Def. 1.1.4.4]{HTT}.
+\item Define the simplicial nerve of a simplicial category and give some examples, following \cite[1.1.5.1-9]{HTT}. 
+\item State \cite[Prop. 1.1.5.10, Cor.1.1.5.12]{HTT}. Try to give an idea of the proof; for this, you need to understand how the inclusion of a simplicial cube minus a face into a simplicial cube can be \enquote{triangulated} and obtained by iteratively gluing maps of the form $\Lambda^{n}_{i}\subset \Delta^{n}$ (this is the meaning of \enquote{anodyne} in the proof of Prop. 1.1.5.10). It is not difficult to convince oneself of this fact using a picture; for a more rigourous proof, one can look at \cite[2.1.2.6-8]{HTT}.
+\item As an application, define the $\infty$-category of \emph{spaces} in the sense of \cite[Def. 1.2.16.1]{HTT}, and also the similar $\infty$-category obtained from the simplicial category structure on $\Top$.
+\item State \cite[Thm. 1.1.5.13]{HTT} and its equivalent formulation \cite[Thm. 2.2.0.1]{HTT}, and explain following the end of \cite[\S 1.1.5] how this can be interpreted as a comparison between the homotopy theory of simplicial categories and $\infty$-categories.
+\end{itemize}
+
+\subsection{December 13th: join and slices (Lucca Tiemens, Joaquim Boas)}  
 
 The \emph{join} of two topological spaces is the topological space we get by joining every point in one to every point in the other. This lecture shows how to define this for simplicial sets. A special case is when one space is a single point. This is called the \emph{cone} for obvious reasons. Joins are needed for the definition of \emph{slice} categories, which are needed for the definition of \emph{limits} in infinity-categories. The ``slice'' of a morphism of topological spaces $f: X \to Y$ is something like the space of pairs $(x, \gamma)$ where $x \in X$ is a point and $\gamma: [0, 1] \to Y$ is a path starting from $f(x)$.
 
@@ -501,20 +531,22 @@ This lecture will cover the following:
 \item Define the join of two simplicial sets \cite[Def.2.11]{Groth}, \cite[Def.1.2.8.1]{HTT}. %
 \item Show that there are isomorphisms $\Delta^{i} {\star} \Delta^{j} \cong \Delta^{i+j+1}$. %
 \item Define the right cone and left cone of a simplicial set, and describe them explicitly \cite[Ex.2.14]{Groth}, \cite[Not.1.2.8.4]{HTT}. %
-\item \emph{Prove} that for any two ∞-categories $S, S'$, the join $S \star S'$ is an ∞-category \cite[Prop.1.2.8.3]{HTT}. %
+\item Prove that for any two ∞-categories $S, S'$, the join $S \star S'$ is an ∞-category \cite[Prop.1.2.8.3]{HTT}. %
 \item Define the overcategory  $C_{/p}$ of a map $p$ by its universal property \cite[Prop.2.17]{Groth}, \cite[Prop.1.2.9.2]{HTT}. %
 \item Define $C_{/p}$  explicitly \cite[Proof of Prop.1.2.9.2]{HTT}. %
-\item State (without proof) that $C_{/p}$ is an ∞-category \cite[Prop.1.2.9.3]{HTT}. %
+\item State that $C_{/p}$ is an ∞-category, and invariant under categorical equivalences \cite[Prop.1.2.9.3]{HTT}. You can try to have a look at the proof, which is \cite[Cor. 2.1.2.2]{HTT}, but it uses several notions which we don't have time to introduce.
 \item Define the undercategory by a universal property, and explicitly \cite[Rem.1.2.9.5]{HTT}. %
 \item Given a morphism of topological spaces $p: Y \to X$, explicitly describe the ∞-category $\mathrm{Sing}_\bullet(X)_{/\mathrm{Sing}_{\bullet}(p)}$. %
 \end{itemize}  
 
-\subsection{December 13th: Limits and Colimits in infinity categories}
+\subsection{December 20th:  Limits and Colimits in infinity categories (Viktor Tabakov, ?)}
 
 There is a theory of limits and colimits in infinity categories which generalizes the one for usual categories. This talk looks at the basic definitions, and also at examples in the infinity-category of topological spaces, which correspond to classical constructions of \emph{homotopy limits and colimits}. The idea is that classical limits and colimits in topological spaces are not homotopy-invariant, and homotopy limits and colimits correct this.
 
 \begin{itemize}
-\item Define the ∞-category of topological spaces. The $n$-simplices consist of:
+\item Define initial and final objects \cite[§2.4]{Groth}, \cite[§1.2.12.3]{HTT}. State \cite[Prop. 1.2.12.4, Cor. 1.2.12.5]{HTT}, prove the easy directions (not relying on results from \cite[\S 2]{HTT}). Explain in what sense initial/final objects are \enquote{unique} in an $\infty$-category \cite[Prop. 1.2.12.9]{HTT}.
+\item Show that the ∞-category of a partially ordered set has an initial (resp. final) object if and only if it has a minimal (resp. maximal) element.
+\item Recall the definition of the $\infty$-category of topological spaces as the $\infty$-category associated to the simplicial category top. Give a more explicit description. For instance, using a cubical model for the singular complex construction, we see that the $n$-simplices consist of:
 \begin{enumerate}
  \item A set of $n{+}1$ topological spaces $X_0, \dots, X_n$.
 
@@ -522,8 +554,7 @@ There is a theory of limits and colimits in infinity categories which generalize
 
  \item The morphisms $h_{i,j}$ are required to satisfy the compatibility condition: For every $a, b$, the restriction of $h_{i,k{+}a{+}b}$ to $X_i{\times}\square^{a{-}1}_{top} {\times} \square^{b{-}1}_{top} \subseteq X_{i}{\times}\square^{a{+}b{-}1}_{top}$ is the composition $h_{i{+}a,i{+}a{+}b} \circ (h_{i,i{+}a} \times \id_{\square^{b{-}1}_{top}})$. Here, the inclusion $\square^{a{-}1}_{top} {\times} \square^{b{-}1}_{top} \subseteq \square^{a{+}b{-}1}_{top}$ is given by $((t_1, \dots, t_{a-1}), (s_1, \dots, s_{b-1})) \mapsto (t_1, \dots, t_{a-1}, 0, s_1, \dots, s_{b-1})$.
 \end{enumerate}
-\item Define initial and final objects \cite[§2.4]{Groth}, \cite[§1.2.12.3]{HTT}. %
-\item Show that the ∞-category of a partially ordered set has an initial (resp. final) object if and only if it has a minimal (resp. maximal) element.
+
 \item Show that the one point topological space is a final object in the ∞-category of topological spaces. %
   State that a topological space homotopy equivalent to a one point topological space is a final object. %
 \item Define colimits and limits \cite[Def.1.2.13.4]{HTT}. %
@@ -535,23 +566,85 @@ There is a theory of limits and colimits in infinity categories which generalize
 \item Claim that this gives a pushout square in the ∞-category of topological spaces. (Optional) Show this claim. Explain that homotopy pushouts are homotopy invariant, in the sense that, for a map of diagrams as above whose components are weak equivalences, the resulting map is a weak equivalence.%
 \item Define the \emph{homotopy pullback} of a diagram $Z \stackrel{f}{\rightarrow} X \stackrel{g}{\leftarrow} Y$  of topological spaces as $\{( z, \gamma, y) \in Z \times \hom([0,1], X) \times Y : \gamma(0) = f(z), \gamma(q) = g(y) \}$. Claim that this gives a pullback square in the ∞-category of topological spaces. %
 \end{itemize}
+
+\subsection{January 10th: Homotopical algebra and Model Categories (Lars Ran)}
+
+Model categories constitutes another framework which is very useful to study situations which go beyond usual category theory. For a long time, model categories were the best available substitute for $\infty$-categories; nowadays, they are still very useful for setting up the theory of $\infty$-categories and for carrying out computations.
+
+\begin{itemize}
+\item Explain the notion of localisation of a category at a set of maps, see for instance \url{https://ncatlab.org/nlab/show/localization}. The localisation always exists but is in general very difficult to understand. One of the goal of the theory of model categories is to get some control on the localisation in some situations.
+\item Present the definition of subcategories of weak equivalences, lifting properties and (functorial) weak factorisation systemes following \cite[\S 14.1]{May_Ponto}.
+\item Define model categories \cite[Def. 14.2.1]{May_Ponto} and present the remarks and vocabulary given after the definition. Give \cite[Def. 14.2.7]{May_Ponto} and the paragraph following it.
+\item State \cite[Lemma 14.2.9]{May_Ponto}. It looks technical but is in fact a very useful statement throughout the theory. Its proof is a good example of how to use the axioms. 
+% \item Define the model category structure on the category $\mathrm{Top}$ of topological spaces (actually compactly generated topological spaces; this is a minor technical point) described in \cite[Def. 17.1.1]{May_Ponto}. First introduce the weak equivalences (in this case homotopy equivalences), the cofibrations and the fibrations. Without giving the full proof, recall the definition of the mapping cylinder (resp. mapping path spaces) of a map $f:X\ra Y$ and how they induce factorisations $X\stackrel{j}{\ra} Mf\stackrel{r}{\ra} Y$ (resp. $X\stackrel{nu}{\ra} Mf\stackrel{\rho}{\ra} Y$ with $j$ a cofibration and $r$ an homotopy equivalence (resp. $\rho$ a fibration and $\nu$ an homotopy equivalence. This is almost the factorisation required by the model category axioms. Explain that every space is both fibrant and cofibrant in that model structure.
+\item Define the Quillen model structure on the category $\mathrm{Top}$ of topological spaces (as in previous talks, technically, one needs to restrict to so-called compactly generated topological spaces, but this is a minor detail and should not be insisted upon): see \cite[Thm. 17.2.2]{May_Ponto} and the definition before. 
+\item Describe the cofibrant objects of the Quillen model structure on $\Top$ \cite[Rmk. 17.2.5]{May_Ponto}, and explain in particular that CW-complexes are cofibrant. In particular, the existence of cofibrant replacements in this model structure is essentially a consequence of the classical fact that any topological space is weak homotopy equivalent to a CW-complex, and the homotopy category of $\mathrm{Top}$ is equivalent to the category of CW-complexes, with morphisms being homotopy equivalent classes of CW-maps. Mention that topologically trivial morphisms, for instance covering spaces, are examples of Serre fibrations. 
+\item Mention, without much details, that there is another model structure $\mathrm{Top}$ whose weak equivalences are homotopy equivalences \cite[Def. 17.1.1]{May_Ponto}.
+\item Define the projective model structure on the category $\Cpl(R-\Mod)$ of unbounded chain complexes over a ring $R$ \cite[Def. 18.4.1, Thm. 18.4.2, Thm. 18.4.3]{May_Ponto}. Explain the relationship between cofibrant objects and projective $R$-modules \cite[Prop. 18.5.2]{May_Ponto}.
+\item Define cylinder objects and left homotopies as in \cite[Def. 14.3.1]{May_Ponto} (Skip the good and very good variants). Explain that, by factoring the map $X\coprod X\ra X$, there are always cylinder objects. Note that, in the Quillen model structure on $\Top$ (resp. the projective model structure on $\Cpl(R-\Mod)$), there is an obvious choice of cylinder object on a space $X$ (resp. a complex $K$), namely $X\times [0,1]$ (resp. $K\otimes [\ldots \ra 0 R= R\ra 0\ra\ldots]$), and that left homotopy then recovers the usual notions of homotopy in topology (resp. in homological algebra). 
+\item State without proof or details that the notion of left homotopy for morphisms $f:A\ra B$ in a model category is well behaved (and in particular an equivalence relation) when the source $A$ is cofibrant and the target $B$ is fibrant. Define the homotopy category of a model category \cite[Def. 14.4.5], noting that for any $X$, the object $RQX$ is fibrant (by construction) but also cofibrant (because $QX$ is cofibrant and the map $QX\ra RQX$ is a cofibration).
+\item State \cite[Prop. 14.4.6, Thm. 14.4.7]. 
+\end{itemize}
+
+\subsection{January 17th: The Quillen and Joyal model structures on Simplicial Sets (Daniel K. (?))}
+
+This talk is devoted to two different model structures on the category $\sSet$ of simplicial sets. The first one is the Quillen model structure, whose fibrant objects are Kan simplicial sets, and which is Quillen equivalent to the Quillen model structure on $\Top$. It plays a fundamental role in many parts of homotopy theory, and leads in particular to the notion of simplicial model categories. Simplicial model categories provide another source of quasi-categories, which is very important in applications. The second one is the Joyal model structure, whose fibrant objects are quasi-categories. Along the way, we will learn a little more about model categories.
+
+\begin{itemize}
+\item Define the cofibrations, fibrations and weak equivalences of the Quillen model structure on simplicial sets \cite[Def. 17.5.1]{May_Ponto}. State that these form a model category. It would take too long to prove this result, but we could see some fragments of the proof which are of independent interest. 
+\item The proof exploits in particular the fundamental relation between simplicial sets and topological spaces. Recall the adjunction geometric realisation/singular complex construction between simplicial sets and (compactly generated weak Hausdorff, CGWH) topological spaces. In our reference \cite[\S 17.5]{May_Ponto}, the adjoint functors are denoted by $T=|-|$ and $S=\Sing$ but I suggest sticking to more standard notations. State \cite[Lemmas 17.5.5-6]{May_Ponto} and explain the proofs (minus the technicalities with CGWH spaces; you can for instance prove the results only for finite CW-complexes).
+\item Explain \cite[Lemma 17.6.1]{May_Ponto} which shows how to write any cofibration of simplicial sets as a kind of relative cell-complex (the class $\mathcal{I}$ of boundary inclusions is defined on p.360 and the relative cell-complexes are defined in \cite[Def. 15.1.1]{May_Ponto}). State that there is a similar statement for trivial cofibrations, where the class $\mathcal{I}$ is replaced by the class $\mathcal{J}$ of horn inclusions, and one needs to consider \emph{retracts} of relative $\mathcal{J}$-cell complexes.
+\item State and prove \cite[Lemma 17.5.9]{May_Ponto}. State \cite[Thm. 17.5.10,Cor.17.5.11]{May_Ponto} and sketch the proof of that corollary explained in \cite[\S 16.2-3]{May_concise}. State the summary theorem \cite[Thm. 17.5.18]{May_Ponto}, which collects the key features of the $(|-|,\Sing)$ adjunction. In particular, at this point we know that the homotopy categories of topological spaces and simplicial sets are equivalent.
+\item (Omit in talk, have a look if you are interested) State \cite[Lemma 17.6.2]{May_Ponto}, explain that the map $j:Mi\ra X\times I$ of the statement is a trivial cofibration and hence that lemma is a special case of the lifting properties predicted by the model category axioms, which turns out to be a key case to complete the proof of the model category axioms. That's all we can say about the proof.
+\item Define Quillen adjunctions and Quillen equivalences \cite[Def. 16.2.1]{May_Ponto}. For instance, the adjunction $(|-|,\Sing)$ is a Quillen equivalence between the Quillen model structures on simplicial sets and topological spaces. Define left (and dually right) derived functors \cite[Def. 16.1.1]{May_Ponto} and state \cite[Prop. 16.2.2]{May_Ponto} (you can mention that the proof relies on the key Ken Brown lemma \cite[Lemma 14.2.9]{May_Ponto} which was stated in the previous talk).
+\item Recall the adjunction between simplicial sets and simplicial categories \cite[Def. 1.1.5.5]{HTT}, and the notion of equivalence of simplicial categories \cite[Def. 1.1.4.4, Def. 1.1.3.6]{HTT} from the talk on simplicial categories. Define the Joyal model structure, which is the model structure whose existence is claimed in \cite[Thm. 2.2.5.1]{HTT} (or rather, define the cofibrations, the weak equivalences, and claim that this provides a model structure). State that the fibrant objects of the Joyal model structure are exactly the $\infty$-categories \cite[Thm. 2.4.6.1]{HTT}.
   
-\subsection{December 20th: Homotopical algebra and Model Categories}
+% \item Define left Quillen bifunctors \cite[Def. 11.4.1]{Riehl_cat_hom} (you have to look at \cite[Def. 11.1.7]{Riehl_cat_hom} for the construction of the pushout-product of morphisms) and state \cite[Lemma 11.4.2]{Riehl_cat_hom} which explains the interest of the notion (this also uses the Ken Brown lemma). Define monoidal model categories \cite[Def. 11.4.6]{Riehl_cat_hom} (you don't need to mention \enquote{Quillen two-variable adjunctions}, just say that $\otimes$ is a left Quillen bifunctor). The second condition on monoidal units is technical, replace it by the stronger condition that the monoidal unit is cofibrant, which happens in all cases we are interested in).
+% \item State that the homotopy category of a monoidal model category has a canonical monoidal structure. State that $\sSet$ (with the Quillen model structure), equipped with the product of simplicial sets, and $\Cpl(R-\Mod)$ (with the projective model structure), equipped with the tensor product of complexes. In the second case, the monoidal structure induced on the homotopy category $D(R-\Mod)$ is the derived tensor product.
 
-\subsection{January 10th: The Quillen and Joyal model structures on Simplicial Sets}
+\item Define simplicial model categories (see e.g. \url{https://ncatlab.org/nlab/show/simplicial+model+category}). Ex: $\sSet$ is a simplicial model category, but so is $\Cpl(R-\Mod)$ and many other examples of interest. On the other hand, the Joyal model structure is not a simplicial model category, even though it is a model category structure on simplicial sets!
+\item Given a simplicial model category $\mathcal{M}$, we can associate an $\infty$-category as follows. First, prove that if $X$ is a cofibrant object and $Y$ is fibrant, then the corresponding mapping simplicial set $\mathrm{Map}_{M}(X,Y)$ (which I recall is defined as $(\Hom_{M}(X\times \Delta^{n},Y))_{n\in\mathbb{N}}$) is a Kan complex; this is an exercise in understanding the definitions, please try to do it. This implies that the Joyal model structure on $\sSet$ is not simplicial, because there are $\infty$-categories $X,Y$ (which are bifibrant in the Joyal model structure) such that the mapping space $\mathrm{Map}_{M}(X,Y)$ is not a Kan complex. Consider the subcategory of bifibrant objects $\mathcal{M}^{cf}$. The category $\mathcal{M}^{cf}$ inherits a structure of simplicial category from $\mathcal{M}$. Because of the previous result on mapping simplicial sets, we can apply \cite[Prop. 1.1.5.10]{HTT}, which was discussed in a previous talk, to conclude that the simplicial nerve $N(\mathcal{M}^{cf})$ of the simplicial category $M^{cf}$ is an $\infty$-category. This construction allows to connect the vast existing literature on model categories to the modern theory of infinity-categories.
+\end{itemize}  
 
-\subsection{January 17th: Straightening and unstraightening, the Yoneda lemma for infinity categories
+\subsection{January 24th: Straightening and unstraightening, the Yoneda lemma for infinity categories (Gentaro M. (?))
 }
 
-\subsection{January 24th: Adjoints in infinity categories, limits and colimits revisited
+Infinity-categories are complicated objects which encode a lot of data (morphisms, homotopies between morphisms, homotopies between homotopies, etc.) and constructing functors between $\infty$-categories seems like a very difficult combinatorial task. In particular, the analogue of presheaves in $\infty$-category theory are functors $C^{\op}\ra \mathcal{S}$ with $\mathcal{S}$ is the $\infty$-category of spaces which was introduced before, and this seems hopeless. This talk will present some key ideas of Joyal and Lurie on how to make this possible.
+
+\begin{itemize}
+\item Present \cite[\S 2.1.1]{HTT}. There is a dual notion of right fibration, present it in parallel. For another useful summary, look at \cite[\S 1]{Barwick-Shah}.
+\item State \cite[Thm 1.4]{Barwick-Shah}. Note that $\mathrm{Top}$ is what we have called $\mathcal{S}$), and that a good name for the $\infty$-category $\mathrm{Fun}(C^{\op},Top)$ is the $\infty$-category of presheaves on $C$. In \cite{HTT}, this theorem is a consequence of a Quillen equivalence of certain model categories \cite[Thm 2.2.1.2]{HTT}, but the model-independent formulation is much easier to understand and remember, even though the proof seems to require to work with model categories.
+\item Explain the special cases of this theorem discussed in \cite[Ex. 1.5-1.9]{Barwick-Shah}. For Ex. 1.8, you could have a look at \cite[\S 1]{Barwick-Glasman} to see what is involved in the proof.
+\item Present \cite[\S 3]{Barwick-Shah} on (co)cartesian fibrations and its relation with the more general Grothendieck construction. Ignore the references to inner fibrations, which is yet another class of maps we will not talk about.
+\item State \cite[Cor. 5.1.2.3-4]{HTT} which explain that $\infty$-categories of presheaves admit all limits and colimits and \enquote{how to compute them}. 
+\item Define the Yoneda embedding by adjunction from the construction in \cite[Ex. 1.8]{Barwick-Shah}. State that it is fully faithful. 
+\end{itemize}
+
+\subsection{January 31th: Adjoints in infinity categories, limits and colimits revisited (Florian M.)
 }
 
-\subsection{January 31th: Stable infinity-categories
+We conclude this tour of general $\infty$-category theory by looking at the concept of adjoint functors. In Lurie's perspective, this is obtained as a special case of the theory of Cartesian fibrations from the previous talk. 
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+%TODO: representable functors as in \cite[Def. 4.4.4.4]{HTT}.
+
+\subsection{February 7th Stable infinity-categories (Louis Martini)
 }
 
-\subsection{February 7th: Monoidal infinity-categories}
+Stable $\infty$-categories are defined by 
 
-\subsection{February 14th: Infinity topoi}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsection{February 14th: Monoidal infinity-categories (Youshua Kesting)}
+
+\begin{itemize}
+\item 
+\end{itemize}
 
 \printbibliography
 
