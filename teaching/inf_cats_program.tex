@@ -503,7 +503,7 @@ Infinity-categories, at least in the context of this seminar, will always be wha
 
 \subsection{December 6th: Simplicial categories and $\infty$-categories (Amelie Flatt)}
 
-There is a more rigid model of $(\infty,1)$-categories which is perhaps more intuitive and also useful to approach the more flexible model of Joyal and Lurie: simplicial categories, considered up to their natural homotopy equivalences. An important point is that any simplicial category gives rise to an $\infty$-category.
+There is a more rigid model of $(\infty,1)$-categories which is perhaps more intuitive and also useful to approach the more flexible model of Joyal and Lurie: simplicial categories, considered up to their natural homotopy equivalences. An important point is that certain simplicial categories gives rise to an $\infty$-category.
 
 This lecture will cover:
 
@@ -539,7 +539,7 @@ This lecture will cover the following:
 \item Given a morphism of topological spaces $p: Y \to X$, explicitly describe the ∞-category $\mathrm{Sing}_\bullet(X)_{/\mathrm{Sing}_{\bullet}(p)}$. %
 \end{itemize}  
 
-\subsection{December 20th:  Limits and Colimits in infinity categories (Viktor Tabakov, ?)}
+\subsection{December 20th:  Limits and Colimits in infinity categories (Viktor Tabakov, Alexei ?)}
 
 There is a theory of limits and colimits in infinity categories which generalizes the one for usual categories. This talk looks at the basic definitions, and also at examples in the infinity-category of topological spaces, which correspond to classical constructions of \emph{homotopy limits and colimits}. The idea is that classical limits and colimits in topological spaces are not homotopy-invariant, and homotopy limits and colimits correct this.
 
@@ -582,8 +582,8 @@ Model categories constitutes another framework which is very useful to study sit
 \item Mention, without much details, that there is another model structure $\mathrm{Top}$ whose weak equivalences are homotopy equivalences \cite[Def. 17.1.1]{May_Ponto}.
 \item Define the projective model structure on the category $\Cpl(R-\Mod)$ of unbounded chain complexes over a ring $R$ \cite[Def. 18.4.1, Thm. 18.4.2, Thm. 18.4.3]{May_Ponto}. Explain the relationship between cofibrant objects and projective $R$-modules \cite[Prop. 18.5.2]{May_Ponto}.
 \item Define cylinder objects and left homotopies as in \cite[Def. 14.3.1]{May_Ponto} (Skip the good and very good variants). Explain that, by factoring the map $X\coprod X\ra X$, there are always cylinder objects. Note that, in the Quillen model structure on $\Top$ (resp. the projective model structure on $\Cpl(R-\Mod)$), there is an obvious choice of cylinder object on a space $X$ (resp. a complex $K$), namely $X\times [0,1]$ (resp. $K\otimes [\ldots \ra 0 R= R\ra 0\ra\ldots]$), and that left homotopy then recovers the usual notions of homotopy in topology (resp. in homological algebra). 
-\item State without proof or details that the notion of left homotopy for morphisms $f:A\ra B$ in a model category is well behaved (and in particular an equivalence relation) when the source $A$ is cofibrant and the target $B$ is fibrant. Define the homotopy category of a model category \cite[Def. 14.4.5], noting that for any $X$, the object $RQX$ is fibrant (by construction) but also cofibrant (because $QX$ is cofibrant and the map $QX\ra RQX$ is a cofibration).
-\item State \cite[Prop. 14.4.6, Thm. 14.4.7]. 
+\item State without proof or details that the notion of left homotopy for morphisms $f:A\ra B$ in a model category is well behaved (and in particular an equivalence relation) when the source $A$ is cofibrant and the target $B$ is fibrant. Define the homotopy category of a model category \cite[Def. 14.4.5]{May_Ponto}, noting that for any $X$, the object $RQX$ is fibrant (by construction) but also cofibrant (because $QX$ is cofibrant and the map $QX\ra RQX$ is a cofibration).
+\item State \cite[Prop. 14.4.6, Thm. 14.4.7]{May_Ponto}. 
 \end{itemize}
 
 \subsection{January 17th: The Quillen and Joyal model structures on Simplicial Sets (Daniel K. (?))}
@@ -609,13 +609,13 @@ This talk is devoted to two different model structures on the category $\sSet$ o
 \subsection{January 24th: Straightening and unstraightening, the Yoneda lemma for infinity categories (Gentaro M. (?))
 }
 
-Infinity-categories are complicated objects which encode a lot of data (morphisms, homotopies between morphisms, homotopies between homotopies, etc.) and constructing functors between $\infty$-categories seems like a very difficult combinatorial task. In particular, the analogue of presheaves in $\infty$-category theory are functors $C^{\op}\ra \mathcal{S}$ with $\mathcal{S}$ is the $\infty$-category of spaces which was introduced before, and this seems hopeless. This talk will present some key ideas of Joyal and Lurie on how to make this possible.
+Infinity-categories are complicated objects which encode a lot of data (morphisms, homotopies between morphisms, homotopies between homotopies, etc.) and constructing functors between $\infty$-categories seems like a very difficult combinatorial task. In particular, the analogue of presheaves in $\infty$-category theory are functors $C^{\op}\ra \mathcal{S}$ with $\mathcal{S}$ is the $\infty$-category of spaces which was introduced before, and this seems hopeless. This talk will present some key ideas of Joyal and Lurie on how to make this possible; they generalize an important construction in usual category theory, the Grothendieck construction.
 
 \begin{itemize}
-\item Present \cite[\S 2.1.1]{HTT}. There is a dual notion of right fibration, present it in parallel. For another useful summary, look at \cite[\S 1]{Barwick-Shah}.
-\item State \cite[Thm 1.4]{Barwick-Shah}. Note that $\mathrm{Top}$ is what we have called $\mathcal{S}$), and that a good name for the $\infty$-category $\mathrm{Fun}(C^{\op},Top)$ is the $\infty$-category of presheaves on $C$. In \cite{HTT}, this theorem is a consequence of a Quillen equivalence of certain model categories \cite[Thm 2.2.1.2]{HTT}, but the model-independent formulation is much easier to understand and remember, even though the proof seems to require to work with model categories.
+\item Present \cite[\S 2.1.1]{HTT}. There is a dual notion of right fibration, present it in parallel. For another useful summary, look at \cite[\S 1]{Barwick-Shah}. Define at the same time inner fibrations (as in \cite[Definition 2.0.0.3]{HTT}.
+\item State \cite[Thm 1.4]{Barwick-Shah}. Note that there $\mathrm{Top}$ is what we have called $\mathcal{S}$, and that a good name for the $\infty$-category $\mathrm{Fun}(C^{\op},Top)$ is the $\infty$-category of presheaves (of spaces) on $C$. In \cite{HTT}, this theorem is a consequence of a Quillen equivalence of certain model categories \cite[Thm 2.2.1.2]{HTT}, but the model-independent formulation is much easier to understand and remember, even though the proof seems to require to work with model categories.
 \item Explain the special cases of this theorem discussed in \cite[Ex. 1.5-1.9]{Barwick-Shah}. For Ex. 1.8, you could have a look at \cite[\S 1]{Barwick-Glasman} to see what is involved in the proof.
-\item Present \cite[\S 3]{Barwick-Shah} on (co)cartesian fibrations and its relation with the more general Grothendieck construction. Ignore the references to inner fibrations, which is yet another class of maps we will not talk about.
+\item Present \cite[\S 3]{Barwick-Shah} on (co)cartesian fibrations and its relation with the more general Grothendieck construction. Another good place to read about the Grothendieck construction is the beginning of \cite[\S 1]{Mazel-Grothendieck}.
 \item State \cite[Cor. 5.1.2.3-4]{HTT} which explain that $\infty$-categories of presheaves admit all limits and colimits and \enquote{how to compute them}. 
 \item Define the Yoneda embedding by adjunction from the construction in \cite[Ex. 1.8]{Barwick-Shah}. State that it is fully faithful. 
 \end{itemize}
@@ -623,7 +623,7 @@ Infinity-categories are complicated objects which encode a lot of data (morphism
 \subsection{January 31th: Adjoints in infinity categories, limits and colimits revisited (Florian M.)
 }
 
-We conclude this tour of general $\infty$-category theory by looking at the concept of adjoint functors. In Lurie's perspective, this is obtained as a special case of the theory of Cartesian fibrations from the previous talk. 
+We conclude this tour of general $\infty$-category theory by looking at the concept of adjoint functors. In Lurie's perspective, this is obtained as a special case of the theory of Cartesian fibrations from the previous talk. There is also an equivalent, perhaps more intuitive definition. 
 
 \begin{itemize}
 \item 

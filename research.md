@@ -12,10 +12,14 @@ In my PhD work, under the supervision of [Joseph Ayoub](http://user.math.uzh.ch/
 
 * (with G. Ancona and A. Huber) [On the relative motive of a smooth commutative group scheme](http://algebraicgeometry.nl/2016-2/2016-2-008.pdf), Algebraic Geometry, volume 3 issue 2, 2016, p.150-178
 
-#### Preprints:
+* Triangulated categories of relative $1$-motives, \emph{Advances in Mathematics}, vol. 347, 2019
 
-* [Triangulated categories of relative 1-motives](https://arxiv.org/abs/1512.00266)
+* Constructible $1$-motives and exactness of realisation functors, accepted for publication in Documenta Mathematica
+
+#### Preprints:
 
 * (with V. Hoskins) [On the Voevodsky motive of the moduli stack of vector bundles on a curve](https://arxiv.org/abs/1711.11072)
 
-* [Constructible 1-motives and exactness](https://arxiv.org/abs/1712.01180)
+* (with V.Hoskins) A formula for the Voevodsky motive of the moduli stack of vector bundles on a curve, arXiv:1809.02150
+
+* (with V.Hoskins) On the Voevodsky motive of the moduli space of Higgs bundles on a curve, arXiv:1910.04440
