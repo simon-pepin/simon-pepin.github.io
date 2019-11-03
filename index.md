@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<img style="width=460px;height=259px;float:left;padding:10px;"
-src="/image/personal_photo_3.jpg" alt="profile picture" width="400" height="259">
+<img style="width=259px;height=460px;float:left;padding:10px;"
+src="/image/personal_photo_3.jpg" alt="profile picture" width="259" height="460">
 
 I am a mathematician, working on questions in algebraic and arithmetic geometry, in particular related to motives.
 
