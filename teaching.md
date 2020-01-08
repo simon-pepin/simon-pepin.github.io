@@ -4,6 +4,10 @@ title: Teaching
 permalink: /teaching/
 ---
 
+Spring semester 2020:
+
+* Organising a [PhD seminar Amsterdam-Nijmegen](https://simon-pepin.github.io/teaching/hilbert_SS20.html) on Hilbert schemes of points on surfaces.
+
 Winter semester 2018: 
 
 * Teaching assistant for [Number Theory III: Local class field theory](http://www.mi.fu-berlin.de/en/math/groups/arithmetic_geometry/teaching/numbthe_wise1819.html)
