@@ -14,7 +14,7 @@ Three afternoon meetings, each with two 1-hour talks.
 
 **February 18th:** 14:30-17, at Radboud University, room HG02.802.
 
-- Talk 1: Zöe Schroot
+- Talk 1: Zöe Schroot 
 
 - Talk 2: Renjie Lyu
 
@@ -22,10 +22,10 @@ Three afternoon meetings, each with two 1-hour talks.
 
 - Talk 3: Sergej Monavari
 
-- Talk 4: ?
+- Talk 4: Pedro Magni
 
 **March 17th:**14:30-17, University of Amsterdam, room F3.20.
 
-- Talk 5: ?
+- Talk 5: Kees Kok
 
-- Talk 6: ?
+- Talk 6: Emma Brakkee
