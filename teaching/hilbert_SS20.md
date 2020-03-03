@@ -22,7 +22,7 @@ Three afternoon meetings, each with two 1-hour talks.
 
 - Talk 3: Sergej Monavari
 
-- Talk 4: Pedro Magni
+- Talk 4: Pablo Magni
 
 **March 17th:**14:30-17, University of Amsterdam, room F3.20.
 
