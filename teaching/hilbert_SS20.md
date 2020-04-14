@@ -10,8 +10,6 @@ Here is the updated version of the [program](/teaching/program_hilb.pdf).
 
 ### _Organisation:_
 
-Three afternoon meetings, each with two 1-hour talks.
-
 **February 18th:** 14:30-17, at Radboud University, room HG02.802.
 
 - Talk 1: Zöe Schroot 
@@ -24,8 +22,10 @@ Three afternoon meetings, each with two 1-hour talks.
 
 - Talk 4: Pablo Magni
 
-**March 17th:**14:30-17, University of Amsterdam, room F3.20.
+**April 14th** 9:00-10:00, online
 
-- Talk 5: Kees Kok
+- Talk 5: Kees Kok : [notes from the talk](/teaching/notes_Kees_Gottsche.pdf)
+
+**April 21st** 9:00-10:00, online
 
 - Talk 6: Emma Brakkee
