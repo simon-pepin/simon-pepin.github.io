@@ -28,4 +28,4 @@ Here is the updated version of the [program](/teaching/program_hilb.pdf).
 
 **April 21st** 9:00-10:00, online
 
-- Talk 6: Emma Brakkee
+- Talk 6: Emma Brakkee: [slides from the talk](/teaching/slides_Emma_Nakajima.pdf)
