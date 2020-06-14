@@ -7,7 +7,7 @@ src="/image/personal_photo_3.jpg" alt="profile picture" width="250" height="350"
 
 I am a mathematician, working on questions in algebraic and arithmetic geometry. 
 
-My main interests are motives and motivic homotopy theory, algebraic groups, moduli spaces of bundles and the emerging field of exponential cohomology theories and exponential motives.
+My main interests are *motives and motivic homotopy theory*, *algebraic groups*, *moduli spaces of bundles* and the emerging study of *exponential motives*.
 
 From January 2020, I am a post-doctoral researcher at the Radboud University Nijmegen (Netherlands). I am part of the Research group of [Ben Moonen](https://www.math.ru.nl/~bmoonen/).
 
