@@ -6,7 +6,7 @@ permalink: /teaching/
 
 Winter semester 2020:
 
-* [Lecture course on Infinity Categories](https://simon-pepin.github.io/teaching/inf_cats_SS20.html) at the University of Amsterdam.
+* [Lecture course on Infinity Categories](https://simon-pepin.github.io/teaching/inf_cats_WS20.html) at the University of Amsterdam.
 
 Spring semester 2020:
 
