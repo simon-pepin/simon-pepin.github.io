@@ -26,8 +26,13 @@ The lectures will take place on Zoom.
 
 ### Sessions and course notes:
 
-- Wednesday September 2nd: Introduction, discussion on category theory. [Zoom link]()
+- Wednesday September 2nd: Presheaves, simplicial sets. [Notes](/teaching/infcats_SS20/Course notes 1.pdf)
 
+- Wednesday September 9th: Simplicial sets II. 
+
+### Exercise sheets
+
+- [Exercise sheet 1](/teaching/infcats_SS20/exercise_sheet_1.pdf)
 
 ### Litterature 
 
