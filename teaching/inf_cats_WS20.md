@@ -28,7 +28,7 @@ The lectures will take place on Zoom.
 
 - Wednesday September 2nd: Presheaves, simplicial sets. [Notes](/teaching/infcats_SS20/Course notes 1.pdf)
 
-- Wednesday September 9th: Simplicial sets II. [Zoom link](https://uva-live.zoom.us/j/93152160728)
+- Wednesday September 9th: Simplicial sets II. [Notes](/teaching/infcats_SS20/Course notes 2.pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
 
 ### Exercise sheets
 
