@@ -28,11 +28,15 @@ The lectures will take place on Zoom.
 
 - Wednesday September 2nd: Presheaves, simplicial sets. [Notes](/teaching/infcats_SS20/Course notes 1.pdf)
 
-- Wednesday September 9th: Simplicial sets II. [Notes](/teaching/infcats_SS20/Course notes 2.pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
+- Wednesday September 9th: Simplicial sets II. [Notes](/teaching/infcats_SS20/Course notes 2.pdf) 
+
+- Wednesday September 16th: Infinity-categories. [Notes](/teaching/infcats_SS20/Course notes 3.pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
 
 ### Exercise sheets
 
 - [Exercise sheet 1](/teaching/infcats_SS20/exercise_sheet_1.pdf)
+
+- [Exercise sheet 2](/teaching/infcats_SS20/exercise_sheet_2.pdf)
 
 ### Litterature 
 
