@@ -37,7 +37,10 @@ The lectures will take place on Zoom.
 - Wednesday September 30th: Infinity-categories III.
 [Notes](/teaching/infcats_SS20/Course notes 5.pdf) 
 
-- Wednesday October 07th: Lifting calculus. [Notes](/teaching/infcats_SS20/Course notes 6.pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
+- Wednesday October 07th: Lifting calculus. [Notes](/teaching/infcats_SS20/Course notes 6.pdf) 
+
+- Wednesday October 14th: Lifting calculus II.
+[Zoom link](https://uva-live.zoom.us/j/93152160728)
 
 ### Exercise sheets
 
@@ -50,6 +53,8 @@ The lectures will take place on Zoom.
 - [Exercise sheet 4](/teaching/infcats_SS20/exercise_sheet_4.pdf)
 
 - [Exercise sheet 5](/teaching/infcats_SS20/exercise_sheet_5.pdf)
+
+- [Exercise sheet 6](/teaching/infcats_SS20/exercise_sheet_6.pdf)
 
 
 ### Litterature 
