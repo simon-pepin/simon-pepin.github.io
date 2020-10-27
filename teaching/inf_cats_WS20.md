@@ -41,7 +41,7 @@ The lectures will take place on Zoom.
 
 - Wednesday October 14th: Lifting calculus II. [Notes](/teaching/infcats_SS20/Course notes 7.pdf)
 
-- Wednesday October 28th: Alternative models. [Notes](/teaching/infcats_SS20/Alternative Models.pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
+- Wednesday October 28th: Alternative models. [Notes](/teaching/infcats_SS20/Alternative models.pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
 
 ### Exercise sheets
 
