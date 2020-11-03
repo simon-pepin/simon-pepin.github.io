@@ -36,6 +36,6 @@ For infinity-category theory:
 
 ### _Planning_:
 
-- [**Program**](/teaching/inf_cats_program.pdf) 
+- [**Program**](/teaching/infcats_WS18/inf_cats_program.pdf) 
 
 
