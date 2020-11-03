@@ -43,7 +43,8 @@ The lectures will take place on Zoom.
 
 - Wednesday October 28th: Alternative models. [Notes](/teaching/infcats_SS20/Alternative models.pdf) 
 
-- Wednesday November 4th: Alternative models II.
+- Wednesday November 4th: Alternative models II. [Notes](/teaching/infcats_SS20/Alternative models 2.pdf)
+ [Zoom link](https://uva-live.zoom.us/j/93152160728)
 
 ### Exercise sheets
 
