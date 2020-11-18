@@ -47,6 +47,9 @@ The lectures will take place on Zoom.
 
 - Wednesday November 11th: Alternative models end; joins. [Notes](/teaching/infcats_SS20/Alternative models end.pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
 
+- Wednesday November 18th: joins, slices and (co)limits. [Notes](/teaching/infcats_SS20/Joins and slices.pdf)
+[Zoom link](https://uva-live.zoom.us/j/93152160728)
+
 ### Exercise sheets
 
 - [Exercise sheet 1](/teaching/infcats_SS20/exercise_sheet_1.pdf)
@@ -66,6 +69,8 @@ The lectures will take place on Zoom.
 - [Exercise sheet 8](/teaching/infcats_SS20/exercise_sheet_8.pdf)
 
 - [Exercise sheet 9](/teaching/infcats_SS20/exercise_sheet_9.pdf) 
+
+- [Exercise sheet 10](/teaching/infcats_SS20/exercise_sheet_10.pdf) 
 
 J. Lurie, [Higher Topos Theory](http://people.math.harvard.edu/~lurie/papers/highertopoi.pdf)
 
