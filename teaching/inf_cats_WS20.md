@@ -74,6 +74,12 @@ The lectures will take place on Zoom.
 
 - [Exercise sheet 10](/teaching/infcats_SS20/exercise_sheet_10.pdf) 
 
+- [Exercise sheet 10](/teaching/infcats_SS20/exercise_sheet_10.pdf) 
+
+- [Exercise sheet 11](/teaching/infcats_SS20/exercise_sheet_11.pdf) 
+
+### References
+
 J. Lurie, [Higher Topos Theory](http://people.math.harvard.edu/~lurie/papers/highertopoi.pdf)
 
 D. Cisinski, [Higher categories and Homotopical Algebra](http://www.mathematik.uni-regensburg.de/cisinski/CatLR.pdf)
