@@ -48,9 +48,10 @@ The lectures will take place on Zoom.
 - Wednesday November 11th: Alternative models end; joins. [Notes](/teaching/infcats_SS20/Alternative models end.pdf)
 
 - Wednesday November 18th: joins, slices and (co)limits. [Notes](/teaching/infcats_SS20/Joins and slices.pdf)
-[Zoom link](https://uva-live.zoom.us/j/93152160728)
 
-- Wednesday November 25th: Colimits and Joyal extension [Notes](/teaching/infcats_SS20/Limits and Joyal.pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
+- Wednesday November 25th: Colimits and Joyal extension [Notes](/teaching/infcats_SS20/Limits and Joyal.pdf)
+
+- Wednesday December 2nd: Grothendieck construction I [Notes](/teaching/infcats_SS20/Joyal extension and grothendieck construction .pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
 
 ### Exercise sheets
 
@@ -77,6 +78,8 @@ The lectures will take place on Zoom.
 - [Exercise sheet 10](/teaching/infcats_SS20/exercise_sheet_10.pdf) 
 
 - [Exercise sheet 11](/teaching/infcats_SS20/exercise_sheet_11.pdf) 
+
+- [Exercise sheet 12](/teaching/infcats_SS20/exercise_sheet_12.pdf) 
 
 ### References
 
