@@ -51,7 +51,9 @@ The lectures will take place on Zoom.
 
 - Wednesday November 25th: Colimits and Joyal extension [Notes](/teaching/infcats_SS20/Limits and Joyal.pdf)
 
-- Wednesday December 2nd: Grothendieck construction I [Notes](/teaching/infcats_SS20/Joyal extension and grothendieck construction .pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
+- Wednesday December 2nd: Grothendieck construction I [Notes](/teaching/infcats_SS20/Joyal extension and grothendieck construction .pdf) 
+
+- Wednesday December 9th: Grothendieck construction II [Notes](/teaching/infcats_SS20/Grothendieck construction .pdf) [Zoom link](https://uva-live.zoom.us/j/93152160728)
 
 ### Exercise sheets
 
