@@ -18,12 +18,23 @@ More recently, I am studying the geometry and motives of moduli spaces and stack
 
 * **Constructible 1-motives and exactness of realisation functors**, accepted for publication in Documenta Mathematica
 
-* (with V. Hoskins) [**On the Voevodsky motive of the moduli stack of vector bundles on a curve**](https://arxiv.org/abs/1711.11072), accepted for publication in the Quarterly Journal of Mathematics
+* (with V. Hoskins) [**On the Voevodsky motive of the moduli stack of vector bundles on a curve**](https://doi.org/10.1093/qmathj/haaa023), The Quarterly Journal of mathematics
+
+* (with V. Hoskins) [**A formula for the Voevodsky motive of the moduli stack of vector bundles on a curve**](https://arxiv.org/abs/1809.02150), accepted for publication in Geometry and Topology
+
+* (with V. Hoskins) [**On the Voevodsky motive of the moduli space of Higgs bundles on a curve**](https://arxiv.org/abs/1910.04440), accepted for publication in Selecta Mathematica
 
 
 #### Preprints:
 
+* (with V. Hoskins and L.
+Fu) [**Motives of moduli spaces of bundles on curves via variation of stability and flips**](http://arxiv.org/abs/2011.14872)
 
-* (with V. Hoskins) [**A formula for the Voevodsky motive of the moduli stack of vector bundles on a curve**](https://arxiv.org/abs/1809.02150)
+* (with M. Levine and
+V. Srinivas) [**Euler characteristics of homogeneous and weighted-homogeneous hypersurfaces**](https://arxiv.org/abs/2101.00482)
 
-* (with V. Hoskins) [**On the Voevodsky motive of the moduli space of Higgs bundles on a curve**](https://arxiv.org/abs/1910.04440)
+#### In preparation:
+
+* (with M. Gallauer and J. Fresán) **Exponential motives I: exponentiation of coefficient systems**
+
+* (with M. Gallauer and J. Fresán) **Exponential motives II: motivic Fourier transform** 
