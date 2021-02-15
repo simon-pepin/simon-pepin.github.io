@@ -33,6 +33,8 @@ Fu) [**Motives of moduli spaces of bundles on curves via variation of stability 
 * (with M. Levine and
 V. Srinivas) [**Euler characteristics of homogeneous and weighted-homogeneous hypersurfaces**](https://arxiv.org/abs/2101.00482)
 
+* (with V. Hoskins and L. Fu) [**Motives of moduli spaces of rank 3 vector bundles and Higgs bundles on a curve**](motive_rank3.pdf)
+
 #### In preparation:
 
 * (with M. Gallauer and J. Fresán) **Exponential motives I: exponentiation of coefficient systems**
