@@ -24,6 +24,8 @@ More recently, I am studying the geometry and motives of moduli spaces and stack
 
 * (with V. Hoskins) [**On the Voevodsky motive of the moduli space of Higgs bundles on a curve**](https://arxiv.org/abs/1910.04440), accepted for publication in Selecta Mathematica
 
+* (with V. Hoskins and L. Fu) [**Motives of moduli spaces of rank 3 vector bundles and Higgs bundles on a curve**](https://arxiv.org/abs/2102.07546), accepted for publication in Electronic Research Archive
+
 
 #### Preprints:
 
@@ -33,7 +35,6 @@ Fu) [**Motives of moduli spaces of bundles on curves via variation of stability 
 * (with M. Levine and
 V. Srinivas) [**Euler characteristics of homogeneous and weighted-homogeneous hypersurfaces**](https://arxiv.org/abs/2101.00482)
 
-* (with V. Hoskins and L. Fu) [**Motives of moduli spaces of rank 3 vector bundles and Higgs bundles on a curve**](https://arxiv.org/abs/2102.07546)
 
 #### In preparation:
 

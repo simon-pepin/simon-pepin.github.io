@@ -4,6 +4,10 @@ title: Teaching
 permalink: /teaching/
 ---
 
+Winter semester 2021:
+
+* Commutative Algebra in the Mastermath program (Utrecht)
+
 Winter semester 2020:
 
 * [Lecture course on Infinity Categories](https://simon-pepin.github.io/teaching/inf_cats_WS20.html) at the University of Amsterdam.
