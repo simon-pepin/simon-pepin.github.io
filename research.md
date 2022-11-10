@@ -37,12 +37,14 @@ V. Srinivas) [**Euler characteristics of homogeneous and weighted-homogeneous hy
 
 *  (with V. Hoskins) [**Motivic mirror symmetry for Higgs bundles**](https://arxiv.org/abs/2205.15393)
 
+*  (with V. Hoskins) [**Voevodsky motives of stacks of coherent sheaves on a curve**](https://arxiv.org/abs/2208.03204)
+
 
 #### In preparation:
 
-* (with M. Gallauer and J. Fresán) **Exponential motives I: exponentiation of coefficient systems**
+* (with M. Gallauer) **Exponential motives I: exponentiation of coefficient systems**
 
-* (with M. Gallauer and J. Fresán) **Exponential motives II: motivic Fourier transform**
+* (with M. Gallauer) **Exponential motives II: motivic Fourier transform**
 
 
 

@@ -4,6 +4,10 @@ title: Teaching
 permalink: /teaching/
 ---
 
+Spring semester 2023: 
+
+* Linear algebra (Amsterdam University College)
+
 Winter semester 2021:
 
 * Commutative Algebra in the Mastermath program (Utrecht)
