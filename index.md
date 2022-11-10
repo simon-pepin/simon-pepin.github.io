@@ -11,7 +11,12 @@ src="/image/personal_photo_3.jpg" alt="profile picture" width="250" height="350"
 
 I am a mathematician, working on questions in algebraic and arithmetic geometry. 
 
-My main interests are related to the theory of motivic and motivic homotopy theory: I am particularly interested in *motives of moduli spaces*, *motivic sheaves and the six-functor formalism*, *refined enumerative geometry* and *exponential motives*.
+My main interests are related to the theory of **motives** and **motivic homotopy theory**: I am particularly interested in :
+
+- **Motives of moduli spaces**
+- **Motivic sheaves and the six-functor formalism**
+- **Refined enumerative geometry**
+- **Exponential motives**.
 
 Starting from January 2023, I will be a post-doctoral research at [Korteweg-de Vries Institute](https://kdvi.uva.nl/) at the University of Amsterdam, in the research group of [Lenny Taelman](https://staff.fnwi.uva.nl/l.d.j.taelman/)
 
