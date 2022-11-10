@@ -4,6 +4,7 @@ title: Research
 permalink: /research/
 ---
 
+
 #### Papers:
 
 * [**Subgroups of maximal rank of reductive groups**](https://smf.emath.fr/publications/sous-groupes-de-groupes-reductifs-de-rang-maximal), Panoramas et Synthèses 47, 2015, p.147-172
