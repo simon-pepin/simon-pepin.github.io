@@ -2,6 +2,10 @@
 layout: default
 ---
 
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
+
 <img style="width=250px;height=350px;float:left;padding:10px;"
 src="/image/personal_photo_3.jpg" alt="profile picture" width="250" height="350">
 
