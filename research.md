@@ -24,6 +24,7 @@ permalink: /research/
 * (with V. Hoskins and L. Fu) [**Motives of moduli spaces of rank 3 vector bundles and Higgs bundles on a curve**](http://www.aimspress.com/article/doi/10.3934/era.2022004), Electronic Research Archive 30 (2022), no. 1, 66–89
 
 
+
 #### Preprints:
 
 * (with V. Hoskins and L.
