@@ -15,7 +15,7 @@ permalink: /research/
 
 * [**Constructible 1-motives and exactness of realisation functors**](https://www.elibm.org/ft/10011983000), Documenta Mathematica 24 (2019), 1721–1737
 
-* (with V. Hoskins) [**On the Voevodsky motive of the moduli stack of vector bundles on a curve**](https://doi.org/10.1093/qmathj/haaa023), The Quarterly Journal of mathematics
+* (with V. Hoskins) [**On the Voevodsky motive of the moduli stack of vector bundles on a curve**](https://doi.org/10.1093/qmathj/haaa023),  The Quarterly Journal of Mathematics, Volume 72, Issue 1-2, June 2021, Pages 71–114.
 
 * (with V. Hoskins) [**A formula for the Voevodsky motive of the moduli stack of vector bundles on a curve**](https://msp.org/gt/2021/25-7/p05.xhtml), Geometry & Topology 25 (2021), no. 7, 3555–3589
 
