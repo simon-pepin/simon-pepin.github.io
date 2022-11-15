@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /research/
+
+User-agent: Googlebot
+Disallow: /csexp.pdf$ 
