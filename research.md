@@ -40,10 +40,6 @@ V. Srinivas) [**Euler characteristics of homogeneous and weighted-homogeneous hy
 
 * (with M. Gallauer, preliminary version) [**Exponentiation of coefficient systems and Exponential motives**](https://arxiv.org/abs/2211.17247)
 
-<a href=”https://simon-pepin.github.io/research/csexp.pdf” style=”display:none”>Hidden link for grant application</a>
-
-
-#### In preparation:
 
 
 
