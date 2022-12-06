@@ -38,13 +38,13 @@ V. Srinivas) [**Euler characteristics of homogeneous and weighted-homogeneous hy
 
 *  (with V. Hoskins) [**Voevodsky motives of stacks of coherent sheaves on a curve**](https://arxiv.org/abs/2208.03204)
 
-* (with M. Gallauer, preliminary version) [**Exponential motives I: exponentiation of coefficient systems**](https://simon-pepin.github.io/research/csexp.pdf)
+* (with M. Gallauer, preliminary version) [**Exponentiation of coefficient systems and Exponential motives**](https://arxiv.org/abs/2211.17247)
+
+<a href=”https://simon-pepin.github.io/research/csexp.pdf” style=”display:none”>Hidden link for grant application</a>
 
 
 #### In preparation:
 
-
-* (with M. Gallauer) **Exponential motives II: motivic Fourier transform**
 
 
 
