@@ -4,7 +4,7 @@ title: Notes
 permalink: /notes/
 ---
 
-#### Talks about my own research:
+#### <ins>Talks about my own research:</ins>
 
 * [**Motivic mirror symmetry for Higgs bundles**](https://simon-pepin.github.io/notes/mirror_padova.pdf), notes from a online talk in Padova in December 2022.
 
@@ -12,7 +12,7 @@ permalink: /notes/
 
 * [**Quadratic enumerative geometry and the Deligne-Milnor formula**](https://simon-pepin.github.io/notes/quadratic_conductor.pdf), notes from a talk in the online seminar *Quadratic forms, linear algebraic groups and beyond*, October 2021 
 
-#### Other seminar talks:
+#### <ins>Other seminar talks:</ins>
 
 * [**Six-functor formalism; why solid abelian groups?**](https://simon-pepin.github.io/notes/six-functors.pdf), Algebraic Geometry Intercity seminar on *Condensed Mathematics*, November 11th 2022
 
