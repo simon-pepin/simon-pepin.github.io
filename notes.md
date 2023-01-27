@@ -6,8 +6,7 @@ permalink: /notes/
 
 #### <ins>Talks about my own research:</ins>
 
-* [**Motives of moduli of bundles on curves**](https://simon-pepin.github.io/notes/Darmstadt_Jan_2023.pdf
-.pdf), notes from an online talk in Darmstadt in January 2023.
+* [**Motives of moduli of bundles on curves**](https://simon-pepin.github.io/notes/Darmstadt_Jan_2023.pdf), notes from an online talk in Darmstadt in January 2023.
 
 * [**Motivic mirror symmetry for Higgs bundles**](https://simon-pepin.github.io/notes/mirror_padova.pdf), notes from a online talk in Padova in December 2022.
 
