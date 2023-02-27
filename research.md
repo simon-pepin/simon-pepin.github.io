@@ -24,12 +24,11 @@ permalink: /research/
 
 * (with V. Hoskins and L. Fu) [**Motives of moduli spaces of rank 3 vector bundles and Higgs bundles on a curve**](http://www.aimspress.com/article/doi/10.3934/era.2022004), Electronic Research Archive 30 (2022), no. 1, 66–89
 
+* (with V. Hoskins and L.
+Fu) [**Motives of moduli spaces of bundles on curves via variation of stability and flips**](http://arxiv.org/abs/2011.14872), Accepted for publiation in the Journal of the London Mathematical Society
 
 
 #### Preprints:
-
-* (with V. Hoskins and L.
-Fu) [**Motives of moduli spaces of bundles on curves via variation of stability and flips**](http://arxiv.org/abs/2011.14872)
 
 * (with M. Levine and
 V. Srinivas) [**Euler characteristics of homogeneous and weighted-homogeneous hypersurfaces**](https://arxiv.org/abs/2101.00482)
