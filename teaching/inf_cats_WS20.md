@@ -26,7 +26,7 @@ The lectures will take place on Zoom.
 
 ### Sessions and course notes:
 
-- Wednesday September 2nd: Presheaves, simplicial sets. [Notes](/teaching/infcats_SS20/Course notes 1.pdf)
+- Wednesday September 2nd: Presheaves, simplicial sets. Unfortunately, the notes for this class have been lost. It covered the basic theory of presheaves on small categories and introduced simplicial sets as a special case.
 
 - Wednesday September 9th: Simplicial sets II. [Notes](/teaching/infcats_SS20/Course notes 2.pdf) 
 
