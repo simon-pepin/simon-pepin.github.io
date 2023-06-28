@@ -18,7 +18,16 @@ My main interests are related to the theory of **motives** and **motivic homotop
 - **Refined enumerative geometry**
 - **Exponential motives**.
 
-Starting from January 2023, I will be a post-doctoral research at [Korteweg-de Vries Institute](https://kdvi.uva.nl/) at the University of Amsterdam, in the research group of [Lenny Taelman](https://staff.fnwi.uva.nl/l.d.j.taelman/)
+I coorganise three conferences this summer 2023 in Nijmegen!
+
+- [Motivic and non-commutative aspects of enumerative geometry](https://www.math.ru.nl/mnc-conference/) (July 3-5)
+
+- [Homotopy theory, K-theory, and trace methods](https://www.math.ru.nl/hkt-conference/) (July 5-7)
+
+- [Motives in moduli and representation theory](https://indico.imapp.ru.nl/event/124/) (July 10-14)
+
+
+Since January 2023, I am a post-doctoral researcher at [Korteweg-de Vries Institute](https://kdvi.uva.nl/) at the University of Amsterdam, in the research group of [Lenny Taelman](https://staff.fnwi.uva.nl/l.d.j.taelman/)
 
 Since January 2020, I have been a post-doctoral researcher at the Radboud University Nijmegen (Netherlands). I am part of the Research group of [Ben Moonen](https://www.math.ru.nl/~bmoonen/).
 
