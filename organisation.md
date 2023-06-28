@@ -8,11 +8,11 @@ Conferences:
 
 * I coorganise three conferences this summer 2023 in Nijmegen!
 
-- [Motivic and non-commutative aspects of enumerative geometry](https://www.math.ru.nl/mnc-conference/) (July 3-5)
+ [Motivic and non-commutative aspects of enumerative geometry](https://www.math.ru.nl/mnc-conference/) (July 3-5)
 
-- [Homotopy theory, K-theory, and trace methods](https://www.math.ru.nl/hkt-conference/) (July 5-7)
+ [Homotopy theory, K-theory, and trace methods](https://www.math.ru.nl/hkt-conference/) (July 5-7)
 
-- [Motives in moduli and representation theory](https://indico.imapp.ru.nl/event/124/) (July 10-14)
+ [Motives in moduli and representation theory](https://indico.imapp.ru.nl/event/124/) (July 10-14)
 
 
 * On September 24-28, 2018, I have organised an Arbeitsgemeinschaft on "Motives, foliations and the conservativity conjecture" together with Joseph Ayoub and Bruno Klingler.
