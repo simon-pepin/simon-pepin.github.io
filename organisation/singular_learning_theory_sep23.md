@@ -33,4 +33,4 @@ Singular learning theory has been developped for 25 years by the statistician Su
 
 ### Ressources:
 
-Besides the [paper](https://arxiv.org/abs/2308.12108) and the [two](https://www.cambridge.org/core/books/algebraic-geometry-and-statistical-learning-theory/9C8FD1BDC817E2FC79117C7F41544A3A) [https://www.routledge.com/Mathematical-Theory-of-Bayesian-Statistics/Watanabe/p/book/9780367734817](textbooks) of Watanabe, there is an extensive list of references at the [Developmental Interpretability](https://devinterp.com/resources) website.
+Besides the [paper](https://arxiv.org/abs/2308.12108) and the [two](https://www.cambridge.org/core/books/algebraic-geometry-and-statistical-learning-theory/9C8FD1BDC817E2FC79117C7F41544A3A) [textbooks](https://www.routledge.com/Mathematical-Theory-of-Bayesian-Statistics/Watanabe/p/book/9780367734817) of Watanabe, there is an extensive list of references at the [Developmental Interpretability](https://devinterp.com/resources) website.
