@@ -1,0 +1,27 @@
+\BOOKMARK [1][-]{section*.1}{Practical details}{}% 1
+\BOOKMARK [1][-]{section*.2}{Overview of the program}{}% 2
+\BOOKMARK [1][-]{section*.3}{Monday 18th: Learning from data, singularity theory}{}% 3
+\BOOKMARK [2][-]{section*.4}{Talk 1 \(10:00-11:00\) Machine learning, deep learning, mysteries}{section*.3}% 4
+\BOOKMARK [2][-]{section*.5}{Talk 2 \(11:00-12:00\) Bayesian statistics and statistical learning theory}{section*.3}% 5
+\BOOKMARK [2][-]{section*.6}{Talk 3 \(13:00-14:00\) Regular and singular models}{section*.3}% 6
+\BOOKMARK [2][-]{section*.7}{Q\046 A, discussion, break \(14:00-15:00\)}{section*.3}% 7
+\BOOKMARK [2][-]{section*.8}{Talk 4 \(15:00-16:00\) Analytic geometry and singularities}{section*.3}% 8
+\BOOKMARK [2][-]{section*.9}{Talk 5 \(16:00-17:00\) Measuring degeneracy with the real log-canonical threshold.}{section*.3}% 9
+\BOOKMARK [1][-]{section*.10}{Tuesday 18th: Singular learning theory - the core results}{}% 10
+\BOOKMARK [2][-]{section*.11}{Q \046 A and discussion \(10:00-11:00\)}{section*.10}% 11
+\BOOKMARK [2][-]{section*.12}{Talk 1 \(11:00-12:00\) Main theorem I: standard form of the log-likelihood function}{section*.10}% 12
+\BOOKMARK [2][-]{section*.13}{Talk 2: \(13:00-14:00\) Main theorem II: Free energy formula}{section*.10}% 13
+\BOOKMARK [2][-]{section*.14}{Talk 3 \(14:15-15:15\): Main theorem III : consequences for generalization errors, singular fluctuation}{section*.10}% 14
+\BOOKMARK [2][-]{section*.15}{Q\046 A, discussion, work in small groups: \(15:15-17:00\)}{section*.10}% 15
+\BOOKMARK [1][-]{section*.16}{Wednesday 20th: Singular learning theory - consequences for phase transitions}{}% 16
+\BOOKMARK [2][-]{section*.17}{Talk 1 \(10:00-11:00\): internal model selection and phase transitions in the Bayesian posterior}{section*.16}% 17
+\BOOKMARK [2][-]{section*.18}{Discussion \(11:00-12:00\): Phase transitions in \173SLT, deep learning, catastrophe theory, condensed matter physics\175 and how to connect it all}{section*.16}% 18
+\BOOKMARK [2][-]{section*.19}{Talk 2 \(13:00-14:00\): Computing RLCTs with algebraic geometry}{section*.16}% 19
+\BOOKMARK [2][-]{section*.20}{Talk 3 \(14:15-15:15\): WBIC paper}{section*.16}% 20
+\BOOKMARK [2][-]{section*.21}{Q\046 A, discussion, work in small groups: \(15:15-17:00\)}{section*.16}% 21
+\BOOKMARK [1][-]{section*.22}{Thursday 21st: Singular learning practice - estimating learning coefficients and applications to phase transitions}{}% 22
+\BOOKMARK [2][-]{section*.23}{Talk 1 \(10:00-11:00\) ``Quantifying degeneracy in singular models via the learning coefficient ''}{section*.22}% 23
+\BOOKMARK [2][-]{section*.24}{Talk 2 \(11:00-12:00\) Computing "0362 in practice and applications}{section*.22}% 24
+\BOOKMARK [2][-]{section*.25}{Talk 3 \(13:00-14:00\) DIY "0362: libraries, internals, APIs}{section*.22}% 25
+\BOOKMARK [2][-]{section*.26}{Q\046 A, discussion, work in small groups: \(14:15-17:00\)}{section*.22}% 26
+\BOOKMARK [1][-]{section*.27}{References}{}% 27

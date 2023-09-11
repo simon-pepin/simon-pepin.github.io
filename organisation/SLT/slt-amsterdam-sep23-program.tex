@@ -1,0 +1,268 @@
+\documentclass[a4paper,11pt]{amsart}
+\usepackage{amsfonts,amssymb,amsmath,amsthm,abstract,color}
+\usepackage{bbm}
+\usepackage[mathscr]{euscript}
+\usepackage[ps,all,arc,rotate]{xy}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{pb-diagram}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+
+\usepackage{stmaryrd} % for GIT quotient double slashes
+
+%\usepackage{newpxtext,newpxmath}
+
+\newcommand{\lambdahat}{\widehat{\lambda}}
+
+\title[Machine learning, singularity theory and phase transitions]{Machine learning, singularity theory and phase transitions \\ University of Amsterdam, 18-21 September 2023}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+This is the program of an informal workshop organised at the University of Amsterdam around \emph{Singular learning theory} and its burgeoning applications to the training dynamics of deep neural networks. This is a topic at the interface of machine learning, statistics and singularity theory in real-analytic geometry, so we expect a diverse audience, and the talks of the first day will provide some background from each discipline. Singular learning theory is an application of the tools of singularity theory to Bayesian statistics, and is a promising framework to understand some of the mysteries of modern deep learning. Our goal will be to understand the recent paper \href{https://arxiv.org/abs/2308.12108}{Quantifying degeneracy in singular models via the learning coefficient} \cite{lambdahat}, both at a theoretical and practical level, and discuss work-in-progress on other deep learning systems.  
+\end{abstract}
+
+\section*{Practical details}
+
+\begin{itemize}
+\item The workshop will take place from Monday 18th to Thursday 21st, from 10:00 to 17:00.
+
+\item The rooms are still in the process of being reserved and will be announced here shortly.
+
+\item If you are not a staff member of the University, you will not be able to access the building. Please send me an email and I will send you my mobile phone number so that we can get you in.
+
+\end{itemize}
+
+\section*{Overview of the program}
+
+\begin{itemize}
+\item Monday 18st: Learning from data, singularity theory
+  \begin{itemize}
+  \item Talk 1 (10:00-11:00): Machine learning, deep learning, mysteries
+  \item Talk 2 (11:00-12:00): Bayesian statistics and statistical learning theory
+  \item Talk 3 (13:00-14:00): Regular and singular models
+  \item Q\& A, discussion, break (14:00-15:00)
+  \item Talk 4 (15:00-16:00) Analytic geometry and singularities
+  \item Talk 5 (16:00-17:00) Measuring degeneracy with the real log-canonical threshold  
+  \end{itemize}
+\item Tuesday 19st: Singular learning theory - core results
+  \begin{itemize}
+  \item Q\& A and discussion (10:00-11:00)
+  \item Talk 1 (11:00-12:00) Main theorem I: standard form of the log-likelihood function
+  \item Talk 2 (13:00-14:00) Main theorem II: free energy formula
+  \item Talk 3 (14:15-15:15) Main theorem III: consequences for generalization errors, singular fluctuation
+  \item Q\& A, discussion, work in small groups (15:15-17:00)  
+  \end{itemize}
+\item Wednesday 20th : Singular learning theory - consequences for phase transitions  
+  \begin{itemize}
+  \item Talk 1 (10:00-11:00) internal model selection and Bayesian phase transitions
+  \item Discussion (11:00-12:00) Larger picture of phase transitions in deep learning.
+  \item Talk 2 (13:00-14:00) Computing RLCTs with algebraic geometry
+  \item Talk 3 (14:15-15:15) Widely applicable Bayesian Information Criterion (WBIC)
+  \item Q\& A, discussion, work in small groups (15:15-17:00)
+  \end{itemize}
+\item Thursday 21st: Singular learning practice - estimating learning coefficients and applications to phase transitions.
+  \begin{itemize}
+  \item Talk 1 (10:00-11:00) ``Quantifying degeneracy in singular models via the learning coefficient ''
+  \item Talk 2 (11:00-12:00) Computing $\lambdahat$ in practice and applications
+  \item Talk 3 (13:00-14:00) DIY $\lambdahat$: libraries, internals, APIs
+  \item Q\& A, discussion, work in small groups: (14:15-17:00)
+  \end{itemize}
+\end{itemize}
+
+
+\section*{Monday 18th: Learning from data, singularity theory}
+
+\subsection*{Talk 1 (10:00-11:00) Machine learning, deep learning, mysteries}
+
+\begin{itemize}
+\item Discuss the basic framework of (supervised) machine learning ML: parametrized models, classifiers with loss functions, train and test datasets, etc.
+\item Introduce simple feed-forward neural networks, discuss tanh and ReLU activation functions.
+\item Briefly discuss how they are trained in practice: first-order optimization, stochastic gradient descent (SGD) - we will come back to this later on.
+\item Give an impressionistic overview of how successful deep learning has been in many domains.
+\item Explain some of the basic mysteries: why are such models trainable? Why do the trained models generalize so well and tend not to overfit? Can we understand the computational structure of trained models and how it forms during training?  
+\end{itemize}
+
+\subsection*{Talk 2 (11:00-12:00) Bayesian statistics and statistical learning theory}
+
+\begin{itemize}
+\item Introduce the framework of Bayesian statistics as used by Watanabe. Explain how to work with a supervised learning ML model such as a DNN in this framework, with the mean square error. Discuss briefly the fact that this is very different from ML practice
+\textbf{Refs:} \cite[\S 1.1-1.4]{green-book}
+\item Introduce the basic quantities of statistical learning theory (which let us track how well the model is learning) and their relationships: generalization,training and cross-validation loss (and their averages), Kullback-Leibler divergence (empirical and averaged), marginal likelihood/partition function, free energy. Point out the difference between losses and errors. \textbf{Refs:}\cite[\S 1.6-1.7]{green-book}, omitting WAIC.
+\item Explain that one goal of statistical learning theory is to understand the behaviour of the various errors in the large $n$ limit, and how the free energy is particularly important (\cite[Rmk 10 in \S 1.7]{green-book}. One could discuss \cite[Example 1.9.4]{green-book} of a simple Gaussian model where everything can be computed explicitly.
+\end{itemize}
+
+\subsection*{Talk 3 (13:00-14:00) Regular and singular models}
+
+\begin{itemize}
+\item Introduce the set of optimal parameters $W_{0}$; explain why we expect the posterior distribution to concentrate along $W_{0}$ and so why the ``geometry'' of $W_{0}$, of $K_{n}$ and $K$ (in a so far imprecise sense) should be relevant to statistical learning theory.
+\item Discuss identifiable and non-identifiable models, noting in particular that $W_{0}$ is a point for identifiable models. Mention Doob's theorem. Explain that DNNs are highly non-identifiable.
+\item Introduce the Fisher information matrix and its link with $K$. Define regular and singular models.
+\item State (semi-rigorously) the Bernstein-Von Mises theorem, which shows that for regular realizable models the posterior density converges in $L^{1}$-norm to a Gaussian distribution centered at the optimal parameter. Mention that the starting point is the Laplace approximation for integral, and sketch the proof in 1d.
+\item Explain (maybe showing plots!) that this is very false for singular models.  
+\item State the asymptotic free energy formula for regular models (perhaps only in the realizable case to keep things simple) \cite[\S 4.2 Theorem 4]{green-book}
+\end{itemize}
+
+\subsection*{Q\& A, discussion, break (14:00-15:00)}
+Possible discussion topics.
+\begin{itemize}
+\item What are standard approaches in statistical learning theory? Why do they fall short for deep learning?
+\item SGD vs Bayesian inference, what is known rigorously (e.g. in regular convex models)? empirically?
+\end{itemize}
+
+
+\subsection*{Talk 4 (15:00-16:00) Analytic geometry and singularities}
+
+\begin{itemize}
+\item Recall definition of smooth and real-analytic functions. Explain why real-analytic functions are better suited to ``do geometry'' (basically, their sets of solutions are reasonable geometric objects, ``generically'' manifolds, unlike sets of solutions of smooth functions). Explain why K is a real-analytic function for a tanh DNN. 
+\item Discuss smooth and singular points of a real-analytic set (and the implicit function theorem), and critical points of a real-analytic function.
+\item Define Morse and Morse-Bott functions and state the Morse-Bott lemma. Connect this to regular/''minimally singular'' statistical models.
+\item Define normal crossings functions and state embedded resolution of singularities for real-analytic functions, in the form used by Watanabe. Explain how this looks like in particular for a positive function like $K$.
+\item Briefly mention that, in practice, singularity theory for real-analytic functions can often be reduced to singularity theory for polynomials, and so to real algebraic geometry, which is convenient for some computations; note however that $K$ itself is almost never a polynomial.
+\item If there is time (!), give example of ADE singularities and their resolutions.
+\end{itemize}
+
+\subsection*{Talk 5 (16:00-17:00) Measuring degeneracy with the real log-canonical threshold.}
+
+\begin{itemize}  
+\item Define the real log-canonical threshold (RLCT) or learning coefficient in terms of volume asymptotics, and closely related in terms of integrability.
+\item Introduce the ``density of states'' (DOS) function/distribution.
+\item Explain roughly, using the discussion of the regular case, why understanding the asymptotic behaviour of the DOS close to the optimal parameters is a key step to understanding the asymptotic behaviour of the partition function.
+\item Explain why the asymptotics of the DOS is closely related to the asymptotics of the volume function, and so the RLCT as defined above. Discuss also the log term and the multiplicity.
+\item Introduce the zeta function and give the characterization of the RLCT in terms of poles (mentioning the role of the Mellin transform)
+\item Explain that the zeta function can be computed on a resolution of singularities and give the resulting formula for the RLCT.
+\item Discuss basic properties of the RLCT (semi-continuity?), and give the formula in the minimally singular case (K Morse-Bott).
+\item If there is time (!), give example of ADE singularities as a case where we can compute the RLCT and they reflect the ``complexity'' of the singularity.
+\end{itemize}
+
+
+\section*{Tuesday 18th: Singular learning theory - the core results}
+
+\subsection*{Q \& A and discussion (10:00-11:00)}
+
+Digesting the material from Monday, before going into the main results! Possible points that deserve clarification:
+\begin{itemize}
+\item Singularities are ``measure-zero'' objects, so why do we expect them to have any role in a probabilistic/statistical setting? Relatedly, machine learning systems are implemented on a computer, so with finite floating-point precision, so singularities should be ``blurred out''; is this a reason to neglect them?
+\end{itemize}  
+\subsection*{Talk 1 (11:00-12:00) Main theorem I: standard form of the log-likelihood function}
+
+Note: for this talk, assume $\beta=1$ (ordinary Bayesian inference) to keep things simple?
+
+\begin{itemize}
+\item Introduce the ``relatively finite variance'' condition, explain that it holds for realizable models.
+\item Show that relatively finite variance implies essential uniqueness of the model along $W_{0}$, and that it implies that ``$f(x,w)$ is divisible by $\sqrt{K(w)-K_{0}}$'' in a neighbourhood of the set $W_{0}$ of optimal parameters.
+\item Use this to define the statistical process $\xi_{n}$ on the resolution, give formulas for its expectation and variance. Draw analogy with the central limit theorem.
+\item Explain roughly what empirical process theory is about and how to deduce that $\xi_{n}$ converges to a Gaussian process (under some technical assumptions which we don't need to discuss).
+\end{itemize}
+
+\subsection*{Talk 2: (13:00-14:00) Main theorem II: Free energy formula}
+
+Note: again, assume $\beta=1$ (ordinary Bayesian inference) to keep things simple?
+
+
+\begin{itemize}
+\item Explain the simple upper bound for the expectation of the free energy \cite[Theorem 6.4]{grey-book}, which does not use   
+\item Explain the decomposition of the partition function in two parts, an essential part (around $W_{0}$) and a non-essential part (away from $W_{0}$.)
+\item Explain how to bound the non-essential part.
+\item Explain how resolution of singularities combined with the standard form of $K_{n}$ gives a formula for the essential part in terms of the stochastic process $\xi_{n}$.  
+\item Show the convergence in law of the partition function as in \cite[Theorem 6.7]{grey-book}.
+\item Deduce the free energy formula, both empirically and in expectation.  
+\end{itemize}
+
+\subsection*{Talk 3 (14:15-15:15): Main theorem III : consequences for generalization errors, singular fluctuation}
+
+\begin{itemize}
+\item Discuss tempered Bayesian inference (adding $beta$!) and the analogy with thermodynamics.  
+\item Recall definitions of the various errors in Bayesian learning theory, and add in the Gibbs ones.
+\item Explain how to unify some of these errors with the ``functional cumulant generating function'' \cite[\S 3.3]{green-book}.
+\item State (imprecisely) the ``basic theorem of Bayesian statistics'' \cite[\S 3.4 Theorem 3]{green-book}.
+\item Define the renormalized posterior distribution, show that it satisfies the ``scaling law'' and define the singular fluctuation \cite[\S 5.4 and \S 6.3]{green-book}
+\item Explain how to apply the ``basic theorem'' in the case of SLT, using the scaling law, to obtain various asymptotic formulas \cite[\S 5.4 and \S 6.3]{green-book}.
+\end{itemize}
+
+\subsection*{Q\& A, discussion, work in small groups: (15:15-17:00)}
+Possible discussion topics:
+\begin{itemize}
+\item How realistic is the condition of relatively finite variance? There is at least one example in \cite[\S 3.4 Example 19]{green-book} which does not satisfy it and where the free energy formula does not hold; can we understand and generalize it?
+\item ReLU activations, which are popular in modern deep-learning architectures are only piecewise-analytic, so the theory above cannot be literally applied to it. What can be said nonetheless?
+\item   
+\item Can we understand qualitatively the next order terms in the free energy formula? Do we expect large multiplicities to play a role? The prior only comes in the constant term, which is very complicated; can be say something about it, perhaps by analogy with the simple formula in the regular case?
+\item What does the singular fluctuation mean, really? And how should it manifest in practice?
+\item Can we interpret the description of the ``renormalized posterior distribution'' and its scaling law as in \cite[\S 6.3]{grey-book} as a ``singular Bernstein-Von Mises theorem''? Can we recover a form of the classical BVM theorem by applying this to regular models?
+\item Does SLT say something about generalization out-of-distribution?  
+\item We haven't discussed what Watanabe proves about maximum likelihood estimate in the singular context, but it is interesting and someone could try to summarize it.
+\end{itemize}
+
+\section*{Wednesday 20th: Singular learning theory - consequences for phase transitions}
+
+\subsection*{Talk 1 (10:00-11:00): internal model selection and phase transitions in the Bayesian posterior}
+
+Besides Watanabe's book, a useful reference for this is the talk of Dan Murfet \href{https://www.youtube.com/watch?v=UBY7xc1LZ6E&t=4364s}.
+
+\begin{itemize}
+\item Introduce the general problem of model selection in Bayesian statistics \cite[\S 8.1]{green-book}
+\item Introduce local learning coefficients \cite{lambdahat}
+\item Explain why the free energy formula implies phase transitions in the Bayesian posterior and discuss why this can be understood as a form of ``internal model selection.''\cite[\S 7.6]{grey-book} \cite[\S 9.4]{green-book}
+
+\end{itemize}
+
+\subsection*{Discussion (11:00-12:00): Phase transitions in \{SLT, deep learning, catastrophe theory, condensed matter physics\} and how to connect it all}
+
+Phase transitions in the Bayesian framework of SLT are mathematically quantifiable phenomena, but we would like to use them to study the phase transitions which are observed empirically during SGD training in deep learning. To help translate between those two set-ups, ideas coming from the study of phase transitions in other contexts should prove useful. Since this is very much an unfinished story, a discussion format seems appropriate.
+
+\subsection*{Talk 2 (13:00-14:00): Computing RLCTs with algebraic geometry}
+
+\begin{itemize}
+\item Explain why, in some cases, it is possible to reduce RLCT computations to the case of polynomials.
+\item Define blow-ups and explain that resolution of singularities can always be achieved by a sequence of blow-ups of smooth subvarieties.  
+\item Choose a paper of Watanabe to illustrate the computation procedure.
+\item Could mention Newton polygons, toric methods, etc.
+\end{itemize}
+
+\subsection*{Talk 3 (14:15-15:15): WBIC paper}
+
+Based on the paper \cite{WBIC}, which is an important theoretical foundation for the paper \cite{lambdahat} which we look at on Thursday.
+
+\begin{itemize}
+\item Define the classical Bayesian information criterion and explain why it is appropriate for model selection for regular models.  
+\item Define the Widely applicable Bayesian Information Criterion (WBIC). Explain why this is easier to estimate in practice than the actual free energy.
+\item State the main theorem \cite[Theorem 4]{WBIC}. The proof is based on the same fundamental ingredients as the free energy formula; the key ``new'' computations are in \cite[\S 5.7]{WBIC} and involve the Gamma function in some interesting way.
+\item Explain how to use WBIC to estimate the global RLCT, \emph{provided} you can sample from the tempered posterior.  
+\end{itemize}
+
+\subsection*{Q\& A, discussion, work in small groups: (15:15-17:00)}
+Many possible topics here.
+\begin{itemize}
+\item The function $K$ (and hence the learning coefficient and other quantities relevant to statistical learning) depends in a complicated way of the interplay between the model and the true distribution. Can we quantify this interplay in some cases? For instance, if the true distribution has a certain symmetry property \emph{and} the model contain a large subset of weights for which the model has this symmetry property, what does it imply about the structure of $K$? Can we deduce something about (local) learning coefficients?
+\item Another interesting notion introduced in \cite[\S 3]{WBIC} is the \emph{parity} of the model, which has to do with the analytic continuation of $\sqrt{K(w)}$ and explains some sign issues in the core SLT theory. The result \cite[Corollary 1]{WBIC} shows that WBIC for models with odd parity should be a better estimator than for models with even parity; do we observe this in practice?
+\item Catastrophe theory!  
+\end{itemize}
+
+\section*{Thursday 21st: Singular learning practice - estimating learning coefficients and applications to phase transitions}
+
+\subsection*{Talk 1 (10:00-11:00) ``Quantifying degeneracy in singular models via the learning coefficient ''}
+
+Goal: present the paper \cite{lambdahat} by Lau-Murfet-Wei.
+
+\subsection*{Talk 2 (11:00-12:00) Computing $\lambdahat$ in practice and applications}
+
+\subsection*{Talk 3 (13:00-14:00) DIY $\lambdahat$: libraries, internals, APIs}
+
+\subsection*{Q\& A, discussion, work in small groups: (14:15-17:00)}
+
+
+\begin{thebibliography}{99}
+
+\bibitem{green-book} S. Watanabe, ``Mathematical Theory of Bayesian Statistics''
+
+\bibitem{grey-book} S. Watanabe, ``Algebraic Geometry and Statistical Learning Theory''
+
+\bibitem{WBIC} S. Watanabe, ``A Widely applicable Bayesian Information Criterion''
+  
+\bibitem{lambdahat} E. Lau, D. Murfet, S. Wei, ``Quantifying degeneracy in singular models via the learning coefficient'', \url{https://arxiv.org/abs/2308.12108}
+
+\end{thebibliography}
+  
+\end{document}

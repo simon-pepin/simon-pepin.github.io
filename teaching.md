@@ -4,6 +4,10 @@ title: Teaching
 permalink: /teaching/
 ---
 
+Winter semester 2023:
+
+* Infinity-categories in the Mastermath program (Utrecht)
+
 Spring semester 2023: 
 
 * Linear algebra (Amsterdam University College)
