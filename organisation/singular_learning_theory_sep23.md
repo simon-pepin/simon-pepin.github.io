@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Informal workshop on "Machine learning, singularity theory and phase transitions"
-permalink: /teaching/singular_learning_theory_sep23
+permalink: /organisation/singular_learning_theory_sep23
 ---
 
 This is the webpage of an informal workshop organised at the University of Amsterdam on September 18th-21st 2023 around **Singular Learning Theory** and its burgeoning applications to the training dynamics of deep neural networks. This is a topic at the interface of machine learning, statistics and singularity theory in real-analytic geometry, so we expect a diverse audience, and the talks on Monday will provide some background from each discipline.
