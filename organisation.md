@@ -6,7 +6,7 @@ permalink: /organisation/
 
 Conferences:
 
-* I am coorganising an informal workshop on ["Machine learning, singularity theory and phase transitions"](https://simon-github.io/organisation/singular_learning_theory_sep23.html) on September 18th-21st at the University of Amsterdam.
+* I am coorganising an informal workshop on ["Machine learning, singularity theory and phase transitions"](https://simon-pepin.github.io/organisation/singular_learning_theory_sep23.html) on September 18th-21st at the University of Amsterdam.
 
 * I coorganised three conferences in the summer 2023 in Nijmegen.
 
