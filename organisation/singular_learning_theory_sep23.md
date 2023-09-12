@@ -6,15 +6,13 @@ permalink: /organisation/singular_learning_theory_sep23
 
 This is the webpage of an informal workshop organised at the University of Amsterdam on September 18th-21st 2023 around **Singular Learning Theory** and its burgeoning applications to the training dynamics of deep neural networks. This is a topic at the interface of machine learning, statistics and singularity theory in real-analytic geometry, so we expect a diverse audience, and the talks on Monday will provide some background from each discipline.
 
-Singular learning theory is an application of the tools of singularity theory to Bayesian statistics, and is a promising framework to understand some of the mysteries of modern deep learning. Our aim will be to survey the recent paper [Quantifying degeneracy in singular models via the learning coefficient](https://arxiv.org/abs/2308.12108), both at a theoretical and practical level, and discuss work-in-progress on other deep learning systems. See the [program](/organisation/SLT/slt-amsterdam-sep23-program.pdf) for more details.
+Singular learning theory is an application of the tools of singularity theory to Bayesian statistics. Our aim will be to survey the recent paper [Quantifying degeneracy in singular models via the learning coefficient](https://arxiv.org/abs/2308.12108), both at a theoretical and practical level, and discuss work-in-progress on other deep learning systems. See the [program](/organisation/SLT/slt-amsterdam-sep23-program.pdf) for more details.
 
 ### _Practical details:_
 
 - The workshop will take place from Monday 18th to Thursday 21st, from 10:00 to 17:00.
 
 - The rooms are still in the process of being reserved and will be announced here shortly.
-
-- If you are not a staff member of the University, you will not be able to access the building. Please send me an email and I will send you my mobile phone number so that we can get you in.
 
 ### Program and schedule:
 
