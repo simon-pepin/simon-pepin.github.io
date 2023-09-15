@@ -10,7 +10,7 @@ Singular learning theory is an application of the tools of singularity theory to
 
 ### _Practical details:_
 
-- The workshop will take place from Monday 18th to Thursday 21st, from 10:00 to 17:00.
+- The workshop will take place from Monday 18th to Thursday 21st, from 10:00 to 17:00 **except on Monday where we start at 09:30**
 
 - Everything will take place Room F1.15, in the building Science Park 107 of the Science Park campus of the University of Amsterdam.
 
