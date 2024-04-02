@@ -16,7 +16,7 @@ permalink: /notes/
 
 #### <ins> Singular learning theory lectures:</ins>
 
-* [**Singular learning theory: from Bayesian statistics to Machine Learning**](https://simon-pepin.github.io/notes/SLT_lectures_Mar_24.pdf), notes from two introductory lectures to Singular Learning Theory at the Isaac Newton Institute (Cambridge) in March 2024
+* [**Singular learning theory: from Bayesian statistics to Machine Learning**](https://simon-pepin.github.io/notes/SLT_lectures_all_Mar_24.pdf), notes from two introductory lectures to Singular Learning Theory at the Isaac Newton Institute (Cambridge) in March 2024
 
 #### <ins>Other seminar talks:</ins>
 
