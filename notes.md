@@ -14,6 +14,10 @@ permalink: /notes/
 
 * [**Quadratic enumerative geometry and the Deligne-Milnor formula**](https://simon-pepin.github.io/notes/quadratic_conductor.pdf), notes from a talk in the online seminar *Quadratic forms, linear algebraic groups and beyond*, October 2021 
 
+#### <ins> Singular learning theory lectures:</ins>
+
+* [**Singular learning theory: from Bayesian statistics to Machine Learning**](https://simon-pepin.github.io/notes/SLT_lectures_all_Mar_24.pdf), notes from two introductory lectures to Singular Learning Theory at the Isaac Newton Institute (Cambridge) in March 2024
+
 #### <ins>Other seminar talks:</ins>
 
 * [**Six-functor formalism; why solid abelian groups?**](https://simon-pepin.github.io/notes/six-functors.pdf), Algebraic Geometry Intercity seminar on *Condensed Mathematics*, November 11th 2022
