@@ -11,21 +11,13 @@ src="/image/personal_photo_3.jpg" alt="profile picture" width="250" height="350"
 
 I am a mathematician, working on questions in algebraic and arithmetic geometry. 
 
-My main interests are related to the theory of **motives** and **motivic homotopy theory**: I am particularly interested in :
+My main interests are related to the theory of **motives**, **motivic homotopy theory** and **singularity theory**. I am particularly interested in:
 
 - **Motives of moduli spaces**
 - **Motivic sheaves and the six-functor formalism**
 - **Refined enumerative geometry**
 - **Exponential motives**.
-
-I coorganise three conferences this summer 2023 in Nijmegen!
-
-- [Motivic and non-commutative aspects of enumerative geometry](https://www.math.ru.nl/mnc-conference/) (July 3-5)
-
-- [Homotopy theory, K-theory, and trace methods](https://www.math.ru.nl/hkt-conference/) (July 5-7)
-
-- [Motives in moduli and representation theory](https://indico.imapp.ru.nl/event/124/) (July 10-14)
-
+- **Singular learning theory in Bayesian statistics and applications to interpretability of machine learning models**
 
 Since January 2023, I am a post-doctoral researcher at [Korteweg-de Vries Institute](https://kdvi.uva.nl/) at the University of Amsterdam, in the research group of [Lenny Taelman](https://staff.fnwi.uva.nl/l.d.j.taelman/)
 
