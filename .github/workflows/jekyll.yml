@@ -3,7 +3,7 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["master", "claude/fix-github-pages-deploy-sBp8x"]
+    branches: ["master"]
   workflow_dispatch:
 
 permissions:
