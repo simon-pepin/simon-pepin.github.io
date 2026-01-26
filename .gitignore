@@ -1,2 +1,19 @@
-/_site
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler
+vendor/
+.bundle/
+Gemfile.lock
+
+# Editor backup files
 *~
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
